@@ -17,10 +17,10 @@ router.get('/', (req, res, next) => {
     res.send('GET Pokemons x Params')
 })
 
-router.post('/', (req, res, next) => { 
+router.post('/', async (req, res, next) => { 
     const { name, type, image } = req.body;
-    const exists = Pokemon.findOne({ where: { name } });
-    console.log(object);
+    const exists = await Pokemon.findOne({ where: { name } });
+    console.log(exists);
 
     if (!exists) { 
         const newPokemon = Pokemon.create({
