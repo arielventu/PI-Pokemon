@@ -33,7 +33,7 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image
             })
-        } else return res.status(400).send("El pokemon con ese nomnya existe");
+        } else return res.status(400).send("Pokemon existente");
         
         return res.send(newPokemon);
             
