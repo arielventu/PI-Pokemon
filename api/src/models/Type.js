@@ -11,19 +11,6 @@ module.exports = (sequelize) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    hp: {
-      type: DataTypes.INTEGER
-    },
-    attack: {
-      type: DataTypes.INTEGER
-    },
-    defense: {
-      type: DataTypes.INTEGER
-    },
-    speed: {
-      type: DataTypes.INTEGER
-    },
-    
+    }
   });
 };
