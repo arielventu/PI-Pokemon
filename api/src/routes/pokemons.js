@@ -30,7 +30,7 @@ router.post('/', async (req, res, next) => {
         })
         return res.send(newPokemon);
     } else {
-        return res.status(400).send('Pokemon ya creado');
+        return res.status(400).send('Pokemon existente');
     }
 })
 
