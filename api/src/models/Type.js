@@ -15,6 +15,15 @@ module.exports = (sequelize) => {
     hp: {
       type: DataTypes.INTEGER
     },
-    Att
+    attack: {
+      type: DataTypes.INTEGER
+    },
+    defense: {
+      type: DataTypes.INTEGER
+    },
+    speed: {
+      type: DataTypes.INTEGER
+    },
+    
   });
 };
