@@ -28,7 +28,7 @@ module.exports = (sequelize) => {
     height: {
       type: DataTypes.INTEGER
     },
-    wheight: {
+    weight: {
       type: DataTypes.INTEGER
     },
     image: {
