@@ -33,11 +33,10 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image
             })
-        } else return res.status(400).send("Pokemon existente");
-        
-        return res.send(newPokemon);
-            
-        
+            return res.send(newPokemon);
+        } else {
+            return res.status(400).send("Pokemon existente");
+        }
     } catch (error) {
         next(error);
     }
