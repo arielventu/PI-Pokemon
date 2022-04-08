@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { Op } = require("sequelize");
 const { Pokemon } = require('../db');
 
 
