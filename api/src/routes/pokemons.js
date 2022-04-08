@@ -21,8 +21,12 @@ router.get('/', (req, res, next) => {
 router.post('/', async (req, res, next) => { 
     const { name, hp, attack, defense, speed, height, weight, image } = req.body;
     const exists = await Pokemon.findOne({ where:{ name } }); // Verifica que no exista un pokemon con el mismo nombre
-
-    if (!exists) { 
+try {
+    
+} catch (error) {
+    
+}
+    if (!exists) { // Si no existe el pokemon lo crea
         const newPokemon = Pokemon.create({
             name,
             hp,
@@ -35,7 +39,7 @@ router.post('/', async (req, res, next) => {
         })
         return res.send(newPokemon);
     } else {
-        return res.status(400).send('Pokemon existente');
+        return res.status(400).send(message);
     }
 })
 
