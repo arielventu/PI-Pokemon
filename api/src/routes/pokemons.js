@@ -20,8 +20,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', async (req, res, next) => { 
     const { name, type, image } = req.body;
-    const exists = await Pokemon.findOne({ where: { name } });
-    console.log(exists);
+    const exists = await Pokemon.findOne({ where:{ name } }); // Verifica que no exista un pokemon con el mismo nombre
 
     if (!exists) { 
         const newPokemon = Pokemon.create({
