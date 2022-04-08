@@ -20,16 +20,17 @@ router.get('/', (req, res, next) => {
 router.post('/', (req, res, next) => { 
     const { name, type, image } = req.body;
     const exists = Pokemon.findOne({ where: { name } });
-    
+    console.log(object);
+
     if (!exists) { 
         const newPokemon = Pokemon.create({
             name,
             type,
             image
         })
-        res.send(newPokemon);
+        return res.send(newPokemon);
     } else {
-        res.status(400).send('Pokemon ya creado');
+        return res.status(400).send('Pokemon ya creado');
     }
 })
 
