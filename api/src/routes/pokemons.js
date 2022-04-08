@@ -4,19 +4,19 @@ const { Router } = require("express");
 const router = Router()
 
 router.get('/', (req, res, next) => { 
-    res.send('Home Pokemons')
+    res.send('GET Home Pokemons')
 })
 
 router.get('/:id', (req, res, next) => { 
-    res.send('Home Pokemons x ID')
+    res.send('GET Pokemons x ID')
 })
 
 router.get('/', (req, res, next) => { 
-    res.send('Home Pokemons')
+    res.send('GET Pokemons x Params')
 })
 
-router.get('/', (req, res, next) => { 
-    res.send('Home Pokemons')
+router.post('/', (req, res, next) => { 
+    res.send('Post Pokemons')
 })
 
 router.get('/', (req, res, next) => { 
