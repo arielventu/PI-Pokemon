@@ -8,6 +8,7 @@ const router = Router()
 router.get('/', (req, res, next) => { 
     
     const pokemonsDB = Pokemon.findAll()
+    res.send(pokemonsDB)
 })
 
 router.get('/:id', (req, res, next) => { 
