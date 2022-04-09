@@ -7,8 +7,8 @@ const { Pokemon } = require('../db');
 const router = Router()
 
 router.get('/', async (req, res, next) => { 
-    
-    res.send('GET Pokemons')
+    const pokemonsDB = await Pokemon.findAll()
+    res.send(pokemonsDB)
 })
 
 router.get('/:id', async (req, res, next) => { 
