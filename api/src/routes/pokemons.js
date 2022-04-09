@@ -13,7 +13,8 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
-    const pokemonsDB = await Pokemon.findAll({ where: { id: { [Op.eq]: id } } })
+    const pokemonsDB = await Pokemon.findAll({ where: { id } })
+    
     res.send(pokemonsDB)
 })
 
