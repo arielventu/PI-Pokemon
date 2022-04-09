@@ -8,12 +8,12 @@ const router = Router()
 
 router.get('/', async (req, res, next) => { 
     
-    const pokemonsDB = await Pokemon.findAll()
-    res.send(pokemonsDB)
+    res.send('GET Pokemons')
 })
 
 router.get('/:id', (req, res, next) => { 
-    res.send('GET Pokemons x ID')
+    const pokemonsDB = await Pokemon.findAll()
+    res.send(pokemonsDB)
 })
 
 router.get('/', (req, res, next) => { 
