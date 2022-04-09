@@ -15,7 +15,7 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     const pokemonsDB = await Pokemon.findAll({ where: { id } })
     try {
-        if (!pokemonsDB.lenght) {
+        if (!pokemonsDB) {
             console.log(pokemonsDB.lenght)
             return res.send('Pokemon no encontrado');  
         } else {
