@@ -16,10 +16,10 @@ router.get('/:id', async (req, res, next) => {
     const pokemonsDB = await Pokemon.findAll({ where: { id } })
     try {
         if (!pokemonsDB) {
-            console.log(pokemonsDB)
+            console.log(pokemonsDB.toJSON())
             return res.send('Pokemon no encontrado');  
         } else {
-            console.log(pokemonsDB)
+            console.log(pokemonsDB.toJSON())
             return res.send(pokemonsDB);
         }
     } catch (error) {
