@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const { Op } = require("sequelize");
+const axios = require("axios");
 const { Pokemon } = require('../db');
 
 
@@ -36,16 +37,11 @@ router.post('/', async (req, res, next) => {
             })
             return res.send(newPokemon);
         } else {
-            return res.status(400).send("Pokemon existente");
+            return res.status(400).send("Pokemon existente en la base de datos");
         }
     } catch (error) {
         next(error);
     }
 })
-
-router.get('/', (req, res, next) => { 
-    res.send('Home Pokemons')
-})
-
 
 module.exports = router;
