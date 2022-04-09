@@ -11,7 +11,8 @@ router.get('/', async (req, res, next) => {
     res.send('GET Pokemons')
 })
 
-router.get('/:id', (req, res, next) => { 
+router.get('/:id', async (req, res, next) => { 
+    const { id } = req.params;
     const pokemonsDB = await Pokemon.findAll()
     res.send(pokemonsDB)
 })
