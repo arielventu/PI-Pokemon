@@ -25,7 +25,6 @@ router.get('/', async (req, res, next) => {
         })
     } 
     res.status(200).send(pokeList);
-    
 })
 
 router.get('/:id', async (req, res, next) => { 
