@@ -22,7 +22,7 @@ router.get('/:id', async (req, res, next) => {
         //     console.log(pokemonsDB)
         //     return res.send(pokemonsDB);
         // }
-        res.send(pokemonDB ? pokemonDB : 'Pokemon no encontrado');
+        res.send(pokemonsDB ? pokemonsDB : 'Pokemon no encontrado');
     } catch (error) {
         next(error)
     }
