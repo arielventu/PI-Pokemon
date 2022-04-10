@@ -13,6 +13,7 @@ const router = Router()
 
 router.get('/', async (req, res, next) => { 
     const pokemonsAPI = await axios.get('https://pokeapi.co/api/v2/pokemon');
+    const pokemons = pokemonsAPI.data.results;
     
 })
 
