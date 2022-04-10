@@ -3,6 +3,11 @@ const { Op } = require("sequelize");
 const axios = require("axios");
 const { Pokemon } = require('../db');
 
+// Únicos Endpoints/Flags que pueden utilizar
+// GET https://pokeapi.co/api/v2/pokemon
+// GET https://pokeapi.co/api/v2/pokemon/{id}
+// GET https://pokeapi.co/api/v2/pokemon/{name}
+// GET https://pokeapi.co/api/v2/type
 
 const router = Router()
 
