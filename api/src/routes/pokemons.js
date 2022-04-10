@@ -14,6 +14,7 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     const pokemonsDB = await Pokemon.findAll({ where: { id } })
+    const pokemonsAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
     try {
         res.send(pokemonsDB.length ? pokemonsDB : 'Pokemon no encontrado');
     } catch (error) {
