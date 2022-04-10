@@ -7,8 +7,7 @@ const { Pokemon } = require('../db');
 const router = Router()
 
 router.get('/', async (req, res, next) => { 
-    const pokemonsDB = await Pokemon.findAll()
-    res.send(pokemonsDB)
+    const pokemonsAPI = await axios.get('https://pokeapi.co/api/v2/pokemon');
 })
 
 router.get('/:id', async (req, res, next) => { 
