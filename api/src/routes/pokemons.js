@@ -20,6 +20,8 @@ router.get('/', async (req, res, next) => {
         pokeList.push({
             id: pokemon.data.id,
             name: pokemon.data.name,
+            attack: pokemon.data.stats[4].base_stat,
+            defense: pokemon.data.stats[3].base_stat,
             image: pokemon.data.sprites.front_default,
             type: pokemon.data.types.map(type => type.type.name)
         })
