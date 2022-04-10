@@ -12,13 +12,18 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
-    const pokemonsDB = await Pokemon.findAll({ where: { id } })
-    const pokemonsAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    const pokemonDB = await Pokemon.findAll({ where: { id } })
+    const pokemonAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
     try {
-        res.send(pokemonsDB.length ? pokemonsDB : 'Pokemon no encontrado');
+        res.send(pokemonAPI.length ? pokemonAPI : 'Pokemon no encontrado');
     } catch (error) {
         next(error)
     }
+    // try {
+    //     res.send(pokemonDB.length ? pokemonDB : 'Pokemon no encontrado');
+    // } catch (error) {
+    //     next(error)
+    // }
 })
 
 router.get('/', (req, res, next) => { 
