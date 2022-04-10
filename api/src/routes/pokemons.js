@@ -3,6 +3,7 @@ const { Op } = require("sequelize");
 const axios = require("axios");
 const { Pokemon } = require('../db');
 
+
 // Únicos Endpoints/Flags que pueden utilizar
 // GET https://pokeapi.co/api/v2/pokemon
 // GET https://pokeapi.co/api/v2/pokemon/{id}
@@ -12,25 +13,29 @@ const { Pokemon } = require('../db');
 const router = Router()
 
 router.get('/', async (req, res, next) => { 
-    const pokemonsAPI = await axios.get('https://pokeapi.co/api/v2/pokemon');
-    for (let i = 0; i < pokemonsAPI.data.results.length; i++) { 
-        const pokemon = axios.get('https://pokeapi.co/api/v2')
-
+    const pokeAPI = await axios.get('https://pokeapi.co/api/v2/pokemon');
+    const pokeList = [];
+    for (let i = 0; i < pokeAPI.data.results.length; i++) { 
+        const pokemon = await axios.get(pokeAPI.data.results[i].url);
+        pokeList.push({
+            id: pokemon.data.id,
+            name: pokemon.data.name
+        })
     }
     
 })
 
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
-    const pokemonDB = await Pokemon.findAll({ where: { id } })
-    const pokemonAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    const pokeDB = await Pokemon.findAll({ where: { id } })
+    const pokeAPI = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
     try {
-        res.send(pokemonAPI.length ? pokemonAPI : 'Pokemon no encontrado');
+        res.send(pokeAPI.length ? pokeAPI : 'Pokemon no encontrado');
     } catch (error) {
         next(error)
     }
     // try {
-    //     res.send(pokemonDB.length ? pokemonDB : 'Pokemon no encontrado');
+    //     res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
     // } catch (error) {
     //     next(error)
     // }
