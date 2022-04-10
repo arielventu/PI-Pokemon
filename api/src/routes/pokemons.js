@@ -23,7 +23,8 @@ router.get('/', async (req, res, next) => {
             image: pokemon.data.sprites.front_default,
             type: pokemon.data.types.map(type => type.type.name)
         })
-    }
+    } 
+    res.status(200).send(pokeList);
     
 })
 
