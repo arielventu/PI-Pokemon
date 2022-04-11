@@ -2,7 +2,10 @@ const { Router } = require("express");
 const { Op } = require("sequelize");
 const axios = require("axios");
 const { Pokemon } = require('../db');
-const { URL_POKE, URL_TYPE } = require('../utils');
+const {
+    URL_POKE,
+    URL_TYPE
+} = require('../utils');
 
 
 // Únicos Endpoints/Flags que pueden utilizar
