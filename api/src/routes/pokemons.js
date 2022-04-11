@@ -51,18 +51,18 @@ router.get('/:id', async (req, res, next) => {
         image: pokeAPI.data.sprites.front_default,
         type: pokeAPI.data.types.map(type => type.type.name)
     }
-    console.log(pokemonFound.hasOwnProperty('id'));
-    return res.status(400).send("Pokemon no encontrado");
-    // try {
-    //     // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
-    //     if (!pokemonFound.id) {
-    //         return res.status(404).send('Pokemon not found');
-    //     } else {
-    //         return res.status(200).send(pokemonFound);
-    //     }
-    // } catch (error) {
-    //     next(error)
-    // }
+    // console.log(pokemonFound.hasOwnProperty('id'));
+    // return res.status(400).send("Pokemon no encontrado");
+    try {
+        // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
+        if (!pokemonFound.id) {
+            return res.status(404).send('Pokemon not found');
+        } else {
+            return res.status(200).send(pokemonFound);
+        }
+    } catch (error) {
+        next(error)
+    }
     // try {
     //     res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
     // } catch (error) {
