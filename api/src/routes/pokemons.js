@@ -35,18 +35,18 @@ router.get('/', async (req, res, next) => {
 
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
-    const pokeDB = await Pokemon.findAll({ where: { id } })
-    // const pokeAPI = await axios.get(`${URL}${id}`)
-    // try {
-    //     res.send(pokeAPI.length ? pokeAPI : 'Pokemon no encontrado');
-    // } catch (error) {
-    //     next(error)
-    // }
+    // const pokeDB = await Pokemon.findAll({ where: { id } })
+    const pokeAPI = await axios.get(`${URL}${id}`)
     try {
-        res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
+        res.send(pokeAPI.length ? pokeAPI : 'Pokemon no encontrado');
     } catch (error) {
         next(error)
     }
+    // try {
+    //     res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
+    // } catch (error) {
+    //     next(error)
+    // }
 })
 
 router.get('/', (req, res, next) => { 
