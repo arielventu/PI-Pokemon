@@ -42,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
     const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
     console.log(pokeAPI.data);
     try {
-        res.send(pokeAPI.data);
+        res.send(pokeAPI.data.name);
     } catch (error) {
         next(error)
     }
