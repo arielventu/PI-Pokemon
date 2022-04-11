@@ -44,7 +44,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         // res.send(pokeAPI.data.name ? JSON.stringify(pokeAPI) : 'Pokemon no encontrado');
         if (pokeAPI.data.name) {
-            const pokemon = await axios.get(pokeAPI.data.species.url);
+            const pokemon = await axios.get(pokeAPI.data.url);
             res.json(pokemon)
         } else {
             res.send('Pokemon no encontrado');
