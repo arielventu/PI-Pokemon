@@ -38,9 +38,9 @@ router.get('/', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     // const pokeDB = await Pokemon.findAll({ where: { id } })
-    console.log(`${URL_POKE}/${id}`);
+    // console.log(`${URL_POKE}/${id}`);
     const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
-    console.log(firstLetterUpperCase(pokeAPI.data.name));
+    console.log(pokeAPI.data);
     try {
         res.send(pokeAPI.length ? pokeAPI : 'Pokemon no encontrado');
     } catch (error) {
