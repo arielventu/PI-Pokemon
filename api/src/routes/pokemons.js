@@ -52,16 +52,17 @@ router.get('/:id', async (req, res, next) => {
         type: pokeAPI.data.types.map(type => type.type.name)
     }
     console.log(pokemonFound.id);
-    try {
-        // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
-        if (!pokemonFound.id) {
-            res.status(404).send('Pokemon not found');
-        } else {
-            res.status(200).send(pokemonFound);
-        }
-    } catch (error) {
-        next(error)
-    }
+    
+    // try {
+    //     // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
+    //     if (!pokemonFound.id) {
+    //         return res.status(404).send('Pokemon not found');
+    //     } else {
+    //         return res.status(200).send(pokemonFound);
+    //     }
+    // } catch (error) {
+    //     next(error)
+    // }
     // try {
     //     res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
     // } catch (error) {
