@@ -1,5 +1,7 @@
-const URL = 'https://pokeapi.co/api/v2';
+const URL_POKE = 'https://pokeapi.co/api/v2/pokemon';
+const URL_TYPE = 'https://pokeapi.co/api/v2/type';
 
 module.exports = {
-    URL,
+    URL_POKE,
+    URL_TYPE
 }
