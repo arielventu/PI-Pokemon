@@ -51,7 +51,7 @@ router.get('/:id', async (req, res, next) => {
         image: pokeAPI.data.sprites.front_default,
         type: pokeAPI.data.types.map(type => type.type.name)
     }
-    // console.log(pokemonFound.id);
+    console.log(pokemonFound.response);
     return res.status(400).send("Pokemon no encontrado");
     // try {
     //     // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
