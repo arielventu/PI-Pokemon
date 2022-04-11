@@ -50,7 +50,7 @@ router.get('/:id', async (req, res, next) => {
     }
     console.log(pokemonFound);
     try {
-        res.send(pokemonFound ? pokemonFound : 'Pokemon not found');
+        res.send(pokemonFound.name ? pokemonFound : 'Pokemon not found');
     } catch (error) {
         next(error)
     }
