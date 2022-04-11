@@ -33,6 +33,10 @@ router.get('/', async (req, res, next) => {
     res.status(200).send(pokeList);
 })
 
+function firstLetterUpperCase (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+    
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     // const pokeDB = await Pokemon.findAll({ where: { id } })
