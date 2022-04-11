@@ -40,7 +40,7 @@ router.get('/:id', async (req, res, next) => {
     // const pokeDB = await Pokemon.findAll({ where: { id } })
     // console.log(`${URL_POKE}/${id}`);
     const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
-    const pokemon = {
+    const pokemonFound = {
         id: pokeAPI.data.id,
         name: pokeAPI.data.name,
         attack: pokeAPI.data.stats[1].base_stat,
@@ -48,9 +48,9 @@ router.get('/:id', async (req, res, next) => {
         image: pokeAPI.data.sprites.front_default,
         type: pokeAPI.data.types.map(type => type.type.name)
     }
-    console.log(pokemon);
+    console.log(pokemonFound);
     try {
-        res.send(pokeAPI.data.name);
+        res.send(pokemonFound);
     } catch (error) {
         next(error)
     }
