@@ -42,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
     const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
     console.log(pokeAPI.data);
     try {
-        res.send('Pokemon no encontrado');
+        res.send(pokeAPI.data);
     } catch (error) {
         next(error)
     }
