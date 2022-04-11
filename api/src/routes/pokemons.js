@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { Op } = require("sequelize");
 const axios = require("axios");
-const { Pokemon } = require('../db'); ç
+const { Pokemon } = require('../db');
 const { URL } = require('../utils');
 
 
