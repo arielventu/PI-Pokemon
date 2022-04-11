@@ -54,7 +54,7 @@ router.get('/:id', async (req, res, next) => {
     console.log(pokemonFound.id);
     try {
         // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
-        if (!pokemonFound) {
+        if (!pokemonFound.id) {
             res.status(404).send('Pokemon not found');
         } else {
             res.status(200).send(pokemonFound);
