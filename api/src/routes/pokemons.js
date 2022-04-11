@@ -52,7 +52,7 @@ router.get('/:id', async (req, res, next) => {
         type: pokeAPI.data.types.map(type => type.type.name)
     }
     console.log(pokemonFound.id);
-    
+    res.send('pokemonNotFound');
     // try {
     //     // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
     //     if (!pokemonFound.id) {
