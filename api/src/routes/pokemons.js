@@ -32,7 +32,7 @@ router.get('/', async (req, res, next) => {
             type: pokemon.data.types.map(type => type.type.name)
         })
     } 
-    console.log(JSON.stringify(pokeDB));
+    console.log(pokeList);
     res.status(200).send(pokeList);
 })
 
