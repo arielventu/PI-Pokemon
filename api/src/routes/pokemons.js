@@ -41,7 +41,6 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     const { name } = req.query;
     
-    // const pokeDB = await Pokemon.findAll({ where: { id } })
     try {
         const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
         const pokeDB = await Pokemon.findAll({ where: { id } })
@@ -54,8 +53,7 @@ router.get('/:id', async (req, res, next) => {
                 image: pokeAPI.data.sprites.front_default,
                 type: pokeAPI.data.types.map(type => type.type.name)
             }
-            // return res.status(200).send(pokemonFound);
-                return res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
+            return res.status(200).send(pokemonFound);
         } else {
             return res.status(404).send('Pokemon not found');
         }
