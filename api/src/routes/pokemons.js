@@ -4,7 +4,8 @@ const axios = require("axios");
 const { Pokemon } = require('../db');
 const {
     URL_POKE,
-    URL_TYPE
+    URL_TYPE,
+    capitalize
 } = require('../utils');
 
 
