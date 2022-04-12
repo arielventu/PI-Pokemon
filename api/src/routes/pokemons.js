@@ -61,16 +61,12 @@ router.get('/:id', async (req, res, next) => {
         }
         Promise.all([pokeAPI, pokeDB])
             .then(() => {
-                res.status(200).send({
-                    pokemonFoundAPI,
-                    pokemonFoundDB
-                })
+                    if (pokeAPI.data.id) {
+                        res.status(200).send(pokemonFoundAPI);
+                    } else if (pokeDB.length) {
+                        res.status(200).send(pokemonFoundDB);
+                    }
         })
-        // if (pokeAPI.data.id) {
-        //     res.status(200).send(pokemonFoundAPI);
-        // } else if (pokeDB.length) {
-        //     res.status(200).send(pokemonFoundDB);
-        // }
         
     } catch (error) {
         error.response?.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
