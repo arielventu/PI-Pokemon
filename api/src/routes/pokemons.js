@@ -61,7 +61,7 @@ router.get('/:id', async (req, res, next) => {
                 attack: pokeDB.attack,
                 defense: pokeDB.defense,
                 image: pokeDB.image,
-                type: pokeDB.type
+                // type: pokeDB.type
             }
             res.status(200).send(pokemonFound);
         }
