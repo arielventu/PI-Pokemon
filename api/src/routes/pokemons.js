@@ -41,7 +41,7 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     // const pokeDB = await Pokemon.findAll({ where: { id } })
     // console.log(`${URL_POKE}/${id}`);
-    const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
+    const pokeAPI = await axios.get(`${URL_POKE}/${id}`).catch(e => { console.log(e) });
     
     try {
         console.log(pokeAPI.data?.id);
