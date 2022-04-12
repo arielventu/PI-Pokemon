@@ -42,10 +42,9 @@ router.get('/:id', async (req, res, next) => {
     const { name } = req.query;
     
     try {
-        const pokeAPI = axios.get(`${URL_POKE}/${id}`)
+        const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
         // const pokeDB = Pokemon.findAll({ where: { id } })
-        await pokeAPI;
-        if (pokeAPI.data.id || pokeAPI.data.name) {
+        if (pokeAPI.data.id || pokeAPI.data.name === name) {
             const pokemonFound = {
                 id: pokeAPI.data.id,
                 name: pokeAPI.data.name,
