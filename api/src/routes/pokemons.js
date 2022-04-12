@@ -56,14 +56,13 @@ router.get('/:id', async (req, res, next) => {
         //     res.status(200).send(pokemonFound);
     // } else
         if (pokeDB) {
-        console.log(pokeDB[0].dataValues);
             const pokemonFound = {
                 id: pokeDB[0].id,
-                name: pokeDB.name,
-                attack: pokeDB.attack,
-                defense: pokeDB.defense,
-                image: pokeDB.image,
-                // type: pokeDB.type
+                name: pokeDB[0].name,
+                attack: pokeDB[0].attack,
+                defense: pokeDB[0].defense,
+                image: pokeDB[0].image,
+                type: pokeDB[0].type
             }
             res.status(200).send(pokemonFound);
         }
