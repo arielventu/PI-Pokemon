@@ -41,7 +41,6 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     
     try {
-        const pokeDB = await Pokemon.findAll({ where: { id } })
         const pokemonFoundAPI = {
             id: pokeAPI.data.id,
             name: pokeAPI.data.name,
@@ -63,6 +62,7 @@ router.get('/:id', async (req, res, next) => {
             const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
             pokeAPI ? res.status(200).send(pokemonFoundAPI) : res.status(404).send({ message: 'Pokemon not found' })
         } else {
+            const pokeDB = await Pokemon.findAll({ where: { id } })
             pokeDB.length ? res.status(200).send(pokemonFoundDB) : res.status(404).send({ message: 'Pokemon not found' })
         }
         
