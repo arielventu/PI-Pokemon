@@ -55,9 +55,10 @@ router.get('/:id', async (req, res, next) => {
         //     }
         //     res.status(200).send(pokemonFound);
     // } else
-    if (pokeDB) {
+        if (pokeDB) {
+        console.log(pokeDB);
             const pokemonFound = {
-                id: pokeDB.id,
+                id: pokeDB[0].id,
                 name: pokeDB.name,
                 attack: pokeDB.attack,
                 defense: pokeDB.defense,
