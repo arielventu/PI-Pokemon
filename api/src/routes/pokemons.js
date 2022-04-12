@@ -59,6 +59,7 @@ router.get('/:id', async (req, res, next) => {
         }
         
         if (id.toString().length < 5) {
+            console.log('ID menor a 5');
             const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
             pokeAPI ? res.status(200).send(pokemonFoundAPI) : res.status(404).send({ message: 'Pokemon not found' })
         } else {
