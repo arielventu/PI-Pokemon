@@ -59,14 +59,12 @@ router.get('/:id', async (req, res, next) => {
             image: pokeDB[0].image,
             type: pokeDB[0].type
         }
-        Promise.all([pokeAPI, pokeDB])
-            .then((res) => {
-                    if (res.data.id) {
-                        res.status(200).send(pokemonFoundAPI)
-                    } else if (res[1].id) {
-                        res.status(200).send(pokemonFoundDB)
-                    }          
-        })
+        
+        if (id.toString().length < 5) {
+            res.status(200).send(pokemonFoundAPI);
+        } else {
+            res.status(200).send(pokemonFoundDB);
+        }
         
     } catch (error) {
         error.response?.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
