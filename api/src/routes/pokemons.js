@@ -2,7 +2,10 @@ const { Router } = require("express");
 const { Op } = require("sequelize");
 const axios = require("axios");
 const { Pokemon } = require('../db');
-const { URL_POKE, URL_TYPE } = require('../utils');
+const {
+    URL_POKE,
+    URL_TYPE
+} = require('../utils');
 
 
 // Únicos Endpoints/Flags que pueden utilizar
@@ -33,13 +36,30 @@ router.get('/', async (req, res, next) => {
     res.status(200).send(pokeList);
 })
 
+
+    
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     // const pokeDB = await Pokemon.findAll({ where: { id } })
-    console.log(`${URL_POKE}/${id}`);
+    // console.log(`${URL_POKE}/${id}`);
     const pokeAPI = await axios.get(`${URL_POKE}/${id}`);
+    const pokemonFound = {
+        id: pokeAPI.data.id,
+        name: pokeAPI.data.name,
+        attack: pokeAPI.data.stats[1].base_stat,
+        defense: pokeAPI.data.stats[2].base_stat,
+        image: pokeAPI.data.sprites.front_default,
+        type: pokeAPI.data.types.map(type => type.type.name)
+    }
+    // console.log(pokemonFound.hasOwnProperty('id'));
+    // return res.status(400).send("Pokemon no encontrado");
     try {
-        res.send(pokeAPI.length ? pokeAPI : 'Pokemon no encontrado');
+        // res.send(pokemonFound.data === 'Not Found' ? pokemonFound.data : pokemonFound);
+        if (!pokemonFound.id) {
+            return res.status(404).send('Pokemon not found');
+        } else {
+            return res.status(200).send(pokemonFound);
+        }
     } catch (error) {
         next(error)
     }
