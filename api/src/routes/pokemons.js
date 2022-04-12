@@ -60,12 +60,12 @@ router.get('/:id', async (req, res, next) => {
             type: pokeDB[0].type
         }
         Promise.all([pokeAPI, pokeDB])
-            .then(() => {
-                    if (pokeAPI.data.id) {
-                        res.status(200).send(pokemonFoundAPI);
-                    } else if (pokeDB.length) {
-                        res.status(200).send(pokemonFoundDB);
-                    }
+            .then((res) => {
+                    if (res.data.id) {
+                        res.status(200).send(pokemonFoundAPI)
+                    } else if (res[1].id) {
+                        res.status(200).send(pokemonFoundDB)
+                    }          
         })
         
     } catch (error) {
