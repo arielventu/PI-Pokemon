@@ -35,8 +35,6 @@ router.get('/', async (req, res, next) => {
     console.log(pokeList);
     res.status(200).send(pokeList);
 })
-
-
     
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
