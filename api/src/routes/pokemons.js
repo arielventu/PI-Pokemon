@@ -54,18 +54,14 @@ router.get('/:id', async (req, res, next) => {
                 image: pokeAPI.data.sprites.front_default,
                 type: pokeAPI.data.types.map(type => type.type.name)
             }
-            return res.status(200).send(pokemonFound);
+            // return res.status(200).send(pokemonFound);
+                return res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
         } else {
             return res.status(404).send('Pokemon not found');
         }
     } catch (error) {
         next(error)
     }
-    // try {
-    //     res.send(pokeDB.length ? pokeDB : 'Pokemon no encontrado');
-    // } catch (error) {
-    //     next(error)
-    // }
 })
 
 router.get('/', (req, res, next) => { 
