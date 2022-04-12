@@ -45,7 +45,7 @@ router.get('/:id', async (req, res, next) => {
     
     try {
         console.log(pokeAPI.data?.id);
-        if (pokeAPI.includes(id)) {
+        if (pokeAPI?.data?.id) {
             const pokemonFound = {
                 id: pokeAPI.data.id,
                 name: pokeAPI.data.name,
