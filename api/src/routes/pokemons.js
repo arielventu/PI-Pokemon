@@ -44,7 +44,7 @@ router.get('/:id', async (req, res, next) => {
         const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
         const pokeDB = await Pokemon.findAll({ where: { id } })
         
-        if (pokeAPI.data.id || pokeDB.id) {
+        if (pokeAPI.data.id) {
             const pokemonFound = {
                 id: pokeAPI.data.id,
                 name: pokeAPI.data.name,
@@ -54,7 +54,17 @@ router.get('/:id', async (req, res, next) => {
                 type: pokeAPI.data.types.map(type => type.type.name)
             }
             res.status(200).send(pokemonFound);
-        } 
+        } else if (pokeDB.id) {
+            const pokemonFound = {
+                id: pokeDB.id,
+                name: pokeDB.name,
+                attack: pokeDB.attack,
+                defense: pokeDB.defense,
+                image: pokeDB.image,
+                type: pokeDB.type
+            }
+            res.status(200).send(pokemonFound);
+        }
         
     } catch (error) {
         error.response?.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
