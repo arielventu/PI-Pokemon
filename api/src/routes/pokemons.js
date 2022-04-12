@@ -41,34 +41,23 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     
     try {
-        const pokemonFoundAPI = {
-            id: pokeAPI.data.id,
-            name: pokeAPI.data.name,
-            attack: pokeAPI.data.stats[1].base_stat,
-            defense: pokeAPI.data.stats[2].base_stat,
-            image: pokeAPI.data.sprites.front_default,
-            type: pokeAPI.data.types.map(type => type.type.name)
-        }
-        const pokemonFoundDB = {
-            id: pokeDB[0].id,
-            name: pokeDB[0].name,
-            attack: pokeDB[0].attack,
-            defense: pokeDB[0].defense,
-            image: pokeDB[0].image,
-            type: pokeDB[0].type
-        }
+        const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
+        const pokeDB = Pokemon.findAll({ where: { id } })
         
-        if (id.toString().length < 5) {
-            console.log('ID menor a 5');
-            const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
-            pokeAPI ? res.status(200).send(pokemonFoundAPI) : res.status(404).send({ message: 'Pokemon not found' })
-        } else {
-            const pokeDB = await Pokemon.findAll({ where: { id } })
-            pokeDB.length ? res.status(200).send(pokemonFoundDB) : res.status(404).send({ message: 'Pokemon not found' })
-        }
+        if (pokeAPI.data.id || pokeDB.id) {
+            const pokemonFound = {
+                id: pokeAPI.data.id,
+                name: pokeAPI.data.name,
+                attack: pokeAPI.data.stats[1].base_stat,
+                defense: pokeAPI.data.stats[2].base_stat,
+                image: pokeAPI.data.sprites.front_default,
+                type: pokeAPI.data.types.map(type => type.type.name)
+            }
+            res.status(200).send(pokemonFound);
+        } 
         
     } catch (error) {
-        error.response?.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+        error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
         // next(error)
         // console.log(error.response.data);
     }
