@@ -43,26 +43,26 @@ router.get('/:id', async (req, res, next) => {
     try {
         const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
         const pokeDB = await Pokemon.findAll({ where: { id } })
+        const pokemonFoundAPI = {
+            id: pokeAPI.data.id,
+            name: pokeAPI.data.name,
+            attack: pokeAPI.data.stats[1].base_stat,
+            defense: pokeAPI.data.stats[2].base_stat,
+            image: pokeAPI.data.sprites.front_default,
+            type: pokeAPI.data.types.map(type => type.type.name)
+        }
+        const pokemonFoundDB = {
+            id: pokeDB[0].id,
+            name: pokeDB[0].name,
+            attack: pokeDB[0].attack,
+            defense: pokeDB[0].defense,
+            image: pokeDB[0].image,
+            type: pokeDB[0].type
+        }
         
         if (pokeAPI.data.id) {
-            const pokemonFound = {
-                id: pokeAPI.data.id,
-                name: pokeAPI.data.name,
-                attack: pokeAPI.data.stats[1].base_stat,
-                defense: pokeAPI.data.stats[2].base_stat,
-                image: pokeAPI.data.sprites.front_default,
-                type: pokeAPI.data.types.map(type => type.type.name)
-            }
             res.status(200).send(pokemonFound);
         } else if (pokeDB.length) {
-            const pokemonFound = {
-                id: pokeDB[0].id,
-                name: pokeDB[0].name,
-                attack: pokeDB[0].attack,
-                defense: pokeDB[0].defense,
-                image: pokeDB[0].image,
-                type: pokeDB[0].type
-            }
             res.status(200).send(pokemonFound);
         }
         
