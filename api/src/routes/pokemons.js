@@ -54,7 +54,7 @@ router.get('/:id', async (req, res, next) => {
                 type: pokeAPI.data.types.map(type => type.type.name)
             }
             res.status(200).send(pokemonFound);
-        } else if (pokeDB.id) {
+        } else if (pokeDB.length) {
             const pokemonFound = {
                 id: pokeDB.id,
                 name: pokeDB.name,
