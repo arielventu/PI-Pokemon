@@ -12,7 +12,7 @@ const router = Router()
 router.get('/', async (req, res, next) => { 
     try {
         const typeDB = await Type.findAll();
-        if (typeDB != null) {
+        if (typeDB.length !== 0) {
             console.log('Desde DB', typeDB);
             res.status(200).send(typeDB);
         } else {
