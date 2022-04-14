@@ -20,8 +20,14 @@ router.get('/', async (req, res, next) => {
     const { name } = req.query;
     
     try {
-        const pokeDB = await Pokemon.findAll(); 
-        const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
+        const pokeDBList = await Pokemon.findAll()
+        //     include: [{
+        //         Type: {
+        //             attributes: ['id', 'name']
+        //         }
+        //     }])
+        // ; 
+        // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
         //Convertir a un array de objetos desde DB
         const pokeAPI = await axios.get(`${URL_POKE}`); 
         const pokeAPIList = []; 
@@ -37,7 +43,7 @@ router.get('/', async (req, res, next) => {
                 type: pokemonAPI.data.types.map(type => type.type.name)
             });
         }
-        const List = pokeAPIList.concat(pokeDB); //Concatena los dos arrays
+        const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
         res.send(List);
    } catch (error) {
        next(error);
@@ -49,7 +55,7 @@ router.get('/:id', async (req, res, next) => {
     if (id.length > 35) { // ID de base de datos
         try {
             const pokeDB = await Pokemon.findAll({ where: { id } })
-            console.log(pokeDB);
+            // console.log(pokeDB);
             if (pokeDB) res.status(200).send(pokeDB);
             else res.status(404).send('Pokemon not found')
         } catch (error) {
