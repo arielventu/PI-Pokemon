@@ -28,7 +28,7 @@ router.get('/', async (req, res, next) => {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
             pokeAPIList.push({
                 id: pokemonAPI.data.id,
-                name: pokemonAPI.data.name,
+                name: capitalize(pokemonAPI.data.name),
                 attack: pokemonAPI.data.stats[1].base_stat,
                 defense: pokemonAPI.data.stats[2].base_stat,
                 image: pokemonAPI.data.sprites.front_default,
