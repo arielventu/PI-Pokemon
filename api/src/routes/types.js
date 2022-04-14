@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
     try {
         const typeDB = await Type.findAll();
         if (typeDB.length !== 0) {
-            console.log('Desde DB', typeDB);
+            console.log('Desde DB');
             res.status(200).send(typeDB);
         } else {
             const getAPI = await axios.get(`${URL_TYPE}`);
