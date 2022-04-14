@@ -109,7 +109,7 @@ router.post('/', async (req, res, next) => {
             })
             return res.send(newPokemon);
         } else {
-            return res.status(400).send("Operación no permitida. Pokemon ya existe en la base de datos");
+            return res.status(400).send("Name already exists in the database");
         }
     } catch (error) {
         next(error);
