@@ -4,7 +4,6 @@ const axios = require("axios");
 const { Pokemon } = require('../db');
 const {
     URL_POKE,
-    URL_TYPE,
     capitalize
 } = require('../utils');
 
@@ -16,7 +15,6 @@ const {
 // GET https://pokeapi.co/api/v2/type
 
 const router = Router()
-
 
 router.get('/', async (req, res, next) => { 
     try {
