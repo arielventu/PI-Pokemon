@@ -20,13 +20,13 @@ router.get('/', async (req, res, next) => {
     const { name } = req.query;
     
     try {
-        const pokeDBList = await Pokemon.findAll()
-        //     include: [{
-        //         Type: {
-        //             attributes: ['id', 'name']
-        //         }
-        //     }])
-        // ; 
+        const pokeDBList = await Pokemon.findAll({
+            include: Type,
+                Where: {
+                    name: { [Op.ilike]: name }
+            }
+        })
+
         // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
         //Convertir a un array de objetos desde DB
         const pokeAPI = await axios.get(`${URL_POKE}`); 
