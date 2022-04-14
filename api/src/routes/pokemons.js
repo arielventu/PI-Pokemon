@@ -102,7 +102,7 @@ router.post('/', async (req, res, next) => {
                 image,
             })
             
-            if (typeof type === 'string') { // Si es un string lo convierte a un array
+            if (typeof type === 'number' && type > 0) { 
                 type = [type];
                 newPokemon.addType(type)
 
