@@ -26,7 +26,14 @@ router.get('/', async (req, res, next) => {
        const pokeAPI = await axios.get(`${URL_POKE}`); 
        const pokeAPIList = await axios.get(pokeAPI.data.results[i].url)
        
-       pokeList.push({ });
+       pokeList.push({ 
+        id: pokemon.data.id,
+        name: pokemon.data.name,
+        attack: pokemon.data.stats[1].base_stat,
+        defense: pokemon.data.stats[2].base_stat,
+        image: pokemon.data.sprites.front_default,
+        type: pokemon.data.types.map(type => type.type.name)
+       });
        const pokeList = pokeDBList.concat(pokeAPIList); //Concatenar los dos arrays
        res.send(pokeList);
        
