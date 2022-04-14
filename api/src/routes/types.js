@@ -2,8 +2,8 @@ const { Router } = require("express");
 const axios = require("axios");
 const { Type } = require('../db');
 const {
-    capitalize,
-    URL_TYPE
+    URL_TYPE,
+    capitalize
 } = require('../utils');
 
 
