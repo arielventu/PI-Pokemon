@@ -22,6 +22,8 @@ const pokeList = []; // Lista de pokemones para mostrar en la vista. Incluye los
 router.get('/', async (req, res, next) => { 
     const pokeAPI = await axios.get(`${URL_POKE}`); //Promesa
     const pokeDB = await Pokemon.findAll(); //Promesa
+    const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues); //Convertir a un array de objetos
+    
     for (let i = 0; i < pokeAPI.data.results.length; i++) { 
         const pokemon = await axios.get(pokeAPI.data.results[i].url);
         pokeList.push({
