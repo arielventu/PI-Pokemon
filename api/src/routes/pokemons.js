@@ -26,7 +26,7 @@ router.get('/', async (req, res, next) => {
        const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues); //Convertir a un array de objetos
        const pokeAPIList = pokeAPI.data.results; //Convertir a un array de objetos
        const pokeList = pokeDBList.concat(pokeAPIList); //Concatenar los dos arrays
-       res.render('pokemons', { pokeList });
+       res.send(pokeList);
        
    } catch (error) {
        next(error);
