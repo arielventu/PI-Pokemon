@@ -62,6 +62,17 @@ router.get('/:id', async (req, res, next) => {
     }
     try {
         const pokeDB = Pokemon.findAll({ where: { id } })
+        if(pokeDB.id) {
+            const pokemonFound = {
+                id: pokeDB.id,
+                name: pokeDB.name,
+                attack: pokeDB.attack,
+                defense: pokeDB.defense,
+                image: pokeDB.image,
+                type: pokeDB.type
+            }
+            res.status(200).send(pokemonFound);
+        }
         
     } catch (error) {
         next(error)
