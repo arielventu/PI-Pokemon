@@ -100,8 +100,9 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
-            type
-            newPokemon.setTypes(type);
+            typeof type === 'string'
+                ? newPokemon.addType(type)
+                : newPokemon.setType(type);
             
             return res.send(newPokemon);
         } else {
