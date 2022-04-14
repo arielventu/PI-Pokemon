@@ -17,27 +17,26 @@ const {
 
 const router = Router()
 
-const pokeList = []; // Lista de pokemones para mostrar en la vista. Incluye los datos de la API y de la DB
 
 router.get('/', async (req, res, next) => { 
-   try {
-       const pokeDB = await Pokemon.findAll(); 
-       const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues); //Convertir a un array de objetos
-       const pokeAPI = await axios.get(`${URL_POKE}`); 
-       for (let i = 0; i < pokeAPI.data.results.length; i++) {
-           const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
-           pokeList.push({
-               id: pokemonAPI.data.id,
-               name: pokemonAPI.data.name,
-               attack: pokemonAPI.data.stats[1].base_stat,
-               defense: pokemonAPI.data.stats[2].base_stat,
-               image: pokemonAPI.data.sprites.front_default,
-               type: pokemonAPI.data.types.map(type => type.type.name)
-           });
-       }
-       const List = pokeDBList.concat(pokeList); //Concatenar los dos arrays
-       res.send(List);
-       
+    try {
+        const pokeDB = await Pokemon.findAll(); 
+        const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues); //Convertir a un array de objetos
+        const pokeAPI = await axios.get(`${URL_POKE}`); 
+        const pokeAPIList = []; 
+        for (let i = 0; i < pokeAPI.data.results.length; i++) {
+            const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
+            pokeAPIList.push({
+                id: pokemonAPI.data.id,
+                name: pokemonAPI.data.name,
+                attack: pokemonAPI.data.stats[1].base_stat,
+                defense: pokemonAPI.data.stats[2].base_stat,
+                image: pokemonAPI.data.sprites.front_default,
+                type: pokemonAPI.data.types.map(type => type.type.name)
+            });
+        }
+        const List = pokeDBList.concat(pokeAPIList); //Concatena los dos arrays
+        res.send(List);
    } catch (error) {
        next(error);
    }
