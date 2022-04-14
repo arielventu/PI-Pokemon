@@ -42,7 +42,7 @@ router.get('/:id', async (req, res, next) => {
     if (id.length > 35) {
     try {
         const pokeDB = Pokemon.findAll({ where: { id } })
-        if (pokeDB.id) res.status(200).send(pokeDB);
+        if (pokeDB) res.status(200).send(pokeDB);
         else res.status(404).send('Pokemon not found')
     } catch (error) {
         next(error)
