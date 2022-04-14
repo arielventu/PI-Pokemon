@@ -37,7 +37,7 @@ router.get('/', async (req, res, next) => {
                 type: pokemonAPI.data.types.map(type => type.type.name)
             });
         }
-        const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
+        const List = pokeAPIList.concat(pokeDB); //Concatena los dos arrays
         res.send(List);
    } catch (error) {
        next(error);
