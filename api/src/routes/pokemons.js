@@ -17,7 +17,8 @@ const {
 const router = Router()
 
 router.get('/', async (req, res, next) => { 
-    const {name} = req.query;
+    const { name } = req.query;
+    
     try {
         const pokeDB = await Pokemon.findAll(); 
         const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
