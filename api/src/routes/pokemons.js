@@ -39,14 +39,15 @@ router.get('/', async (req, res, next) => {
     
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
-    if (id.length > 35)
+    if (id.length > 35) {
     try {
         const pokeDB = Pokemon.findAll({ where: { id } })
         if (pokeDB.id) res.status(200).send(pokeDB);
         else res.status(404).send('Pokemon not found')
     } catch (error) {
         next(error)
-    }
+        }
+    } else {
     try {
         const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
         
@@ -66,6 +67,7 @@ router.get('/:id', async (req, res, next) => {
         error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
         // next(error)
         // console.log(error.response.data);
+        }
     }
 })
 
