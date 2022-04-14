@@ -35,25 +35,11 @@ router.get('/', async (req, res, next) => {
                 type: pokemonAPI.data.types.map(type => type.type.name)
             });
         }
-        const List = pokeDBList.concat(pokeAPIList); //Concatena los dos arrays
+        const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
         res.send(List);
    } catch (error) {
        next(error);
    }
-    
-    // for (let i = 0; i < pokeAPI.data.results.length; i++) { 
-    //     const pokemon = await axios.get(pokeAPI.data.results[i].url);
-    //     pokeList.push({
-    //         id: pokemon.data.id,
-    //         name: pokemon.data.name,
-    //         attack: pokemon.data.stats[1].base_stat,
-    //         defense: pokemon.data.stats[2].base_stat,
-    //         image: pokemon.data.sprites.front_default,
-    //         type: pokemon.data.types.map(type => type.type.name)
-    //     })
-    // } 
-    // console.log(pokeList);
-    // res.status(200).send(pokeList);
 })
     
 router.get('/:id', async (req, res, next) => { 
