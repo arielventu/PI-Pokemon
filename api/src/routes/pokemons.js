@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { Op } = require("sequelize");
 const axios = require("axios");
-const { Pokemon, Type } = require('../db');
+const { Pokemon, Type, PokemonType } = require('../db');
 const {
     URL_POKE,
     capitalize
@@ -100,7 +100,7 @@ router.post('/', async (req, res, next) => {
             })
 
             if (typeof type ==='number'){
-                await newPokemon.addType(type)
+                await newPokemon.addType(type, { through: PokemonType });
             }
 
             return res.send(newPokemon);
