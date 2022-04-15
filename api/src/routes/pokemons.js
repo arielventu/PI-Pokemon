@@ -99,7 +99,9 @@ router.post('/', async (req, res, next) => {
                 image,
             })
 
-            
+            if (typeof type ==='number'){
+                await newPokemon.addType(type)
+            }
 
             return res.send(newPokemon);
         } else {
