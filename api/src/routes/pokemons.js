@@ -5,7 +5,7 @@ const { Pokemon, Type } = require('../db');
 const {
     URL_POKE,
     capitalize,
-    URL_LOCAL
+    URL_NODE,
 } = require('../utils');
 
 
@@ -105,7 +105,7 @@ router.post('/', async (req, res, next) => {
             if (typesOk.length > 0) {
                 await newPokemon.addType(type)
             } else {
-                await axios.get(`${URL_LOCAL}/types`)
+                await axios.get(`${URL_NODE}/types`)
                 await newPokemon.addType(type) 
             }
 
