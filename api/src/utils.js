@@ -16,7 +16,7 @@ const getTypes = async () => {
                     name: capitalize(typeAPI.data.name)
                 });
             }
-            const typeDB = await Type.bulkCreate(typeAPIList);
+    return await Type.bulkCreate(typeAPIList);
 }
 
 module.exports = {
