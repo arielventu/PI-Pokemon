@@ -102,9 +102,15 @@ router.post('/', async (req, res, next) => {
                 image,
             })
             
-            if (Array.isArray(type)) { 
-                
-                newPokemon.addType(type)
+                if (Array.isArray(type)) {
+                    for (let i = 0; i < type.length; i++) {
+                        if (typeof type[i] !== 'number') {
+                            const newType = await Type.create({
+                                name: type[i]
+                            })
+                            await newPokemon.addType(newType);
+                        }
+                    }
 
             } else {
                 newPokemon.setType(type);
