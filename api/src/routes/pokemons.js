@@ -100,7 +100,7 @@ router.post('/', async (req, res, next) => {
             })
 
             if (typeof type ==='number'){
-                await newPokemon.addType(type, { through: PokemonType });
+                await newPokemon.addType(type);
             }
 
             return res.send(newPokemon);
