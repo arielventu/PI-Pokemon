@@ -98,14 +98,14 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
-            let typesDb = await Type.findAll({
+            await newPokemon.addType(type);
+            const result = await Pokemon.findOne({
                 where: {
-                  name: {
-                    [Op.in]: type,
-                  },
+                    name: name
                 },
-              });
-              await newPokemon.addTypes(typesDb);
+                include: Type
+            });
+            console.log(result);
             return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
