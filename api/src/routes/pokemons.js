@@ -101,7 +101,7 @@ router.post('/', async (req, res, next) => {
             let typesDb = await Type.findAll({
                 where: {
                   name: {
-                    [Op.in]: types,
+                    [Op.in]: type,
                   },
                 },
               });
