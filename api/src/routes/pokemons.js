@@ -21,10 +21,7 @@ router.get('/', async (req, res, next) => {
     
     try {
         const pokeDBList = await Pokemon.findAll({
-            include: Type,
-                Where: {
-                    name: { [Op.ilike]: name }
-            }
+            include: Type
         })
 
         // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
