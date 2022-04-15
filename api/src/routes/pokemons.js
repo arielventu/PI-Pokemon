@@ -98,21 +98,6 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
-            
-                if (Array.isArray(type)) {
-                    for (let i = 0; i < type.length; i++) {
-                        if (typeof type[i] !== 'number') {
-                            const newType = await Type.create({
-                                name: type[i]
-                            })
-                            await newPokemon.addType(newType);
-                        }
-                    }
-
-            } else {
-                newPokemon.setType(type);
-            }
-            
             return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
