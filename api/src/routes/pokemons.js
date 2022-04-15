@@ -100,6 +100,7 @@ router.post('/', async (req, res, next) => {
                 image,
             })
             // Asignación de tipos al pokemon
+            await
             await newPokemon.addType(type);
             // const result = await Pokemon.findOne({
             //     where: { name }, 
