@@ -103,15 +103,9 @@ router.post('/', async (req, res, next) => {
             })
             
             if (Array.isArray(type)) { 
-                for (const i in type) {
-                    if (typeOf type[i] !== '') {
-                        const newType = await Type.create({
-                            name: type[i]
-                        })
-                        await newPokemon.addType(newType);                    
-                    }
-                }
                 
+                newPokemon.addType(type)
+
             } else {
                 newPokemon.setType(type);
             }
