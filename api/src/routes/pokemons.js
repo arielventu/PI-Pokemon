@@ -99,9 +99,16 @@ router.post('/', async (req, res, next) => {
                 image,
             })
             
-            if (typeof type ==='number'){
-                await Pokemon.addType(type, { through: 'PokemonType' });
-            }
+            let typesDb = await Type.findAll({
+                where: {
+                  name: {
+                    [Op.in]: type,
+                  },
+                },
+              });
+            console.log(typ);  
+            await newPokemon.addTypes(typesDb);
+            //   return newPokemon;
           
             return res.send(newPokemon);
         } else {
