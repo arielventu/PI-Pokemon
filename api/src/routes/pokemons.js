@@ -98,12 +98,19 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
-            console.log(typeof type)
+            
             if (typeof type ==='number'){
                 await newPokemon.addType(type);
             }
-
-            return res.send(newPokemon);
+            const result = await Pokemon.findOne({
+                where: {
+                    name: name
+                },
+                include: Type
+            });
+            pokemonList.push(result)
+            return res.status(200).send(result);
+            // return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
         }
