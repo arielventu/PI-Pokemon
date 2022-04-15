@@ -100,7 +100,7 @@ router.post('/', async (req, res, next) => {
             })
             
             if (typeof type ==='number'){
-                await newPokemon.addType(type);
+                await exist.addType(type);
             }
             const result = await Pokemon.findOne({
                 where: {
