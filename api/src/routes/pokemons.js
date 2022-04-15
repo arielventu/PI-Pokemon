@@ -102,7 +102,13 @@ router.post('/', async (req, res, next) => {
             })
             // Asignación de tipos al pokemon
             const typesOk = await Type.findAll()
-            typesOk.length > 0 ? await newPokemon.addType(type) : await getTypes();
+            if (typesOk.length > 0) {
+                await newPokemon.addType(type)
+            } else {
+                await getTypes()
+                await newPokemon.addType(type) 
+            }
+
             // const result = await Pokemon.findOne({
             //     where: { name }, 
             //     include: Type // Retorna el pokemon con su tipo
