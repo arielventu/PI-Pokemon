@@ -106,7 +106,7 @@ router.post('/', async (req, res, next) => {
                   },
                 },
               });
-            console.log(typesDb);  
+            console.log(type);  
             await newPokemon.addTypes(typesDb);
             //   return newPokemon;
           
