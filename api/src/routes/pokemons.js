@@ -100,6 +100,7 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
+            
             // Asignación de tipos al pokemon
             const typesOk = await Type.findAll()
             if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
