@@ -5,7 +5,7 @@ function capitalize (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function getTypes() {
+const getTypes = async () => {
     const getAPI = await axios.get(`${URL_TYPE}`);
             const typeAPIList = [];
             for (let i = 0; i < getAPI.data.results.length; i++) {
