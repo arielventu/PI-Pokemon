@@ -108,12 +108,6 @@ router.post('/', async (req, res, next) => {
                 await axios.get(`${URL_NODE}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
                 await newPokemon.addType(type) 
             }
-
-            // const result = await Pokemon.findOne({
-            //     where: { name }, 
-            //     include: Type // Retorna el pokemon con su tipo
-            // });
-            // console.log(result);
             return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
