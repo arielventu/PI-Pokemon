@@ -1,29 +1,13 @@
-const { axios } = require('axios');
-const { Type } = require('./db');
-
-
 const URL_POKE = 'https://pokeapi.co/api/v2/pokemon';
 const URL_TYPE = 'https://pokeapi.co/api/v2/type';
+const URL_LOCAL = 'http://localhost:3001';
 
 function capitalize (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-const getTypes = async () => {
-    const getAPI = await axios.get('https://pokeapi.co/api/v2/type');
-            const typeAPIList = [];
-            for (let i = 0; i < getAPI.data.results.length; i++) {
-                const typeAPI = await axios.get(getAPI.data.results[i].url)
-                typeAPIList.push({
-                    name: capitalize(typeAPI.data.name)
-                });
-            }
-    return await Type.bulkCreate(typeAPIList);
 }
 
 module.exports = {
     URL_POKE,
     URL_TYPE,
     capitalize,
-    getTypes
 }
