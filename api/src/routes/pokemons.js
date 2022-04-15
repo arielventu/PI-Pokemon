@@ -98,18 +98,18 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
-            await newPokemon.addType(type);
-            const result = await Pokemon.findOne({
-                where: {
-                    name: name
-                },
-                include: Type
-            });
-          
-            return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
         }
+        
+        await newPokemon.addType(type);
+        const result = await Pokemon.findOne({
+            where: {
+                name: name
+            },
+            include: Type
+        });
+        return res.send(newPokemon);
     } catch (error) {
         next(error);
     }
