@@ -1,4 +1,6 @@
-const {axios} = require('axios');
+const { axios } = require('axios');
+const { Type } = require('./db');
+
 
 const URL_POKE = 'https://pokeapi.co/api/v2/pokemon';
 const URL_TYPE = 'https://pokeapi.co/api/v2/type';
@@ -8,7 +10,7 @@ function capitalize (string) {
 }
 
 const getTypes = async () => {
-    const getAPI = await axios.get(`${URL_TYPE}`);
+    const getAPI = await axios.get('https://pokeapi.co/api/v2/type');
             const typeAPIList = [];
             for (let i = 0; i < getAPI.data.results.length; i++) {
                 const typeAPI = await axios.get(getAPI.data.results[i].url)
