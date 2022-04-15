@@ -98,6 +98,9 @@ router.post('/', async (req, res, next) => {
                 weight,
                 image,
             })
+
+            
+
             return res.send(newPokemon);
         } else {
             return res.status(400).send("Name already exists in the database");
