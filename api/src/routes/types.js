@@ -3,7 +3,7 @@ const axios = require("axios");
 const { Type } = require('../db');
 const {
     URL_TYPE,
-    capitalize
+    toUpper
 } = require('../utils');
 
 
@@ -21,7 +21,7 @@ router.get('/', async (req, res, next) => {
             for (let i = 0; i < getAPI.data.results.length; i++) {
                 const typeAPI = await axios.get(getAPI.data.results[i].url)
                 typeAPIList.push({
-                    name: capitalize(typeAPI.data.name)
+                    name: toUpper(typeAPI.data.name)
                 });
             }
             const typeDB = await Type.bulkCreate(typeAPIList);

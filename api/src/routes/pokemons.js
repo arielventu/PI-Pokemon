@@ -5,7 +5,8 @@ const { Pokemon, Type } = require('../db');
 const {
     URL_POKE,
     URL_SERVER,
-    capitalize,
+    toUpper,
+    toLower
 } = require('../utils');
 
 
@@ -39,7 +40,7 @@ router.get('/', async (req, res, next) => {
                 const pokemon = pokeDB.dataValues;
                 const pokemonFound = {
                     id: pokemon.id,
-                    name: capitalize(pokemon.name),
+                    name: toUpper(pokemon.name),
                     hp: pokemon.hp,
                     attack: pokemon.attack,
                     defense: pokemon.defense,
@@ -47,7 +48,7 @@ router.get('/', async (req, res, next) => {
                     weight: pokemon.weight,
                     height: pokemon.height,
                     image: pokemon.image,
-                    type: pokemon.types.map(type => capitalize(type.dataValues.name))
+                    type: pokemon.types.map(type => toUpper(type.dataValues.name))
                 }
                 return res.status(200).send(pokemonFound);
             } catch (error) {
@@ -56,10 +57,10 @@ router.get('/', async (req, res, next) => {
         } else {
             try {
                 const pokeAPI = await axios.get(`${URL_POKE}/${name}`); // Búsqueda en API
-                if (pokeAPI.data.name = name) {
+                if (pokeAPI.data.name === toLower(name)) {
                     const pokemonFound = {
                         id: pokeAPI.data.id,
-                        name: capitalize(pokeAPI.data.name),
+                        name: toUpper(pokeAPI.data.name),
                         hp: pokeAPI.data.stats[5].base_stat,
                         attack: pokeAPI.data.stats[1].base_stat,
                         defense: pokeAPI.data.stats[2].base_stat,
@@ -67,7 +68,7 @@ router.get('/', async (req, res, next) => {
                         weight: pokeAPI.data.weight,
                         height: pokeAPI.data.height,
                         image: pokeAPI.data.sprites.front_default,
-                        type: pokeAPI.data.types.map(type => capitalize(type.type.name))
+                        type: pokeAPI.data.types.map(type => toUpper(type.type.name))
                     }
                     console.log('Desde API')
                     return res.status(200).send(pokemonFound);
@@ -92,7 +93,7 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeDB.length; i++) {
             const pokemon = pokeDB[i].dataValues;
             pokeDBList.push({
-                name: capitalize(pokemon.name),
+                name: toUpper(pokemon.name),
                 image: pokemon.image,
                 type: pokemon.types.map(type => type.dataValues.name)
             });
@@ -105,9 +106,9 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
             pokeAPIList.push({
-                name: capitalize(pokemonAPI.data.name),
+                name: toUpper(pokemonAPI.data.name),
                 image: pokemonAPI.data.sprites.front_default,
-                type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
+                type: pokemonAPI.data.types.map(type => toUpper(type.type.name))
             });
         }
         const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
@@ -127,7 +128,7 @@ router.get('/:id', async (req, res, next) => {
                     const pokemon = pokeDB.dataValues;
                     const pokemonFound = {
                         id: pokemon.id,
-                        name: capitalize(pokemon.name),
+                        name: toUpper(pokemon.name),
                         hp: pokemon.hp,
                         attack: pokemon.attack,
                         defense: pokemon.defense,
@@ -135,7 +136,7 @@ router.get('/:id', async (req, res, next) => {
                         weight: pokemon.weight,
                         height: pokemon.height,
                         image: pokemon.image,
-                        type: pokemon.types.map(type => capitalize(type.dataValues.name))
+                        type: pokemon.types.map(type => toUpper(type.dataValues.name))
                 }
                 return res.status(200).send(pokemonFound);
             }
@@ -150,7 +151,7 @@ router.get('/:id', async (req, res, next) => {
             if (pokeAPI.data.id) { 
                 const pokemonFound = {
                     id: pokeAPI.data.id,
-                    name: capitalize(pokeAPI.data.name),
+                    name: toUpper(pokeAPI.data.name),
                     hp: pokeAPI.data.stats[5].base_stat,
                     attack: pokeAPI.data.stats[1].base_stat,
                     defense: pokeAPI.data.stats[2].base_stat,
@@ -158,7 +159,7 @@ router.get('/:id', async (req, res, next) => {
                     weight: pokeAPI.data.weight,
                     height: pokeAPI.data.height,
                     image: pokeAPI.data.sprites.front_default,
-                    type: pokeAPI.data.types.map(type => capitalize(type.type.name))
+                    type: pokeAPI.data.types.map(type => toUpper(type.type.name))
                 }
                 res.status(200).send(pokemonFound);
             } 
