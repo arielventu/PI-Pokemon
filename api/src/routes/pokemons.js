@@ -22,19 +22,20 @@ router.get('/', async (req, res, next) => {
     
     // **************************************************************************************
     // ************************************PROBANDO**************************************************
-    if (name) { 
-        try {
-            const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
+    
+    try {
+        const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
+        if (pokeDB) {
             console.log("Desde DB");
             if (pokeDB) res.status(200).send(pokeDB);
             else res.status(404).send('Pokemon not found')
-        } catch (error) {
-            next(error)
-        }
-    } else { // ID de API
-        try {
+            // } catch (error) {
+            //     next(error)
+            // }
+        } else { // ID de API
+            // try {
             const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
-            if (pokeAPI.data.name = name) { 
+            if (pokeAPI.data.name = name) {
                 const pokemonFound = {
                     id: pokeAPI.data.id,
                     name: pokeAPI.data.name,
@@ -45,14 +46,15 @@ router.get('/', async (req, res, next) => {
                 }
                 console.log('Desde API')
                 res.status(200).send(pokemonFound);
-            } 
-            
-        } catch (error) {
-            error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
-            // next(error)
-            // console.log(error.response.data);
+            }
         }
+            
+    } catch (error) {
+        error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+        // next(error)
+        // console.log(error.response.data);
     }
+    
     
     // *************************************PROBANDO*************************************************
     // **************************************************************************************
