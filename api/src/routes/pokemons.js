@@ -22,7 +22,7 @@ router.get('/', async (req, res, next) => {
     
     // **************************************************************************************
     // ************************************PROBANDO**************************************************
-    if (name) { // ID de base de datos
+    if (name) { 
         try {
             const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
             console.log("Desde DB");
@@ -34,7 +34,7 @@ router.get('/', async (req, res, next) => {
     } else { // ID de API
         try {
             const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
-            
+            clg
             if (pokeAPI.data.name = name) { 
                 const pokemonFound = {
                     id: pokeAPI.data.id,
