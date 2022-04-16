@@ -4,7 +4,7 @@ const axios = require("axios");
 const { Pokemon, Type } = require('../db');
 const {
     URL_POKE,
-    URL_NODE,
+    URL_SERVER,
     capitalize,
 } = require('../utils');
 
@@ -109,7 +109,7 @@ router.post('/', async (req, res, next) => {
                 if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
                     await newPokemon.addType(type) // Si no está vacía asigna el tipo al pokemon creado
                 } else {
-                    await axios.get(`${URL_NODE}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
+                    await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
                     await newPokemon.addType(type) 
                 }
                 return res.send(newPokemon);
