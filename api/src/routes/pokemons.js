@@ -20,7 +20,37 @@ const router = Router()
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
     
-    
+    if (id.length > 35) { // ID de base de datos
+        try {
+            const pokeDB = await Pokemon.findAll({ where: { id }, include: Type });
+            console.log("Desde DB");
+            if (pokeDB) res.status(200).send(pokeDB);
+            else res.status(404).send('Pokemon not found')
+        } catch (error) {
+            next(error)
+        }
+    } else { // ID de API
+        try {
+            const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
+            
+            if (pokeAPI.data.id) { 
+                const pokemonFound = {
+                    id: pokeAPI.data.id,
+                    name: pokeAPI.data.name,
+                    attack: pokeAPI.data.stats[1].base_stat,
+                    defense: pokeAPI.data.stats[2].base_stat,
+                    image: pokeAPI.data.sprites.front_default,
+                    type: pokeAPI.data.types.map(type => type.type.name)
+                }
+                res.status(200).send(pokemonFound);
+            } 
+            
+        } catch (error) {
+            error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+            // next(error)
+            // console.log(error.response.data);
+        }
+    }
 
     try {
         const pokeDBList = await Pokemon.findAll({
