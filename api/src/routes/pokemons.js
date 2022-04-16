@@ -20,6 +20,8 @@ const router = Router()
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
     
+    // **************************************************************************************
+    // **************************************************************************************
     if (name) { // ID de base de datos
         try {
             const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
@@ -51,7 +53,10 @@ router.get('/', async (req, res, next) => {
             // console.log(error.response.data);
         }
     }
-
+    
+    // **************************************************************************************
+    // **************************************************************************************
+    
     try {
         const pokeDBList = await Pokemon.findAll({
             include: Type
