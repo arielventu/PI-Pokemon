@@ -43,7 +43,7 @@ router.get('/', async (req, res, next) => {
                         type: pokeAPI.data.types.map(type => type.type.name)
                     }
                     console.log('Desde API')
-                    res.status(200).send(pokemonFound);
+                    return res.status(200).send(pokemonFound);
                 }
             } catch (error) {
                 error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
