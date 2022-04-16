@@ -22,37 +22,36 @@ router.get('/', async (req, res, next) => {
     
     // **************************************************************************************
     // ************************************PROBANDO**************************************************
-    
-    const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
-    if (pokeDB) { 
-        try {
-            console.log("Desde DB");
-            if (pokeDB) res.status(200).send(pokeDB);
-            else res.status(404).send('Pokemon not found')
-        } catch (error) {
-            next(error)
-        }
-    } else {
-        try {
-            const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
-            console.log(pokeAPI.data);
-            if (pokeAPI.data.name = name) { 
-                const pokemonFound = {
-                    id: pokeAPI.data.id,
-                    name: pokeAPI.data.name,
-                    attack: pokeAPI.data.stats[1].base_stat,
-                    defense: pokeAPI.data.stats[2].base_stat,
-                    image: pokeAPI.data.sprites.front_default,
-                    type: pokeAPI.data.types.map(type => type.type.name)
+    if (name) {
+        const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
+        if (pokeDB.length !== 0) {
+            try {
+                pokeDB ? res.status(200).send(pokeDB) : res.status(404).send('Pokemon not found')
+            } catch (error) {
+                next(error)
+            }
+        } else {
+            try {
+                const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
+                console.log(pokeAPI.data);
+                if (pokeAPI.data.name = name) {
+                    const pokemonFound = {
+                        id: pokeAPI.data.id,
+                        name: pokeAPI.data.name,
+                        attack: pokeAPI.data.stats[1].base_stat,
+                        defense: pokeAPI.data.stats[2].base_stat,
+                        image: pokeAPI.data.sprites.front_default,
+                        type: pokeAPI.data.types.map(type => type.type.name)
+                    }
+                    console.log('Desde API')
+                    res.status(200).send(pokemonFound);
                 }
-                console.log('Desde API')
-                res.status(200).send(pokemonFound);
-            } 
             
-        } catch (error) {
-            error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
-            // next(error)
-            // console.log(error.response.data);
+            } catch (error) {
+                error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+                // next(error)
+                // console.log(error.response.data);
+            }
         }
     }
     
