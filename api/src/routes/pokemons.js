@@ -108,8 +108,12 @@ router.get('/:id', async (req, res, next) => {
                 const pokemonFound = {
                     id: pokeAPI.data.id,
                     name: pokeAPI.data.name,
+                    hp: pokeAPI.data.stats[5].base_stat,
                     attack: pokeAPI.data.stats[1].base_stat,
                     defense: pokeAPI.data.stats[2].base_stat,
+                    s: pokeAPI.data.stats[4].base_stat,
+                    weight: pokeAPI.data.weight,
+                    height: pokeAPI.data.height,
                     image: pokeAPI.data.sprites.front_default,
                     type: pokeAPI.data.types.map(type => type.type.name)
                 }
