@@ -34,7 +34,6 @@ router.get('/', async (req, res, next) => {
     } else { // ID de API
         try {
             const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
-            console.log('Desde API')
             if (pokeAPI.data.name = name) { 
                 const pokemonFound = {
                     id: pokeAPI.data.id,
@@ -44,6 +43,7 @@ router.get('/', async (req, res, next) => {
                     image: pokeAPI.data.sprites.front_default,
                     type: pokeAPI.data.types.map(type => type.type.name)
                 }
+                console.log('Desde API')
                 res.status(200).send(pokemonFound);
             } 
             
