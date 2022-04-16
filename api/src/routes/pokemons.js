@@ -26,7 +26,20 @@ router.get('/', async (req, res, next) => {
         const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
         if (pokeDB.length !== 0) {
             try {
-                
+                const pokemon = pokeDB[0].dataValues;
+                    const pokemonFound = {
+                        id: pokemon.id,
+                        name: capitalize(pokemon.name),
+                        hp: pokemon.hp,
+                        attack: pokemon.attack,
+                        defense: pokemon.defense,
+                        speed: pokemon.speed,
+                        weight: pokemon.weight,
+                        height: pokemon.height,
+                        image: pokemon.image,
+                        type: pokemon.types.map(type => capitalize(type.dataValues.name))
+                }
+                return res.status(200).send(pokemonFound);
             } catch (error) {
                 next(error)
             }
