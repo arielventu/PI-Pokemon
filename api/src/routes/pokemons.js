@@ -94,8 +94,25 @@ router.get('/:id', async (req, res, next) => {
     if (id.length > 35) { // ID de base de datos
         try {
             const pokeDB = await Pokemon.findAll({ where: { id }, include: Type });
-            // console.log(pokeDB);
-            if (pokeDB) res.status(200).send(pokeDB);
+            if (pokeDB) {
+                for (let i = 0; i < pokeDB.length; i++) {
+                    const pokemon = pokeDB[i].dataValues;
+                    const pokemonFound = {
+                        id: pokemon.id,
+                        name: capitalize(pokemon.name),
+                        hp: pokemon.hp,
+                        attack: pokemon.attack,
+                        defense: pokemon.defense,
+                        speed: pokemon.speed,
+                        weight: pokemon.weight,
+                        height: pokemon.height,
+                        image: pokemon.image,
+                        type: pokemon.types.map(type => capitalize(type.dataValues.name))
+                    }
+                    return res.status(200).send(pokemonFound);
+                }
+                return res.status(200).send(pokeDB);
+            }
             else res.status(404).send('Pokemon not found')
         } catch (error) {
             next(error)
