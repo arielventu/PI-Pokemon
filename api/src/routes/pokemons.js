@@ -90,6 +90,7 @@ router.post('/', async (req, res, next) => {
         
         // TODO Pasar esto a if general (!name || !type) ? res.status(404).send('Necessary parameters not provided') : null;
         
+        
         // Creación del nuevo pokemon
         if (!exists) { // Si no existe el pokemon lo crea
             const newPokemon = await Pokemon.create({
