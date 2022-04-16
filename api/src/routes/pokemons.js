@@ -25,9 +25,11 @@ router.get('/', async (req, res, next) => {
     // **************************************************************************************
     // ************************************PROBANDO**************************************************
     if (name) {
-        const pokeDB = await Pokemon.findAll({
-            name: {
-                [Op.iLike]: name
+        const pokeDB = await Pokemon.findOne({
+            where: {
+                name: {
+                    [Op.iLike]: name
+                }
             },
             include: Type
         });
