@@ -6,8 +6,8 @@ function capitalize (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-function capitalize (string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function lowercase (string) {
+    return string.charAt(0).toLowerCase() + string.slice(1);
 }
 
 function startsWithCapital(string){
@@ -20,4 +20,6 @@ module.exports = {
     URL_TYPE,
     URL_SERVER,
     capitalize,
+    lowercase,
+    startsWithCapital
 }
