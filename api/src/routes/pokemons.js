@@ -26,7 +26,6 @@ router.get('/', async (req, res, next) => {
         const pokeDB = await Pokemon.findAll({ where: { name }, include: Type });
         if (pokeDB.length !== 0) {
             try {
-                console.log(pokeDB)
                 pokeDB ? res.status(200).send(pokeDB) : res.status(404).send('Pokemon not found')
             } catch (error) {
                 next(error)
@@ -61,6 +60,8 @@ router.get('/', async (req, res, next) => {
         const pokeDBList = await Pokemon.findAll({
             include: Type
         })
+                
+        console.log(pokeDBList);
 
         // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
         //Convertir a un array de objetos desde DB
