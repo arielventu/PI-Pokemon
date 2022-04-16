@@ -90,33 +90,35 @@ router.post('/', async (req, res, next) => {
         
         // TODO Pasar esto a if general (!name || !type) ? res.status(404).send('Necessary parameters not provided') : null;
         
-        
-        // Creación del nuevo pokemon
-        if (!exists) { // Si no existe el pokemon lo crea
-            const newPokemon = await Pokemon.create({
-                name,
-                hp,
-                attack,
-                defense,
-                speed,
-                height,
-                weight,
-                image,
-            })
-
-            // Asignación de tipos al pokemon
-            const typesOk = await Type.findAll()
-            if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
-                await newPokemon.addType(type) // Si no está vacía asigna el tipo al pokemon creado
-            } else {
-                await axios.get(`${URL_NODE}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
-                await newPokemon.addType(type) 
-            }
-            return res.send(newPokemon);
+        if (!name || !type) {
+            res.status(404).send('Necessary parameters not provided')
         } else {
-            return res.status(400).send("Name already exists in the database");
+            // Creación del nuevo pokemon
+            if (!exists) { // Si no existe el pokemon lo crea
+                const newPokemon = await Pokemon.create({
+                    name,
+                    hp,
+                    attack,
+                    defense,
+                    speed,
+                    height,
+                    weight,
+                    image,
+                })
+    
+                // Asignación de tipos al pokemon
+                const typesOk = await Type.findAll()
+                if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
+                    await newPokemon.addType(type) // Si no está vacía asigna el tipo al pokemon creado
+                } else {
+                    await axios.get(`${URL_NODE}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
+                    await newPokemon.addType(type) 
+                }
+                return res.send(newPokemon);
+            } else {
+                return res.status(400).send("Name already exists in the database");
+            }
         }
-        
     } catch (error) {
         next(error);
     }
