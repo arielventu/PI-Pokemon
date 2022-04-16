@@ -109,9 +109,8 @@ router.get('/:id', async (req, res, next) => {
                         image: pokemon.image,
                         type: pokemon.types.map(type => capitalize(type.dataValues.name))
                     }
-                    return res.status(200).send(pokemonFound);
                 }
-                return res.status(200).send(pokeDB);
+                return res.status(200).send(pokemonFound);
             }
             else res.status(404).send('Pokemon not found')
         } catch (error) {
