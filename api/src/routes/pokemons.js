@@ -34,7 +34,7 @@ router.get('/', async (req, res, next) => {
             },
             include: Type
         });
-        console.log(pokeDB);
+        // console.log(pokeDB);
         if (pokeDB) {
             try {
                 const pokemon = pokeDB.dataValues;
@@ -56,6 +56,7 @@ router.get('/', async (req, res, next) => {
             }
         } else {
             try {
+                console.log(toLower(name));
                 const pokeAPI = await axios.get(`${URL_POKE}/${name}`); // Búsqueda en API
                 if (pokeAPI.data.name === toLower(name)) {
                     const pokemonFound = {
