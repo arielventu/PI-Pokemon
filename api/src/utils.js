@@ -6,6 +6,13 @@ function capitalize (string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+function capitalize (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function startsWithCapital(string){
+    return string.charAt(0) === string.charAt(0).toUpperCase()
+}
 
 
 module.exports = {
