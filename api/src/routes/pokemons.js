@@ -56,7 +56,7 @@ router.get('/', async (req, res, next) => {
         } else {
             try {
                 const pokeAPI = await axios.get(`${URL_POKE}/${name}`); // Búsqueda en API
-                if (pokeAPI.data.name = name) {
+                if (pokeAPI.data.name === name) {
                     const pokemonFound = {
                         id: pokeAPI.data.id,
                         name: capitalize(pokeAPI.data.name),
@@ -99,7 +99,7 @@ router.get('/', async (req, res, next) => {
         }
         
         const pokeAPI = await axios.get(`${URL_POKE}`); 
-            const pokeAPIList = []; 
+        const pokeAPIList = []; 
             
         //Convertir a un array de objetos desde API
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
