@@ -86,7 +86,7 @@ router.get('/', async (req, res, next) => {
                 // attack: pokemonAPI.data.stats[1].base_stat,
                 // defense: pokemonAPI.data.stats[2].base_stat,
                 image: pokemonAPI.data.sprites.front_default,
-                type: pokemonAPI.data.types.map(type => type.type.name)
+                type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
             });
         }
         const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
