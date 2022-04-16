@@ -33,8 +33,8 @@ router.get('/', async (req, res, next) => {
         }
     } else { // ID de API
         try {
-            const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
-            clg
+            const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
+            console.log('Desde API')
             if (pokeAPI.data.name = name) { 
                 const pokemonFound = {
                     id: pokeAPI.data.id,

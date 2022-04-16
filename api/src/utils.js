@@ -9,6 +9,6 @@ function capitalize (string) {
 module.exports = {
     URL_POKE,
     URL_TYPE,
-    URL_NODE,
+    URL_SERVER,
     capitalize,
 }
