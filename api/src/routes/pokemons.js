@@ -94,9 +94,8 @@ router.get('/:id', async (req, res, next) => {
     if (id.length > 35) { // ID de base de datos
         try {
             const pokeDB = await Pokemon.findAll({ where: { id }, include: Type });
-            if (pokeDB) {
-                for (let i = 0; i < pokeDB.length; i++) {
-                    const pokemon = pokeDB[i].dataValues;
+            if (pokeDB.length !== 0) {
+                    const pokemon = pokeDB[0].dataValues;
                     const pokemonFound = {
                         id: pokemon.id,
                         name: capitalize(pokemon.name),
@@ -108,7 +107,6 @@ router.get('/:id', async (req, res, next) => {
                         height: pokemon.height,
                         image: pokemon.image,
                         type: pokemon.types.map(type => capitalize(type.dataValues.name))
-                    }
                 }
                 return res.status(200).send(pokemonFound);
             }
