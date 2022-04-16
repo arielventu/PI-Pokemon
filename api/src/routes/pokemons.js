@@ -78,7 +78,7 @@ router.get('/', async (req, res, next) => {
             });
         }
         const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
-        res.send(List);
+        return res.send(List);
    } catch (error) {
        next(error);
    }
