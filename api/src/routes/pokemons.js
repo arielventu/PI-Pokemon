@@ -18,16 +18,16 @@ const {
 const router = Router()
 
 const pokemonFoundDB = {
-    id: pokemon.id,
-    name: capitalize(pokemon.name),
-    hp: pokemon.hp,
-    attack: pokemon.attack,
-    defense: pokemon.defense,
-    speed: pokemon.speed,
-    weight: pokemon.weight,
-    height: pokemon.height,
-    image: pokemon.image,
-    type: pokemon.types.map(type => capitalize(type.dataValues.name))
+    id: pokeDB[0].dataValues.id,
+    name: capitalize(pokeDB[0].dataValues.name),
+    hp: pokeDB[0].dataValues.hp,
+    attack: pokeDB[0].dataValues.attack,
+    defense: pokeDB[0].dataValues.defense,
+    speed: pokeDB[0].dataValues.speed,
+    weight: pokeDB[0].dataValues.weight,
+    height: pokeDB[0].dataValues.height,
+    image: pokeDB[0].dataValues.image,
+    type: pokeDB[0].dataValues.types.map(type => capitalize(type.dataValues.name))
 };
 
 const pokemonFoundAPI = {
