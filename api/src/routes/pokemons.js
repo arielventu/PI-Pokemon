@@ -17,6 +17,32 @@ const {
 
 const router = Router()
 
+const pokemonFoundDB = {
+    id: pokemon.id,
+    name: capitalize(pokemon.name),
+    hp: pokemon.hp,
+    attack: pokemon.attack,
+    defense: pokemon.defense,
+    speed: pokemon.speed,
+    weight: pokemon.weight,
+    height: pokemon.height,
+    image: pokemon.image,
+    type: pokemon.types.map(type => capitalize(type.dataValues.name))
+};
+
+const pokemonFoundAPI = {
+    id: pokeAPI.data.id,
+    name: capitalize(pokeAPI.data.name),
+    hp: pokeAPI.data.stats[5].base_stat,
+    attack: pokeAPI.data.stats[1].base_stat,
+    defense: pokeAPI.data.stats[2].base_stat,
+    speed: pokeAPI.data.stats[4].base_stat,
+    weight: pokeAPI.data.weight,
+    height: pokeAPI.data.height,
+    image: pokeAPI.data.sprites.front_default,
+    type: pokeAPI.data.types.map(type => capitalize(type.type.name))
+}
+
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
     
