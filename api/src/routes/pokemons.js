@@ -33,9 +33,10 @@ router.get('/', async (req, res, next) => {
             },
             include: Type
         });
+        console.log(pokeDB);
         if (pokeDB.length !== 0) {
             try {
-                const pokemon = pokeDB[0].dataValues;
+                const pokemon = pokeDB.dataValues;
                 const pokemonFound = {
                     id: pokemon.id,
                     name: capitalize(pokemon.name),
