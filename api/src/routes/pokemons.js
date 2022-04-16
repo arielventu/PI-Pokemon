@@ -25,12 +25,13 @@ router.get('/', async (req, res, next) => {
     // **************************************************************************************
     // ************************************PROBANDO**************************************************
     if (name) {
-        const pokeDB = await Pokemon.findAll({
+        const pokeDB = await Pokemon.findOne({
             name: {
                 [Op.iLike]: name
             },
             include: Type
         });
+        console.log(pokeDB);
         if (pokeDB.length !== 0) {
             try {
                 const pokemon = pokeDB[0].dataValues;
