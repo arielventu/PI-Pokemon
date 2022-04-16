@@ -32,9 +32,10 @@ router.get('/', async (req, res, next) => {
         } catch (error) {
             next(error)
         }
-    } else { // ID de API
+    } else {
         try {
             const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
+            console.log(first)
             if (pokeAPI.data.name = name) { 
                 const pokemonFound = {
                     id: pokeAPI.data.id,
