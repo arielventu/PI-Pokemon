@@ -60,15 +60,21 @@ router.get('/', async (req, res, next) => {
         const pokeDB = await Pokemon.findAll({
             include: Type
         })
+        const pokeDBList = []; 
                 
         console.log(pokeDB[0].dataValues.types[0].dataValues.name);
         for (let i = 0; i < pokeDB.length; i++) {
-            const pokeDBList = pokeDB[i].dataValues;
-            
+            const pokemon = pokeDB[i].dataValues;
+            pokeDBList.push({
+                id: pokemon.id,
+                name: capitalize(pokemon.name),
+                attack: pokemon.attack,
+                defense: pokemon.defense,
+                image: pokemon.image,
+                type: pokemon.types.map(type => type.dataValues.name)
+            });
         }
 
-        // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
-        //Convertir a un array de objetos desde DB
         const pokeAPI = await axios.get(`${URL_POKE}`); 
         const pokeAPIList = []; 
         //Convertir a un array de objetos desde API
