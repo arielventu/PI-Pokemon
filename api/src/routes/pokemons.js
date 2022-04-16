@@ -24,8 +24,8 @@ router.get('/', async (req, res, next) => {
     
     // **************************************************************************************
     // ************************************BÚSQUEDA POR NAME*********************************
-    if (name) {
-        const pokeDB = await Pokemon.findOne({
+    if (name) { //Si se proporciona un nombre por query realize la busqueda en DB y API
+        const pokeDB = await Pokemon.findOne({ // Búsqueda en DB
             where: {
                 name: {
                     [Op.iLike]: name
@@ -55,7 +55,7 @@ router.get('/', async (req, res, next) => {
             }
         } else {
             try {
-                const pokeAPI = await axios.get(`${URL_POKE}/${name}`);
+                const pokeAPI = await axios.get(`${URL_POKE}/${name}`); // Búsqueda en API
                 if (pokeAPI.data.name = name) {
                     const pokemonFound = {
                         id: pokeAPI.data.id,
@@ -79,10 +79,10 @@ router.get('/', async (req, res, next) => {
             }
         }
     }
+
     // **************************************************************************************
-    // **************************************************************************************
-    
-    try {
+    // **************************************GET GENERAL*************************************
+        try {
         const pokeDB = await Pokemon.findAll({
             include: Type
         })
@@ -96,7 +96,7 @@ router.get('/', async (req, res, next) => {
                 type: pokemon.types.map(type => type.dataValues.name)
             });
         }
-
+        
         const pokeAPI = await axios.get(`${URL_POKE}`); 
         const pokeAPIList = []; 
         //Convertir a un array de objetos desde API
@@ -110,11 +110,12 @@ router.get('/', async (req, res, next) => {
         }
         const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
         return res.send(List);
-   } catch (error) {
-       next(error);
-   }
+    } catch (error) {
+        next(error);
+    }
 })
-    
+
+
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     if (id.length > 35) { // ID de base de datos
@@ -167,6 +168,8 @@ router.get('/:id', async (req, res, next) => {
         }
     }
 })
+
+
 
 router.post('/', async (req, res, next) => { 
     const { name, hp, attack, defense, speed, height, weight, image , type} = req.body;
