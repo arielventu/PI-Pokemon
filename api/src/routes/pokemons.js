@@ -120,8 +120,8 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     if (id.length > 35) { // ID de base de datos
         try {
-            const pokeDB = await Pokemon.findAll({ where: { id }, include: Type }); // Búsqueda en DB
-            if (pokeDB.length !== 0) {
+            const pokeDB = await Pokemon.findOne({ where: { id }, include: Type }); // Búsqueda en DB
+            if (pokeDB) {
                     const pokemon = pokeDB[0].dataValues;
                     const pokemonFound = {
                         id: pokemon.id,
