@@ -20,6 +20,8 @@ const router = Router()
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
     
+    
+
     try {
         const pokeDBList = await Pokemon.findAll({
             include: Type
