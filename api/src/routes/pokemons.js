@@ -66,10 +66,10 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeDB.length; i++) {
             const pokemon = pokeDB[i].dataValues;
             pokeDBList.push({
-                id: pokemon.id,
+                //id: pokemon.id,
                 name: capitalize(pokemon.name),
-                attack: pokemon.attack,
-                defense: pokemon.defense,
+                //attack: pokemon.attack,
+                //defense: pokemon.defense,
                 image: pokemon.image,
                 type: pokemon.types.map(type => type.dataValues.name)
             });
@@ -81,10 +81,10 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
             pokeAPIList.push({
-                id: pokemonAPI.data.id,
+                // id: pokemonAPI.data.id,
                 name: capitalize(pokemonAPI.data.name),
-                attack: pokemonAPI.data.stats[1].base_stat,
-                defense: pokemonAPI.data.stats[2].base_stat,
+                // attack: pokemonAPI.data.stats[1].base_stat,
+                // defense: pokemonAPI.data.stats[2].base_stat,
                 image: pokemonAPI.data.sprites.front_default,
                 type: pokemonAPI.data.types.map(type => type.type.name)
             });
