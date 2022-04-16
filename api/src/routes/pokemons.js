@@ -20,40 +20,7 @@ const router = Router()
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
     
-    if (name) {
-        try {
-            const pokemonDB = await Pokemon.findOne({
-                where: {
-                    name: {
-                        [Op.like]: `%${name}%`
-                    }
-                }
-            });
-            if (pokemonDB) {
-                console.log('Desde DB');
-                res.status(200).send(pokemonDB);
-            } else {
-                const getAPI = await axios.get(`${URL_POKE}/${name}`);
-                const pokemonAPI = await axios.get(getAPI.data.species.url);
-                const typeAPI = await axios.get(pokemonAPI.data.types[0].type.url);
-                const pokemonDB = await Pokemon.create({
-                    name: capitalize(name),
-                    hp: getAPI.data.stats[5].base_stat,
-                    attack: getAPI.data.stats[4].base_stat,
-                    defense: getAPI.data.stats[3].base_stat,
-                    speed: getAPI.data.stats[0].base_stat,
-                    height: getAPI.data.height,
-                    weight: getAPI.data.weight,
-                    image: getAPI.data.sprites.front_default,
-                    type: capitalize(typeAPI.data.name)
-                });
-                console.log('Desde API');
-                res.status(200).send(pokemonDB);
-            }
-        } catch (error) {
-            next(error);
-        }
-    }
+    
 
     try {
         const pokeDBList = await Pokemon.findAll({
