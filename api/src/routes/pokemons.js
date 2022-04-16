@@ -122,7 +122,7 @@ router.get('/:id', async (req, res, next) => {
         try {
             const pokeDB = await Pokemon.findOne({ where: { id }, include: Type }); // Búsqueda en DB
             if (pokeDB) {
-                    const pokemon = pokeDB[0].dataValues;
+                    const pokemon = pokeDB.dataValues;
                     const pokemonFound = {
                         id: pokemon.id,
                         name: capitalize(pokemon.name),
