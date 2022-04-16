@@ -93,7 +93,7 @@ router.get('/:id', async (req, res, next) => {
     const { id } = req.params;
     if (id.length > 35) { // ID de base de datos
         try {
-            const pokeDB = await Pokemon.findAll({ where: { id }, include: Type });
+            const pokeDB = await Pokemon.findAll({ where: { id }, include: Type }); // Búsqueda en DB
             if (pokeDB.length !== 0) {
                     const pokemon = pokeDB[0].dataValues;
                     const pokemonFound = {
@@ -116,7 +116,7 @@ router.get('/:id', async (req, res, next) => {
         }
     } else { // ID de API
         try {
-            const pokeAPI = await axios.get(`${URL_POKE}/${id}`)
+            const pokeAPI = await axios.get(`${URL_POKE}/${id}`) // Búsqueda en API
             
             if (pokeAPI.data.id) { 
                 const pokemonFound = {
