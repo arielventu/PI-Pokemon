@@ -111,7 +111,7 @@ router.get('/:id', async (req, res, next) => {
                     hp: pokeAPI.data.stats[5].base_stat,
                     attack: pokeAPI.data.stats[1].base_stat,
                     defense: pokeAPI.data.stats[2].base_stat,
-                    s: pokeAPI.data.stats[4].base_stat,
+                    speed: pokeAPI.data.stats[4].base_stat,
                     weight: pokeAPI.data.weight,
                     height: pokeAPI.data.height,
                     image: pokeAPI.data.sprites.front_default,
