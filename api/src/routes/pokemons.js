@@ -61,7 +61,7 @@ router.get('/', async (req, res, next) => {
             include: Type
         })
                 
-        console.log(pokeDBList.toJSON());
+        console.log(pokeDBList[pokemon]);
 
         // const pokeDBList = pokeDB.map(pokemon => pokemon.dataValues);
         //Convertir a un array de objetos desde DB
