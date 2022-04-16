@@ -56,9 +56,9 @@ router.get('/', async (req, res, next) => {
             }
         } else {
             try {
-                console.log(toLower(name));
+                name = toLower(name); // Paso a minúsculas el nombre par ala búsqued en API
                 const pokeAPI = await axios.get(`${URL_POKE}/${name}`); // Búsqueda en API
-                if (pokeAPI.data.name === toLower(name)) {
+                if (pokeAPI.data.name === name) {
                     const pokemonFound = {
                         id: pokeAPI.data.id,
                         name: toUpper(pokeAPI.data.name),
