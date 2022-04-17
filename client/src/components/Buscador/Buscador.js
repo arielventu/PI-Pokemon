@@ -1,78 +1,72 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
+import { getAllPosts } from "../../actions";
+
 import './Buscador.css';
-import { addMovieFavorite, getMovies } from "../../actions";
 
-
-
-export class Buscador extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: ""
-    };
-  }
-  handleChange(event) {
-    this.setState({ title: event.target.value });
-  }
-
+class Buscador extends Component {
+  
   handleSubmit(event) {
     event.preventDefault();
-    this.props.getMovies(this.state.title)
+    this.setState({
+     filtrados: this.props.posts.filter(p => p.title.includes(this.state.postsSearch))
+    })
+    this.setState({
+      postsSearch: ""
+    })
   }
- 
   
+  viewAllPost(){
+    this.setState({
+      filtrados: this.props.posts
+    })
+  }
+
   render() {
-    const { title } = this.state;
+    console.log(this.props)
+    const { postsSearch } = this.props;
     return (
-      <div>
-        <h2>Buscador</h2>
+      <div className= "details">
+        {/* <h2>Buscador</h2>
         <form className="form-container" onSubmit={(e) => this.handleSubmit(e)}>
           <div>
-            <label className="label" htmlFor="title">Película: </label>
+            <label className="label" htmlFor="user">Posts: </label>
             <input
               type="text"
               id="title"
               autoComplete="off"
-              value={title}
-              onChange={(e) => this.handleChange(e)}
-              />
+              value={ postsSearch}
+            />
           </div>
           <button type="submit">BUSCAR</button>
         </form>
-        <ul>
-         {/* Aqui tienes que escribir tu codigo para mostrar la lista de peliculas */}
-         {
-          this.props.movies.map((movie) => { //Este movie es el q pasa x props redux en el mapstatetoprops
-            return (
-              <div key={movie.imdbID}> {/* Este key es para evitar el warning de React */}
-                <Link to={`/movie/${movie.imdbID}`}>
-                  <label>{movie.Title}</label>
-                </Link>
-                <button onClick={() => this.props.addMovieFavorite(movie)}>Fav</button>
-              </div>
-            )
-          })
-         }
         
-        </ul>
+        <button className="btn2" onClick={() => this.viewAllPost()}>VER TODOS</button>
+        <div className="details">
+             <h4 className="title">Posts </h4>
+                <div className= "card">
+      
+                  </div>
+            </div> */}
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return {
-    movies: state.moviesLoaded
-  };
-}
 
 function mapDispatchToProps(dispatch) {
   return {
-    addMovieFavorite: movie => dispatch(addMovieFavorite(movie)),
-    getMovies: (title) => dispatch(getMovies(title))
+      getAllPosts: () => dispatch(getAllPosts())
   };
 }
-// export default Buscador;
-export default connect(mapStateToProps, mapDispatchToProps)(Buscador);
+
+function mapStateToProps(state) {
+  return {
+      posts: state.posts
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Buscador)

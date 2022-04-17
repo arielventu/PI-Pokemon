@@ -1,46 +1,36 @@
-export const GET_MOVIES = 'GET_MOVIES';
-export const GET_MOVIE_DETAIL = 'GET_MOVIE_DETAIL';
-export const ADD_MOVIE_FAVORITE = 'ADD_MOVIE_FAVORITE';
-export const REMOVE_MOVIE_FAVORITE = 'REMOVE_MOVIE_FAVORITE';
+export const GET_ALL_POSTS = 'GET_ALL_POSTS';
+export const GET_ALL_USERS = 'GET_ALL_USERS';
+export const GET_ALL_USERS_POST = 'GET_ALL_USERS_POST';
+export const GET_ALL_COMMENTS_POST = 'GET_ALL_COMMENTS_POST';
 
-const apiKey = '253a6910';
-
-export function getMovies(title) {
+export function getAllUsers() {
     return function(dispatch) {
-        return fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${title}`)
+      return fetch("https://jsonplaceholder.typicode.com/users")
         .then(response => response.json())
-        .then(jsonData => {
-            dispatch({
-                type: GET_MOVIES,
-                payload: jsonData
-            });
-        });
-    }
-}
-
-export function getMovieDetail(id) {
+        .then(json => dispatch({ type: GET_ALL_USERS, payload: json}))
+    };
+  }
+  
+  export function getAllUserPosts(id) {
     return function(dispatch) {
-        return fetch(`http://www.omdbapi.com/?apikey=${apiKey}&i=${id}`)
-        .then(response => response.json())
-        .then(jsonData => {
-            dispatch({
-                type: GET_MOVIE_DETAIL,
-                payload: jsonData
-            });
-        });
+      return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${id}`)
+    .then((response) => response.json())
+    .then(json => dispatch({ type: GET_ALL_USERS_POST, payload: json}))
     };
-}
+  }
 
-export function addMovieFavorite(title) {
-    return {
-        type: ADD_MOVIE_FAVORITE,
-        payload: title
+  export function getAllPosts() {
+    return function(dispatch) {
+      return fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then(json => dispatch({ type: GET_ALL_POSTS, payload: json}))
     };
-}
+  }
 
-export function removeMovieFavorite(id) {
-    return {
-        type: REMOVE_MOVIE_FAVORITE,
-        payload: id
+  export function getAllCommentsPost() {
+    return function(dispatch) {
+      return fetch("https://jsonplaceholder.typicode.com/comments")
+    .then((response) => response.json())
+    .then(json => dispatch({ type: GET_ALL_COMMENTS_POST, payload: json}))
     };
-}
+  }

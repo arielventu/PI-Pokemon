@@ -1,20 +1,29 @@
 import React from "react";
-
-import Favorites from "./components/Favorites/Favorites";
-import Buscador from "./components/Buscador/Buscador";
-import NavBar from "./components/NavBar/NavBar";
 import { Route } from "react-router-dom";
-import Movie from "./components/Movie/Movie";
+import NavBar from "./components/NavBar/NavBar";
+import Buscador from "./components/Buscador/Buscador";
+import Users from "./components/Users/Users";
+import UserPosts from "./components/UserPosts/UserPosts";
+import CommentsPost from "./components/CommentsPost/CommentsPost";
 
 function App() {
   return (
       <React.Fragment>
-          <NavBar />
-          <Route exact path="/" component={Buscador} />
-          <Route path="/favs" component={Favorites} />
-          <Route path="/movie/:id" component={Movie} />
+         <Route path='/'>
+            <NavBar />
+         </Route>
+         <Route exact path='/'>
+            <Users />
+         </Route>
+         <Route path='/users/:id/posts' component={UserPosts} />
+         <Route path='/users/:id/posts' component={CommentsPost} />
+         <Route path='/home' component={Buscador} />
+         
+         
+         
+          
       </React.Fragment>
-  );
+  )
 }
 
-export default App;
+export default App
