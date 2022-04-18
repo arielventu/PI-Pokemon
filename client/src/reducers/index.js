@@ -7,27 +7,27 @@ const initialState = {
   commentsPost: [],
 };
 
-export default function rootReducer(state = initialState, action) {
-  switch (action.type) {
+export default function rootReducer(state = initialState, {payload, type}) {
+  switch (type) {
    case GET_ALL_USERS:
      return {
        ...state,
-       users: action.payload,
+       users: payload,
      };
      case GET_ALL_POSTS:
      return {
        ...state,
-       posts: action.payload,
+       posts: payload,
      };
      case GET_ALL_USERS_POST:
      return {
        ...state,
-       userPosts: action.payload,
+       userPosts: payload,
      };
      case GET_ALL_COMMENTS_POST:
      return {
        ...state,
-       commentsPost: action.payload,
+       commentsPost: payload,
      };
      default:
      return state;

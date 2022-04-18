@@ -1,5 +1,5 @@
 import React from 'react';
-import {Buscador, mapDispatchToProps, mapStateToProps } from './Buscador';
+import {Buscador, mapDispatchToProps, mapStateToProps } from './SearchBar';
 import configureMockStore from "redux-mock-store";
 import thunk from 'redux-thunk';
 import isReact from 'is-react';

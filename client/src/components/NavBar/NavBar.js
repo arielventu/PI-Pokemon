@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Buscador from '../Buscador/Buscador';
+import Buscador from '../SearchBar/SearchBar';
 import Logo from '../../logoHenry.png'
 
 import './Navbar.css';

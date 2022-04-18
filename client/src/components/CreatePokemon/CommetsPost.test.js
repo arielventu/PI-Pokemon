@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentsPost, mapDispatchToProps, mapStateToProps } from './CommentsPost';
+import { CommentsPost, mapDispatchToProps, mapStateToProps } from './CreatePokemon';
 import configureMockStore from "redux-mock-store";
 import thunk from 'redux-thunk';
 import isReact from 'is-react';

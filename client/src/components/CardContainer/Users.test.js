@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, mapDispatchToProps, mapStateToProps } from './Users';
+import { Users, mapDispatchToProps, mapStateToProps } from './CardContainer';
 import configureMockStore from "redux-mock-store";
 import thunk from 'redux-thunk';
 import isReact from 'is-react';

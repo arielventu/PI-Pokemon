@@ -1,10 +1,10 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
-import Buscador from "./components/Buscador/Buscador";
-import Users from "./components/Users/Users";
-import UserPosts from "./components/UserPosts/UserPosts";
-import CommentsPost from "./components/CommentsPost/CommentsPost";
+import Buscador from "./components/SearchBar/SearchBar";
+import Users from "./components/CardContainer/CardContainer";
+import UserPosts from "./components/CardDetail/CardDetail";
+import CommentsPost from "./components/CreatePokemon/CreatePokemon";
 
 function App() {
   return (

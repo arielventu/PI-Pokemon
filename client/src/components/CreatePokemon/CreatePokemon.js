@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getAllCommentsPost } from '../../actions/index';
 
-import './CommentsPost.css';
+import './CreatePokemon.css';
 
 class CommentsPost extends React.Component {
     constructor(props) {
