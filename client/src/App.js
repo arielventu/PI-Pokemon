@@ -11,7 +11,7 @@ function App() {
       <React.Fragment>
         <Route exact path='/' component={LandingPage} />
         <Route path='/home' component={NavBar} />
-      
+        <Route path='/home' component={SearchBar} />
         <Route path='/users/:id/posts' component={UserPosts} />
         <Route path='/users/:id/posts' component={CommentsPost} />
         <Route path='/home' component={Buscador} />
