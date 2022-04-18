@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect }from 'react';
 
 const CardContainer = () => {
   return (
@@ -8,5 +8,6 @@ const CardContainer = () => {
       </div>
   )
 };
+
 
 export default CardContainer;
