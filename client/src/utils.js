@@ -1,1 +1,1 @@
-const POKE_URL = 'localhost:3001/pokemons';
+const ALL_POKES = 'localhost:3001/pokemons';
