@@ -16,6 +16,7 @@ function App() {
       <Route path="/home" component={CardContainer} />
       <Route path="/home" component={SearchBar} />
       <Route path="/pokemon/:id" component={PokemonDetail} />
+      <Route path="/pokemon//" />
       <Route path="/pokemon/create" />
       </React.Fragment>
   );
