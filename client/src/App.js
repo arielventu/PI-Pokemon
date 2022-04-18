@@ -1,10 +1,15 @@
+import React from 'react';
+import { BrowserRouter as Route} from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Henry Pokemon</h1>
-    </div>
+    <React.Fragment>
+      <Route exact path="/home" component={NavBar} />
+      <Route exact path="/home" component={CardContainer} />
+          <Route path="/favs" component={Favorites} />
+          <Route path="/movie/:id" component={Movie} />
+      </React.Fragment>
   );
 }
 
