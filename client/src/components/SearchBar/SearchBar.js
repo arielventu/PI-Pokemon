@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getAllPosts } from "../../actions";
 
-import './Buscador.css';
+import './SearchBar.css';
 
-class Buscador extends Component {
+class SearchBar extends Component {
   
   handleSubmit(event) {
     event.preventDefault();
@@ -69,4 +69,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Buscador)
+)(SearchBar)
