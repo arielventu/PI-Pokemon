@@ -5,6 +5,8 @@ import LandingPage from './components/LandingPage/';
 import NavBar from './components/NavBar/';
 import CardContainer from './components/CardContainer/';
 import SearchBar from './components/SearchBar/';
+import PokemonDetail from './components/PokemonDetail/';
+import PokemonCreate from './components/PokemonCreate/';
 
 
 
@@ -16,8 +18,7 @@ function App() {
       <Route path="/home" component={CardContainer} />
       <Route path="/home" component={SearchBar} />
       <Route path="/pokemon/:id" component={PokemonDetail} />
-      <Route path="/pokemon/" />
-      <Route path="/pokemon/create" />
+      <Route path="/pokemon/create" component={PokemonCreate} />
       </React.Fragment>
   );
 }
