@@ -1,0 +1,1 @@
+const POKE_URL = 'localhost:3001/pokemons';
