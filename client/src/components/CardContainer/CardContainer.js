@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { getAllUsers } from "../../actions/index";
-import './Users.css';
+import './CardContainer.css';
 
-export class Users extends React.Component {
+export class CardContainer extends React.Component {
   
   componentDidMount(){
     this.props.getAllUsers(this.props)
