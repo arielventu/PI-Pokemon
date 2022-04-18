@@ -7,8 +7,8 @@ function App() {
     <React.Fragment>
       <Route exact path="/home" component={NavBar} />
       <Route exact path="/home" component={CardContainer} />
-          <Route path="/favs" component={Favorites} />
-          <Route path="/movie/:id" component={Movie} />
+      <Route path="/home" component={Favorites} />
+      <Route path="/movie/:id" component={Movie} />
       </React.Fragment>
   );
 }
