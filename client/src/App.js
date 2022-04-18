@@ -19,7 +19,6 @@ function App() {
       <Route exact path="/home" component={CardContainer} />
       {/* <Route path="/pokemon/:id" component={PokemonDetail} />
       <Route path="/pokemon/create" component={PokemonCreate} /> */}
-      
     </React.Fragment>
   );
 }
