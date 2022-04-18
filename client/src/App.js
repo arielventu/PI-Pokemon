@@ -14,11 +14,12 @@ function App() {
   return (
     <React.Fragment>
       <Route exact path="/" component={LandingPage} />
-      <Route path="/home" component={NavBar} />
-      <Route path="/home" component={SearchBar} />
-      <Route path="/home" component={CardContainer} />
+      <Route exact path="/home" component={NavBar} />
+      <Route exact path="/home" component={SearchBar} />
+      <Route exact path="/home" component={CardContainer} />
       {/* <Route path="/pokemon/:id" component={PokemonDetail} />
       <Route path="/pokemon/create" component={PokemonCreate} /> */}
+      
     </React.Fragment>
   );
 }
