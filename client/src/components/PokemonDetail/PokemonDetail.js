@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import './CardDetail.css';
+import './PokemonDetail.css';
 import { getAllUserPosts, getAllUsers } from '../../actions';
 
 

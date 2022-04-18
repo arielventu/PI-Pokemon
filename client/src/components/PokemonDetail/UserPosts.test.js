@@ -1,5 +1,5 @@
 import React from 'react';
-import { UserPosts, mapDispatchToProps, mapStateToProps } from './CardDetail';
+import { UserPosts, mapDispatchToProps, mapStateToProps } from './PokemonDetail';
 import configureMockStore from "redux-mock-store";
 import thunk from 'redux-thunk';
 import isReact from 'is-react';
