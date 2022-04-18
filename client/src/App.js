@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Route} from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/index';
 // import NavBar from './components/NavBar/';
@@ -19,7 +19,7 @@ function App() {
       <Route path="/home" component={SearchBar} />
       <Route path="/pokemon/:id" component={PokemonDetail} />
       <Route path="/pokemon/create" component={PokemonCreate} /> */}
-      </React.Fragment>
+    </React.Fragment>
   );
 }
 
