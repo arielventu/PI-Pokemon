@@ -1,39 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ALL_POKES from '../../utils';
+import { getPokemons } from '../../actions';
 
 
 
 const CardContainer = () => {
-    const [pokemon, setPokemon] = useState([]);
-    const [search, setSearch] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState('');
-
-    const fetchPokemon = async () => {
-        setIsLoading(true);
-        try {
-            const res = await fetch(`${ALL_POKES}`);
-            const data = await res.json();
-            setPokemon(data);
-            setIsLoading(false);
-        } catch (err) {
-            setError(err);
-        }
-    };
-
-    useEffect(() => {
-        fetchPokemon();
-    }, []);
-
-    const handleChange = (e) => {
-        setSearch(e.target.value);
-    };
-
-    const filteredPokemon = pokemon.filter((pokemon) => {
-        return pokemon.name.toLowerCase().includes(search.toLowerCase());
-    });
-
     
+        
 
   return (
       <div>
