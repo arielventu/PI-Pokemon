@@ -21,6 +21,20 @@ const CardContainer = () => {
         }
     };
 
+    useEffect(() => {
+        fetchPokemon();
+    }, []);
+
+    const handleChange = (e) => {
+        setSearch(e.target.value);
+    };
+
+    const filteredPokemon = pokemon.filter((pokemon) => {
+        return pokemon.name.toLowerCase().includes(search.toLowerCase());
+    });
+
+    
+
   return (
       <div>
           <h1>CardContainer</h1>
