@@ -16,14 +16,11 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const getPokemons = () => {
     return async dispatch => {
       try {
-        if (!pokemon.length) {
-          const response = await fetch(
-            `${URL}/pokemons?limit=${limit}&offset=${offset}`
-          );
-          const pokemons = await response.json();
-          dispatch({type: GET_POKE, payload: pokemons, gen});
-        }
-        dispatch({type: GET_POKE, gen});
+        
+          const response = await fetch(ALL_POKES);
+          const pokemons1 = await response.json();
+          dispatch({type: GET_POKEMONS, payload: pokemons1});
+        
       } catch (err) {
         if (err.response) {
           const {response} = err;
@@ -32,7 +29,7 @@ export const getPokemons = () => {
           console.log(response.headers);
         }
         console.log(err);
-        dispatch({type: GET_POKE, payload: []});
+        dispatch({type: GET_POKEMONS, payload: []});
       }
     };
   };
