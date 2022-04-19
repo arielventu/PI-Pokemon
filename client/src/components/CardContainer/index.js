@@ -21,7 +21,6 @@ const CardContainer = () => {
 
     return (
         <div>
-          {console.log(pokemons)}
           <h1>CardContainer</h1>
           <div className="card-container">
               {pokemons.map(pokemon => (
