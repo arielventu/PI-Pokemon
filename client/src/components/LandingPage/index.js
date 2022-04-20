@@ -2,6 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
+
+    const dispatch = useDispatch(); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
+    useEffect(() => {
+        if (pokemons.length === 0) { // si no están cargados en el store, se cargan
+            dispatch(getPokemons());
+        }
+    }, [dispatch]);
+
     return (
         <div>
             <h1>Landing Page</h1>

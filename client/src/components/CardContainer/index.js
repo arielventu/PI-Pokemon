@@ -8,7 +8,9 @@ const CardContainer = () => {
     const pokemons = useSelector(state => state.pokemons);
   
     useEffect(() => {
-        dispatch(getPokemons());
+        if (pokemons.length === 0) { // si no están cargados en el store, se cargan
+            dispatch(getPokemons());
+        }
     }, [dispatch]);
 
 
