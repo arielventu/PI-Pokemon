@@ -12,7 +12,12 @@ const CardContainer = () => {
     }, [dispatch]);
 
 
-    if (pokemons.length === 0) return <div>Loading...</div>    
+    if (pokemons.length === 0) {
+        return <div>
+            Loading...
+            <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading" />
+        </div>      
+    } 
         return (
         <div>
                 <h1>CardContainer</h1>
