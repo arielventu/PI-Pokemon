@@ -17,9 +17,8 @@ export const getPokemons = () => {
     return async dispatch => {
       try {
         
-          const response = await fetch(ALL_POKES);
-          const pokemons1 = await response.json();
-          dispatch({type: GET_POKEMONS, payload: pokemons1});
+          const response = await axios(ALL_POKES);
+          dispatch({type: GET_POKEMONS, payload: pokemons.data});
         
       } catch (err) {
         if (err.response) {
