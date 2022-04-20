@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import Loading from './components/Loading';
-import LandingPage from './components/LandingPage/index';
+// import Loading from './components/Loading';
+import LandingPage from './components/LandingPage/';
 import NavBar from './components/NavBar/';
 import CardContainer from './components/CardContainer/';
 import SearchBar from './components/SearchBar/';
@@ -14,8 +14,8 @@ import SearchBar from './components/SearchBar/';
 function App() {
   return (
     <React.Fragment>
-      <Route path="/" component={Loading} />
-      {/* <Route exact path="/" component={LandingPage} /> */}
+      {/* <Route path="/" component={Loading} /> */}
+      <Route exact path="/" component={LandingPage} />
       <Route exact path="/home" component={NavBar} />
       <Route exact path="/home" component={SearchBar} />
       <Route exact path="/home" component={CardContainer} />
