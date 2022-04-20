@@ -1,0 +1,8 @@
+.wall-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: animate 15s ease-in-out infinite
+}
