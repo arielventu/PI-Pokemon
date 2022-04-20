@@ -20,7 +20,7 @@ const CardContainer = () => {
                         <div key={p.id}>
                             <h1>{p.name}</h1>
                             <img src={p.image} alt={p.name} />
-                            <h1>{ type.map((type) => type)   }</h1>
+                            <h3>{ p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
                         </div>
                     )
                 })}
