@@ -24,23 +24,32 @@
 @keyframes animate {
     0%, 100%{
         background-image: var(--URL1);
-    }10%{
+    }
+    10%{
         background-image: var(--URL2);
-    }20%{
+    }
+    20%{
         background-image: var(--URL3);
-    }30%{
+    }
+    30%{
         background-image: var(--URL4);
-    }40%{
+    }
+    40%{
         background-image: var(--URL5);
-    }50%{
+    }
+    50%{
         background-image: var(--URL6);
-    }60%{
+    }
+    60%{
         background-image: var(--URL7);
-    }70%{
+    }
+    70%{
         background-image: var(--URL8);
-    }80%{
+    }
+    80%{
         background-image: var(--URL9);
-    }90%{
+    }
+    90%{
         background-image: var(--URL10);
     }
 }
