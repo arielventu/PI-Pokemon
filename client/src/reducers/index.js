@@ -1,19 +1,18 @@
-import {GET_POKEMONS, WALL_PAGE_LOADED} from '../actions';
+import {GET_POKEMONS, SEARCH_POKEMONS} from '../actions';
 
 const initialState = {
 	pokemons: [],
 	types: [],
 	selectedType: '',
 	filtereredPokemons: [],
-	wallpapers: [],
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
 	switch (type) {
-		case WALL_PAGE_LOADED:
+		case SEARCH_POKEMONS:
 			return { 
 				...state,
-				wallpapers: payload,
+				pokemons: payload,
 			};
 		case GET_POKEMONS:
 			return {

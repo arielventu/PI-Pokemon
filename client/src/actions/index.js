@@ -2,7 +2,7 @@ import axios from 'axios';
 import { ALL_POKES } from '../utils.js';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
-export const WALL_PAGE_LOADED = 'WALL_PAGE_LOADED';
+export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -20,10 +20,19 @@ export const getPokemons = () => {
     };
 };
 
-export const wallPageLoaded = (wallpapers) => {
-    return {
-        type: WALL_PAGE_LOADED,
-        payload: wallpapers,
+export const searchPokemons = (search) => {
+    return function (dispatch) {
+        axios.get(`${ALL_POKES}?name=${search}`)
+        .then(response => {
+                console.log(response);
+                dispatch({
+                    type: SEARCH_POKEMONS,
+                    payload: response.data.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())),
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     };
 }
 
