@@ -15,8 +15,13 @@ const CardContainer = () => {
         return (
         <div>
                 <h1>CardContainer</h1>
-                {pokemons.map(() => { 
-                    
+                {pokemons.map((p) => { 
+                    return (
+                        <div key={p.id}>
+                            <h1>{p.name}</h1>
+                            <img src={p.image} alt={p.name} />
+                        </div>
+                    )
                 })}
           
      </div>
