@@ -15,7 +15,7 @@ const CardContainer = () => {
     if (pokemons.length === 0) {
         return <div>
             Loading...
-            <img src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="loading" />
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif" alt="loading" />
         </div>      
     } 
         return (
