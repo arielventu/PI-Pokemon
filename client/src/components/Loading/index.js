@@ -1,9 +1,9 @@
 import React from 'react'
-import './WallPage.css'
+import './Loading.css'
 
 const index = () => {
   return (
-      <div className='wall-page'>
+      <div className='loading-animation'>
           
     </div>
   )

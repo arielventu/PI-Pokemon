@@ -1,0 +1,54 @@
+:root {
+    --URL1 : url("https://img.wallpapersafari.com/desktop/800/450/92/59/kaidGe.jpg");
+    --URL2 : url("https://img.wallpapersafari.com/desktop/800/450/5/30/rgZUHC.jpg");
+    --URL3 : url("https://img.wallpapersafari.com/desktop/800/450/23/93/K3aCZN.jpg");
+    --URL4 : url("https://img.wallpapersafari.com/desktop/800/450/33/9/w9vHZt.jpg");
+    --URL5 : url("https://img.wallpapersafari.com/desktop/800/450/14/88/O3Q4fS.jpg");
+    --URL6 : url("https://img.wallpapersafari.com/desktop/800/450/65/4/78hwnu.jpg");
+    --URL7 : url("https://img.wallpapersafari.com/desktop/800/450/11/44/p5ex84.jpg");
+    --URL8 : url("https://img.wallpapersafari.com/desktop/800/450/14/19/zXjt7U.jpg");
+    --URL9 : url("https://img.wallpapersafari.com/desktop/800/450/24/48/Y8wfOd.jpg");
+    --URL10 : url("https://img.wallpapersafari.com/desktop/800/450/15/53/f8R9uL.jpg");
+}
+
+.loading-animation {
+    /* position: absolute; */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    animation: animate 10s infinite linear;
+}
+
+@keyframes animate {
+    0%, 100%{
+        background-image: var(--URL1);
+    }
+    10%{
+        background-image: var(--URL2);
+    }
+    20%{
+        background-image: var(--URL3);
+    }
+    30%{
+        background-image: var(--URL4);
+    }
+    40%{
+        background-image: var(--URL5);
+    }
+    50%{
+        background-image: var(--URL6);
+    }
+    60%{
+        background-image: var(--URL7);
+    }
+    70%{
+        background-image: var(--URL8);
+    }
+    80%{
+        background-image: var(--URL9);
+    }
+    90%{
+        background-image: var(--URL10);
+    }
+}
