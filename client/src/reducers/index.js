@@ -5,10 +5,16 @@ const initialState = {
 	types: [],
 	selectedType: '',
 	filtereredPokemons: [],
+	wallpapers: [],
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
 	switch (type) {
+		case WALL_PAGE_LOADED:
+			return {
+				...state,
+				wallpapers: payload,
+			};
 		case GET_POKEMONS:
 			return {
 				...state,
