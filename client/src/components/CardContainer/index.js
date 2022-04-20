@@ -20,6 +20,7 @@ const CardContainer = () => {
                         <div key={p.id}>
                             <h1>{p.name}</h1>
                             <img src={p.image} alt={p.name} />
+                            <h1>{ type.map((type) => type)   }</h1>
                         </div>
                     )
                 })}
