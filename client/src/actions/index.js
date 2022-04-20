@@ -23,11 +23,11 @@ export const getPokemons = () => {
 export const searchPokemons = (search) => {
     return function (dispatch) {
         axios.get(`${ALL_POKES}?name=${search}`)
-        .then(response => {
-                console.log(response);
+        .then(pokemons => {
+                console.log(pokemons);
                 dispatch({
                     type: SEARCH_POKEMONS,
-                    payload: response.data
+                    payload: pokemons.data
                 });
             })
             .catch(error => {
