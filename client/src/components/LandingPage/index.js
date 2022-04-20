@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { getPokemons } from '../../actions';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const LandingPage = () => {
 
     const dispatch = useDispatch(); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
+    const pokemons = useSelector(state => state.pokemons);
     useEffect(() => {
         if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
