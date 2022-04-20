@@ -2,6 +2,9 @@ import {GET_POKEMONS} from '../actions';
 
 const initialState = {
 	pokemons: [],
+	types: [],
+	selectedType: '',
+	filtereredPokemons: [],
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
