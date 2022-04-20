@@ -1,7 +1,7 @@
 require('dotenv').config();
 import axios from 'axios';
 // import URL from '../utils';
-const { URL } = process.env;
+const { PPP } = process.env;
 
 
 export const GET_POKEMONS = 'GET_POKEMONS';
@@ -9,7 +9,7 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const getPokemons = () => {
     return function (dispatch) {
         console.log(`${URL}/pokemons/`);
-        axios.get(`${URL}/pokemons/`)
+        axios.get(`${PPP}/pokemons/`)
             .then(response => {
                 dispatch({
                     type: GET_POKEMONS,
