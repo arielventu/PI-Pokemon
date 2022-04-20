@@ -5,6 +5,7 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
+        console.log(ALL_POKES);
         axios.get(ALL_POKES)
             .then(response => {
                 dispatch({
