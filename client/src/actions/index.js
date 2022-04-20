@@ -5,8 +5,8 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
-        console.log(ALL_POKES);
-        axios.get(ALL_POKES)
+        console.log('http://localhost:3001/pokemons/');
+        axios.get('http://localhost:3001/pokemons/')
             .then(response => {
                 dispatch({
                     type: GET_POKEMONS,
