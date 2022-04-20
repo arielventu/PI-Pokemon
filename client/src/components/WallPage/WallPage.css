@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    animation: animate 40s  infinite linear;
+    animation: animate 40s ease-in-out infinite;
     transition: background-image 0.5s linear
 }
 
