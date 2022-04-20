@@ -12,11 +12,11 @@ const SearchBar = () => {
   const onChange = (e) => {
     setSearch(e.target.value)
   }
-  
+
   return (
     <div>
       <form onSubmit={onSubmit} >
-        <input type="text"  />
+        <input type="text"  onChange={onChange} />
         <input type="submit" value="Search" />
       </form>
     </div>
