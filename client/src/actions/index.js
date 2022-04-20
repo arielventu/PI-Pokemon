@@ -1,6 +1,7 @@
 import axios from 'axios';
 import URL from '../utils';
 
+
 export const GET_POKEMONS = 'GET_POKEMONS';
 
 export const getPokemons = () => {
