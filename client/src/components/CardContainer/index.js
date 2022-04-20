@@ -7,7 +7,24 @@ import { useSelector, useDispatch } from 'react-redux';
 const CardContainer = () => {
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
-  
+    const [selectedPokemon, setSelectedPokemon] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    useEffect(() => {
+        dispatch(getPokemons());
+    }, [dispatch]);
+
+    const handleSelectPokemon = (pokemon) => {
+        setSelectedPokemon(pokemon);
+    }
+
+    const handleSearchTermChange = (event) => {
+        setSearchTerm(event.target.value);
+    }
+
+    const filteredPokemons = pokemons.filter(pokemon => {
+        return pokemon.name.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 
     return (
         <div>
