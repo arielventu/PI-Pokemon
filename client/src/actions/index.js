@@ -1,12 +1,12 @@
 import axios from 'axios';
-import ALL_POKES from '../utils';
+import URL from '../utils';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
-        console.log('http://localhost:3001/pokemons/');
-        axios.get('http://localhost:3001/pokemons/')
+        console.log(`${URL}/pokemons/`);
+        axios.get(`${URL}/pokemons/`)
             .then(response => {
                 dispatch({
                     type: GET_POKEMONS,
