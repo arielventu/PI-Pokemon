@@ -16,7 +16,7 @@ const SearchBar = () => {
   return (
     <div>
       <form onSubmit={onSubmit} >
-        <input type="text"  onChange={onChange} />
+        <input type="text" onChange={onChange} value={ search }/>
         <input type="submit" value="Search" />
       </form>
     </div>
