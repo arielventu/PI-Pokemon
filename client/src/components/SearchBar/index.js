@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import searchPokemons from '../actions/searchPokemons';
 
 const SearchBar = () => {
   const [search, setSearch] = useState('')
@@ -8,7 +8,6 @@ const SearchBar = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    console.log(search)
     dispatch(searchPokemons(search));
   }
 
