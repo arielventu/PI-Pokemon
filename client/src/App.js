@@ -14,7 +14,7 @@ import SearchBar from './components/SearchBar/';
 function App() {
   return (
     <React.Fragment>
-      {/* <Route path="/" component={WallPage} /> */}
+      <Route path="/" component={WallPage} />
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/home" component={NavBar} />
       <Route exact path="/home" component={SearchBar} />
