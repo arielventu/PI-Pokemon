@@ -11,6 +11,8 @@ const CardContainer = () => {
         dispatch(getPokemons());
     }, [dispatch]);
 
+
+    if (pokemons.length === 0) return <div>Loading...</div>    
         return (
         <div>
                 <h1>CardContainer</h1>
@@ -23,7 +25,6 @@ const CardContainer = () => {
                         </div>
                     )
                 })}
-          
      </div>
     );
 };
