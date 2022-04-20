@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 
 const SearchBar = () => {
@@ -7,6 +8,7 @@ const SearchBar = () => {
   const onSubmit = (e) => {
     e.preventDefault()
     console.log(search)
+    axios.get()
   }
 
   const onChange = (e) => {
