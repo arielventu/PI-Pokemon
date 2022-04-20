@@ -3,7 +3,6 @@ import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 
 
-
 const CardContainer = () => {
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
