@@ -12,9 +12,9 @@
 }
 
 .loading-animation {
-    /* position: absolute; */
-    left: 0;
-    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     animation: animate 10s infinite linear;
@@ -22,33 +22,33 @@
 
 @keyframes animate {
     0%, 100%{
-        background-image: var(--URL1);
+        image: var(--URL1);
     }
     10%{
-        background-image: var(--URL2);
+        image: var(--URL2);
     }
     20%{
-        background-image: var(--URL3);
+        image: var(--URL3);
     }
     30%{
-        background-image: var(--URL4);
+        image: var(--URL4);
     }
     40%{
-        background-image: var(--URL5);
+        image: var(--URL5);
     }
     50%{
-        background-image: var(--URL6);
+        image: var(--URL6);
     }
     60%{
-        background-image: var(--URL7);
+        image: var(--URL7);
     }
     70%{
-        background-image: var(--URL8);
+        image: var(--URL8);
     }
     80%{
-        background-image: var(--URL9);
+        image: var(--URL9);
     }
     90%{
-        background-image: var(--URL10);
+        image: var(--URL10);
     }
 }

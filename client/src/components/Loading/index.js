@@ -1,12 +1,12 @@
 import React from 'react'
 import './Loading.css'
 
-const index = () => {
+const Loading = () => {
   return (
       <div className='loading-animation'>
-          
+          <h1>Loading...</h1>
     </div>
   )
 }
 
-export default index
+export default Loading
