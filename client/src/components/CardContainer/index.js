@@ -10,7 +10,7 @@ const CardContainer = () => {
   
     useEffect(() => {
         dispatch(getPokemons());
-    }, [dispatch]);
+    }, []);
 
         return (
         <div>
