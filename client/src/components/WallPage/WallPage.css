@@ -18,7 +18,7 @@
     width: 100%;
     height: 100%;
     background-size: cover;
-    animation: animate 9s infinite linear;
+    animation: animate 8s infinite linear;
 }
 
 @keyframes animate {
