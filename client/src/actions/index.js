@@ -1,15 +1,13 @@
 import axios from 'axios';
-import URL from '../utils';
-
-
+import { ALL_POKES } from '../utils.js';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
-        console.log(URL);
-        axios.get(URL)
-            .then(response => {
+        axios.get(ALL_POKES)
+        .then(response => {
+                console.log(response);
                 dispatch({
                     type: GET_POKEMONS,
                     payload: response.data,
