@@ -17,7 +17,7 @@ const CardContainer = () => {
     if (pokemons.length === 0) {
         return (
             <div>
-                <img src="https://vota.luanca.eu/img/loading.gif" alt="loading" />
+                <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif" alt="loading" />
                 <h3>Loading...</h3>
             </div>      
         )
