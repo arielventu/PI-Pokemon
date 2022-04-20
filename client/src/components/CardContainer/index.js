@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
+import { LOADING_IMG } from '../../utils';
+import './CardContainer.css';
 
 
 const CardContainer = () => {
@@ -17,7 +19,7 @@ const CardContainer = () => {
     if (pokemons.length === 0) {
         return (
             <div>
-                <img src="https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif" alt="loading" />
+                <img src={LOADING_IMG} alt="loading" />
                 <h3>Loading...</h3>
             </div>      
         )
