@@ -1,14 +1,14 @@
 links {
     --URL1 : "https://img.wallpapersafari.com/desktop/1920/1080/92/59/kaidGe.jpg";
-    URL2 : "https://img.wallpapersafari.com/desktop/1920/1080/5/30/rgZUHC.jpg";
-    URL3 : "https://img.wallpapersafari.com/desktop/1920/1080/23/93/K3aCZN.jpg";
-    URL4 :"https://img.wallpapersafari.com/desktop/1920/1080/33/9/w9vHZt.jpg";
-    URL5 :"https://img.wallpapersafari.com/desktop/1920/1080/14/88/O3Q4fS.jpg";
-    URL6 :"https://img.wallpapersafari.com/desktop/1920/1080/65/4/78hwnu.jpg";
-    URL7 :"https://img.wallpapersafari.com/desktop/1920/1080/11/44/p5ex84.jpg";
-    URL8 :"https://img.wallpapersafari.com/desktop/1920/1080/14/19/zXjt7U.jpg";
-    URL9 :"https://img.wallpapersafari.com/desktop/1920/1080/24/48/Y8wfOd.jpg";
-    URL10 : "https://img.wallpapersafari.com/desktop/1920/1080/15/53/f8R9uL.jpg";
+    --URL2 : "https://img.wallpapersafari.com/desktop/1920/1080/5/30/rgZUHC.jpg";
+    --URL3 : "https://img.wallpapersafari.com/desktop/1920/1080/23/93/K3aCZN.jpg";
+    --URL4 :"https://img.wallpapersafari.com/desktop/1920/1080/33/9/w9vHZt.jpg";
+    --URL5 :"https://img.wallpapersafari.com/desktop/1920/1080/14/88/O3Q4fS.jpg";
+    --URL6 :"https://img.wallpapersafari.com/desktop/1920/1080/65/4/78hwnu.jpg";
+    --URL7 :"https://img.wallpapersafari.com/desktop/1920/1080/11/44/p5ex84.jpg";
+    --URL8 :"https://img.wallpapersafari.com/desktop/1920/1080/14/19/zXjt7U.jpg";
+    --URL9 :"https://img.wallpapersafari.com/desktop/1920/1080/24/48/Y8wfOd.jpg";
+    --URL10 : "https://img.wallpapersafari.com/desktop/1920/1080/15/53/f8R9uL.jpg";
 
 }
 
@@ -23,24 +23,24 @@ links {
 
 @keyframes animate {
     0%, 100%{
-        background-image: url(URL1);
+        background-image: url(--URL1);
     }10%{
-        background-image: url(URL2);
+        background-image: url(--URL2);
     }20%{
-        background-image: url(URL3);
+        background-image: url(--URL3);
     }30%{
-        background-image: url(URL4);
+        background-image: url(--URL4);
     }40%{
-        background-image: url(URL5);
+        background-image: url(--URL5);
     }50%{
-        background-image: url(URL6);
+        background-image: url(--URL6);
     }60%{
-        background-image: url(URL7);
+        background-image: url(--URL7);
     }70%{
-        background-image: url(URL8);
+        background-image: url(--URL8);
     }80%{
-        background-image: url(URL9);
+        background-image: url(--URL9);
     }90%{
-        background-image: url(URL10);
+        background-image: url(--URL10);
     }
 }
