@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { setState } from 'react'
+
 
 const SearchBar = () => {
   return (
-    <div>SearchBar</div>
+    <div>
+      
+    </div>
   )
 }
 
