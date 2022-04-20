@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import searchPokemons from '../actions/searchPokemons';
+import searchPokemons from '../../actions';
 
 const SearchBar = () => {
   const [search, setSearch] = useState('')
