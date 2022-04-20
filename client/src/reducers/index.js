@@ -11,7 +11,7 @@ const initialState = {
 const rootReducer = (state = initialState, {payload, type}) => {
 	switch (type) {
 		case WALL_PAGE_LOADED:
-			return {
+			return { 
 				...state,
 				wallpapers: payload,
 			};
