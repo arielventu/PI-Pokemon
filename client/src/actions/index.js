@@ -27,7 +27,7 @@ export const searchPokemons = (search) => {
                 console.log(response);
                 dispatch({
                     type: SEARCH_POKEMONS,
-                    payload: response.data.filter(pokemon => pokemon.name.toLowerCase().includes(search.toLowerCase())),
+                    payload: response.data
                 });
             })
             .catch(error => {
