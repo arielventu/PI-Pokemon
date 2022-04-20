@@ -1,3 +1,5 @@
+import 
+
 .wall-page {
     position: absolute;
     left: 0;
@@ -5,4 +7,28 @@
     width: 100%;
     height: 100%;
     animation: animate 15s ease-in-out infinite
+}
+
+@keyframes animate {
+    0%, 100%{
+        background-image: url(URL1);
+    }10%{
+        background-image: url();
+    }20%{
+        background-image: url();
+    }30%{
+        background-image: url();
+    }40%{
+        background-image: url();
+    }50%{
+        background-image: url();
+    }60%{
+        background-image: url();
+    }70%{
+        background-image: url();
+    }80%{
+        background-image: url();
+    }90%{
+        background-image: url();
+    }
 }
