@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const PokemonCard = () => {
+const PokemonCard = (name, image, type, id) => {
 
   return (
     <div>
