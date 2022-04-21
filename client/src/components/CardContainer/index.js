@@ -14,7 +14,7 @@ const CardContainer = () => {
         if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
         }
-    }, []);
+    }, [dispatch]);
 
 
     if (pokemons.length === 0) {
@@ -28,29 +28,17 @@ const CardContainer = () => {
         return (
         <div>
                 <h1>CardContainer</h1>
-                <div className='div_card_container'>
-                    {pokemons.length ? (
-                        <div className='div_card'>
-                            {pokemons.map((pokes) => (
-                                <PokemonCard
-                                    name={pokes.name}
-                                    image={pokes.image}
-                                    type={pokes.type}
-                                />
-                            ))}
+                {pokemons.map((p) => { 
+                    return (
+                        <div key={p.id}>
+                            <h1>Name: {p.name}</h1>
+                            <img src={p.image} alt={p.name} />
+                            <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
                         </div>
-                        
-			) : (
-				<div className='not_found_div'>
-                    <h1>Pokemon NOT FOUND!!</h1>
-                    {/* <img src={error} width="170" height="170" alt='Error img'/> */}
-                </div>
-            )}
-		        </div>  
-                        
+                    )
+                })}
      </div>
     );
-    
 };
 
 
