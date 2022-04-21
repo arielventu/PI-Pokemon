@@ -17,41 +17,39 @@ const CardContainer = () => {
     }, []);
 
 
-    // if (pokemons.length === 0) {
-    //     return (
-    //         <div>
-    //             <img src={LOADING_IMG} alt="loading" />
-    //             <h3>Loading...</h3>
-    //         </div>      
-    //     )
-    // } 
-    //     return (
-    //     <div>
-    //             <h1>CardContainer</h1>
-    //             {pokemons.map((p) => {
-    //                 return <PokemonCard name={p.name} image={p.image } type={p.type} />}
-    //             )}    
-                        
-    //  </div>
-    // );
-    <div className='div_card_container'>
-			{pokemons.length ? (
-				<div className='div_card'>
-					{pokemons.map((pokes) => (
-						<PokemonCard
-							name={pokes.name}
-							image={pokes.image}
-							hp={pokes.type}
-						/>
-					))}
-				</div>
+    if (pokemons.length === 0) {
+        return (
+            <div>
+                <img src={LOADING_IMG} alt="loading" />
+                <h3>Loading...</h3>
+            </div>      
+        )
+    } 
+        return (
+        <div>
+                <h1>CardContainer</h1>
+                <div className='div_card_container'>
+                    {pokemons.length ? (
+                        <div className='div_card'>
+                            {pokemons.map((pokes) => (
+                                <PokemonCard
+                                    name={pokes.name}
+                                    image={pokes.image}
+                                    type={pokes.type}
+                                />
+                            ))}
+                        </div>
 			) : (
 				<div className='not_found_div'>
                 <h1>Pokemon NOT FOUND!!</h1>
                 {/* <img src={error} width="170" height="170" alt='Error img'/> */}
             </div>
 			)}
-		</div>
+		</div>  
+                        
+     </div>
+    );
+    
 };
 
 
