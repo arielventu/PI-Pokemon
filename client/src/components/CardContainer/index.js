@@ -39,13 +39,14 @@ const CardContainer = () => {
                                 />
                             ))}
                         </div>
+                        
 			) : (
 				<div className='not_found_div'>
-                <h1>Pokemon NOT FOUND!!</h1>
-                {/* <img src={error} width="170" height="170" alt='Error img'/> */}
-            </div>
-			)}
-		</div>  
+                    <h1>Pokemon NOT FOUND!!</h1>
+                    {/* <img src={error} width="170" height="170" alt='Error img'/> */}
+                </div>
+            )}
+		        </div>  
                         
      </div>
     );
