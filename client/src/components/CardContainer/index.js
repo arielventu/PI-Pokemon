@@ -28,7 +28,10 @@ const CardContainer = () => {
         return (
         <div>
                 <h1>CardContainer</h1>
-                <PokemonCard pokemons={pokemons} />
+                {pokemons.map((p) => {
+                    return <PokemonCard p={p} />}
+                )}    
+                        
      </div>
     );
 };
