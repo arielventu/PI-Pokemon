@@ -5,13 +5,12 @@ const PokemonCard = (name, image, type, id) => {
 
   return (
     <div>
-      <h1>PokemonCard</h1>
-         
-              <h1>Name: {name}</h1>
-              <img src={image} alt={name} />
-              {/* <h3>Type: { type[1] ? type[0] + ' ' + type[1] : type }</h3> */}
-          
-    </div>
+			<div className='div_poke_card'>
+				<img className='img' src={image} width="200" height="200" alt='Image' />
+				<div className='div_name'>{name}</div>
+				<div className='div_type'>{type}</div>
+			</div>
+		</div>
   )
 }
 
