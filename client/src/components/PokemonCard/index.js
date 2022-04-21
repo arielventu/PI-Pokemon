@@ -3,7 +3,8 @@ import React from 'react';
 
 
 const PokemonCard = (name, image, type, id) => {
-console.log(name);
+  console.log(name);
+  console.log(id);
   return (
 
 			<div key={id}>
