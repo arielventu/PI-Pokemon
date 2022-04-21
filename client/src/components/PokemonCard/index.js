@@ -3,9 +3,9 @@ import React from 'react';
 
 
 const PokemonCard = (name, image, type, id) => {
-
+console.log(name);
   return (
-    
+
 			<div key={id}>
           <h1>{name}</h1>
           <img src={image} alt={name} />

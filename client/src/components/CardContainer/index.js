@@ -28,7 +28,7 @@ const CardContainer = () => {
         return (
         <div>
                 {/* <h1>CardContainer</h1> */}
-                {pokemons.map((p) => { 
+                {pokemons && pokemons.map((p) => { 
                     return (
                         // <div key={p.id}>
                         //     <h1>Name: {p.name}</h1>
