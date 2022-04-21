@@ -14,7 +14,7 @@ const CardContainer = () => {
         if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
         }
-    }, [dispatch]);
+    }, []);
 
 
     if (pokemons.length === 0) {
