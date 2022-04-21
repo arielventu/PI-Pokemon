@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const PokemonCard = (name, image, type) => {
+export default function PokemonCard (name, image, type) {
   console.log(name);
   console.log(image);
   console.log(type);
@@ -18,4 +18,3 @@ const PokemonCard = (name, image, type) => {
   )
 }
 
-export default PokemonCard;
