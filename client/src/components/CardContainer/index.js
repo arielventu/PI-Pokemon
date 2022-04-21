@@ -38,7 +38,7 @@ const CardContainer = () => {
                         // </div>
                         <div>
                             <li>
-                                <PokemonCard key={p.id} name={p.name} image={p.image} id={p.id} />
+                                <PokemonCard name={p.name} image={p.image} />
                             </li>
                         </div>    
                     )
