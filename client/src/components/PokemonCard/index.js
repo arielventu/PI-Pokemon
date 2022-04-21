@@ -6,13 +6,13 @@ const PokemonCard = () => {
   return (
     <div>
       <h1>PokemonCard</h1>
-         <div key={p.id}>
-              <h1>Name: {p.name}</h1>
-              <img src={p.image} alt={p.name} />
-              <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+         <div key={id}>
+              <h1>Name: {name}</h1>
+              <img src={image} alt={name} />
+              <h3>Type: { type[1] ? type[0] + ' ' + type[1] : type }</h3>
           </div>
     </div>
   )
 }
 
-export default PokemonCard
+export default PokemonCard;
