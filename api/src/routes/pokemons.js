@@ -99,7 +99,7 @@ router.get('/', async (req, res, next) => {
             });
         }
         
-        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
+        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=1`); 
         const pokeAPIList = []; 
             
         //Convertir a un array de objetos desde API
