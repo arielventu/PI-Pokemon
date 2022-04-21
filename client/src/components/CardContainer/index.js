@@ -16,7 +16,7 @@ const CardContainer = () => {
         }
     }, [dispatch]);
     
-    console.log(pokemons);
+    // console.log(pokemons);
 
     if (pokemons.length === 0) {
         return (
@@ -31,12 +31,12 @@ const CardContainer = () => {
                 {/* <h1>CardContainer</h1> */}
                 {pokemons && pokemons.map((p) => { 
                     return (
-                        // <div key={p.id}>
-                        //     <h1>Name: {p.name}</h1>
-                        //     <img src={p.image} alt={p.name} />
-                        //     <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-                        // </div>
-                        <li><PokemonCard key={p.id} name={p.name} image={p.image} id={p.id} /></li>
+                        <div key={p.id}>
+                            <h1>Name: {p.name}</h1>
+                            <img src={p.image} alt={p.name} />
+                            <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+                        </div>
+                        // <li><PokemonCard key={p.id} name={p.name} image={p.image} id={p.id} /></li>
                     )
                 })}
      </div>
