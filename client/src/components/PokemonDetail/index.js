@@ -1,5 +1,7 @@
-import React from 'react'
-import { getPokemons } from '../../actions'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getPokemons } from '../../actions';
+
 
 const PokemonDetail = () => {
   const dispatch = useDispatch()
@@ -15,7 +17,7 @@ const PokemonDetail = () => {
   
   return (
     <div>
-      <h1>Pokemon Detail</h1>
+      {/* <h1>Pokemon Detail</h1>
         <div>
           {pokemons.map(pokemon => (
             <div key={pokemon.id}>
@@ -30,7 +32,7 @@ const PokemonDetail = () => {
               </div>
             </div>
           ))} 
-        </div>           
+        </div>            */}
     </div>
   )
 }
