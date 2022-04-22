@@ -29,22 +29,25 @@ const CardContainer = () => {
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
     
+
+    // Obtengo los pokemons del store 
+
     useEffect(() => {
         if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
         }
     }, []);
 
-    // Paginación
+    // Paginación ***************************************************************************
 
-    const nextHandler = () => {
+    const nextPageHandler = () => {
         // console.log(currentPage);
         if (currentPage < Math.ceil(pokemons.length / pokemonsPerPage)) {// Calcula el número de páginas totales y verifica que no se pase del límite de páginas
             setCurrentPage(currentPage + 1);
         }
     }
 
-    const prevHandler = () => {
+    const prevPageHandler = () => {
         // console.log(currentPage);
         if (currentPage > 1) { // Verifica que no se pase del límite inferior
             setCurrentPage(currentPage - 1);
@@ -70,7 +73,7 @@ const CardContainer = () => {
         pageNumbersHandler();
     }, [currentPage, pokemons]);
     
-    // Ordenamiento
+    // Ordenamiento **************************************************************************
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
@@ -81,17 +84,15 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
-    const sortPokemons = (p) => {
+    (function sortPokemons (p) { // Función para ordenar la lista de pokemons
         if (order === 'Ascendente') {
             return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
         } else {
             return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
         }
-    }
+    })(pokemonsToShow); // Se autoejecuta la función y se pasa como parámetro la lista de pokemons
 
-    
-    
-
+    // Render******************************************************************************
 
     if (pokemons.length === 0) {
         return (
@@ -106,7 +107,6 @@ const CardContainer = () => {
                 <div className='card-container-header'>
                     <h1>Pokemons</h1>
                     <div className='card-container-header-order'>
-                        {sortPokemons(pokemonsToShow)}
                         <select onChange={(e) => sortBy(e.target.value)}>
                             <option value='id'>ID</option>
                             <option value='name'>Name</option>
@@ -127,13 +127,13 @@ const CardContainer = () => {
                     ))}
                 </div>
                 <div className='card-container-footer'>
-                    <button onClick={prevHandler}>Prev</button>
+                    <button onClick={prevPageHandler}>Prev</button>
                         {pageNumbers.map((page) => (
                             <button key={page} onClick={() => goToPageHandler(page)}>
                                 {page}
                             </button>
                         ))}
-                    <button onClick={nextHandler}>Next</button>
+                    <button onClick={nextPageHandler}>Next</button>
                         <p> Página: {currentPage}</p>
                     </div>
 
