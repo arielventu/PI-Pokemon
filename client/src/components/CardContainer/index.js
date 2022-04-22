@@ -30,14 +30,17 @@ const CardContainer = () => {
     
 
     const nextHandler = () => {
-        console.log("next");
+        console.log(currentPage);
         if (currentPage < Math.ceil(pokemons.length / pokemonsPerPage)) {
             setCurrentPage(currentPage + 1);
         }
     }
 
     const prevHandler = () => {
-        console.log("prev");
+        console.log(currentPage);
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
     }
 
 
