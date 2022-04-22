@@ -28,11 +28,16 @@ const CardContainer = () => {
     } else {
         return (
             <div>
-                <div className='card-container'>
+                {/* <div className='card-container'>
                     {pokemons.map((p) => (
                         <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
                     ))}
-                </div>
+                </div> */}
+                               <div key={p.id}>
+                                   <h1>Name: {p.name}</h1>
+                                   <img src={p.image} alt={p.name} />
+                                   <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+                               </div>
             </div>
           )
                 
@@ -44,9 +49,4 @@ const CardContainer = () => {
             
 
 
-         {/* //                     <div key={p.id}>
-         //                         <h1>Name: {p.name}</h1>
-         //                         <img src={p.image} alt={p.name} />
-         //                         <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-         //                     </div> */}
 export default CardContainer;
