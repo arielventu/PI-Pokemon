@@ -3,10 +3,8 @@ import './PokemonCard.css';
 
 
 
-export default function PokemonCard ({name, id, image, type}) {
-  
+const PokemonCard = ({name, id, image, type}) => {
   return (
-      
 			<div className='pokemon-card'>
           <h1>Name:{name}</h1>
           <img src={image} alt={name} width="105" height="105" />
@@ -21,7 +19,8 @@ export default function PokemonCard ({name, id, image, type}) {
 							))}
 					</div>
       </div>
-		
   )
 }
 
+
+export default PokemonCard;
