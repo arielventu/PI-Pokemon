@@ -28,7 +28,7 @@ const CardContainer = () => {
     } else {
         return (
             <div className='caed-container'>
-                {pokemons && pokemons.map((p) => {
+                {pokemons.map((p) => {
                     return <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
                 })}
             </div>
