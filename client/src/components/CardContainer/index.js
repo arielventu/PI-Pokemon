@@ -111,7 +111,7 @@ const CardContainer = () => {
                             <option value='name'>Name</option>
                             <option value='type'>Type</option>
                         </select>
-                        <button onClick={() => sortPokemons()}>{order}</button>
+                        <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
                 <div className='card-container-body'>
