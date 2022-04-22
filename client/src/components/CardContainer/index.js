@@ -30,12 +30,18 @@ const CardContainer = () => {
             <div>
                 <div className='card-container'>
                     {pokemons.map((p) => (
-                        // <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
-                               <div key={p.id}>
-                                   <h1>Name: {p.name}</h1>
-                                   <img src={p.image} alt={p.name} />
-                                   <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-                               </div>
+                        <PokemonCard
+                            // key={p.id}
+                            name={p.name}
+                            // image={p.image}
+                            // type={p.type} />
+                        />
+                            
+                            //    <div key={p.id}>
+                            //        <h1>Name: {p.name}</h1>
+                            //        <img src={p.image} alt={p.name} />
+                            //        <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+                            //    </div>
                     ))}
                 </div>
             </div>
