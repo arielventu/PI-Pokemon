@@ -2,7 +2,8 @@ import React from 'react';
 
 
 
-export default function PokemonCard (name, id, image, type) {
+export default function PokemonCard (id, name, image, type) {
+  console.log(id);
   const p = name;
   return (
       
