@@ -27,7 +27,7 @@ const CardContainer = () => {
         )
     } else {
         return (
-            <div className={`${style.CardsDiv}`}>
+            <div className={card-container}>
               {props && props.cities.map((city) => (
                 <Card
                   key={city.id}
