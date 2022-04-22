@@ -34,8 +34,8 @@ const CardContainer = () => {
                             key={p.id}
                             name={p.name}
                             image={p.image}
-                            type1={p.type.length > 1 ? p.type[0] + ' ' + p.type[1] : p.type}
-
+                            // type1={p.type.length > 1 ? p.type[0] + ' ' + p.type[1] : p.type}
+                            type={p.type}
                             />
                     ))}
                 </div>
