@@ -29,10 +29,10 @@ const CardContainer = () => {
         return (
             <div>
                 <div className='card-container'>
-                    {pokemons.map(({p}) => (
+                    {pokemons.map((p) => (
                         <PokemonCard
                             // key={p.id}
-                            name={p.name.name}
+                            name={p[name]}
                             // image={p.image}
                             // type={p.type} />
                         />
