@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
-// import PokemonCard from '../PokemonCard/index';
+import PokemonCard from '../PokemonCard/';
 import { LOADING_IMG } from '../../utils';
 import './CardContainer.css';
 
@@ -23,24 +23,30 @@ const CardContainer = () => {
             <div>
                 <img src={LOADING_IMG} alt="loading" />
                 <h3>Loading...</h3>
-            </div>      
+            </div>
         )
-    } 
+    }
+    else {
         return (
-        <div>
-                {/* <h1>CardContainer</h1> */}
-                {pokemons && pokemons.map(p => { 
-                    return (
-                        <div key={p.id}>
-                            <h1>Name: {p.name}</h1>
-                            <img src={p.image} alt={p.name} />
-                            <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-                        </div>
-                         
-                    )
-                })}
-     </div>
-    );
+            //     <div>
+            //             {/* <h1>CardContainer</h1> */}
+            //             {pokemons && pokemons.map(p => { 
+            //                 return (
+            //                     <div key={p.id}>
+            //                         <h1>Name: {p.name}</h1>
+            //                         <img src={p.image} alt={p.name} />
+            //                         <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+            //                     </div>
+            <div>
+                <PokemonCard pp={p.name} />
+                {/* <PokemonCard name={p.name} image={p.image} /> */}
+                            
+            </div>
+        )
+        //             })}
+        //  </div>
+        // );
+    }
 };
 
 
