@@ -35,7 +35,7 @@ const CardContainer = () => {
         }
     }, []);
 
-    
+    // Paginado
 
     const nextHandler = () => {
         // console.log(currentPage);
@@ -70,6 +70,24 @@ const CardContainer = () => {
         pageNumbersHandler();
     }, [currentPage, pokemons]);
     
+    // Ordenar
+
+    const sortBy = (orderBy) => {
+        if (order === 'A') {
+            setOrder('D');
+        } else {
+            setOrder('A');
+        }
+        setOrderBy(orderBy);
+    }
+
+    const sortPokemons = (pokemons) => {
+        if (order === 'A') {
+            return pokemons.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
+        } else {
+            return pokemons.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
+        }
+    }
 
 
     
