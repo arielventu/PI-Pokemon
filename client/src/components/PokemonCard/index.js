@@ -9,7 +9,7 @@ export default function PokemonCard ({name, id, image, type}) {
 			<div>
           <h1>Name:{name}</h1>
           <img src={image} alt={name} />
-          <div className='div_type_container'>
+          <div className='div-type'>
 						{type &&
 							type.map((el, i) => (
 								<div key={i} className='{cssButtonType(el)}'>
