@@ -27,16 +27,11 @@ const CardContainer = () => {
         )
     } else {
         return (
-            <div className={card-container}>
-              {props && props.cities.map((city) => (
+            <div className='caed-container'>
+              {pokemons && pokemons.map((city) => (
                 <Card
-                  key={city.id}
-                  id={city.id}
-                  max={city.main.temp_max}
-                  min={city.main.temp_min}
                   name={city.name}
                   img={city.weather[0].icon}
-                  onClose={() => alert(city.name)}
                 />
               ))}
             </div>
