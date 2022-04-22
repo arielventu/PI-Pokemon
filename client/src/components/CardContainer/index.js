@@ -27,6 +27,17 @@ const CardContainer = () => {
 
     
     
+    const nextHandler = () => {
+        console.log("next");
+    }
+
+    const prevHandler = () => {
+        console.log("prev");
+    }
+
+
+
+
     
     // console.log(pokemons);
 
