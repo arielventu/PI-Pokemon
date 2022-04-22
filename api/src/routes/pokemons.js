@@ -107,6 +107,7 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
             pokeAPIList.push({
+                id: pokemonAPI.data.id,
                 name: capitalize(pokemonAPI.data.name),
                 image: pokemonAPI.data.sprites.other.dream_world.front_default,
                 type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
