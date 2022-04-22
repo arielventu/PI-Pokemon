@@ -15,7 +15,8 @@ const CardContainer = () => {
             dispatch(getPokemons());
         }
     }, []);
-    
+
+       
     // console.log(pokemons);
 
     if (pokemons.length === 0) {
@@ -27,17 +28,22 @@ const CardContainer = () => {
         )
     } else {
         return (
-                <div className='card-container'>
+            <div className='card-container'>
+                <div className='card-container-row'>
                     {pokemons.map((p) => (
                         // console.log(p.type)
                         <PokemonCard
                             key={p.id}
                             name={p.name}
                             image={p.image}
-                            // type1={p.type.length > 1 ? p.type[0] + ' ' + p.type[1] : p.type}
                             type={p.type}
                             />
                     ))}
+                </div>
+                <div className='card-container-footer'>
+                        
+                    </div>
+
                 </div>
             )
             
@@ -45,20 +51,4 @@ const CardContainer = () => {
     }
     
     
-    // <PokemonCard
-    //     // key={p.id}
-    //     name={p.name}
-    //     // image={p.image}
-    //     // type={p.type} />
-    // />
-        
-        //    <div key={p.id}>
-        //        <h1>Name: {p.name}</h1>
-        //        <img src={p.image} alt={p.name} />
-        //        <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-        //    </div>
-
-            
-
-
 export default CardContainer;
