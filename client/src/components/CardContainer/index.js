@@ -16,7 +16,7 @@ const CardContainer = () => {
   
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage] = useState(12);
-    const [loading, setLoading] = useState(true);
+    // const [loading, setLoading] = useState(true);
 
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
