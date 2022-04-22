@@ -105,9 +105,12 @@ const CardContainer = () => {
                 <div className='card-container-header'>
                     <h1>Pokemons</h1>
                     <div className='card-container-header-order'>
-                        <button onClick={() => sortBy('id')}>ID</button>
-                        <button onClick={() => sortBy('name')}>Name</button>
-                        <button onClick={() => sortBy('type')}>Type</button>
+                        <select onChange={(e) => sortBy(e.target.value)}>
+                            <option value='id'>ID</option>
+                            <option value='name'>Name</option>
+                            <option value='type'>Type</option>
+                        </select>
+                        <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
                 <div className='card-container-body'>
