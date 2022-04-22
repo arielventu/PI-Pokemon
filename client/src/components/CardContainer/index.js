@@ -67,7 +67,7 @@ const CardContainer = () => {
     }
 
     useEffect(() => {
-        const indexOfLast = currentPage * pokemonsPerPage;
+        const indexOfLast = currentPage * pokemonsPerPage;  
         const indexOfFirst = indexOfLast - pokemonsPerPage;
         setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast));
         pageNumbersHandler();
