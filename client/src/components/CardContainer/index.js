@@ -15,6 +15,8 @@ const CardContainer = () => {
     const pokemons = useSelector(state => state.pokemons);
   
     const pokemonsPerPage = 12;
+    const [currentPage, setCurrentPage] = useState(1);
+    const [pokemonsToShow, setPokemonsToShow] = useState([]);
 
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
@@ -26,9 +28,12 @@ const CardContainer = () => {
     }, []);
 
     
-    
+
     const nextHandler = () => {
         console.log("next");
+        if (currentPage < Math.ceil(pokemons.length / pokemonsPerPage)) {
+            setCurrentPage(currentPage + 1);
+        }
     }
 
     const prevHandler = () => {
