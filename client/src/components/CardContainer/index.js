@@ -25,29 +25,34 @@ const CardContainer = () => {
                 <h3>Loading...</h3>
             </div>
         )
-    }
-    else {
+    } else {
         return (
-                <div>
-            //             {/* <h1>CardContainer</h1> */}
-                        {pokemons && pokemons.map(p => { 
-                            return (
-            //                     <div key={p.id}>
-            //                         <h1>Name: {p.name}</h1>
-            //                         <img src={p.image} alt={p.name} />
-            //                         <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
-            //                     </div>
-            <div>
-                <PokemonCard pp={p.name} />
-                {/* <PokemonCard name={p.name} image={p.image} /> */}
-                            
+            <div className={`${style.CardsDiv}`}>
+              {props && props.cities.map((city) => (
+                <Card
+                  key={city.id}
+                  id={city.id}
+                  max={city.main.temp_max}
+                  min={city.main.temp_min}
+                  name={city.name}
+                  img={city.weather[0].icon}
+                  onClose={() => alert(city.name)}
+                />
+              ))}
             </div>
-        )
-                    })}
-          </div>
-         );
-    }
-};
+          )
+                
+}
+}
+
+            
+
+            
 
 
+         {/* //                     <div key={p.id}>
+         //                         <h1>Name: {p.name}</h1>
+         //                         <img src={p.image} alt={p.name} />
+         //                         <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
+         //                     </div> */}
 export default CardContainer;
