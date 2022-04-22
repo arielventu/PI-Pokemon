@@ -1,9 +1,13 @@
 import React from 'react'
+import { getPokemons } from '../../actions'
 
-const index = () => {
+const PokemonDetail = () => {
   return (
-    <div>index</div>
+      <div>
+          <h1>Pokemon Detail</h1>
+          
+    </div>
   )
 }
 
-export default index
+export default PokemonDetail
