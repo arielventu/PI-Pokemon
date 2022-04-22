@@ -6,7 +6,7 @@ import LandingPage from './components/LandingPage/';
 import NavBar from './components/NavBar/';
 import CardContainer from './components/CardContainer/';
 import SearchBar from './components/SearchBar/';
-import PokemonDetail from './components/PokemonDetail/';
+// import PokemonDetail from './components/PokemonDetail/';
 // import PokemonCreate from './components/PokemonCreate/';
 
 
