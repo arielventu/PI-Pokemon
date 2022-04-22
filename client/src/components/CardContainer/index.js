@@ -123,15 +123,13 @@ const CardContainer = () => {
                 </div>
                 <div className='card-container-footer'>
                     <button onClick={prevHandler}>Prev</button>
-                    <>
-                        {currentPage}
                         {pageNumbers.map((page) => (
                             <button key={page} onClick={() => goToPageHandler(page)}>
                                 {page}
                             </button>
                         ))}
-                    </>
                     <button onClick={nextHandler}>Next</button>
+                        <p> Página: {currentPage}</p>
                     </div>
 
                 </div>
