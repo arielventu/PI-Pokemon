@@ -17,6 +17,8 @@ const CardContainer = () => {
     const pokemonsPerPage = 4;
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsToShow, setPokemonsToShow] = useState([]);
+    const [pageNumbers, setPageNumbers] = useState([]);
+
 
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
@@ -43,7 +45,25 @@ const CardContainer = () => {
         }
     }
 
+    const goToPageHandler = (page) => {
+        setCurrentPage(page);
+    }
 
+    const pageNumbersHandler = () => {
+        const pageNumbers = [];
+        for (let i = 1; i <= Math.ceil(pokemons.length / pokemonsPerPage); i++) {
+            pageNumbers.push(i);
+        }
+        setPageNumbers(pageNumbers);
+    }
+
+    useEffect(() => {
+        const indexOfLastPokemon = currentPage * pokemonsPerPage;
+        const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
+        setPokemonsToShow(pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon));
+        pageNumbersHandler();
+    }, [currentPage, pokemons]);
+    
 
 
     
@@ -72,7 +92,14 @@ const CardContainer = () => {
                 </div>
                 <div className='card-container-footer'>
                     <button onClick={prevHandler}>Prev</button>
-                    <>{currentPage}</>
+                    <>
+                        {currentPage}
+                        {pageNumbers.map((page) => (
+                            <button key={page} onClick={() => goToPageHandler(page)}>
+                                {page}
+                            </button>
+                        ))}
+                    </>
                     <button onClick={nextHandler}>Next</button>
                     </div>
 
