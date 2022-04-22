@@ -93,6 +93,7 @@ router.get('/', async (req, res, next) => {
         for (let i = 0; i < pokeDB.length; i++) {
             const pokemon = pokeDB[i].dataValues;
             pokeDBList.push({
+                id: pokemon.id,
                 name: capitalize(pokemon.name),
                 image: pokemon.image,
                 type: pokemon.types.map(type => type.dataValues.name)
