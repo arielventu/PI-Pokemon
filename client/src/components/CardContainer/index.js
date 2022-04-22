@@ -71,7 +71,7 @@ const CardContainer = () => {
         const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
         setPokemonsToShow(pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon));
         pageNumbersHandler();
-    }, [currentPage, pokemons]);
+    }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
     
     // Ordenamiento **************************************************************************
 
