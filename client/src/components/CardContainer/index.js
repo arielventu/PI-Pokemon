@@ -31,15 +31,18 @@ const CardContainer = () => {
 
     
 
+    // Funciones de paginado
+  
+    
     const nextHandler = () => {
-        console.log(currentPage);
+        // console.log(currentPage);
         if (currentPage < Math.ceil(pokemons.length / pokemonsPerPage)) {
             setCurrentPage(currentPage + 1);
         }
     }
 
     const prevHandler = () => {
-        console.log(currentPage);
+        // console.log(currentPage);
         if (currentPage > 1) {
             setCurrentPage(currentPage - 1);
         }
