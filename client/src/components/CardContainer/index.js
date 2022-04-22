@@ -80,7 +80,7 @@ const CardContainer = () => {
         return (
             <div className='card-container'>
                 <div className='card-container-row'>
-                    {pokemons.map((p) => (
+                    {pokemonsToShow.map((p) => (
                         // console.log(p.type)
                         <PokemonCard
                             key={p.id}
