@@ -3,7 +3,7 @@ import React from 'react';
 
 
 export default function PokemonCard (name, id, image, type) {
-  console.log(name);
+  console.log(id);
   return (
 
 			<div>
