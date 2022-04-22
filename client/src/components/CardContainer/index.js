@@ -22,8 +22,8 @@ const CardContainer = () => {
     const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
-    const [order, setOrder] = useState('Ascendente'); // A: ascendente, D: descendente
-    const [orderBy, setOrderBy] = useState('id'); // Default
+    const [order, setOrder] = useState('Ascendente'); // Ascendente x defecto
+    const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
 
 
     // **************************************************************************************
