@@ -22,7 +22,7 @@ const CardContainer = () => {
     const [pageNumbers, setPageNumbers] = useState([]);
 
     // Order
-    const [order, setOrder] = useState('A'); // A: ascendente, D: descendente
+    const [order, setOrder] = useState('Ascendente'); // A: ascendente, D: descendente
     const [orderBy, setOrderBy] = useState('id'); // Default
 
 
@@ -73,16 +73,16 @@ const CardContainer = () => {
     // Ordenar
 
     const sortBy = (orderBy) => {
-        if (order === 'A') {
-            setOrder('D');
+        if (order === 'Ascendente') {
+            setOrder('Descendente');
         } else {
-            setOrder('A');
+            setOrder('Ascendente');
         }
         setOrderBy(orderBy);
     }
 
     const sortPokemons = (p) => {
-        if (order === 'A') {
+        if (order === 'Ascendente') {
             return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
         } else {
             return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
