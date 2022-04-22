@@ -32,7 +32,7 @@ const CardContainer = () => {
                     {pokemons.map((p) => (
                         <PokemonCard
                             // key={p.id}
-                            name={p.name}
+                            name={p.name.name}
                             // image={p.image}
                             // type={p.type} />
                         />
