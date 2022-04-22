@@ -23,7 +23,7 @@ const CardContainer = () => {
 
     // Ordenamiento
     const [order, setOrder] = useState('Ascendente'); // A: ascendente, D: descendente
-    const [orderBy, setOrderBy] = useState('id'); // Ordena por ID por defecto
+    const [orderBy, setOrderBy] = useState('id'); // Default
 
 
     // **************************************************************************************
@@ -90,9 +90,10 @@ const CardContainer = () => {
     }
 
     
-    //Render
+    
 
-    if (pokemons.length === 0) { // Si no hay pokemons, muestra una imagen de cargando
+
+    if (pokemons.length === 0) {
         return (
             <div>
                 <img src={LOADING_IMG} alt="loading" />
@@ -100,11 +101,12 @@ const CardContainer = () => {
             </div>
         )
     } else {
-        return ( // Si hay pokemons, muestra la lista de pokemons
+        return (
             <div className='card-container'>
                 <div className='card-container-header'>
                     <h1>Pokemons</h1>
                     <div className='card-container-header-order'>
+                        {sortPokemons(pokemonsToShow)}
                         <select onChange={(e) => sortBy(e.target.value)}>
                             <option value='id'>ID</option>
                             <option value='name'>Name</option>
