@@ -30,11 +30,10 @@ const CardContainer = () => {
                 <div className='card-container'>
                     {pokemons.map((p) => (
                         // console.log(p.image)
-                        < div className = 'card-container__card' key = { p.id } >
                     <PokemonCard
-                        name={p.name}
+                            name={p.name}
+                            image={p.image}
                             />
-                        </div>
                     ))}
                 </div>
             )
