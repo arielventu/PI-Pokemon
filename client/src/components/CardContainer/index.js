@@ -81,17 +81,16 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
-    const sortPokemons = (pokemons) => {
+    const sortPokemons = (pokemonsToShow) => {
         if (order === 'A') {
-            return pokemons.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
+            return pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
         } else {
-            return pokemons.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
+            return pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
         }
     }
 
-
     
-    // console.log(pokemons);
+    console.log(pokemonsToShow);
 
     if (pokemons.length === 0) {
         return (
