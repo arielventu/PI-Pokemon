@@ -5,7 +5,7 @@ import React from 'react';
 export default function PokemonCard (name, id, image, type) {
   // console.log(id);
   return (
-
+      
 			<div>
           <h1>Name: {name}</h1>
           <img src={image} alt={name} />

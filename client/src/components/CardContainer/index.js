@@ -16,7 +16,7 @@ const CardContainer = () => {
         }
     }, []);
     
-    // console.log(pokemons);
+    console.log(pokemons);
 
     if (pokemons.length === 0) {
         return (
