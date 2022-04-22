@@ -26,6 +26,12 @@ const CardContainer = () => {
             dispatch(getPokemons());
         }
     }, []);
+
+    //Paginador
+    const indexOfLastPokemon = currentPage * pokemonsPerPage;
+    const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
+    const currentPokemons = pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+    
     
     // console.log(pokemons);
 
