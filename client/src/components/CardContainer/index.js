@@ -103,6 +103,14 @@ const CardContainer = () => {
     } else {
         return (
             <div className='card-container'>
+                <div className='card-container-header'>
+                    <h1>Pokemons</h1>
+                    <div className='card-container-header-order'>
+                        <button onClick={() => sortBy('id')}>ID</button>
+                        <button onClick={() => sortBy('name')}>Name</button>
+                        <button onClick={() => sortBy('type')}>Type</button>
+                    </div>
+                </div>
                 <div className='card-container-body'>
                     {pokemonsToShow.map((p) => (
                         // console.log(p.type)
