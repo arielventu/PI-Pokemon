@@ -72,6 +72,7 @@ const CardContainer = () => {
                 </div>
                 <div className='card-container-footer'>
                     <button onClick={prevHandler}>Prev</button>
+                    <p>{currentPage}</p>
                     <button onClick={nextHandler}>Next</button>
                     </div>
 
