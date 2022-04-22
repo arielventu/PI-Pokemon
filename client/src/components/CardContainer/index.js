@@ -9,14 +9,12 @@ import './CardContainer.css';
 const CardContainer = () => {
 
     // **************************************************************************************
-    // **************************************STATE*******************************************
+    // ********************************STATE & CONSTANTS*************************************
 
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
   
-    const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage] = useState(12);
-    // const [loading, setLoading] = useState(true);
+    const pokemonsPerPage = 12;
 
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
