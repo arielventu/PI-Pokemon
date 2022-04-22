@@ -14,7 +14,7 @@ const CardContainer = () => {
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
   
-    const pokemonsPerPage = 12;
+    const pokemonsPerPage = 4;
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsToShow, setPokemonsToShow] = useState([]);
 
