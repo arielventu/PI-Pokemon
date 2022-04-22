@@ -2,18 +2,17 @@ import React from 'react';
 
 
 
-export default function PokemonCard (id, name, image, type) {
-  console.log(id);
-  const p = name;
+export default function PokemonCard ({name, id, image, type}) {
+  
   return (
       
 			<div>
-          <h1>Name:{p.name}</h1>
-          <img src={p.image} alt={p.name} />
+          <h1>Name:{name}</h1>
+          <img src={image} alt={name} />
       
-        {p.type.map(
+        {/* {p.type.map(
           (t) => ( <span>{t}</span> )
-          )}
+          )} */}
       </div>
 		
   )
