@@ -81,16 +81,17 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
-    const sortPokemons = (pokemonsToShow) => {
+    const sortPokemons = (p) => {
         if (order === 'A') {
-            return pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
+            return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
         } else {
-            return pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
+            return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
         }
     }
 
     
-    console.log(pokemonsToShow);
+    console.log(sortPokemons(pokemonsToShow));
+
 
     if (pokemons.length === 0) {
         return (
@@ -110,7 +111,7 @@ const CardContainer = () => {
                             <option value='name'>Name</option>
                             <option value='type'>Type</option>
                         </select>
-                        <button onClick={() => sortBy(orderBy)}>{order}</button>
+                        <button onClick={() => sortPokemons()}>{order}</button>
                     </div>
                 </div>
                 <div className='card-container-body'>
