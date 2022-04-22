@@ -61,7 +61,7 @@ const CardContainer = () => {
     const pageNumbersHandler = () => { 
         const pageNumbers = []; // Array para guardar los números de páginas
         for (let i = 1; i <= Math.ceil(pokemons.length / pokemonsPerPage); i++) { 
-            pageNumbers.push(i); //
+            pageNumbers.push(i); 
         }
         setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
     }
