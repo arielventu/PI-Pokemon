@@ -37,8 +37,8 @@ const CardContainer = () => {
                         //     <h3>Type: { p.type[1] ? p.type[0] + ' ' + p.type[1] : p.type }</h3>
                         // </div>
                         <div>
-                            
-                                <PokemonCard name={p.name} image={p.image} />
+                            <PokemonCard />
+                                {/* <PokemonCard name={p.name} image={p.image} /> */}
                             
                         </div>    
                     )
