@@ -77,11 +77,11 @@ const CardContainer = () => {
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
-            setOrder('Descendente')
             setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1));
+            setOrder('Descendente')
         } else {
-            setOrder('Ascendente');
             setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1))
+            setOrder('Ascendente');
         }
         setOrderBy(orderBy);
     }
