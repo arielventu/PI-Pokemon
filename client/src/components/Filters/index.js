@@ -8,12 +8,39 @@ const Filters = () => {
   const dispatch = useDispatch()
   const types = useSelector(state => state.types)
 
+  const [selectedTypes, setSelectedTypes] = useState([])
+
+
+
   useEffect(() => {
     if (types.length === 0) { // si no están cargados en el store, se cargan
       dispatch(getTypes())
       // console.log(types)
     }
   }, [dispatch])
+
+  const handleChange = (e) => {
+    const { value } = e.target
+    const index = selectedTypes.indexOf(value)
+    if (index === -1) {
+      setSelectedTypes([...selectedTypes, value])
+    } else {
+      setSelectedTypes(selectedTypes.filter(type => type !== value))
+    }
+  }
+
+  const filterBy = () => {
+    return selectedTypes.map(type => {
+      return {
+        type: type,
+        selected: true
+      }
+    })
+  }
+
+
+
+
 
   return (
     <div>
