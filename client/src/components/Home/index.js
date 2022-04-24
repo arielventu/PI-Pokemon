@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { getPokemons, getTypes } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
-import SearchBar from '../SearchBar';
 import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
