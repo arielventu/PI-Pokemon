@@ -10,7 +10,7 @@ export const getPokemons = () => {
     return function (dispatch) {
         axios.get(ALL_POKES)
         .then(response => {
-                // console.log(response);
+                console.log(response.data);
                 dispatch({
                     type: GET_POKEMONS,
                     payload: response.data,
