@@ -24,16 +24,8 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			};
 		case ORIGIN_POKEMONS:
 			return {
-				...state.pokemons.map(pokemon => {
-					if (pokemon.id === payload.id) {
-						pokemon.origin = payload.origin;
-					}
-					return pokemon;
-				}),
-				
-
-			
-				pokemons: payload,
+				...state.pokemons,
+				pokemonsOrigin: payload,
 			};
 		default:
 			return state;
