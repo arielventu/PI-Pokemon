@@ -95,7 +95,16 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
+    const filterByType = (type) => {
+        const filteredPokemons = pokemons.filter(pokemon => pokemon.type.includes(type));
+        setPokemonsToShow(filteredPokemons);
+    }
 
+    const filterByOrigin = (id) => {
+        const filteredPokemons = pokemons.filter(pokemon => pokemon.origin.id === id);
+        
+        setPokemonsToShow(filteredPokemons);
+    }
 
     // Render ********************************************************************************
 
