@@ -126,6 +126,12 @@ const CardContainer = () => {
                         <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
+                <div calssName='home-header-filter'>
+                    <select onChange={(e) => filterBy(e.target.value)}>
+                        <option value='Todos'>Todos</option>
+                        {types.map(type => <option key={type.id} value={type.name}>{type.name}</option>)}
+                    </select>
+                </div>
                 <div className='home-body'>
                     {pokemonsToShow.map((p) => (
                         // console.log(p.type)
