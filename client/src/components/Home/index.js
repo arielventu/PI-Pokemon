@@ -139,7 +139,7 @@ const CardContainer = () => {
                             name={p.name}
                             image={p.image}
                             type={p.type}
-                            attack={p.attack}
+                            // attack={p.attack}
                             />
                     ))}
                 </div>
