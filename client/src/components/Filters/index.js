@@ -16,7 +16,25 @@ const Filters = () => {
   }, [dispatch])
 
   return (
-    <div>Filters</div>
+    <div>
+      <div className='home-filters'>
+        <div className='home-filters-types'>
+            <select onChange={(e) => filterBy(e.target.value)}>
+                <option value='Todos'>Todos</option>
+                {types.map(type => (
+                    <option key={type.id} value={type.name}>{type.name}</option>
+                ))}
+            </select>
+        </div>
+        <div className='home-filters-origin'>
+            <select onChange={(e) => filterBy(e.target.value)}>
+                <option value='Todos'>Todos</option>
+                <option value='PokeAPI'>PokeAPI</option>
+                <option value='PokeCreated'>PokeCreated</option>
+            </select>
+        </div>
+    </div>
+    </div>
   )
 }
 
