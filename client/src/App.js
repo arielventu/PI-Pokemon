@@ -4,7 +4,7 @@ import './App.css';
 // import Loading from './components/Loading';
 import LandingPage from './components/LandingPage/';
 import NavBar from './components/NavBar/';
-import Filters from './components/Filters/'
+import Filters from './components/Filters/';
 import Home from './components/Home';
 import SearchBar from './components/SearchBar/';
 // import PokemonDetail from './components/PokemonDetail/';
