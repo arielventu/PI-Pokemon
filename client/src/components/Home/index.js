@@ -43,7 +43,7 @@ const CardContainer = () => {
     useEffect(() => {
         if (types.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getTypes());
-            console.log(types);
+            // console.log(types);
         }
     }, []);
 
@@ -82,7 +82,7 @@ const CardContainer = () => {
         pageNumbersHandler();
     }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
     
-    // Ordenamiento **************************************************************************
+    // Ordenamiento y Filtrado **************************************************************************
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
