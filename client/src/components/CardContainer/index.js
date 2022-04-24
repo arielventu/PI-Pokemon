@@ -22,7 +22,7 @@ const CardContainer = () => {
     const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
-    const [order, setOrder] = useState('Ascendente'); // Ascendente x defecto
+    const [order, setOrder] = useState('Descendente'); // Descendente x defecto
     const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
 
 
@@ -76,21 +76,24 @@ const CardContainer = () => {
     // Ordenamiento **************************************************************************
 
     const sortBy = (orderBy) => {
-        if (order === 'Ascendente') {
-            setOrder('Descendente');
-        } else {
-            setOrder('Ascendente');
-        }
+        // if (order === 'Ascendente') {
+        //     setOrder('Descendente');
+        // } else {
+        //     setOrder('Ascendente');
+        // }
+        order === 'Descendente'
+            ? setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1))
+            : setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1))
         setOrderBy(orderBy);
     }
 
-    (function sortPokemons (p) { // Función para ordenar la lista de pokemons
-        if (order === 'Ascendente') {
-            return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
-        } else {
-            return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
-        }
-    })(pokemonsToShow); // Se autoejecuta la función y se pasa como parámetro la lista de pokemons
+    // (function sortPokemons (p) { // Función para ordenar la lista de pokemons
+    //     if (order === 'Ascendente') {
+    //         return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
+    //     } else {
+    //         return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
+    //     }
+    // })(pokemonsToShow); // Se autoejecuta la función y se pasa como parámetro la lista de pokemons
 
     // Render ********************************************************************************
 
