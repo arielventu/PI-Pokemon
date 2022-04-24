@@ -82,7 +82,7 @@ const CardContainer = () => {
         pageNumbersHandler();
     }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
     
-    // Ordenamiento y Filtrado **************************************************************************
+    // Ordenamiento y Filtrado ****************************************************************
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
@@ -93,6 +93,14 @@ const CardContainer = () => {
             setOrder('Ascendente');
         }
         setOrderBy(orderBy);
+    }
+
+    const filterBy = (type) => {
+        if (type === 'Todos') {
+            setPokemonsToShow(pokemons);
+        } else {
+            setPokemonsToShow(pokemons.filter(pokemon => pokemon.type.includes(type)));
+        }
     }
 
     // Render ********************************************************************************
