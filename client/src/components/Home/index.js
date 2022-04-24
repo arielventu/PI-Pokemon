@@ -45,7 +45,7 @@ const CardContainer = () => {
             dispatch(getTypes());
             // console.log(types);
         }
-    }, []);
+    }, [dispatch]);
 
     // Paginación ***************************************************************************
 
