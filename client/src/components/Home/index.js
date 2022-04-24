@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons, getTypes } from '../../actions';
+import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
 import { LOADING_IMG } from '../../utils';
