@@ -96,6 +96,7 @@ router.get('/', async (req, res, next) => {
                 id: pokemon.id,
                 name: capitalize(pokemon.name),
                 image: pokemon.image,
+                attack: pokemon.attack,
                 type: pokemon.types.map(type => type.dataValues.name)
             });
         }
@@ -110,6 +111,7 @@ router.get('/', async (req, res, next) => {
                 id: pokemonAPI.data.id,
                 name: capitalize(pokemonAPI.data.name),
                 image: pokemonAPI.data.sprites.other.dream_world.front_default,
+                attack: pokemonAPI.data.stats[1].base_stat,
                 type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
             });
         }
