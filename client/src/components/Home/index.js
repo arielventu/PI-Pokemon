@@ -112,13 +112,13 @@ const CardContainer = () => {
                 </div>
                 <div className='home-body'>
                     {pokemonsToShow.map((p) => (
-                        // console.log(p.type)
-                        <PokemonCard
-                            key={p.id}
-                            name={p.name}
-                            image={p.image}
-                            type={p.type}
-                            />
+                        console.log(p.type)
+                        // <PokemonCard
+                        //     key={p.id}
+                        //     name={p.name}
+                        //     image={p.image}
+                        //     type={p.type}
+                        //     />
                     ))}
                 </div>
                 <div className='home-footer'>
