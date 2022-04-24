@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { ALL_POKES } from '../utils.js';
+import { ALL_POKES, ALL_TYPES } from '../utils.js';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
 export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
+export const GET_TYPES = 'GET_TYPES';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -19,6 +20,23 @@ export const getPokemons = () => {
             });
     };
 };
+
+export const getTypes = () => {
+    return function (dispatch) {
+        axios.get(ALL_TYPES)
+        .then(response => {
+            // console.log(response);
+            dispatch({
+                type: GET_TYPES,
+                payload: response.data,
+            });
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    };
+};
+
 
 export const searchPokemons = (search) => {
     return function (dispatch) {

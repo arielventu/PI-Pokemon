@@ -15,6 +15,7 @@ const CardContainer = () => {
     // Información de los pokemons
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
+    const types = useSelector(state => state.types);
   
     // Paginación 
     const pokemonsPerPage = 4;
@@ -31,11 +32,17 @@ const CardContainer = () => {
     // **************************************FUNCTIONS****************************************
     
 
-    // Obtengo los pokemons del store 
+    // Obtengo los datos del store 
 
     useEffect(() => {
         if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
+        }
+    }, []);
+
+    useEffect(() => {
+        if (types.length === 0) { // si no están cargados en el store, se cargan
+            dispatch(getTypes());
         }
     }, []);
 
