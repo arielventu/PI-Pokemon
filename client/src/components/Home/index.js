@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
+import Filters from '../Filters';
 import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
@@ -129,7 +130,9 @@ const CardContainer = () => {
                         <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
-                
+                <div>
+                    <Filters types={types} filterByType={filterByType} filterByOrigin={filterByOrigin} />
+                </div>
 
                 {/* <div calssName='home-header-filter'>
                     <select onChange={(e) => filterBy(e.target.value)}>
