@@ -3,6 +3,7 @@ import './PokemonCard.css';
 
 const PokemonCard = ({name, id, image, type, attack}) => {
 	console.log(attack)
+	console.log(id)
   return (
 		<div className='pokemon-card'>
 			<h1>Name:{name}</h1>
