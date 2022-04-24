@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
-import PokemonCard from '../PokemonCard/';
+import PokemonCard from '../PokemonCard';
 import { LOADING_IMG } from '../../utils';
 import './CardContainer.css';
 
@@ -105,10 +105,10 @@ const CardContainer = () => {
         )
     } else {
         return (
-            <div className='card-container'>
-                <div className='card-container-header'>
+            <div className='home'>
+                <div className='home-header'>
                     <h1>Pokemons</h1>
-                    <div className='card-container-header-order'>
+                    <div className='home-header-order'>
                         <select onChange={(e) => sortBy(e.target.value)}>
                             <option value='id'>ID</option>
                             <option value='name'>Name</option>
@@ -117,7 +117,7 @@ const CardContainer = () => {
                         <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
-                <div className='card-container-body'>
+                <div className='home-body'>
                     {pokemonsToShow.map((p) => (
                         // console.log(p.type)
                         <PokemonCard
@@ -128,7 +128,7 @@ const CardContainer = () => {
                             />
                     ))}
                 </div>
-                <div className='card-container-footer'>
+                <div className='home-footer'>
                     <button onClick={prevPageHandler}>&nbsp; &lt; &nbsp;</button>
                         {pageNumbers.map((page) => (
                             <button key={page} onClick={() => goToPageHandler(page)}>
