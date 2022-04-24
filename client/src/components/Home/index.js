@@ -120,7 +120,7 @@ const CardContainer = () => {
                         <select onChange={(e) => sortBy(e.target.value)}>
                             <option value='id'>ID</option>
                             <option value='name'>Name</option>
-                            <option value='attack'>Type</option>
+                            <option value='attack'>Attack</option>
                         </select>
                         <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
