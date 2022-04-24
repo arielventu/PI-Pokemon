@@ -97,9 +97,9 @@ const CardContainer = () => {
 
     const filterBy = (type) => {
         if (type === 'Todos') {
-            setPokemonsToShow(pokemonstoShow.filter);
+            setPokemonsToShow(pokemonsToShow);
         } else {
-            setPokemonsToShow(pokemonsToShow.filter(pokemon => pokemon.type.includes(type)));
+            setPokemonsToShow(pokemons.filter(pokemon => pokemon.type.includes(type)));
         }
     }
 
