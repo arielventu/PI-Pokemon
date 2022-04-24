@@ -3,7 +3,7 @@ import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
 import { LOADING_IMG } from '../../utils';
-import './CardContainer.css';
+import './Home.css';
 
 
 const CardContainer = () => {
