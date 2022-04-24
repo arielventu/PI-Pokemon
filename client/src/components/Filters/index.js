@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useState, useEffect } from 'react'
 import { getTypes } from '../../actions'
 
 
@@ -10,7 +11,7 @@ const Filters = () => {
   useEffect(() => {
     if (types.length === 0) { // si no están cargados en el store, se cargan
       dispatch(getTypes())
-      console.log(types)
+      // console.log(types)
     }
   }, [dispatch])
 
