@@ -94,13 +94,17 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
-    // const filterBy = (type) => {
-    //     if (type === 'Todos') {
-    //         setPokemonsToShow(pokemonsToShow);
-    //     } else {
-    //         setPokemonsToShow(pokemons.filter(pokemon => pokemon.type.includes(type)));
-    //     }
-    // }
+    const filterByType = (type) => {
+        const filteredPokemons = pokemons.filter(pokemon => pokemon.type.includes(type));
+        setPokemonsToShow(filteredPokemons);
+    }
+
+    const filterByOrigin = () => {
+        let origin = '';
+
+        const filteredPokemons = pokemons.filter(pokemon => pokemon.origin === origin);
+        setPokemonsToShow(filteredPokemons);
+    }
 
     // Render ********************************************************************************
 
@@ -125,6 +129,8 @@ const CardContainer = () => {
                         <button onClick={() => sortBy(orderBy)}>{order}</button>
                     </div>
                 </div>
+                
+
                 {/* <div calssName='home-header-filter'>
                     <select onChange={(e) => filterBy(e.target.value)}>
                         <option value='Todos'>Todos</option>
