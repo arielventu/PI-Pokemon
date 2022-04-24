@@ -86,14 +86,6 @@ const CardContainer = () => {
         setOrderBy(orderBy);
     }
 
-    // (function sortPokemons (p) { // Función para ordenar la lista de pokemons
-    //     if (order === 'Ascendente') {
-    //         return p.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1);
-    //     } else {
-    //         return p.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1);
-    //     }
-    // })(pokemonsToShow); // Se autoejecuta la función y se pasa como parámetro la lista de pokemons
-
     // Render ********************************************************************************
 
     if (pokemons.length === 0) {
