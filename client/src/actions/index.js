@@ -55,11 +55,14 @@ export const searchPokemons = (search) => {
     };
 }
 
-export const originPokemons = (origin) => {
+export const originPokemons = (id) => {
     return function (dispatch) {
         dispatch({
             type: ORIGIN_POKEMONS,
-            payload: origin
+            payload: {
+                id: id,
+                
+            }
     });
 }
 
