@@ -54,4 +54,11 @@ export const searchPokemons = (search) => {
     };
 }
 
+export const setPokemonsOrigin = (origin) => (dispatch) => {
+	dispatch({type: 'POKEMONS_ORIGIN', payload: origin});
+};
+
+export const setPokemonsType = (type) => (dispatch) => {
+	dispatch({type: 'POKEMONS_TYPE', payload: type});
+};
 
