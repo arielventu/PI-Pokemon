@@ -3,6 +3,7 @@ import {GET_POKEMONS, SEARCH_POKEMONS} from '../actions';
 const initialState = {
 	pokemons: [],
 	types: [],
+	
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
