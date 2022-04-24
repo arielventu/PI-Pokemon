@@ -4,6 +4,7 @@ import { ALL_POKES, ALL_TYPES } from '../utils.js';
 export const GET_POKEMONS = 'GET_POKEMONS';
 export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
+export const ORIGIN_POKEMONS = 'ORIGIN_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -54,11 +55,13 @@ export const searchPokemons = (search) => {
     };
 }
 
-export const setPokemonsOrigin = (origin) => (dispatch) => {
-	dispatch({type: 'POKEMONS_ORIGIN', payload: origin});
-};
+export const originPokemons = (origin) => {
+    return function (dispatch) {
+        dispatch({
+            type: ORIGIN_POKEMONS,
+            payload: origin
+    });
+}
 
-export const setPokemonsType = (type) => (dispatch) => {
-	dispatch({type: 'POKEMONS_TYPE', payload: type});
-};
+}
 
