@@ -78,10 +78,10 @@ const CardContainer = () => {
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
             setOrder('Descendente')
-            setPokemonsToShow(pokemons.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1));
+            setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1));
         } else {
             setOrder('Ascendente');
-            setPokemonsToShow(pokemons.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1))
+            setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1))
         }
         setOrderBy(orderBy);
     }
