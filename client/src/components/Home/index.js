@@ -39,12 +39,12 @@ const CardContainer = () => {
         }
     }, []);
 
-    useEffect(() => {
-        if (types.length === 0) { // si no están cargados en el store, se cargan
-            dispatch(getTypes());
-            // console.log(types);
-        }
-    }, [dispatch]);
+    // useEffect(() => {
+    //     if (types.length === 0) { // si no están cargados en el store, se cargan
+    //         dispatch(getTypes());
+    //         // console.log(types);
+    //     }
+    // }, [dispatch]);
 
     // Paginación ***************************************************************************
 
