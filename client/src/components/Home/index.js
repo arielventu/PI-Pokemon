@@ -41,11 +41,11 @@ const CardContainer = () => {
         }
     }, []);
 
-    useEffect(() => {
-        if (pokemonsToShow.length === 0) { // si no están cargados en el store, se cargan
-            dispatch(setPokemonsToShow(pokemonsToShow));
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (pokemonsToShow.length === 0) { // si no están cargados en el store, se cargan
+    //         dispatch(setPokemonsToShow(pokemonsToShow));
+    //     }
+    // }, []);
 
     // useEffect(() => {
     //     if (types.length === 0) { // si no están cargados en el store, se cargan
@@ -82,12 +82,20 @@ const CardContainer = () => {
         setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
     }
 
+    // useEffect(() => {
+    //     const indexOfLast = currentPage * pokemonsPerPage;  
+    //     const indexOfFirst = indexOfLast - pokemonsPerPage;
+    //     setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast));
+    //     pageNumbersHandler();
+    // }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
+    
     useEffect(() => {
-        const indexOfLast = currentPage * pokemonsPerPage;  
+        const indexOfLast = currentPage * pokemonsPerPage;
         const indexOfFirst = indexOfLast - pokemonsPerPage;
-        setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast));
+        dispatch(setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast)));
         pageNumbersHandler();
-    }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
+    }, [currentPage, pokemons, dispatch]); // Si cambia la página, se actualiza el array de números de páginas
+    
     
     // Ordenamiento y Filtrado ****************************************************************
 
