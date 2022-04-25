@@ -7,7 +7,7 @@ import { getTypes, filterTypes, setPokemonsToShow} from '../../actions'
 const Filters = () => {
   const dispatch = useDispatch()
   const types = useSelector(state => state.types)
-  const typesFilter = useSelector(state => state.typesFilter)
+  const typeFiltered = useSelector(state => state.typeFiltered)
 
   useEffect(() => {
       dispatch(getTypes())
@@ -34,6 +34,7 @@ const Filters = () => {
             </option>
           ))}
         </select>
+        <h1>{typeFiltered}</h1>
       </div>
     </div>
 
