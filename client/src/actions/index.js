@@ -68,15 +68,10 @@ export const setPokemonsToShow = (pokemons) => {
 
 export const filterTypes = (type) => {
     return function (dispatch) {
-        try {
-            dispatch({
-                type: FILTER_TYPES,
-                payload: type,
-            });
-
-        } catch (error) {
-            console.log(error);
-        }
+        dispatch({
+            type: FILTER_TYPES,
+            payload: type,
+        });
     };
 }
 
