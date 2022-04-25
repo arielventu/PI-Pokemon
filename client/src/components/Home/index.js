@@ -36,7 +36,7 @@ const Home = () => {
     // Obtengo los datos del store 
 
     useEffect(() => {
-        if (pokemons.length === 0) { // si no están cargados en el store, se cargan
+        if (pokemons === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
         }
     }, []);
