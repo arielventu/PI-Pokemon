@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons } from '../../actions';
+import { getPokemons, setPokemonsToShow } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
 import Filters from '../Filters';
@@ -16,11 +16,12 @@ const CardContainer = () => {
     const dispatch = useDispatch();
     const pokemons = useSelector(state => state.pokemons);
     const types = useSelector(state => state.types);
+    const pokemonsToShow = useSelector(state => state.pokemonsToShow);
   
     // Paginación 
     const pokemonsPerPage = 4;
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsToShow, setPokemonsToShow] = useState([]);
+    // const [pokemonsToShow, setPokemonsToShow] = useState([]);
     const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento

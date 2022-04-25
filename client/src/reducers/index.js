@@ -3,6 +3,7 @@ import {GET_POKEMONS, SEARCH_POKEMONS, GET_TYPES, ORIGIN_POKEMONS} from '../acti
 const initialState = {
 	pokemons: [],
 	types: [],
+	pokemonsToShow: [],
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
@@ -21,6 +22,11 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			return {
 				...state,
 				types: payload,
+			};
+		case SET_POKEMONS_TO_SHOW:
+			return {
+				...state,
+				pokemonsToShow: payload,
 			};
 		case ORIGIN_POKEMONS:
 			return {

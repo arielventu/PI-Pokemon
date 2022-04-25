@@ -5,6 +5,7 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
 export const ORIGIN_POKEMONS = 'ORIGIN_POKEMONS';
+export const SET_POKEMONS_TO_SHOW = 'SET_POKEMONS_TO_SHOW';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -55,16 +56,14 @@ export const searchPokemons = (search) => {
     };
 }
 
-export const originPokemons = (id) => {
+export const setPokemonsToShow = (pokemons) => {
     return function (dispatch) {
         dispatch({
-            type: ORIGIN_POKEMONS,
-            payload: {
-                id: id,
-                
-            }
-    });
+            type: SET_POKEMONS_TO_SHOW,
+            payload: pokemons,
+        });
+    };
 }
 
-}
+
 
