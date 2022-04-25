@@ -37,7 +37,7 @@ const Home = () => {
 
     useEffect(() => {
             dispatch(getPokemons());
-    }, [pokemons, dispatch]);
+    }, [dispatch]);
 
     // Pagination Handler *******************************************************************
 
