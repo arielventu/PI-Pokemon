@@ -17,7 +17,6 @@ const CardContainer = () => {
     const pokemons = useSelector(state => state.pokemons);
     const types = useSelector(state => state.types);
     const pokemonsToShow = useSelector(state => state.pokemonsToShow);
-    const setPokemonsToShow = useDispatch(setPokemonsToShow);
   
     // Paginación 
     const pokemonsPerPage = 4;
@@ -42,11 +41,14 @@ const CardContainer = () => {
         }
     }, []);
 
-    useEffect(() => {
-        if (pokemons.length > 0) {
-            setPokemonsToShow(pokemons);
-        }
-    }, []);
+    useEffect(() => {   
+        // Paginación ***************************************************************************
+        const indexOfLastPokemon = currentPage * pokemonsPerPage;
+        const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
+        const currentPokemons = pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+        setPokemonsToShow(currentPokemons);
+    }, [currentPage, pokemons]);
+        
 
     // useEffect(() => {
     //     if (types.length === 0) { // si no están cargados en el store, se cargan
