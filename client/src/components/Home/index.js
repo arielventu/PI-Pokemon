@@ -17,6 +17,7 @@ const CardContainer = () => {
     const pokemons = useSelector(state => state.pokemons);
     const types = useSelector(state => state.types);
     const pokemonsToShow = useSelector(state => state.pokemonsToShow);
+    const setPokemonsToShow = useDispatch(setPokemonsToShow);
   
     // Paginación 
     const pokemonsPerPage = 4;
