@@ -66,12 +66,12 @@ export const setPokemonsToShow = (pokemons) => {
     };
 }
 
-export const filterTypes = (typeFiltered) => {
+export const filterTypes = (type) => {
     return function (dispatch) {
         try {
             dispatch({
                 type: FILTER_TYPES,
-                payload: typeFiltered,
+                payload: type,
             });
 
         } catch (error) {
