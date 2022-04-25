@@ -6,6 +6,7 @@ export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
 export const ORIGIN_POKEMONS = 'ORIGIN_POKEMONS';
 export const SET_POKEMONS_TO_SHOW = 'SET_POKEMONS_TO_SHOW';
+export const FILTER_TYPES = 'FILTER_TYPES';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -65,7 +66,14 @@ export const setPokemonsToShow = (pokemons) => {
     };
 }
 
-// export const filterPokemons
+export const filterTypes = (types) => {
+    return function (dispatch) {
+        dispatch({
+            type: FILTER_TYPES,
+            payload: types,
+        });
+    };
+}
 
 
 

@@ -1,11 +1,18 @@
-import {GET_POKEMONS, SEARCH_POKEMONS, GET_TYPES, ORIGIN_POKEMONS, SET_POKEMONS_TO_SHOW} from '../actions';
+import {
+	GET_POKEMONS,
+	SEARCH_POKEMONS,
+	GET_TYPES,
+	ORIGIN_POKEMONS,
+	SET_POKEMONS_TO_SHOW,
+	FILTER_TYPES,
+} from '../actions';
 
 const initialState = {
 	pokemons: [],
 	types: [],
 	pokemonsToShow: [],
 	pokemonsOrigin: 'All',
-	pokemonsFilter: 'All',
+	typesFilter: 'All',
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
@@ -35,11 +42,11 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				...state.pokemons,
 				pokemonsOrigin: payload,
 			};
-		// case FILTER_POKEMONS:
-		// 	return {
-		// 		...state.pokemons,
-		// 		pokemonsFilter: payload,
-		// 	};
+		case FILTER_TYPES:
+			return {
+				...state.pokemons,
+				typesFilter: payload,
+			};
 		default:
 			return state;
 	}
