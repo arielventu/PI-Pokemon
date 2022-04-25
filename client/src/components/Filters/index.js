@@ -32,15 +32,16 @@ const Filters = () => {
       <h3>Filters</h3>
       <div className="filters__types">
         <h4>Types</h4>
-        
-        <select onChange={handleChange} onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
+        <select onChange={handleChange}>
           <option value="">All</option>
           {types.map((type) => (
             <option key={type.id} value={type.name}>
               {type.name}
             </option>
           ))}
-        </select>
+          </select>
+          </form>
         {/* <button onClick={handleSubmit}>Filter</button> */}
         <h1>{typeFiltered}</h1>
       </div>
