@@ -38,7 +38,6 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				pokemonsToShow: payload,
 			};
 		case ORIGIN_POKEMONS:
-			state.pokemonsToShow = state.pokemons;
 			return {
 				...state,
 				pokemonsOrigin: payload,
