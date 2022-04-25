@@ -13,32 +13,31 @@ const Filters = () => {
       dispatch(getTypes())
   }, [dispatch])
 
-  const filterTypesHandler = (type) => {
-    dispatch(filterTypes(type))
+  const handleChange = (e) => {
+    dispatch(filterTypes(e.target.value))
   }
 
-      
+   
 
 
    
   return (
     <div className="filters">
-      <h2>Filters</h2>
-      <div className="div-types">
-        {types && types.map((el, i) => (
-          <div key={i} className="div-type">
-            <button
-              key={i}
-              className={`button-type ${typesFilter.includes(el) ? 'selected' : ''}`}
-              onClick={() => filterTypesHandler(el)}
-            >
-              {el}
-            </button>
-
-          </div>
-        ))}
+      <h3>Filters</h3>
+      <div className="filters__types">
+        <h4>Types</h4>
+        <select onChange={handleChange}>
+          <option value="">All</option>
+          {types.map((type) => (
+            <option key={type.id} value={type.name}>
+              {type.name}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
+
+    
   )
 }
 
