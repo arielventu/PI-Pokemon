@@ -65,5 +65,7 @@ export const setPokemonsToShow = (pokemons) => {
     };
 }
 
+// export const filterPokemons
+
 
 

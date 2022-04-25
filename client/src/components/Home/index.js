@@ -7,7 +7,7 @@ import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
 
-const CardContainer = () => {
+const Home = () => {
 
     // **************************************************************************************
     // ********************************STATE & CONSTANTS*************************************
@@ -145,4 +145,4 @@ const CardContainer = () => {
     }
     
     
-export default CardContainer;
+export default Home;

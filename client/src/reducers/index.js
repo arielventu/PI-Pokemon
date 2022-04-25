@@ -4,6 +4,8 @@ const initialState = {
 	pokemons: [],
 	types: [],
 	pokemonsToShow: [],
+	pokemonsOrigin: 'All',
+	pokemonsFilter: 'All',
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
@@ -33,6 +35,11 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				...state.pokemons,
 				pokemonsOrigin: payload,
 			};
+		// case FILTER_POKEMONS:
+		// 	return {
+		// 		...state.pokemons,
+		// 		pokemonsFilter: payload,
+		// 	};
 		default:
 			return state;
 	}
