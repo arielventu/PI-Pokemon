@@ -23,8 +23,8 @@ const Filters = () => {
     <div>
       <div className='home-filters'>
         <div className='home-filters-types'>
-            {/* <select onChange={(e) => filterBy(e.target.value)}> */}
-            <select>
+            <select onChange={(e) => handleChange(e.target.value)}>
+            {/* <select> */}
                 <option value='All'>All</option>
                 {types.map(type => (
                     <option key={type.id} value={type.name}>{type.name}</option>
