@@ -32,7 +32,6 @@ const Filters = () => {
       <h3>Filters</h3>
       <div className="filters__types">
         <h4>Types</h4>
-        <form onSubmit={handleSubmit}>
         <select onChange={handleChange}>
           <option value="">All</option>
           {types.map((type) => (
@@ -41,8 +40,7 @@ const Filters = () => {
             </option>
           ))}
           </select>
-          </form>
-        {/* <button onClick={handleSubmit}>Filter</button> */}
+        <button onClick={handleSubmit}>Filter</button>
         <h1>{typeFiltered}</h1>
       </div>
     </div>
