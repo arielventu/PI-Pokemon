@@ -13,7 +13,12 @@ const Filters = () => {
       dispatch(getTypes())
   }, [dispatch])
 
- 
+  const handleChange = (e) => {
+    dispatch(filterTypes(e.target.value))
+    console.log(typesFilter)
+  }
+
+   
   return (
     <div>
       <div className='home-filters'>
