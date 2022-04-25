@@ -15,7 +15,6 @@ const Filters = () => {
 
   const handleChange = (e) => {
     dispatch(filterTypes(e.target.value))
-    dispatch(setPokemonsToShow(typeFiltered))
   }
 
   return (
