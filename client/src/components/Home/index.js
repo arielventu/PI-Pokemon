@@ -41,20 +41,7 @@ const CardContainer = () => {
         }
     }, []);
 
-    // useEffect(() => {
-    //     if (pokemonsToShow.length === 0) { // si no están cargados en el store, se cargan
-    //         dispatch(setPokemonsToShow(pokemonsToShow));
-    //     }
-    // }, []);
-
-    // useEffect(() => {
-    //     if (types.length === 0) { // si no están cargados en el store, se cargan
-    //         dispatch(getTypes());
-    //         // console.log(types);
-    //     }
-    // }, [dispatch]);
-
-    // Paginación ***************************************************************************
+    // Pagination Handler *******************************************************************
 
     const nextPageHandler = () => {
         // console.log(currentPage);
@@ -82,13 +69,8 @@ const CardContainer = () => {
         setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
     }
 
-    // useEffect(() => {
-    //     const indexOfLast = currentPage * pokemonsPerPage;  
-    //     const indexOfFirst = indexOfLast - pokemonsPerPage;
-    //     setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast));
-    //     pageNumbersHandler();
-    // }, [currentPage, pokemons]); // Si cambia la página, se actualiza el array de números de páginas
-    
+    // Pagination Function *******************************************************************
+
     useEffect(() => {
         const indexOfLast = currentPage * pokemonsPerPage;
         const indexOfFirst = indexOfLast - pokemonsPerPage;
@@ -108,17 +90,6 @@ const CardContainer = () => {
             setOrder('Ascendente');
         }
         setOrderBy(orderBy);
-    }
-
-    const filterByType = (type) => {
-        const filteredPokemons = pokemons.filter(pokemon => pokemon.type.includes(type));
-        setPokemonsToShow(filteredPokemons);
-    }
-
-    const filterByOrigin = (id) => {
-        const filteredPokemons = pokemons.filter(pokemon => pokemon.origin.id === id);
-        
-        setPokemonsToShow(filteredPokemons);
     }
 
     // Render ********************************************************************************
