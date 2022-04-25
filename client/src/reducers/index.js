@@ -12,7 +12,7 @@ const initialState = {
 	types: [],
 	pokemonsToShow: [],
 	pokemonsOrigin: 'All',
-	typesFilter: 'All',
+	typeFiltered: 'All',
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
@@ -45,7 +45,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 		case FILTER_TYPES:
 			return {
 				...state.pokemons,
-				typesFilter: payload,
+				typeFiltered: payload,
 			};
 		default:
 			return state;
