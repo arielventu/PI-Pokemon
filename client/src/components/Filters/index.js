@@ -17,10 +17,6 @@ const Filters = () => {
     dispatch(filterTypes(e.target.value))
   }
 
-   
-
-
-   
   return (
     <div className="filters">
       <h3>Filters</h3>
