@@ -41,15 +41,12 @@ const CardContainer = () => {
         }
     }, []);
 
-    useEffect(() => {   
-        // Paginación ***************************************************************************
-        const indexOfLastPokemon = currentPage * pokemonsPerPage;
-        const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
-        const currentPokemons = pokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
-        setPokemonsToShow(currentPokemons);
-    }, [currentPage, pokemons]);
-        
-
+    useEffect(() => {
+        if (pokemonsToShow.length === 0) { // si no están cargados en el store, se cargan
+            dispatch(setPokemonsToShow(pokemons));
+        }
+    }, []);
+    
     // useEffect(() => {
     //     if (types.length === 0) { // si no están cargados en el store, se cargan
     //         dispatch(getTypes());
