@@ -17,12 +17,18 @@ const Filters = () => {
     dispatch(filterTypes(e.target.value))
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(setPokemonsToShow())
+  }
+
+
   return (
     <div className="filters">
       <h3>Filters</h3>
       <div className="filters__types">
         <h4>Types</h4>
-        <select onChange={handleChange}>
+        <select onChange={handleChange} onSubmit={handleSubmit}>
           <option value="">All</option>
           {types.map((type) => (
             <option key={type.id} value={type.name}>
