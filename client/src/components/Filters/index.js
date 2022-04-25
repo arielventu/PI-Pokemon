@@ -21,7 +21,7 @@ const Filters = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(setPokemonsToShow(
-      pokemons.filter(pokemon => type) 
+      pokemons.filter(pokemon => types) 
     ))
     console.log(typeFiltered);
   }
