@@ -23,6 +23,7 @@ const Filters = () => {
     dispatch(setPokemonsToShow(
       pokemons.filter(pokemon => pokemon.types.includes(typeFiltered)) 
     ))
+    console.log(typeFiltered);
   }
 
 
