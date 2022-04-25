@@ -36,10 +36,8 @@ const Home = () => {
     // Obtengo los datos del store 
 
     useEffect(() => {
-        if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
-        }
-    }, []);
+    }, [pokemons, dispatch]);
 
     // Pagination Handler *******************************************************************
 
@@ -76,7 +74,7 @@ const Home = () => {
         const indexOfFirst = indexOfLast - pokemonsPerPage;
         dispatch(setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast)));
         pageNumbersHandler();
-    }, [currentPage, pokemons, dispatch]); // Si cambia la página, se actualiza el array de números de páginas
+    }, [currentPage, pokemons, dispatch, pageNumbersHandler]); // Si cambia la página, se actualiza el array de números de páginas
     
     
     // Ordenamiento y Filtrado ****************************************************************
