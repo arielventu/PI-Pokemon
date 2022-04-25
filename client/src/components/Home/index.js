@@ -21,7 +21,7 @@ const CardContainer = () => {
     // Paginación 
     const pokemonsPerPage = 4;
     const [currentPage, setCurrentPage] = useState(1);
-    // const [pokemonsToShow, setPokemonsToShow] = useState([]);
+    // const [pokemonsToShow, setPokemonsToShow] = useState([]); //Se reemplazó x State de Redux
     const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
@@ -83,10 +83,10 @@ const CardContainer = () => {
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
-            setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1));
+            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1)));
             setOrder('Descendente')
         } else {
-            setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1))
+            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1)))
             setOrder('Ascendente');
         }
         setOrderBy(orderBy);
