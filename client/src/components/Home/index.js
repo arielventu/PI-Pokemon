@@ -59,13 +59,7 @@ const Home = () => {
         setCurrentPage(page); // Cambia la página actual 
     }
 
-    const pageNumbersHandler = () => { 
-        const pageNumbers = []; // Array para guardar los números de páginas
-        for (let i = 1; i <= Math.ceil(pokemons.length / pokemonsPerPage); i++) { 
-            pageNumbers.push(i); 
-        }
-        setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
-    }
+    
 
     // Pagination Function *******************************************************************
 
@@ -73,8 +67,16 @@ const Home = () => {
         const indexOfLast = currentPage * pokemonsPerPage;
         const indexOfFirst = indexOfLast - pokemonsPerPage;
         dispatch(setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast)));
+        
+        const pageNumbersHandler = () => { 
+            const pageNumbers = []; // Array para guardar los números de páginas
+            for (let i = 1; i <= Math.ceil(pokemons.length / pokemonsPerPage); i++) { 
+                pageNumbers.push(i); 
+            }
+            setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
+        }
         pageNumbersHandler();
-    }, [currentPage, pokemons, dispatch, pageNumbersHandler]); // Si cambia la página, se actualiza el array de números de páginas
+    }, [currentPage, pokemons, dispatch]); // Si cambia la página, se actualiza el array de números de páginas
     
     
     // Ordenamiento y Filtrado ****************************************************************
