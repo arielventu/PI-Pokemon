@@ -43,10 +43,10 @@ const CardContainer = () => {
 
     useEffect(() => {
         if (pokemonsToShow.length === 0) { // si no están cargados en el store, se cargan
-            dispatch(setPokemonsToShow(pokemons));
+            dispatch(setPokemonsToShow(pokemonsToShow));
         }
     }, []);
-    
+
     // useEffect(() => {
     //     if (types.length === 0) { // si no están cargados en el store, se cargan
     //         dispatch(getTypes());
