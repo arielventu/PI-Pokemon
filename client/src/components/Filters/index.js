@@ -1,50 +1,26 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react'
-import { getTypes } from '../../actions'
+import { getTypes, filterTypes, pokemonsOrigin } from '../../actions'
 
 
 const Filters = () => {
   const dispatch = useDispatch()
   const types = useSelector(state => state.types)
-
-  const [selectedTypes, setSelectedTypes] = useState([])
-
-
+  const pokemonsOrigin = useSelector(state => state.pokemonsOrigin)
+  const typesFilter = useSelector(state => state.typesFilter)
 
   useEffect(() => {
-    if (types.length === 0) { // si no están cargados en el store, se cargan
       dispatch(getTypes())
-      // console.log(types)
-    }
   }, [dispatch])
 
-  const handleChange = (e) => {
-    const { value } = e.target
-    const index = selectedTypes.indexOf(value)
-    if (index === -1) {
-      setSelectedTypes([...selectedTypes, value])
-    } else {
-      setSelectedTypes(selectedTypes.filter(type => type !== value))
-    }
-  }
-
-  const filterBy = () => {
-    return selectedTypes.map(type => {
-      return {
-        type: type,
-        selected: true
-      }
-    })
-  }
-
-
-
+ 
   return (
     <div>
       <div className='home-filters'>
         <div className='home-filters-types'>
-            <select onChange={(e) => filterBy(e.target.value)}>
+            {/* <select onChange={(e) => filterBy(e.target.value)}> */}
+            <select>
                 <option value='All'>All</option>
                 {types.map(type => (
                     <option key={type.id} value={type.name}>{type.name}</option>
@@ -52,10 +28,11 @@ const Filters = () => {
             </select>
         </div>
         <div className='home-filters-origin'>
-            <select onChange={(e) => filterBy(e.target.value)}>
+            <select>
+            {/* <select onChange={(e) => filterBy(e.target.value)}> */}
                 <option value='All'>All</option>
                 <option value='PokeAPI'>PokeAPI</option>
-                <option value='PokeCreated'>PokeCreated</option>
+                <option value='Created'>Created</option>
             </select>
         </div>
     </div>
