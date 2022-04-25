@@ -6,6 +6,7 @@ import { getTypes, filterTypes, setPokemonsToShow} from '../../actions'
 
 const Filters = () => {
   const dispatch = useDispatch()
+  const pokemons = useSelector(state => state.pokemons)
   const types = useSelector(state => state.types)
   const typeFiltered = useSelector(state => state.typeFiltered)
 
