@@ -39,12 +39,12 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			};
 		case ORIGIN_POKEMONS:
 			return {
-				...state.pokemons,
+				...state,
 				pokemonsOrigin: payload,
 			};
 		case FILTER_TYPES:
 			return {
-				...state.pokemons,
+				...state,
 				typeFiltered: payload,
 			};
 		default:
