@@ -1,13 +1,12 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useState, useEffect } from 'react'
-import { getTypes, filterTypes, pokemonsOrigin } from '../../actions'
+import { getTypes, filterTypes} from '../../actions'
 
 
 const Filters = () => {
   const dispatch = useDispatch()
   const types = useSelector(state => state.types)
-  const pokemonsOrigin = useSelector(state => state.pokemonsOrigin)
   const typesFilter = useSelector(state => state.typesFilter)
 
   useEffect(() => {
