@@ -11,8 +11,8 @@ const initialState = {
 	pokemons: [],
 	types: [],
 	pokemonsToShow: [],
-	pokemonsOrigin: 'All',
-	typeFiltered: 'All',
+	// pokemonsOrigin: 'All',
+	// typeFiltered: 'All',
 };
 
 const rootReducer = (state = initialState, {payload, type}) => {
