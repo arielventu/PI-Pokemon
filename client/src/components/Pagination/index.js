@@ -10,6 +10,7 @@ const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
     const renderPageNumbers = pageNumbers.map(number => {
         return (
             <nav key={number}>
+                <h1>PAGINACIONNN</h1>
                 <li className="page-numbers">
                     <button onClick={() => pagination(number)}>{number}</button>
                 </li>
@@ -17,11 +18,6 @@ const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
         );
 
     });
-
-        
-//     return (
-//     <div>Pagination</div>
-//   )
 }
 
 export default Pagination
