@@ -57,56 +57,6 @@ const Home = () => {
             dispatch(getPokemons());
     }, [dispatch]);
 
-    // Pagination Handler *******************************************************************
-
-    // const nextPageHandler = () => {
-    //     // console.log(currentPage);
-    //     if (currentPage < Math.ceil(allPokemons.length / pokemonsPerPage)) {// Calcula el número de páginas totales y verifica que no se pase del límite de páginas
-    //         setCurrentPage(currentPage + 1);
-    //     }
-    // }
-
-    // const prevPageHandler = () => {
-    //     // console.log(currentPage);
-    //     if (currentPage > 1) { // Verifica que no se pase del límite inferior
-    //         setCurrentPage(currentPage - 1);
-    //     }
-    // }
-
-    // const goToPageHandler = (page) => {
-    //     setCurrentPage(page); // Cambia la página actual 
-    // }
-
-    
-
-    // Pagination Function *******************************************************************
-
-    // useEffect(() => {
-    //     const indexOfLast = currentPage * pokemonsPerPage;
-    //     const indexOfFirst = indexOfLast - pokemonsPerPage;
-    //     dispatch(setPokemonsToShow(pokemons.slice(indexOfFirst, indexOfLast)));
-        
-    //     const pageNumbers = []; // Array para guardar los números de páginas
-    //     for (let i = 1; i <= Math.ceil(pokemons.length / pokemonsPerPage); i++) { 
-    //         pageNumbers.push(i); 
-    //     }
-    //     setPageNumbers(pageNumbers); // Guarda los números de páginas en el array
-    // }, [currentPage, pokemons, dispatch]); // Si cambia la página, se actualiza el array de números de páginas
-    
-    
-    // Ordenamiento y Filtrado ****************************************************************
-
-    // const sortBy = (orderBy) => {
-    //     if (order === 'Ascendente') {
-    //         dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1)));
-    //         setOrder('Descendente')
-    //     } else {
-    //         dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1)))
-    //         setOrder('Ascendente');
-    //     }
-    //     setOrderBy(orderBy);
-    // }
-
     
 
     // Render ********************************************************************************
@@ -123,14 +73,7 @@ const Home = () => {
             <div className='home'>
                 <div className='home-header'>
                     <h1>Pokemons</h1>
-                    {/* <div className='home-header-order'>
-                        <select onChange={(e) => sortBy(e.target.value)}>
-                            <option value='id'>ID</option>
-                            <option value='name'>Name</option>
-                            <option value='attack'>Attack</option>
-                        </select>
-                        <button onClick={() => sortBy(orderBy)}>{order}</button>
-                    </div> */}
+                   
                 </div>
                 <div className='home-body'>
                     {currentPokemons.map((p) => (
