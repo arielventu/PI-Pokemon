@@ -21,7 +21,7 @@ const Home = () => {
     const pokemonsToShow = useSelector(state => state.pokemonsToShow);
   
     // Paginación 
-    const pokemonsPerPage = 4;
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
     // const [pokemonsToShow, setPokemonsToShow] = useState([]); //Se reemplazó x State de Redux
     const [pageNumbers, setPageNumbers] = useState([]);
