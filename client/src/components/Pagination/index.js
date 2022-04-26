@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pagination = ({}) => {
+const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
   return (
     <div>Pagination</div>
   )

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { getPokemons, setPokemonsToShow } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
-import SearchBar from '../SearchBar';
-import NavBar from '../NavBar';
-import Filters from '../Filters';
+// import SearchBar from '../SearchBar';
+// import NavBar from '../NavBar';
+// import Filters from '../Filters';
 import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
