@@ -20,8 +20,8 @@ const Filters = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (e.target.value === 'All') {
-      dispatch(setPokemonsToShow(pokemons))
+    if (e.target.value === '') {
+      dispatch(setPokemonsToShow(pokemonsToShow))
     } else {
       pokemons.filter(pokemon => pokemon.type.includes(typeFiltered))
     }
