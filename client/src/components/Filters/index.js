@@ -16,16 +16,17 @@ const Filters = () => {
 
   const handleChange = (e) => {
     dispatch(filterTypes(e.target.value))
+    dispatch()
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (e.target.value === '') {
-      dispatch(setPokemonsToShow(pokemonsToShow))
-    } else {
-      pokemons.filter(pokemon => pokemon.type.includes(typeFiltered))
-    }
-  }
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   if (e.target.value === '') {
+  //     dispatch(setPokemonsToShow(pokemonsToShow))
+  //   } else {
+  //     pokemons.filter(pokemon => pokemon.type.includes(typeFiltered))
+  //   }
+  // }
 
 
   return (
@@ -41,7 +42,7 @@ const Filters = () => {
             </option>
           ))}
           </select>
-        <button onClick={handleSubmit}>Filter</button>
+        {/* <button onClick={handleSubmit}>Filter</button> */}
         <h1>{typeFiltered}</h1>
       </div>
     </div>
