@@ -3,12 +3,12 @@ import React from 'react'
 const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
     const pageNumbers = [];
 
-    for (let i = 1; i <= Math.ceil(allPokemons / pokemonsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(allPokemons/pokemonsPerPage); i++) {
         pageNumbers.push(i);
     }
 
     return (
-    <nav key={number}>
+    <nav>
         <h1>PAGINACIONNN</h1>
             <ul className="pagination">
                 {pageNumbers.map(number => (
