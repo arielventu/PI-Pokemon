@@ -19,10 +19,12 @@ const Home = () => {
     const allPokemons = useSelector(state => state.pokemons);
   
     // Paginación 
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
     const [currentPage, setCurrentPage] = useState(1);
-    // const [pokemonsToShow, setPokemonsToShow] = useState([]); //Se reemplazó x State de Redux
-    const [pageNumbers, setPageNumbers] = useState([]);
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
+    const indexOfLastPokemon = currentPage * pokemonsPerPage;
+    const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
+    const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+    // const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
     const [order, setOrder] = useState('Descendente'); // Descendente x defecto
@@ -32,6 +34,21 @@ const Home = () => {
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
     
+    // Función para cambiar la página
+    const pagination = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    // Función para cambiar el orden
+    // const handleOrder = (order) => {
+    //     setOrder(order);
+    // };
+
+    // Función para cambiar el orden
+    // const handleOrderBy = (orderBy) => {
+    //     setOrderBy(orderBy);
+    // };
+
 
     // Obtengo los datos del store 
 
