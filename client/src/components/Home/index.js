@@ -23,7 +23,7 @@ const Home = () => {
     const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
-    const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+    const pokemonsToShow = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
     // const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
@@ -144,14 +144,14 @@ const Home = () => {
                     ))}
                 </div>
                 <div className='home-footer'>
-                    <button onClick={prevPageHandler}>&nbsp; &lt; &nbsp;</button>
+                    {/* <button onClick={prevPageHandler}>&nbsp; &lt; &nbsp;</button>
                         {pageNumbers.map((page) => (
                             <button key={page} onClick={() => goToPageHandler(page)}>
                                 {page}
                             </button>
                         ))}
                     <button onClick={nextPageHandler}>&nbsp; &gt; &nbsp;</button>
-                        <p> Página: {currentPage}</p>
+                        <p> Página: {currentPage}</p> */}
                     </div>
 
                 </div>
