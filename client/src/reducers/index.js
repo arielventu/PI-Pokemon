@@ -1,10 +1,10 @@
 import {
 	GET_POKEMONS,
-	SEARCH_POKEMONS,
 	GET_TYPES,
-	ORIGIN_POKEMONS,
-	SET_POKEMONS_TO_SHOW,
-	FILTER_TYPES,
+	// SEARCH_POKEMONS,
+	// ORIGIN_POKEMONS,
+	// SET_POKEMONS_TO_SHOW,
+	// FILTER_TYPES,
 } from '../actions';
 
 const initialState = {
@@ -17,38 +17,38 @@ const initialState = {
 
 const rootReducer = (state = initialState, {payload, type}) => {
 	switch (type) {
-		case SEARCH_POKEMONS:
-			return { 
-				...state,
-				pokemons: payload,
-			};
 		case GET_POKEMONS:
 			return {
 				...state,
 				pokemons: payload,
 			};
-		case GET_TYPES:
-			return {
-				...state,
-				types: payload,
-			};
-		case SET_POKEMONS_TO_SHOW:
-			return {
-				...state,
-				pokemonsToShow: payload,
-			};
-		case ORIGIN_POKEMONS:
-			return {
-				...state,
-				pokemonsOrigin: payload,
-			};
-		case FILTER_TYPES:
-			return {
-				...state,
-				typeFiltered: payload,
-			};
-		default:
-			return state;
+			case GET_TYPES:
+				return {
+					...state,
+					types: payload,
+				};
+			// case SET_POKEMONS_TO_SHOW:
+			// 	return {
+			// 		...state,
+			// 		pokemonsToShow: payload,
+			// 	};
+			// case ORIGIN_POKEMONS:
+			// 	return {
+			// 		...state,
+			// 		pokemonsOrigin: payload,
+			// 	};
+			// case SEARCH_POKEMONS:
+			// 	return { 
+			// 		...state,
+			// 		pokemons: payload,
+			// 	};
+			// case FILTER_TYPES:
+			// 	return {
+			// 		...state,
+			// 		typeFiltered: payload,
+			// 	};
+			default:
+				return state;
 	}
 };
 
