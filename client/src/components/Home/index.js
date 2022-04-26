@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import PokemonCard from '../PokemonCard';
+import Pagination from '../Pagination';
 // import SearchBar from '../SearchBar';
 // import NavBar from '../NavBar';
 // import Filters from '../Filters';
@@ -144,14 +145,15 @@ const Home = () => {
                     ))}
                 </div>
                 <div className='home-footer'>
-                    {/* <button onClick={prevPageHandler}>&nbsp; &lt; &nbsp;</button>
-                        {pageNumbers.map((page) => (
-                            <button key={page} onClick={() => goToPageHandler(page)}>
-                                {page}
-                            </button>
-                        ))}
-                    <button onClick={nextPageHandler}>&nbsp; &gt; &nbsp;</button>
-                        <p> Página: {currentPage}</p> */}
+                    <Pagination 
+                        pokemonsPerPage={pokemonsPerPage}
+                        totalPokemons={allPokemons.length}
+                        pagination={pagination}
+                        // nextPageHandler={nextPageHandler}
+                        // prevPageHandler={prevPageHandler}
+                        // goToPageHandler={goToPageHandler}
+                        // pageNumbers={pageNumbers}
+                        />
                     </div>
 
                 </div>

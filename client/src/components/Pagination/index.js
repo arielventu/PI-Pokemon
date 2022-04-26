@@ -3,7 +3,7 @@ import React from 'react'
 const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
     const pageNumbers = [];
 
-    for (let i = 1; i <= Math.ceil(allPokemons.length / pokemonsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(allPokemons / pokemonsPerPage); i++) {
         pageNumbers.push(i);
     }
 
