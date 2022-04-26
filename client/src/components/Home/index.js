@@ -24,7 +24,7 @@ const Home = () => {
     const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
-    const pokemonsToShow = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
+    const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
     // const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
@@ -111,7 +111,7 @@ const Home = () => {
 
     // Render ********************************************************************************
 
-    if (allPokemons.length === 0) {
+    if (currentPokemons.length === 0) {
         return (
             <div>
                 <img src={LOADING_IMG} alt="loading" />
@@ -133,7 +133,7 @@ const Home = () => {
                     </div> */}
                 </div>
                 <div className='home-body'>
-                    {pokemonsToShow.map((p) => (
+                    {currentPokemons.map((p) => (
                         // console.log(p.type)
                         <PokemonCard
                             key={p.id}
