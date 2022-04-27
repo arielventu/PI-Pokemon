@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemons } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
 import Pagination from '../Pagination';
 // import SearchBar from '../SearchBar';
@@ -78,8 +79,7 @@ const Home = () => {
                 <div className='home-body'>
                     {currentPokemons.map((p) => (
                         // console.log(p.type)
-                        <PokemonCard
-                            key={p.id}
+                        <PokemonCard key={p.id}
                             name={p.name}
                             image={p.image}
                             type={p.type}
