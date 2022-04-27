@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons, getTypes, filterByOrigin, filterByType } from '../../actions';
+import { getPokemons, getTypes, filterByOrigin, filterByType, sort } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
@@ -60,8 +60,10 @@ const Home = () => {
 
     const sortBy = (orderBy) => {
         if (order === 'Asc') {
+            dispatch(sort(orderBy, 'Asc'));
             setOrder('Desc');
         } else {
+            dispatch(sort(orderBy, 'Desc'));
             setOrder('Asc');
         }
         setOrderBy(orderBy);

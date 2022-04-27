@@ -3,7 +3,7 @@ import {
 	GET_TYPES,
 	FILTER_BY_ORIGIN,
 	FILTER_BY_TYPE,
-	SORT_BY_NAME,
+	SORT,
 	// SEARCH_POKEMONS,
 	// SET_POKEMONS_TO_SHOW,
 } from '../actions';
@@ -51,7 +51,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				pokemons: typeFiltered,
 			};
-		case SORT_BY_NAME:
+		case SORT:
 			let pokemonsSorted = state.pokemons;
 		
 			if (payload === 'Desc') pokemonsSorted.sort((a, b) => a.name > b.name ? 1 : -1);

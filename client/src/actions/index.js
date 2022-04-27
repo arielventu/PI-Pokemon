@@ -5,7 +5,7 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
-export const SORT_BY_NAME = 'SORT_BY_NAME';
+export const SORT = 'SORT';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
@@ -56,10 +56,10 @@ export const filterByType = (payload) => {
     };
 }
 
-export const sortByName = (payload) => {
+export const sort = (payload) => {
     // console.log(payload);
     return {
-        type: 'SORT_BY_NAME',
+        type: 'SORT',
         payload,
     };
 }
