@@ -16,6 +16,7 @@ const Home = () => {
     // Información de los pokemons
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
+    const allTypes = useSelector((state) => state.types);
   
     // Paginación 
     const [currentPage, setCurrentPage] = useState(1);
@@ -92,7 +93,7 @@ const Home = () => {
                     </select>
                     <select onChange={(e) => handleFilterByType(e)}>
                         <option value='All'>All</option>
-                        {type.map((type) => (
+                        {allTypes.map((type) => (
                                 <option key={type.id} value={type.name}>
                                     {type.name}
                                 </option>
