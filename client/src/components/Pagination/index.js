@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
+export default function Pagination ({allPokemons, pokemonsPerPage, pagination}) {
     const pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(allPokemons/pokemonsPerPage); i++) {
@@ -18,8 +18,6 @@ const Pagination = ({allPokemons, pokemonsPerPage, pagination}) => {
                 ))}
         </ul>
     </nav>
-    );
+    )
 
 }
-
-export default Pagination
