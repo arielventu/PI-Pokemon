@@ -40,7 +40,12 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				...state,
 				pokemons: originFiltered,
 			};
-		
+		case FILTER_BY_TYPE:
+			const pokemons = state.pokemons;
+			let typeFiltered;
+
+			if (payload === 'All') typeFiltered = pokemons;
+			
 	
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
