@@ -38,6 +38,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 					let reg_ex = /-/;
 					return allPokes.filter((el) => el.id.toString().search(reg_ex) !== -1);
 				}
+				console.log(allPokes);
 			}
 			return {
 				...state,
