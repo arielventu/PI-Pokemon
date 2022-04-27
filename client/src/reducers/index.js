@@ -35,7 +35,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 
 			if (payload === 'All') originFiltered = allPokemons;
 			if (payload === 'PokeAPI') originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
-			if (payload === 'Created') originFiltered = allPokemons.filter((el) => typeof el.id.toString().length > 30);
+			if (payload === 'Created') originFiltered = allPokemons.filter((el) => el.id.toString().length > 30);
 			// 	let reg_ex = /-/;
 			// 	originFiltered = allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
 			// }
