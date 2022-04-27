@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons, getTypes, filterByOrigin, filterByType, sort } from '../../actions';
+import { getPokemons, getTypes, filterByOrigin, filterByType, sortBy } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
@@ -26,8 +26,8 @@ const Home = () => {
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
     // Ordenamiento
-    const [order, setOrder] = useState('Desc'); // Descendente x defecto
-    const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
+    // const [order, setOrder] = useState('Desc'); // Descendente x defecto
+    // const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
 
 
     // **************************************************************************************
@@ -58,15 +58,8 @@ const Home = () => {
         dispatch(filterByType(e.target.value));
     };
 
-    const sortBy = (orderBy) => {
-        if (order === 'Asc') {
-            
-            setOrder('Desc');
-        } else {
-            dispatch(sort(orderBy, 'Desc'));
-            setOrder('Asc');
-        }
-        setOrderBy(orderBy);
+    const handleSort = (e) => {
+        dispatch(sortBy(e.target.value));
     }
 
         
