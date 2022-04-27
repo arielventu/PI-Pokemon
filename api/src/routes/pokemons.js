@@ -202,7 +202,9 @@ router.post('/', async (req, res, next) => {
                 // Asignación de tipos al pokemon
                 const typesOk = await Type.findAll()
                 if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
-                    await newPokemon.addType(type) // Si no está vacía asigna el tipo al pokemon creado
+                    await newPokemon.addType(
+                        type.push(typesOk.map(type => type.name))
+                    ) // Si no está vacía asigna el tipo al pokemon creado
                 } else {
                     await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
                     await newPokemon.addType(type) 
