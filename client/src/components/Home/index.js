@@ -60,10 +60,8 @@ const Home = () => {
 
     const sortBy = (orderBy) => {
         if (order === 'Ascendente') {
-            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1)));
-            setOrder('Descendente')
+            setOrder('Descendente');
         } else {
-            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1)))
             setOrder('Ascendente');
         }
         setOrderBy(orderBy);
