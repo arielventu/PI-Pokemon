@@ -31,18 +31,16 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			};
 		case FILTER_BY_ORIGIN:
 			const allPokes = state.pokemons;
-			(function getPokemonsOrigin (payload) {
-				if (payload === 'All') return allPokes;
-				if (payload === 'PokeAPI') return allPokes.filter((el) => typeof el.id === 'number');
-				if (payload === 'Created') {
-					let reg_ex = /-/;
-					return allPokes.filter((el) => el.id.toString().search(reg_ex) !== -1);
-				}
-			})(payload);
-			
+			let originFiltered;
+			if (payload === 'All') return originFiltered=allPokes;
+			if (payload === 'PokeAPI') return originFiltered=allPokes.filter((el) => typeof el.id === 'number');
+			if (payload === 'Created') {
+				let reg_ex = /-/;
+				return originFiltered=allPokes.filter((el) => el.id.toString().search(reg_ex) !== -1);
+			}
 			return {
 				...state,
-				pokemons: allPokes,
+				pokemons: originFiltered,
 			};
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
