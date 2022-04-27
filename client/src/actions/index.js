@@ -66,13 +66,20 @@ export const sortBy = (payload) => {
 }
 
 export const createPokemon = (payload) => {
-    return {
-        type: 'CREATE_POKEMON',
-        payload,
+    return function (dispatch) {
+        axios.post(ALL_POKES, payload)
+            .then(response => {
+                console.log(response);  
+                dispatch({
+                    type: CREATE_POKEMON,
+                    payload: response.data,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
     };
-}
-    
-    
+};
 
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {
