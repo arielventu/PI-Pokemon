@@ -148,7 +148,7 @@ export default function PokemonCreate () {
                   {errors.weight && <p>{errors.weight}</p>}   
               </div>
               <div>
-                  <label htmlFor="type">Type</label>
+                  <label>Type</label>
                   <select
                       name="type"
                       multiple
@@ -162,7 +162,7 @@ export default function PokemonCreate () {
               </div>
               <button type="submit">Submit</button>
           </form>
-          <Link to="/">Back to Home</Link>
+          <Link to="/home">Back to Home</Link>
       </div>
   )
 }
