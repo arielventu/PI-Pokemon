@@ -11,7 +11,7 @@ import {
 const initialState = {
 	pokemons: [],
 	types: [],
-	pokemonsToShow: [],
+	allPokemons: [],
 	// pokemonsOrigin: 'All',
 	// typeFiltered: 'All',
 };
@@ -22,6 +22,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			return {
 				...state,
 				pokemons: payload,
+				allPokemons: payload,
 			};
 		case GET_TYPES:
 			return {
@@ -40,7 +41,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			}
 			return {
 				...state,
-				pokemons: getPokemonsOrigin ,
+				pokemons: getPokemonsOrigin,
 			};
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
