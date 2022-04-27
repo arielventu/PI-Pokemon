@@ -28,6 +28,7 @@ export default function PokemonCreate () {
         speed: '',
         height: '',
         weight: '',
+        image: '',
         type: []
     });
     const [errors, setErrors] = useState({});
@@ -160,6 +161,15 @@ export default function PokemonCreate () {
                       ))}
                   </select>
               </div>
+              <div>
+                  <label htmlFor="image">Image</label>
+                  <input
+                      type="text"
+                      name="image"
+                      value={pokemon.image}
+                      onChange={handleChange}
+                  />
+                </div>
               <button type="submit">Submit</button>
           </form>
           <Link to="/home">Back to Home</Link>
