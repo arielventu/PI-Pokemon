@@ -17,7 +17,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight }) => {
     return errors;
 };
 
-export default function PokemonCreate ({ name, hp, attack, defense, speed, height, weight }) {
+export default function PokemonCreate () {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
     const [pokemon, setPokemon] = useState({
@@ -154,7 +154,7 @@ export default function PokemonCreate ({ name, hp, attack, defense, speed, heigh
                       value={pokemon.type}
                       onChange={handleSelect}
                   >
-                      {types.map(type => (
+                      {type.map(type => (
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
