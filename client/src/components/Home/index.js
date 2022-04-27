@@ -63,14 +63,14 @@ const Home = () => {
 
     // Render ********************************************************************************
 
-    // if (currentPokemons.length === 0) {
-    //     return (
-    //         <div>
-    //             <img src={LOADING_IMG} alt="loading" />
-    //             <h3>Loading...</h3>
-    //         </div>
-    //     )
-    // } else {
+    if (currentPokemons.length === 0) {
+        return (
+            <div>
+                <img src={LOADING_IMG} alt="loading" />
+                <h3>Loading...</h3>
+            </div>
+        )
+    } else {
         return (
             <div className='home'>
                 <div className='home-header'>
@@ -103,7 +103,7 @@ const Home = () => {
             )
             
         }
-    // }
+    }
     
     
 export default Home;

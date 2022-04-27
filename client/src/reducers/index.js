@@ -30,14 +30,15 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				types: payload,
 			};
 		case FILTER_BY_ORIGIN:
-			const allPokes = state.allPokemons;
+			const allPokemons = state.allPokemons;
 			let originFiltered;
-			if (payload === 'All') return originFiltered=allPokes;
-			if (payload === 'PokeAPI') return originFiltered=allPokes.filter((el) => typeof el.id === 'number');
+			if (payload === 'All') return originFiltered = allPokemons;
+			if (payload === 'PokeAPI') return originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
 			if (payload === 'Created') {
 				let reg_ex = /-/;
-				return originFiltered=allPokes.filter((el) => el.id.toString().search(reg_ex) !== -1);
+				return originFiltered = allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
 			}
+			console.log(originFiltered);
 			return {
 				...state,
 				pokemons: originFiltered,
