@@ -37,12 +37,10 @@ const rootReducer = (state = initialState, {payload, type}) => {
 					let reg_ex = /-/;
 					return allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
 				}
-			
 			}
-			
 			return {
 				...state,
-				pokemons: pokemonsOrigin,
+				pokemons: getPokemonsOrigin(payload),
 			};
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
