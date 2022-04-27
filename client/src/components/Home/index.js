@@ -93,13 +93,12 @@ const Home = () => {
                         ))}
                     </select>
                     <h1>Sort</h1>
-                    <select onChange={(e) => handleSort(e.target.value)}>
-                        <option value='id'>ID</option>
-                        <option value='name'>Name</option>
-                        <option value='attack'>Attack</option>
+                    <select onChange={(e) => handleSort(e)}>
+                        <option value='A-Z'>A-Z</option>
+                        <option value='Z-A'>Z-A</option>
+                        <option value='Ʌ Attack'>Ʌ Attack</option>
+                        <option value='V Attack'>V Attack</option>
                     </select>
-                    <h1>Order</h1>
-                    <button onClick={() => sortBy(orderBy)}>{order}</button>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}

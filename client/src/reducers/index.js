@@ -3,7 +3,7 @@ import {
 	GET_TYPES,
 	FILTER_BY_ORIGIN,
 	FILTER_BY_TYPE,
-	SORT,
+	SORT_BY,
 	// SEARCH_POKEMONS,
 	// SET_POKEMONS_TO_SHOW,
 } from '../actions';
@@ -51,7 +51,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				pokemons: typeFiltered,
 			};
-		case SORT:
+		case SORT_BY:
 			const pokemonsSorted = state.pokemons;
 			let orderBy;
 
