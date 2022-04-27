@@ -15,7 +15,7 @@ const Home = () => {
 
     // Información de los pokemons
     const dispatch = useDispatch();
-    const allPokemons = useSelector(state => state.pokemons);
+    const allPokemons = useSelector((state) => state.pokemons);
   
     // Paginación 
     const [currentPage, setCurrentPage] = useState(1);

@@ -42,7 +42,7 @@ export const getTypes = () => {
 };
 
 export const filterByOrigin = (payload) => {
-    console.log(payload);
+    // console.log(payload);
     return {
         type: 'FILTER_BY_ORIGIN',
         payload,
