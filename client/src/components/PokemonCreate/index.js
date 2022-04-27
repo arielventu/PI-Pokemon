@@ -65,7 +65,7 @@ export default function PokemonCreate () {
                 type: []
             });
         }
-        console.log(e);
+        // console.log(e);
     };
 
     useEffect(() => {
@@ -155,7 +155,7 @@ export default function PokemonCreate () {
                       value={pokemon.type}
                       onChange={handleSelect}
                   >
-                      {type.map(type => (
+                      {types.map(type => (
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
