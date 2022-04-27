@@ -54,8 +54,8 @@ function rootReducer (state = initialState, {payload, type}) {
 		case SORT_BY_NAME:
 			let pokemonsSorted = state.pokemons;
 		
-			if (payload === 'A-Z') pokemonsSorted.sort((a, b) => a.name.localeCompare(b.name));
-			if (payload === 'Z-A') pokemonsSorted.sort((a, b) => b.name.localeCompare(a.name));
+			if (payload === 'A-Z') pokemonsSorted.sort((a, b) => a.name > b.name ? 1 : -1);
+			if (payload === 'Z-A') pokemonsSorted.sort((a, b) => b.name > a.name ? 1 : -1);
 			return {
 				...state,
 				pokemons: pokemonsSorted,
