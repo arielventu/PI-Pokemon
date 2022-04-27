@@ -93,7 +93,7 @@ const Home = () => {
                         ))}
                     </select>
                     <h1>Sort</h1>
-                    <select onChange={(e) => sortBy(e.target.value)}>
+                    <select onChange={(e) => handleSort(e.target.value)}>
                         <option value='id'>ID</option>
                         <option value='name'>Name</option>
                         <option value='attack'>Attack</option>
