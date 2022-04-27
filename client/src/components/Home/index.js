@@ -92,7 +92,7 @@ const Home = () => {
                     </select>
                     <select onChange={(e) => handleFilterByType(e)}>
                         <option value='All'>All</option>
-                        {types.map((type) => (
+                        {type.map((type) => (
                                 <option key={type.id} value={type.name}>
                                     {type.name}
                                 </option>
