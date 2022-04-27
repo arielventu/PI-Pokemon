@@ -4,10 +4,10 @@ import { ALL_POKES, ALL_TYPES } from '../utils.js';
 export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
+export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 // export const ORIGIN_POKEMONS = 'ORIGIN_POKEMONS';
 // export const SET_POKEMONS_TO_SHOW = 'SET_POKEMONS_TO_SHOW';
-// export const FILTER_TYPES = 'FILTER_TYPES';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -49,6 +49,13 @@ export const filterByOrigin = (payload) => {
     };
 }
 
+export const filterByType = (payload) => {
+    // console.log(payload);
+    return {
+        type: 'FILTER_BY_TYPE',
+        payload,
+    };
+}
 
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {

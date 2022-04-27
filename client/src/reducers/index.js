@@ -2,10 +2,10 @@ import {
 	GET_POKEMONS,
 	GET_TYPES,
 	FILTER_BY_ORIGIN,
+	FILTER_BY_TYPE,
 	// SEARCH_POKEMONS,
 	// ORIGIN_POKEMONS,
 	// SET_POKEMONS_TO_SHOW,
-	// FILTER_TYPES,
 } from '../actions';
 
 const initialState = {
@@ -36,13 +36,11 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			if (payload === 'All') originFiltered = allPokemons;
 			if (payload === 'PokeAPI') originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
 			if (payload === 'Created') originFiltered = allPokemons.filter((el) => el.id.toString().length > 30);
-			// 	let reg_ex = /-/;
-			// 	originFiltered = allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
-			// }
 			return {
 				...state,
 				pokemons: originFiltered,
 			};
+		
 	
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
