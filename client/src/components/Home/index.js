@@ -105,6 +105,8 @@ const Home = () => {
                         <option value='name'>Name</option>
                         <option value='attack'>Attack</option>
                     </select>
+                    <h1>Order</h1>
+                    <h3>{order}</h3>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}
