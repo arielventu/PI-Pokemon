@@ -59,7 +59,7 @@ export const filterByType = (payload) => {
 export const sortBy = (payload) => {
     // console.log(payload);
     return {
-        type: 'SORT',
+        type: 'SORT_BY',
         payload,
     };
 }
