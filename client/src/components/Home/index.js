@@ -60,7 +60,7 @@ const Home = () => {
 
     const sortBy = (orderBy) => {
         if (order === 'Asc') {
-            dispatch(sort(orderBy, 'Asc'));
+            
             setOrder('Desc');
         } else {
             dispatch(sort(orderBy, 'Desc'));
