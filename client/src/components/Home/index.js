@@ -58,8 +58,8 @@ const Home = () => {
             dispatch(getPokemons());
     }, [dispatch]);
 
-    const handleFilterByOrigin = (origin) => {
-        dispatch(filterByOrigin(origin));
+    const handleFilterByOrigin = (e) => {
+        dispatch(filterByOrigin(e.target.value));
     };
 
 
