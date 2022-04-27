@@ -26,7 +26,7 @@ const Home = () => {
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
     // Ordenamiento
-    const [order, setOrder] = useState('Descendente'); // Descendente x defecto
+    const [order, setOrder] = useState('Desc'); // Descendente x defecto
     const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
 
 
@@ -59,10 +59,10 @@ const Home = () => {
     };
 
     const sortBy = (orderBy) => {
-        if (order === 'Ascendente') {
-            setOrder('Descendente');
+        if (order === 'Asc') {
+            setOrder('Desc');
         } else {
-            setOrder('Ascendente');
+            setOrder('Asc');
         }
         setOrderBy(orderBy);
     }
