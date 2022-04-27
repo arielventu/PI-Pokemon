@@ -5,9 +5,8 @@ export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
+export const SORT_BY_NAME = 'SORT_BY_NAME';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
-// export const ORIGIN_POKEMONS = 'ORIGIN_POKEMONS';
-// export const SET_POKEMONS_TO_SHOW = 'SET_POKEMONS_TO_SHOW';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -57,6 +56,16 @@ export const filterByType = (payload) => {
     };
 }
 
+export const sortByName = (payload) => {
+    // console.log(payload);
+    return {
+        type: 'SORT_BY_NAME',
+        payload,
+    };
+}
+    
+    
+
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {
 //         axios.get(`${ALL_POKES}?name=${search}`)
@@ -73,23 +82,7 @@ export const filterByType = (payload) => {
 //     };
 // }
 
-// export const setPokemonsToShow = (pokemons) => {
-//     return function (dispatch) {
-//         dispatch({
-//             type: SET_POKEMONS_TO_SHOW,
-//             payload: pokemons,
-//         });
-//     };
-// }
 
-// export const filterTypes = (type) => {
-//     return function (dispatch) {
-//         dispatch({
-//             type: FILTER_TYPES,
-//             payload: type,
-//         });
-//     };
-// }
 
 
 

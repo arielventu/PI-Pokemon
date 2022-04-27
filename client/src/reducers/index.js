@@ -3,8 +3,8 @@ import {
 	GET_TYPES,
 	FILTER_BY_ORIGIN,
 	FILTER_BY_TYPE,
+	SORT_BY_NAME,
 	// SEARCH_POKEMONS,
-	// ORIGIN_POKEMONS,
 	// SET_POKEMONS_TO_SHOW,
 } from '../actions';
 
@@ -51,7 +51,15 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				pokemons: typeFiltered,
 			};
+		case SORT_BY_NAME:
+			let pokemonsSorted = state.pokemons;
 		
+			if (payload === 'A-Z') pokemonsSorted.sort((a, b) => a.name.localeCompare(b.name));
+			if (payload === 'Z-A') pokemonsSorted.sort((a, b) => b.name.localeCompare(a.name));
+			return {
+				...state,
+				pokemons: pokemonsSorted,
+			};
 			
 	
 			// case SET_POKEMONS_TO_SHOW:
