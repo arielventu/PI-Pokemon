@@ -99,7 +99,12 @@ const Home = () => {
                                 </option>
                         ))}
                     </select>
-                    <h1>Pokemons</h1>
+                    <h1>Sort</h1>
+                    <select onChange={(e) => sortBy(e.target.value)}>
+                        <option value='id'>ID</option>
+                        <option value='name'>Name</option>
+                        <option value='attack'>Attack</option>
+                    </select>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}
