@@ -77,14 +77,11 @@ const Home = () => {
                    
                 </div>
                 <div className='home-body'>
-                    {currentPokemons.map((p) => (
+                    {currentPokemons?.map((p) => (
                         // console.log(p.type)
-                        <PokemonCard key={p.id}
-                            name={p.name}
-                            image={p.image}
-                            type={p.type}
-                            // attack={p.attack}
-                            />
+                        <Link to={`/pokemon/${p.id}`} key={p.id}>
+                            <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
+                        </Link>
                     ))}
                 </div>
                 <div className='home-footer'>
