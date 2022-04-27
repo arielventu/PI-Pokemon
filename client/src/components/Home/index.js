@@ -26,8 +26,8 @@ const Home = () => {
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
     // Ordenamiento
-    // const [order, setOrder] = useState('Descendente'); // Descendente x defecto
-    // const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
+    const [order, setOrder] = useState('Descendente'); // Descendente x defecto
+    const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
 
 
     // **************************************************************************************
