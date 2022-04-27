@@ -20,7 +20,7 @@ const Home = () => {
   
     // Paginación 
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(2);
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
@@ -85,12 +85,13 @@ const Home = () => {
         return (
             <div className='home'>
                 <div className='home-header'>
-                    <h1>Filters</h1>
+                    <h1>Origin</h1>
                     <select onChange={(e) => handleFilterByOrigin(e)}>
                         <option value='All'>All</option>
                         <option value='PokeAPI'>PokeAPI</option>
                         <option value='Created'>Created</option>
                     </select>
+                    <h1>Type</h1>
                     <select onChange={(e) => handleFilterByType(e)}>
                         <option value='All'>All</option>
                         {allTypes.map((type) => (
