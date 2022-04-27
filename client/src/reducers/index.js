@@ -30,7 +30,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				types: payload,
 			};
 		case FILTER_BY_ORIGIN:
-			let allPokesByOrigin = state.allPokemons;
+			const allPokesByOrigin = state.allPokemons;
 			let originFiltered;
 
 			if (payload === 'All') originFiltered = allPokesByOrigin;
@@ -41,7 +41,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				pokemons: originFiltered,
 			};
 		case FILTER_BY_TYPE:
-			let allPokesByType = state.allPokemons;
+			const allPokesByType = state.allPokemons;
 			let typeFiltered;
 
 			if (payload === 'All') typeFiltered = allPokesByType;
@@ -52,12 +52,13 @@ function rootReducer (state = initialState, {payload, type}) {
 				pokemons: typeFiltered,
 			};
 		case SORT:
-			let pokemonsSorted = state.pokemons;
-			
-			if (payload === 'id') pokemonsSorted.sort((a, b) => a.id - b.id);
-			if (payload === 'name') pokemonsSorted.sort((a, b) => a.name.localeCompare(b.name));
-			if (payload === 'attack') pokemonsSorted.sort((a, b) => a.attack - b.attack);
-			
+			const pokemonsSorted = state.pokemons;
+			let sortBy;
+
+			if (payload === 'id') sortBy = pokemonsSorted.sort((a, b) => a.id - b.id);
+			if (payload === 'name') sortBy = pokemonsSorted.sort((a, b) => a.name.localeCompare(b.name));
+			if (payload === 'attack') sortBy = pokemonsSorted.sort((a, b) => a.attack - b.attack);
+
 			if (payload === 'Desc') pokemonsSorted.sort((a, b) => a.name > b.name ? 1 : -1);
 			if (payload === 'Asc') pokemonsSorted.sort((a, b) => b.name > a.name ? 1 : -1);
 			return {
