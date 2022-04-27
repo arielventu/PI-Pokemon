@@ -38,16 +38,6 @@ const Home = () => {
         setCurrentPage(pageNumber);
     };
 
-    // Función para cambiar el orden
-    // const handleOrder = (order) => {
-    //     setOrder(order);
-    // };
-
-    // Función para cambiar el orden
-    // const handleOrderBy = (orderBy) => {
-    //     setOrderBy(orderBy);
-    // };
-
 
     // Obtengo los datos del store 
 
