@@ -4,6 +4,7 @@ import {
 	FILTER_BY_ORIGIN,
 	FILTER_BY_TYPE,
 	SORT_BY,
+	CREATE_POKEMON,
 	// SEARCH_POKEMONS,
 	// SET_POKEMONS_TO_SHOW,
 } from '../actions';
@@ -63,6 +64,11 @@ function rootReducer (state = initialState, {payload, type}) {
 			return {
 				...state,
 				pokemons: orderBy,
+			};
+		case CREATE_POKEMON:
+			return {
+				...state,
+				pokemons: [...state.pokemons, payload],
 			};
 			
 	

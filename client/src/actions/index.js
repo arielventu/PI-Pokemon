@@ -6,6 +6,7 @@ export const GET_TYPES = 'GET_TYPES';
 export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 export const SORT_BY = 'SORT_BY';
+export const CREATE_POKEMON = 'CREATE_POKEMON';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
@@ -60,6 +61,13 @@ export const sortBy = (payload) => {
     // console.log(payload);
     return {
         type: 'SORT_BY',
+        payload,
+    };
+}
+
+export const createPokemon = (payload) => {
+    return {
+        type: 'CREATE_POKEMON',
         payload,
     };
 }
