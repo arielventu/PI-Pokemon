@@ -65,6 +65,7 @@ export default function PokemonCreate () {
                 type: []
             });
         }
+        console.log(e);
     };
 
     useEffect(() => {
