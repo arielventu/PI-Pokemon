@@ -219,12 +219,12 @@ router.post('/', async (req, res, next) => {
                 }
                 return res.send(newPokemon);
             } else {
-                return res.status(400).json("Name already exists in the database");
+                return res.json("Name already exists in the database");
             }
         }
     } catch (error) {
-        // next(error);
-        res.send
+        next(error);
+        // res.send(error.response.data);
     }
 })
 
