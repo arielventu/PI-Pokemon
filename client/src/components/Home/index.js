@@ -74,6 +74,11 @@ const Home = () => {
             <div className='home'>
                 <div className='home-header'>
                     <h1>Pokemons</h1>
+                        <Pagination 
+                            pokemonsPerPage={pokemonsPerPage}
+                            allPokemons={allPokemons.length}
+                            pagination={pagination}
+                        />
                    
                 </div>
                 <div className='home-body'>
@@ -85,15 +90,6 @@ const Home = () => {
                     ))}
                 </div>
                 <div className='home-footer'>
-                    <Pagination 
-                        pokemonsPerPage={pokemonsPerPage}
-                        allPokemons={allPokemons.length}
-                        pagination={pagination}
-                        // nextPageHandler={nextPageHandler}
-                        // prevPageHandler={prevPageHandler}
-                        // goToPageHandler={goToPageHandler}
-                        // pageNumbers={pageNumbers}
-                        />
                     </div>
 
                 </div>
