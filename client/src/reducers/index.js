@@ -16,7 +16,7 @@ const initialState = {
 	// typeFiltered: 'All',
 };
 
-const rootReducer = (state = initialState, {payload, type}) => {
+function rootReducer (state = initialState, {payload, type}) {
 	switch (type) {
 		case GET_POKEMONS:
 			return {
@@ -30,7 +30,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				types: payload,
 			};
 		case FILTER_BY_ORIGIN:
-			const allPokemons = state.allPokemons;
+			let allPokemons = state.allPokemons;
 			let originFiltered;
 
 			if (payload === 'All') originFiltered = allPokemons;
@@ -41,10 +41,17 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				pokemons: originFiltered,
 			};
 		case FILTER_BY_TYPE:
-			const pokemons = state.pokemons;
+			let allPokes = state.allPokemons;
 			let typeFiltered;
 
-			if (payload === 'All') typeFiltered = pokemons;
+			if (payload === 'All') typeFiltered = allPokemons;
+			if (payload !== 'All')
+				typeFiltered = allPokes.filter((el) => el.type.includes(payload));
+			return {
+				...state,
+				pokemons: typeFiltered,
+			};
+		
 			
 	
 			// case SET_POKEMONS_TO_SHOW:
