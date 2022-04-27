@@ -57,8 +57,8 @@ function rootReducer (state = initialState, {payload, type}) {
 
 			if (payload === 'A-Z') orderBy = pokemonsSorted.sort((a, b) => a.name > b.name ? 1 : -1);
 			if (payload === 'Z-A') orderBy = pokemonsSorted.sort((a, b) => a.name < b.name ? 1 : -1);
-			if (payload === 'Ʌ Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack > b.attack ? 1 : -1);
-			if (payload === 'V Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack < b.attack ? 1 : -1);
+			if (payload === 'Ʌ Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack < b.attack ? 1 : -1);
+			if (payload === 'V Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack > b.attack ? 1 : -1);
 			console.log(orderBy);
 			return {
 				...state,
