@@ -63,6 +63,7 @@ export default function PokemonCreate () {
                 speed: '',
                 height: '',
                 weight: '',
+                image: '',
                 type: []
             });
         }
