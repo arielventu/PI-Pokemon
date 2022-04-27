@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons, getTypes, filterByOrigin } from '../../actions';
+import { getPokemons, getTypes, filterByOrigin, filterByType } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
@@ -63,6 +63,11 @@ const Home = () => {
         dispatch(filterByOrigin(e.target.value));
     };
 
+    const handleFilterByType = (e) => {
+        dispatch(filterByType(e.target.value));
+    };
+
+
 
         
 
@@ -84,6 +89,14 @@ const Home = () => {
                         <option value='All'>All</option>
                         <option value='PokeAPI'>PokeAPI</option>
                         <option value='Created'>Created</option>
+                    </select>
+                    <select onChange={(e) => handleFilterByType(e)}>
+                        <option value='All'>All</option>
+                        {types.map((type) => (
+                                <option key={type.id} value={type.name}>
+                                    {type.name}
+                                </option>
+                        ))}
                     </select>
                     <h1>Pokemons</h1>
                         <Pagination 

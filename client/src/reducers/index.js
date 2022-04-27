@@ -30,23 +30,23 @@ function rootReducer (state = initialState, {payload, type}) {
 				types: payload,
 			};
 		case FILTER_BY_ORIGIN:
-			let allPokemons = state.allPokemons;
+			let allPokesByOrigin = state.allPokemons;
 			let originFiltered;
 
-			if (payload === 'All') originFiltered = allPokemons;
-			if (payload === 'PokeAPI') originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
-			if (payload === 'Created') originFiltered = allPokemons.filter((el) => el.id.toString().length > 30);
+			if (payload === 'All') originFiltered = allPokesByOrigin;
+			if (payload === 'PokeAPI') originFiltered = allPokesByOrigin.filter((el) => typeof el.id === 'number');
+			if (payload === 'Created') originFiltered = allPokesByOrigin.filter((el) => el.id.toString().length > 30);
 			return {
 				...state,
 				pokemons: originFiltered,
 			};
 		case FILTER_BY_TYPE:
-			let allPokes = state.allPokemons;
+			let allPokesByType = state.allPokemons;
 			let typeFiltered;
 
-			if (payload === 'All') typeFiltered = allPokemons;
+			if (payload === 'All') typeFiltered = allPokesByType;
 			if (payload !== 'All')
-				typeFiltered = allPokes.filter((el) => el.type.includes(payload));
+				typeFiltered = allPokesByType.filter((el) => el.type.includes(payload));
 			return {
 				...state,
 				pokemons: typeFiltered,
