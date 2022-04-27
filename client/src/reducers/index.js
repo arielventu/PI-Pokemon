@@ -40,7 +40,7 @@ const rootReducer = (state = initialState, {payload, type}) => {
 			}
 			return {
 				...state,
-				pokemons: getPokemonsOrigin(payload),
+				pokemons: getPokemonsOrigin ,
 			};
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
