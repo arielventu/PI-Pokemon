@@ -104,7 +104,7 @@ const Home = () => {
                         <option value='attack'>Attack</option>
                     </select>
                     <h1>Order</h1>
-                    <h3>{order}</h3>
+                    <button onClick={() => sortBy(orderBy)}>{order}</button>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}
