@@ -87,7 +87,7 @@ const Home = () => {
                 <div className='home-footer'>
                     <Pagination 
                         pokemonsPerPage={pokemonsPerPage}
-                        totalPokemons={allPokemons.length}
+                        allPokemons={allPokemons.length}
                         pagination={pagination}
                         // nextPageHandler={nextPageHandler}
                         // prevPageHandler={prevPageHandler}
