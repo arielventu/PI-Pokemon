@@ -17,8 +17,12 @@ const validate = ({ name, hp, attack, defense, speed, height, weight }) => {
     return errors;
 };
 
-export const index = () => {
+export const PokemonCreate = () => {
   return (
-    <div>index</div>
+      <div>
+          <h1>Create Pokemon</h1>
+          
+          
+    </div>
   )
 }
