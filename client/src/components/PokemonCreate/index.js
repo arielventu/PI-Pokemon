@@ -17,7 +17,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight }) => {
     return errors;
 };
 
-export default function PokemonCreate () {
+export default function PokemonCreate ({ name, hp, attack, defense, speed, height, weight }) {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
     const [pokemon, setPokemon] = useState({
