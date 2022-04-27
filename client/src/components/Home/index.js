@@ -73,6 +73,10 @@ const Home = () => {
         return (
             <div className='home'>
                 <div className='home-header'>
+                    <h1>Filters</h1>
+                    <select>
+                        
+                    </select>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}
