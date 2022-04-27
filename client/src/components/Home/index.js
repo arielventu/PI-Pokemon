@@ -75,7 +75,9 @@ const Home = () => {
                 <div className='home-header'>
                     <h1>Filters</h1>
                     <select>
-                        
+                        <option value='All'>All</option>
+                        <option value='PokeAPI'>PokeAPI</option>
+                        <option value='Created'>Created</option>
                     </select>
                     <h1>Pokemons</h1>
                         <Pagination 
