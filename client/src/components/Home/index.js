@@ -58,7 +58,16 @@ const Home = () => {
         dispatch(filterByType(e.target.value));
     };
 
-
+    const sortBy = (orderBy) => {
+        if (order === 'Ascendente') {
+            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] > b[orderBy]) ? 1 : -1)));
+            setOrder('Descendente')
+        } else {
+            dispatch(setPokemonsToShow(pokemonsToShow.sort((a, b) => (a[orderBy] < b[orderBy]) ? 1 : -1)))
+            setOrder('Ascendente');
+        }
+        setOrderBy(orderBy);
+    }
 
         
 
@@ -90,6 +99,7 @@ const Home = () => {
                                 </option>
                         ))}
                     </select>
+                    <h1>Pokemons</h1>
                     <h1>Pokemons</h1>
                         <Pagination 
                             pokemonsPerPage={pokemonsPerPage}
