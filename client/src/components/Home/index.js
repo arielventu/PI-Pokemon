@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons } from '../../actions';
+import { getPokemons, filterByOrigin } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
@@ -58,7 +58,12 @@ const Home = () => {
             dispatch(getPokemons());
     }, [dispatch]);
 
+    const handleFilterByOrigin = (origin) => {
+        dispatch(filterByOrigin(origin));
+    };
+
     
+        
 
     // Render ********************************************************************************
 
