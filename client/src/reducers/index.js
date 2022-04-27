@@ -32,134 +32,18 @@ const rootReducer = (state = initialState, {payload, type}) => {
 		case FILTER_BY_ORIGIN:
 			const allPokemons = state.allPokemons;
 			let originFiltered;
-			payload === 'All' 
-		
 
-			 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-				 
-			
-			if (payload === 'All') 
-				originFiltered = allPokemons;
-			}
-			if (payload === 'PokeAPI') {
-				originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
-			}
-			if (payload === 'Created') {
-				let reg_ex = /-/;
-				originFiltered = allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
-			}
+			if (payload === 'All') originFiltered = allPokemons;
+			if (payload === 'PokeAPI') originFiltered = allPokemons.filter((el) => typeof el.id === 'number');
+			if (payload === 'Created') originFiltered = allPokemons.filter((el) => typeof el.id.toString().length > 30);
+			// 	let reg_ex = /-/;
+			// 	originFiltered = allPokemons.filter((el) => el.id.toString().search(reg_ex) !== -1);
+			// }
 			return {
 				...state,
 				pokemons: originFiltered,
 			};
+	
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
 			// 		...state,
@@ -184,5 +68,6 @@ const rootReducer = (state = initialState, {payload, type}) => {
 				return state;
 	}
 };
+
 
 export default rootReducer;
