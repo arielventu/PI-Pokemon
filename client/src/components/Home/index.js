@@ -4,9 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
 import Pagination from '../Pagination';
-// import SearchBar from '../SearchBar';
-// import NavBar from '../NavBar';
-// import Filters from '../Filters';
 import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
@@ -26,7 +23,6 @@ const Home = () => {
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
-    // const [pageNumbers, setPageNumbers] = useState([]);
 
     // Ordenamiento
     // const [order, setOrder] = useState('Descendente'); // Descendente x defecto
