@@ -62,7 +62,7 @@ const Home = () => {
         dispatch(filterByOrigin(origin));
     };
 
-    
+
         
 
     // Render ********************************************************************************
@@ -79,7 +79,7 @@ const Home = () => {
             <div className='home'>
                 <div className='home-header'>
                     <h1>Filters</h1>
-                    <select>
+                    <select onChange={(e) => handleFilterByOrigin(e)}>
                         <option value='All'>All</option>
                         <option value='PokeAPI'>PokeAPI</option>
                         <option value='Created'>Created</option>
