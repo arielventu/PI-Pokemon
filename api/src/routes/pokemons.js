@@ -183,7 +183,7 @@ router.post('/', async (req, res, next) => {
     try {
         const exists = name ? await Pokemon.findOne({ where: { name } }) : null; // Verifica que no exista un pokemon con el mismo nombre y q reciba un nombre como parámetro
         
-        if (!name || !type) res.status(404).send('Necessary parameters not provided'); // Notifica en caso de no recibir un nombre o un tipo
+        if (!name || !type) res.send('Necessary parameters not provided'); // Notifica en caso de no recibir un nombre o un tipo
         else { 
 
             // Creación del nuevo pokemon
@@ -201,30 +201,25 @@ router.post('/', async (req, res, next) => {
     
                 // Asignación de tipos al pokemon
                 const typesOk = await Type.findAll()
-                if (!type) {
-                    res.send('At least one type must be selected'); // Notifica en caso de no recibir un tipo
-                    
+                if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
+                    await newPokemon.addType(
+                        type.map(type => {
+                            const typeFound = typesOk.find(typeOk => typeOk.name === type)
+                            return typeFound.id
+                        })
+                    ) // Si no está vacía asigna el tipo al pokemon creado
                 } else {
-                    if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
-                        await newPokemon.addType(
-                            type.map(type => {
-                                const typeFound = typesOk.find(typeOk => typeOk.name === type)
-                                return typeFound.id
-                            })
-                        ) // Si no está vacía asigna el tipo al pokemon creado
-                    } else {
-                        await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
-                        await newPokemon.addType(
-                            type.map(type => {
-                                const typeFound = typesOk.find(typeOk => typeOk.name === type)
-                                return typeFound.id
-                            })
-                        )
-                    }
-                    return res.send("Pokmon created");
+                    await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
+                    await newPokemon.addType(
+                        type.map(type => {
+                            const typeFound = typesOk.find(typeOk => typeOk.name === type)
+                            return typeFound.id
+                        })
+                    )
                 }
+                return res.send("Pokmon created");
             } else {
-                return res.json("Name already exists in the database");
+                return res.send("Name already exists in the database");
             }
         }
     } catch (error) {
