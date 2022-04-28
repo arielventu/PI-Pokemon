@@ -1,7 +1,7 @@
 import React from 'react';
 import './PokemonCard.css';
 
-const PokemonCard = ({name, id, image, type, attack}) => {
+export default function PokemonCard ({name, id, image, type, attack}) {
 	
 	return (
 	  
@@ -21,5 +21,3 @@ const PokemonCard = ({name, id, image, type, attack}) => {
   )
 }
 
-
-export default PokemonCard;

@@ -8,7 +8,7 @@ import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
 
-const Home = () => {
+export default function Home () {
 
     // **************************************************************************************
     // ********************************STATE & CONSTANTS*************************************
@@ -42,7 +42,7 @@ const Home = () => {
     // Obtengo los datos del store 
 
     useEffect(() => {
-            dispatch(getPokemons());
+        dispatch(getPokemons());
     }, [dispatch]);
 
     useEffect(() => {
@@ -89,9 +89,9 @@ const Home = () => {
                     <select onChange={(e) => handleFilterByType(e)}>
                         <option value='All'>All</option>
                         {allTypes.map((type) => (
-                                <option key={type.id} value={type.name}>
-                                    {type.name}
-                                </option>
+                            <option key={type.id} value={type.name}>
+                                {type.name}
+                            </option>
                         ))}
                     </select>
                     <h1>Sort</h1>
@@ -102,11 +102,11 @@ const Home = () => {
                         <option value='V Attack'>V Attack</option>
                     </select>
                     <h1>Pokemons</h1>
-                        <Pagination 
-                            pokemonsPerPage={pokemonsPerPage}
-                            allPokemons={allPokemons.length}
-                            pagination={pagination}
-                        />
+                    <Pagination
+                        pokemonsPerPage={pokemonsPerPage}
+                        allPokemons={allPokemons.length}
+                        pagination={pagination}
+                    />
                    
                 </div>
                 <div className='home-body'>
@@ -118,12 +118,11 @@ const Home = () => {
                     ))}
                 </div>
                 <div className='home-footer'>
-                    </div>
-
                 </div>
-            )
-        }
+
+            </div>
+        )
     }
+}
     
     
-export default Home;

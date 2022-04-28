@@ -4,7 +4,7 @@ import { getPokemons, getPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
 
 
-const PokemonDetail = () => {
+export default function PokemonDetail () {
   const dispatch = useDispatch()
   const pokemons = useSelector(state => state.pokemons)
   const pokemonDetails = useSelector(state => state.pokemonDetails)
@@ -39,5 +39,3 @@ const PokemonDetail = () => {
     </div>
   )
 }
-
-export default PokemonDetail
