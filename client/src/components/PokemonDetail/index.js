@@ -4,7 +4,7 @@ import { getPokemons, getPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
 
 
-export default function PokemonDetail (name, hp, attack, defense, speed, height, weight, image, type) {
+export default function PokemonDetail (props) {
   // console.log(props);
   
   const dispatch = useDispatch()
