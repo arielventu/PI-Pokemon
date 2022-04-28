@@ -73,9 +73,9 @@ export default function PokemonCreate () {
 
     useEffect(() => {
         dispatch(getTypes());
-        dispatch(getPokemons());
     }, [dispatch]);
-
+    
+    // dispatch(getPokemons());
 
   return (
       <div>
