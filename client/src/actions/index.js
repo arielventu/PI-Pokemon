@@ -75,7 +75,10 @@ export const createPokemon = (payload) => {
                         type: CREATE_POKEMON,
                         payload: response.data,
                     });
-                } else console.log(response.data);
+                } else {
+                    console.log(response.data);
+                    alert(response.data);    
+                }
             })
             .catch(error => {
                 console.log(error);
