@@ -87,6 +87,21 @@ export const createPokemon = (payload) => {
     };
 };
 
+export const getPokemonDetils = (payload) => {
+    return function (dispatch) {
+        axios.get(`${ALL_POKES}/${payload}`)
+            .then(response => {
+                // console.log(response.data);
+                dispatch({
+                    type: 'GET_POKEMON_DETILS',
+                    payload: response.data,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    };
+};
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {
 //         axios.get(`${ALL_POKES}?name=${search}`)
