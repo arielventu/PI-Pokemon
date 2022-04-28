@@ -69,7 +69,7 @@ export const createPokemon = (payload) => {
     return function (dispatch) {
         axios.post(ALL_POKES, payload)
             .then(response => {
-                // console.log(response);  
+                console.log(response.data);  
                 dispatch({
                     type: CREATE_POKEMON,
                     payload: response.data,
