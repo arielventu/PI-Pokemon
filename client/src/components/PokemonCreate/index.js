@@ -34,19 +34,21 @@ export default function PokemonCreate () {
     const [errors, setErrors] = useState({});
     const allPokemons = useSelector((state) => state.pokemons);
 
-    const handleChange = (e) => {
-        setPokemon({
-            ...pokemon,
-            [e.target.name]: e.target.value
-        });
-    };
-
     const disableButton = () => {
         if (Object.keys(errors).length > 0) {
             return true;
         }
         return false;
     };
+
+    const handleChange = (e) => {
+        setPokemon({
+            ...pokemon,
+            [e.target.name]: e.target.value
+        });
+        disableButton();
+    };
+
 
     const handleSelect = (e) => {
         setPokemon({
