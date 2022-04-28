@@ -67,15 +67,15 @@ function rootReducer (state = initialState, {payload, type}) {
 		case CREATE_POKEMON:
 			return {
 				...state,
-				detailPokemon: payload,
-			};
-		case GET_POKEMON_DETAILS:
-			return {
-				...state,
 				pokemons: [
 					...state.pokemons,
 					payload
 				],
+			};
+		case GET_POKEMON_DETAILS:
+			return {
+				...state,
+				detailPokemon: payload,
 			};
 
 	
