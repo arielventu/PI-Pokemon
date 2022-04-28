@@ -32,7 +32,6 @@ export default function PokemonCreate () {
         type: []
     });
     const [errors, setErrors] = useState({});
-    // const [isSubmitting, setIsSubmitting] = useState(false);
     const allPokemons = useSelector((state) => state.pokemons);
 
     const handleChange = (e) => {
@@ -40,20 +39,19 @@ export default function PokemonCreate () {
             ...pokemon,
             [e.target.name]: e.target.value
         });
-        const errors = validate(pokemon);
-        setErrors(errors);
     };
-
+    
     const handleSelect = (e) => {
         setPokemon({
             ...pokemon,
             type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         });
     };
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
-        // setIsSubmitting(true);
+        const errors = validate(pokemon);
+        setErrors(errors);
         if (Object.keys(errors).length === 0) {
             dispatch(createPokemon(pokemon));
             setPokemon({
