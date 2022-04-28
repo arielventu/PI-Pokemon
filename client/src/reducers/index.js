@@ -6,6 +6,7 @@ import {
 	SORT_BY,
 	CREATE_POKEMON,
 	GET_POKEMON_DETAILS,
+	CLEAR_POKEMON_DETAILS
 	// SEARCH_POKEMONS,
 } from '../actions';
 
@@ -77,7 +78,11 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				detailPokemon: payload,
 			};
-
+		case CLEAR_POKEMON_DETAILS:
+			return {
+				...state,
+				detailPokemon: {},
+			};
 	
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {

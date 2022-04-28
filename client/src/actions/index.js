@@ -8,6 +8,7 @@ export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 export const SORT_BY = 'SORT_BY';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
+export const CLEAR_POKEMON_DETAILS = 'CLEAR_POKEMON_DETAILS';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
@@ -104,6 +105,12 @@ export const getPokemonDetails = (payload) => {
             });
     };
 };
+
+export const clearPokemonDetails = () => {
+    return {
+        type: 'CLEAR_POKEMON_DETAILS',
+    };
+}
 
 
 // export const searchPokemons = (search) => {
