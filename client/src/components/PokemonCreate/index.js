@@ -40,6 +40,7 @@ export default function PokemonCreate () {
             [e.target.name]: e.target.value
         });
     };
+
     
     const handleSelect = (e) => {
         setPokemon({
