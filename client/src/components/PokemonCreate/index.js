@@ -57,7 +57,7 @@ export default function PokemonCreate () {
         }
         else {
             if (pokemon.type.length === 0) {
-                pokemon.type = types.map(type => type.name);
+                pokemon.type = types.map(type => type.id === 1 ? type.name : null);
             }
             if (pokemon.image === '') {
                 pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg';
