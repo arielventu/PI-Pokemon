@@ -176,8 +176,6 @@ router.get('/:id', async (req, res, next) => {
     }
 })
 
-
-
 router.post('/', async (req, res, next) => { 
     const { name, hp, attack, defense, speed, height, weight, image , type} = req.body;
     try {
