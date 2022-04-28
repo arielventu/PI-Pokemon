@@ -98,7 +98,7 @@ export default function PokemonCreate () {
                       value={pokemon.name}
                       onChange={handleChange}
                   />
-                  {errors.name && <p>{errors.name}</p>}   
+                  {isSubmited && errors.name && <p>{errors.name}</p>}   
               </div>
               <div>
                   <label name="hp">HP</label>
@@ -108,7 +108,7 @@ export default function PokemonCreate () {
                       value={pokemon.hp}
                       onChange={handleChange}
                   />  
-                  {errors.hp && <p>{errors.hp}</p>}   
+                  {isSubmited && errors.hp && <p>{errors.hp}</p>}   
               </div>
               <div>
                   <label name="attack">Attack</label>
@@ -118,7 +118,7 @@ export default function PokemonCreate () {
                       value={pokemon.attack}
                       onChange={handleChange}
                   />  
-                  {errors.attack && <p>{errors.attack}</p>}   
+                  {isSubmited && errors.attack && <p>{errors.attack}</p>}   
               </div>
               <div>
                   <label name="defense">Defense</label>    
@@ -128,7 +128,7 @@ export default function PokemonCreate () {
                       value={pokemon.defense}
                       onChange={handleChange}
                   />
-                  {errors.defense && <p>{errors.defense}</p>} 
+                  {isSubmited && errors.defense && <p>{errors.defense}</p>} 
               </div>
               <div>
                   <label name="speed">Speed</label>
@@ -138,7 +138,7 @@ export default function PokemonCreate () {
                       value={pokemon.speed}
                       onChange={handleChange}
                   />
-                  {errors.speed && <p>{errors.speed}</p>} 
+                  {isSubmited && errors.speed && <p>{errors.speed}</p>} 
               </div>  
               <div>
                   <label name="height">Height</label>  
@@ -148,7 +148,7 @@ export default function PokemonCreate () {
                       value={pokemon.height}
                       onChange={handleChange}
                   />
-                  {errors.height && <p>{errors.height}</p>}   
+                  {isSubmited && errors.height && <p>{errors.height}</p>}   
               </div>
               <div>
                   <label name="weight">Weight</label>  
