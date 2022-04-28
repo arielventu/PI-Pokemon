@@ -41,7 +41,13 @@ export default function PokemonCreate () {
         });
     };
 
-    
+    const disableButton = () => {
+        if (Object.keys(errors).length > 0) {
+            return true;
+        }
+        return false;
+    };
+
     const handleSelect = (e) => {
         setPokemon({
             ...pokemon,
