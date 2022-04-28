@@ -10,10 +10,10 @@ export default function PokemonDetail (props) {
   const dispatch = useDispatch()
   const pokemons = useSelector(state => state.pokemons)
   const pokemonDetail = useSelector(state => state.detailPokemon)
-  const pokemonFound = pokemons.find(pokemon => pokemon.id === pokemonDetail.id)
+  // const pokemonFound = pokemons.find(pokemon => pokemon.id === pokemonDetail.id)
 
   useEffect(() => {
-    dispatch(getPokemonDetails())
+    dispatch(getPokemonDetails(props.match.params.id))
   }, [dispatch])
 
   
