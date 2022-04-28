@@ -88,7 +88,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			let searchFiltered;
 
 			if (payload === '') searchFiltered = allPokes;
-			if (payload !== '') searchFiltered = allPokes.filter((el) => el.name.toLowerCase().includes(payload.toLowerCase()));
+			if (payload !== '') searchFiltered = allPokes.filter((el) => el.name.includes(payload));
 			return {
 				...state,
 				pokemons: searchFiltered,
