@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
-import { getTypes, createPokemon } from '../../actions'
+import { getTypes, createPokemon, getPokemons } from '../../actions'
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
     const errors = {};
@@ -32,7 +32,7 @@ export default function PokemonCreate () {
         type: []
     });
     const [errors, setErrors] = useState({});
-    // const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmited, setIsSubmited] = useState(false);
     const allPokemons = useSelector((state) => state.pokemons);
 
     const handleChange = (e) => {
@@ -53,7 +53,6 @@ export default function PokemonCreate () {
         e.preventDefault();
         const errors = validate(pokemon);
         setErrors(errors);
-        // setIsSubmitting(true);
         if (Object.keys(errors).length === 0) {
             dispatch(createPokemon(pokemon));
             setPokemon({
@@ -67,7 +66,9 @@ export default function PokemonCreate () {
                 image: '',
                 type: []
             });
+            setIsSubmited(true);
         }
+        isSubmited ? dispatch(getPokemons()) : null;
     };
 
     useEffect(() => {
