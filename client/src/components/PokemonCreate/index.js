@@ -162,6 +162,15 @@ export default function PokemonCreate () {
                   {errors.weight && <p>{errors.weight}</p>}   
               </div>
               <div>
+                  <label name="image">Image</label>
+                  <input
+                      type="text"
+                      name="image"
+                      value={pokemon.image}
+                      onChange={handleChange}
+                  />
+              </div>
+              <div>
                   <label name="Type">Type</label>
                   <select
                       name="type"
@@ -170,19 +179,10 @@ export default function PokemonCreate () {
                       onChange={handleSelect}
                   >
                       {types.map(type => (
-                          <option key={type.id} value={type.name}>{type.name}</option>
+                          <select key={type.id} value={type.name}>{type.name}</select>
                       ))}
                   </select>
                     {errors.type && <p>{errors.type}</p>}
-              </div>
-              <div>
-                  <label name="image">Image</label>
-                  <input
-                      type="text"
-                      name="image"
-                      value={pokemon.image}
-                      onChange={handleChange}
-                  />
               </div>
               {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
                   <button type="submit" disabled>Create Pokemon</button> 
