@@ -52,7 +52,11 @@ export default function PokemonCreate () {
         e.preventDefault();
         const errors = validate(pokemon);
         setErrors(errors);
-        if (Object.keys(errors).length === 0) {
+        if (Object.keys(errors).length !== 0) {
+            alert('Pokemon not created. Please fix the errors in the form.');
+        }
+        else {
+
             dispatch(createPokemon(pokemon));
             setPokemon({
                 name: '',
@@ -65,9 +69,6 @@ export default function PokemonCreate () {
                 image: '',
                 type: []
             });
-        }
-        else {
-            alert('Pokemon not created. Please fix the errors in the form.');
         }
     };
 
