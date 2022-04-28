@@ -184,8 +184,8 @@ export default function PokemonCreate () {
                       onChange={handleChange}
                   />
               </div>
-              {Object.keys(errors).length > 0 ?
-                  <button type="submit" disabled>Create Pokemon</button>
+              {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
+                  <button type="submit" disabled>Create Pokemon</button> 
                   : <button type="submit">Create Pokemon</button>
               }
                   {/* <button type="submit">Create</button> */}
