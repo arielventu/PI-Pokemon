@@ -158,7 +158,7 @@ export default function PokemonCreate () {
                       value={pokemon.weight}
                       onChange={handleChange}
                   />
-                  {errors.weight && <p>{errors.weight}</p>}   
+                  {isSubmited && errors.weight && <p>{errors.weight}</p>}   
               </div>
               <div>
                   <label name="Type">Type</label>
@@ -172,7 +172,7 @@ export default function PokemonCreate () {
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
-                    {errors.type && <p>{errors.type}</p>}
+                    {/* {isSubmited && errors.type && <p>{errors.type}</p>} */}
               </div>
               <div>
                   <label name="image">Image</label>
