@@ -201,23 +201,28 @@ router.post('/', async (req, res, next) => {
     
                 // Asignación de tipos al pokemon
                 const typesOk = await Type.findAll()
-                if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
-                    await newPokemon.addType(
-                        type.map(type => {
-                            const typeFound = typesOk.find(typeOk => typeOk.name === type)
-                            return typeFound.id
-                        })
-                    ) // Si no está vacía asigna el tipo al pokemon creado
+                if (!type) {
+                    res.send('At least one type must be selected'); // Notifica en caso de no recibir un tipo
+                    
                 } else {
-                    await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
-                    await newPokemon.addType(
-                        type.map(type => {
-                            const typeFound = typesOk.find(typeOk => typeOk.name === type)
-                            return typeFound.id
-                        })  
-                    ) 
+                    if (typesOk.length > 0) { // Verifica si la tabla de tipos está vacía
+                        await newPokemon.addType(
+                            type.map(type => {
+                                const typeFound = typesOk.find(typeOk => typeOk.name === type)
+                                return typeFound.id
+                            })
+                        ) // Si no está vacía asigna el tipo al pokemon creado
+                    } else {
+                        await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
+                        await newPokemon.addType(
+                            type.map(type => {
+                                const typeFound = typesOk.find(typeOk => typeOk.name === type)
+                                return typeFound.id
+                            })
+                        )
+                    }
+                    return res.send("Pokmon reated");
                 }
-                return res.send(newPokemon);
             } else {
                 return res.json("Name already exists in the database");
             }
