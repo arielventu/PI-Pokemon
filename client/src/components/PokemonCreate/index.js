@@ -98,6 +98,7 @@ export default function PokemonCreate() {
                         name="name"
                         value={pokemon.name}
                         onChange={handleChange}
+                        
                     />
                     {errors.name && <p>{errors.name}</p>}
                 </div>
