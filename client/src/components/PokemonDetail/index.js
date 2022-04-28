@@ -21,9 +21,8 @@ export default function PokemonDetail (props) {
     <div>
       {pokemonDetail && 
         <div>
-          <h1>{pokemonDetail.name}</h1>
           <img src={pokemonDetail.image} alt={pokemonDetail.name} />
-          <p>{pokemonDetail.description}</p>
+          <h1>{pokemonDetail.name}</h1>
           <p>{pokemonDetail.type}</p>
           <p>{pokemonDetail.hp}</p>
           <p>{pokemonDetail.attack}</p>
