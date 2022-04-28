@@ -87,7 +87,7 @@ export default function PokemonCreate () {
   return (
       <div>
           <h1>Create Pokemon</h1>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} onChange={handleChange}>
               <div>
                   <label name="name">Name</label>
                   <input
