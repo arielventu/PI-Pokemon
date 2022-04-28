@@ -40,6 +40,8 @@ export default function PokemonCreate () {
             ...pokemon,
             [e.target.name]: e.target.value
         });
+        const errors = validate(pokemon);
+        setErrors(errors);
     };
 
     const handleSelect = (e) => {
@@ -51,8 +53,6 @@ export default function PokemonCreate () {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const errors = validate(pokemon);
-        setErrors(errors);
         // setIsSubmitting(true);
         if (Object.keys(errors).length === 0) {
             dispatch(createPokemon(pokemon));
