@@ -3,8 +3,8 @@ import { Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
-import NavBar from './components/NavBar/';
-// import SearchBar from './components/SearchBar/';
+// import NavBar from './components/NavBar/';
+import SearchBar from './components/SearchBar/';
 import PokemonDetail from './components/PokemonDetail/';
 import PokemonCreate from './components/PokemonCreate/';
 

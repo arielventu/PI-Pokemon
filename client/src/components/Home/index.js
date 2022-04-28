@@ -82,7 +82,6 @@ export default function Home () {
         return (
             <div className='home'>
                 <div className='home-header'>
-                    <NavBar />
                     <h1>Origin</h1>
                     <select onChange={(e) => handleFilterByOrigin(e)}>
                         <option value='All'>All</option>
