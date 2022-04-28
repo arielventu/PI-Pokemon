@@ -179,7 +179,8 @@ export default function PokemonCreate () {
                       value={pokemon.image}
                       onChange={handleChange}
                   />
-                </div>
+              </div>
+              { Object.keys(errors).length !== 0 }
               <button type="submit">Submit</button>
           </form>
           <Link to="/home">Back to Home</Link>
