@@ -33,7 +33,7 @@ export default function PokemonCreate () {
     });
     
     const [errors, setErrors] = useState({});
-    const allPokemons = useSelector((state) => state.pokemons);
+    // const allPokemons = useSelector((state) => state.pokemons);
 
     const handleChange = (e) => {
         setPokemon({
@@ -44,7 +44,6 @@ export default function PokemonCreate () {
             ...pokemon,
             [e.target.name]: e.target.value
         }));
-        setErrors(errors);
     };
 
 
