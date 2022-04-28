@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemons, getPokemonDetails, clearPokemonDetails } from '../../actions';
+import { getPokemons, getPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ export default function PokemonDetail (props) {
 
   useEffect(() => {
     dispatch(getPokemonDetails(props.match.params.id))
-    dispatch(clearPokemonDetails())
+    
   }, [dispatch])
 
   console.log(pokemonDetail.name);

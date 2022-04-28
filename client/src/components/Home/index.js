@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getPokemons, getTypes, filterByOrigin, filterByType, sortBy } from '../../actions';
+import { getPokemons, getTypes, filterByOrigin, filterByType, sortBy, clearPokemonDetails } from '../../actions';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
@@ -43,11 +43,13 @@ export default function Home () {
 
     useEffect(() => {
         dispatch(getPokemons());
+        dispatch(getTypes());
+        dispatch(clearPokemonDetails());
     }, [dispatch]);
 
-    useEffect(() => {
-        dispatch(getTypes())
-    }, [dispatch])
+    // useEffect(() => {
+    //     dispatch(getTypes())
+    // }, [dispatch])
 
 
     const handleFilterByOrigin = (e) => {
