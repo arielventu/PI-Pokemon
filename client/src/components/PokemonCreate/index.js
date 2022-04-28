@@ -32,7 +32,7 @@ export default function PokemonCreate () {
         type: []
     });
     const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    // const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setPokemon({
@@ -52,7 +52,7 @@ export default function PokemonCreate () {
         e.preventDefault();
         const errors = validate(pokemon);
         setErrors(errors);
-        setIsSubmitting(true);
+        // setIsSubmitting(true);
         if (Object.keys(errors).length === 0) {
             dispatch(createPokemon(pokemon));
             setPokemon({
