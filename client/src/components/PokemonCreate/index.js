@@ -109,9 +109,8 @@ export default function PokemonCreate() {
                         name="hp"
                         value={pokemon.hp}
                         onChange={handleChange}
-                        // placeholder={errors.hp}
                     />
-                    {/* {errors.hp && <p>{errors.hp}</p>} */}
+                    {errors.hp && <p>{errors.hp}</p>}
                 </div>
                 <div>
                     <label name="attack">Attack</label>
@@ -131,7 +130,7 @@ export default function PokemonCreate() {
                         value={pokemon.defense}
                         onChange={handleChange}
                     />
-                    {/* {errors.defense && <p>{errors.defense}</p>} */}
+                    {errors.defense && <p>{errors.defense}</p>}
                 </div>
                 <div>
                     <label name="speed">Speed</label>
@@ -141,7 +140,7 @@ export default function PokemonCreate() {
                         value={pokemon.speed}
                         onChange={handleChange}
                     />
-                    {/* {errors.speed && <p>{errors.speed}</p>} */}
+                    {errors.speed && <p>{errors.speed}</p>}
                 </div>
                 <div>
                     <label name="height">Height</label>
@@ -161,7 +160,7 @@ export default function PokemonCreate() {
                         value={pokemon.weight}
                         onChange={handleChange}
                     />
-                    {/* {errors.weight && <p>{errors.weight}</p>} */}
+                    {errors.weight && <p>{errors.weight}</p>}
                 </div>
                 <div>
                     <label name="image">Image</label>
