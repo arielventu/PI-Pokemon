@@ -21,13 +21,13 @@ export default function PokemonDetail (props) {
     <div>
       {pokemonDetail && 
         <div>
-          <img src={pokemonDetail.image} alt={pokemonDetail.name} />
+          <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
           <h1>{pokemonDetail.name}</h1>
-          <p>{pokemonDetail.type}</p>
-          <p>{pokemonDetail.hp}</p>
-          <p>{pokemonDetail.attack}</p>
-          <p>{pokemonDetail.defense}</p>
-          <p>{pokemonDetail.speed}</p>
+          <p>Type: {pokemonDetail.type}</p>
+          <p>HP: {pokemonDetail.hp}</p>
+          <p>Attack: {pokemonDetail.attack}</p>
+          <p>Defense: {pokemonDetail.defense}</p>
+          <p>Speed: {pokemonDetail.speed}</p>
           <p>{pokemonDetail.height}</p>
           <p>{pokemonDetail.weight}</p>
         </div>
