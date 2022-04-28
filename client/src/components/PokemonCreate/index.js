@@ -14,6 +14,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight }) => {
     if (!speed || speed.search(regEx) === -1) errors.speed = 'Speed is required and must be a number';
     if (!height || height.search(regEx) === -1) errors.height = 'Height is required and must be a number';
     if (!weight || weight.search(regEx) === -1) errors.weight = 'Weight is required and must be a number';
+    if (!type) errors.type = 'Type is required';
     return errors;
 };
 
