@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import { getTypes, createPokemon } from '../../actions'
 
-const validate = ({ name, hp, attack, defense, speed, height, weight }) => {
+const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
     const errors = {};
     const regEx = /^\d+$/;
 
@@ -161,6 +161,7 @@ export default function PokemonCreate () {
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
+                    {errors.type && <p>{errors.type}</p>}
               </div>
               <div>
                   <label htmlFor="image">Image</label>
