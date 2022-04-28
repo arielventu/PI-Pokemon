@@ -17,7 +17,7 @@ export default function PokemonDetail (props) {
     
   }, [dispatch])
 
-  console.log(pokemonDetail.name);
+  // console.log(pokemonDetail.name);
   return (
     <div>
       {pokemonDetail && 
