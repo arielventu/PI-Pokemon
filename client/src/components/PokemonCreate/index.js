@@ -188,7 +188,7 @@ export default function PokemonCreate () {
                   <button type="submit" disabled>Create Pokemon</button> 
                   : <button type="submit">Create Pokemon</button>
               }
-                  {/* <button type="submit">Create</button> */}
+                  {/* <button type="submit">Create Pokemon</button> */}
           </form>
           <Link to="/home">Back to Home</Link>
       </div>
