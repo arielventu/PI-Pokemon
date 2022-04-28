@@ -68,7 +68,7 @@ const Home = () => {
 
     // Render ********************************************************************************
 
-    if (currentPokemons.length === 0) {
+    if (allPokemons.length === 0) {
         return (
             <div>
                 <img src={LOADING_IMG} alt="loading" />
