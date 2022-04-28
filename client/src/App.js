@@ -15,9 +15,9 @@ function App() {
     <React.Fragment>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/home" component={Home} />
-      <Route path="/pokemon/:id" component={PokemonDetail} />
-      {/* <Route exact path="/home" component={NavBar} /> */}
       <Route exact path="/home" component={SearchBar} />
+      <Route exact path="/pokemon/:id" component={PokemonDetail} />
+      {/* <Route exact path="/home" component={NavBar} /> */}
       <Route path="/pokemon/create" component={PokemonCreate} />
     </React.Fragment>
   );
