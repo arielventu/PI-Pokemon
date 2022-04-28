@@ -81,8 +81,7 @@ export default function PokemonCreate () {
     useEffect(() => {
         dispatch(getTypes());
         dispatch(getPokemons());
-        setErrors(errors                                );
-    }, [dispatch, errors]);
+    }, [dispatch]);
 
 
   return (
