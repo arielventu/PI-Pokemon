@@ -6,8 +6,8 @@ import {
 	SORT_BY,
 	CREATE_POKEMON,
 	GET_POKEMON_DETAILS,
-	CLEAR_POKEMON_DETAILS
-	// SEARCH_POKEMONS,
+	CLEAR_POKEMON_DETAILS,
+	SEARCH_POKEMONS,
 } from '../actions';
 
 const initialState = {
@@ -83,27 +83,16 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				detailPokemon: {},
 			};
-	
-			// case SET_POKEMONS_TO_SHOW:
-			// 	return {
-			// 		...state,
-			// 		pokemonsToShow: payload,
-			// 	};
-			// case ORIGIN_POKEMONS:
-			// 	return {
-			// 		...state,
-			// 		pokemonsOrigin: payload,
-			// 	};
-			// case SEARCH_POKEMONS:
-			// 	return { 
-			// 		...state,
-			// 		pokemons: payload,
-			// 	};
-			// case FILTER_TYPES:
-			// 	return {
-			// 		...state,
-			// 		typeFiltered: payload,
-			// 	};
+		case SEARCH_POKEMONS:
+			const allPokes = state.allPokemons;
+			let searchFiltered;
+
+			if (payload === '') searchFiltered = allPokes;
+			if (payload !== '') searchFiltered = allPokes.filter((el) => el.name.toLowerCase().includes(payload.toLowerCase()));
+			return {
+				...state,
+				pokemons: searchFiltered,
+			};
 			default:
 				return state;
 	}

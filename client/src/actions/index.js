@@ -9,7 +9,7 @@ export const SORT_BY = 'SORT_BY';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
 export const CLEAR_POKEMON_DETAILS = 'CLEAR_POKEMON_DETAILS';
-// export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
+export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -117,10 +117,16 @@ export const searchPokemons = (payload) => {
         axios.get(`${ALL_POKES}?name=${payload}`)
             .then(response => {
                 // console.log(response.data);
-                dispatch({
-                    type: 'SEARCH_POKEMONS',
-                    payload: response.data,
-                });
+                if (response.data !== 'Pokemon not found') {
+                    dispatch({
+                        type: 'SEARCH_POKEMONS',
+                        payload: response.data,
+                    });
+                    alert(response.data);
+                } else {
+                    // console.log(response.data);
+                    alert(response.data);    
+                }
             })
             .catch(error => {
                 console.log(error);
