@@ -34,19 +34,13 @@ export default function PokemonCreate () {
     const [errors, setErrors] = useState({});
     const allPokemons = useSelector((state) => state.pokemons);
 
-    const disableButton = () => {
-        if (Object.keys(errors).length > 0) {
-            return true;
-        }
-        return false;
-    };
-
     const handleChange = (e) => {
         setPokemon({
             ...pokemon,
             [e.target.name]: e.target.value
         });
-        disableButton();
+        const errors = validate(pokemon);
+        setErrors(errors);
     };
 
 
@@ -59,8 +53,6 @@ export default function PokemonCreate () {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const errors = validate(pokemon);
-        setErrors(errors);
         if (Object.keys(errors).length > 0) {
             alert('Pokemon not created. Please fix the errors in the form.');
         }
@@ -192,7 +184,6 @@ export default function PokemonCreate () {
               {Object.keys(errors).length !== 0 ?
                   <button type="submit" disabled>Create</button> :
                   <button type="submit">Create</button>}
-              {/* <button type="submit">Submit</button> */}
           </form>
           <Link to="/home">Back to Home</Link>
       </div>
