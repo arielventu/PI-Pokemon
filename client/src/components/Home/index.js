@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
 import Pagination from '../Pagination';
-import NavBar from '../NavBar';
 import { LOADING_IMG } from '../../utils';
 import './Home.css';
 
