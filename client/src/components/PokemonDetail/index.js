@@ -16,12 +16,12 @@ export default function PokemonDetail (props) {
     dispatch(getPokemonDetails(props.match.params.id))
   }, [dispatch])
 
-  
+  console.log(pokemonDetail);
   return (
     <div>
       {pokemonDetail.length > 0 && 
         <div>
-          <h1>{pokemonDetail.name}</h1>
+          <h1>{pokemonDetail[0].name}</h1>
         </div>
         }
     
