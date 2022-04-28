@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function PokemonDetail (props) {
-  // console.log(props);
+  console.log(props);
   
   const dispatch = useDispatch()
   // const pokemons = useSelector(state => state.pokemons)
@@ -24,14 +24,13 @@ export default function PokemonDetail (props) {
         <div>
           <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
           <h1>{pokemonDetail.name}</h1>
-          <p>
+          <div>
             {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
               <div key={i} className='{cssButtonType(el)}'>
-                <p key={i} className='p'>
-                  {el}
-					</p>
-					</div>
-				))}</p>
+                <p key={i} className='p'>{el}</p>
+              </div>
+            ))}
+          </div>
           <p>HP: {pokemonDetail.hp}</p>
           <p>Attack: {pokemonDetail.attack}</p>
           <p>Defense: {pokemonDetail.defense}</p>
