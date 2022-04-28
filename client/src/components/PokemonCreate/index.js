@@ -33,6 +33,7 @@ export default function PokemonCreate () {
     });
     const [errors, setErrors] = useState({});
     // const [isSubmitting, setIsSubmitting] = useState(false);
+    const allPokemons = useSelector((state) => state.pokemons);
 
     const handleChange = (e) => {
         setPokemon({
