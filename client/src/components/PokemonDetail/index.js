@@ -8,7 +8,7 @@ export default function PokemonDetail (props) {
   console.log(props);
   
   const dispatch = useDispatch()
-  const pokemons = useSelector(state => state.pokemons)
+  // const pokemons = useSelector(state => state.pokemons)
   const pokemonDetail = useSelector(state => state.detailPokemon)
   // const pokemonFound = pokemons.find(pokemon => pokemon.id === pokemonDetail.id)
 
