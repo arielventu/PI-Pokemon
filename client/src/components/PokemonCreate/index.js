@@ -172,7 +172,6 @@ export default function PokemonCreate () {
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
-                    {/* {isSubmited && errors.type && <p>{errors.type}</p>} */}
               </div>
               <div>
                   <label name="image">Image</label>
