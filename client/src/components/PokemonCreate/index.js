@@ -79,7 +79,7 @@ export default function PokemonCreate () {
           <h1>Create Pokemon</h1>
           <form onSubmit={handleSubmit}>
               <div>
-                  <label htmlFor="name">Name</label>
+                  <label name="name">Name</label>
                   <input
                       type="text"
                       name="name"
@@ -89,7 +89,7 @@ export default function PokemonCreate () {
                   {errors.name && <p>{errors.name}</p>}   
               </div>
               <div>
-                  <label htmlFor="hp">HP</label>
+                  <label name="hp">HP</label>
                   <input
                       type="text" 
                       name="hp"
@@ -99,7 +99,7 @@ export default function PokemonCreate () {
                   {errors.hp && <p>{errors.hp}</p>}   
               </div>
               <div>
-                  <label htmlFor="attack">Attack</label>
+                  <label name="attack">Attack</label>
                   <input
                       type="text"
                       name="attack"
@@ -109,7 +109,7 @@ export default function PokemonCreate () {
                   {errors.attack && <p>{errors.attack}</p>}   
               </div>
               <div>
-                  <label htmlFor="defense">Defense</label>    
+                  <label name="defense">Defense</label>    
                   <input
                       type="text"
                       name="defense"
@@ -119,7 +119,7 @@ export default function PokemonCreate () {
                   {errors.defense && <p>{errors.defense}</p>} 
               </div>
               <div>
-                  <label htmlFor="speed">Speed</label>
+                  <label name="speed">Speed</label>
                   <input
                       type="text"
                       name="speed"
@@ -129,7 +129,7 @@ export default function PokemonCreate () {
                   {errors.speed && <p>{errors.speed}</p>} 
               </div>  
               <div>
-                  <label htmlFor="height">Height</label>  
+                  <label name="height">Height</label>  
                   <input
                       type="text"
                       name="height"
@@ -139,7 +139,7 @@ export default function PokemonCreate () {
                   {errors.height && <p>{errors.height}</p>}   
               </div>
               <div>
-                  <label htmlFor="weight">Weight</label>  
+                  <label name="weight">Weight</label>  
                   <input
                       type="text"
                       name="weight"
@@ -149,7 +149,7 @@ export default function PokemonCreate () {
                   {errors.weight && <p>{errors.weight}</p>}   
               </div>
               <div>
-                  <label>Type</label>
+                  <label name="Type">Type</label>
                   <select
                       name="type"
                       multiple
@@ -163,7 +163,7 @@ export default function PokemonCreate () {
                     {errors.type && <p>{errors.type}</p>}
               </div>
               <div>
-                  <label htmlFor="image">Image</label>
+                  <label name="image">Image</label>
                   <input
                       type="text"
                       name="image"
