@@ -104,6 +104,8 @@ export const getPokemonDetails = (payload) => {
             });
     };
 };
+
+
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {
 //         axios.get(`${ALL_POKES}?name=${search}`)
