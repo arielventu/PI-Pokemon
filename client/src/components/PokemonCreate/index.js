@@ -33,6 +33,7 @@ export default function PokemonCreate () {
     });
     const [errors, setErrors] = useState({});
     const allPokemons = useSelector((state) => state.pokemons);
+    const [isSubmited, setIsSubmited] = useState(false);
 
     const handleChange = (e) => {
         setPokemon({
@@ -63,6 +64,7 @@ export default function PokemonCreate () {
             if (pokemon.image === '') {
                 pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; //Asigna imagen por defecto
             }
+            setIsSubmited(true);
             dispatch(createPokemon(pokemon));
             setPokemon({
                 name: '',
