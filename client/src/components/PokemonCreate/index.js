@@ -66,6 +66,9 @@ export default function PokemonCreate () {
                 type: []
             });
         }
+        else {
+            alert('Pokemon not created. Please fix the errors in the form.');
+        }
     };
 
     useEffect(() => {
