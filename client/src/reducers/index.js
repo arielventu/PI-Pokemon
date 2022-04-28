@@ -91,7 +91,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			if (payload !== '') searchFiltered = allPokes.filter((el) => el.name.includes(payload));
 			return {
 				...state,
-				pokemons: searchFiltered,
+				detailPokemon: searchFiltered,
 			};
 			default:
 				return state;
