@@ -38,7 +38,8 @@ export default function PokemonDetail (props) {
           <p>Height: {pokemonDetail.height}</p>
           <p>Weight: {pokemonDetail.weight}</p>
         </div>
-        }
+      }
+      <Link to='/home'>Back</Link>
     
       
     </div>
