@@ -23,13 +23,19 @@ export default function PokemonDetail (props) {
         <div>
           <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
           <h1>{pokemonDetail.name}</h1>
-          <p>Type: {pokemonDetail.type}</p>
+          <p>Type: {type && type.map((el, i) => (
+					<div key={i} className='{cssButtonType(el)}'>
+						<p key={i} className='p'>
+							{el}
+						</p>
+					</div>
+				))}</p>
           <p>HP: {pokemonDetail.hp}</p>
           <p>Attack: {pokemonDetail.attack}</p>
           <p>Defense: {pokemonDetail.defense}</p>
           <p>Speed: {pokemonDetail.speed}</p>
-          <p>{pokemonDetail.height}</p>
-          <p>{pokemonDetail.weight}</p>
+          <p>Height: {pokemonDetail.height}</p>
+          <p>Weight: {pokemonDetail.weight}</p>
         </div>
         }
     
