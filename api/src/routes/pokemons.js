@@ -182,8 +182,8 @@ router.post('/', async (req, res, next) => {
     const { name, hp, attack, defense, speed, height, weight, image , type} = req.body;
     try {
         const exists = name ? await Pokemon.findOne({ where: { name } }) : null; // Verifica que no exista un pokemon con el mismo nombre y q reciba un nombre como parámetro
-        
-        if (!name || !type.name) res.send('Necessary parameters not provided'); // Notifica en caso de no recibir los parámetros necesarios
+        console.log(type);
+        if (!name || !type) res.send('Necessary parameters not provided'); // Notifica en caso de no recibir un nombre o un tipo
         else { 
 
             // Creación del nuevo pokemon
@@ -219,7 +219,7 @@ router.post('/', async (req, res, next) => {
                 }
                 return res.send("Pokmon created");
             } else {
-                return res.send("Name already exists in the database");
+                return res.json("Name already exists in the database");
             }
         }
     } catch (error) {
