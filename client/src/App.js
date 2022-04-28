@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
 // import NavBar from './components/NavBar/';
 // import SearchBar from './components/SearchBar/';
-// import PokemonDetail from './components/PokemonDetail/';
+import PokemonDetail from './components/PokemonDetail/';
 import PokemonCreate from './components/PokemonCreate/';
 
 
@@ -15,9 +15,9 @@ function App() {
     <React.Fragment>
       <Route exact path="/" component={LandingPage} />
       <Route exact path="/home" component={Home} />
+      <Route path="/pokemon/:id" component={PokemonDetail} />
       {/* <Route exact path="/home" component={NavBar} />
-      <Route exact path="/home" component={SearchBar} />
-      {/* <Route path="/pokemon/:id" component={PokemonDetail} /> */}
+      <Route exact path="/home" component={SearchBar} /> */}
       <Route path="/pokemon/create" component={PokemonCreate} />
     </React.Fragment>
   );
