@@ -12,6 +12,7 @@ const initialState = {
 	pokemons: [],
 	types: [],
 	allPokemons: [],
+	pokemonCreated: '',
 };
 
 function rootReducer (state = initialState, {payload, type}) {
@@ -65,7 +66,7 @@ function rootReducer (state = initialState, {payload, type}) {
 		case CREATE_POKEMON:
 			return {
 				...state,
-				pokemons: [...state.pokemons, payload],
+				pokemons: [...state, payload],
 			};
 			
 	
