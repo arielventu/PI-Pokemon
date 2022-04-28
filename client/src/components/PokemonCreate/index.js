@@ -60,7 +60,7 @@ export default function PokemonCreate () {
                 pokemon.type = ['normal'];
             }
             if (pokemon.image === '') {
-                pokemon.image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png';
+                pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg';
             }
             dispatch(createPokemon(pokemon));
             setPokemon({
