@@ -1,17 +1,19 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemons } from '../../actions';
+import { getPokemons, getPokemonDetails} from '../../actions';
 
 
 const PokemonDetail = () => {
   const dispatch = useDispatch()
   const pokemons = useSelector(state => state.pokemons)
+  const pokemonDetails = useSelector(state => state.pokemonDetails)
+  const pokemonFound = pokemons.find(pokemon => pokemon.id === pokemonDetails.id)
 
   useEffect(() => {
     if (pokemons.length === 0) {
       dispatch(getPokemons())
     }
-  }, [])
+  }, [dispatch, pokemons])
 
 
   

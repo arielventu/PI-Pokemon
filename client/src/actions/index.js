@@ -7,6 +7,7 @@ export const FILTER_BY_ORIGIN = 'FILTER_BY_ORIGIN';
 export const FILTER_BY_TYPE = 'FILTER_BY_TYPE';
 export const SORT_BY = 'SORT_BY';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
+export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
 // export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
 
 export const getPokemons = () => {
@@ -88,13 +89,13 @@ export const createPokemon = (payload) => {
     };
 };
 
-export const getPokemonDetils = (payload) => {
+export const getPokemonDetails = (payload) => {
     return function (dispatch) {
         axios.get(`${ALL_POKES}/${payload}`)
             .then(response => {
                 // console.log(response.data);
                 dispatch({
-                    type: 'GET_POKEMON_DETILS',
+                    type: 'GET_POKEMON_DETAILS',
                     payload: response.data,
                 });
             })

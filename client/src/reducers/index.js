@@ -5,6 +5,7 @@ import {
 	FILTER_BY_TYPE,
 	SORT_BY,
 	CREATE_POKEMON,
+	GET_POKEMON_DETAILS,
 	// SEARCH_POKEMONS,
 } from '../actions';
 
@@ -12,7 +13,6 @@ const initialState = {
 	pokemons: [],
 	types: [],
 	allPokemons: [],
-	pokemonCreated: '',
 };
 
 function rootReducer (state = initialState, {payload, type}) {
@@ -66,9 +66,20 @@ function rootReducer (state = initialState, {payload, type}) {
 		case CREATE_POKEMON:
 			return {
 				...state,
-				pokemons: [...state.pokemons, payload],
+				pokemons: [
+					...state.pokemons,
+					payload
+				],
 			};
-			
+		case GET_POKEMON_DETAILS:
+			return {
+				...state,
+				pokemons: [
+					...state.pokemons,
+					payload
+				],
+			};
+
 	
 			// case SET_POKEMONS_TO_SHOW:
 			// 	return {
