@@ -33,7 +33,6 @@ export default function PokemonCreate () {
     });
     const [errors, setErrors] = useState({});
     const allPokemons = useSelector((state) => state.pokemons);
-    const [isSubmited, setIsSubmited] = useState(false);
 
     const handleChange = (e) => {
         setPokemon({
@@ -64,7 +63,6 @@ export default function PokemonCreate () {
             if (pokemon.image === '') {
                 pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; //Asigna imagen por defecto
             }
-            setIsSubmited(true);
             dispatch(createPokemon(pokemon));
             setPokemon({
                 name: '',
@@ -98,7 +96,7 @@ export default function PokemonCreate () {
                       value={pokemon.name}
                       onChange={handleChange}
                   />
-                  {isSubmited && errors.name && <p>{errors.name}</p>}   
+                  {errors.name && <p>{errors.name}</p>}   
               </div>
               <div>
                   <label name="hp">HP</label>
@@ -108,7 +106,7 @@ export default function PokemonCreate () {
                       value={pokemon.hp}
                       onChange={handleChange}
                   />  
-                  {isSubmited && errors.hp && <p>{errors.hp}</p>}   
+                  {errors.hp && <p>{errors.hp}</p>}   
               </div>
               <div>
                   <label name="attack">Attack</label>
@@ -118,7 +116,7 @@ export default function PokemonCreate () {
                       value={pokemon.attack}
                       onChange={handleChange}
                   />  
-                  {isSubmited && errors.attack && <p>{errors.attack}</p>}   
+                  {errors.attack && <p>{errors.attack}</p>}   
               </div>
               <div>
                   <label name="defense">Defense</label>    
@@ -128,7 +126,7 @@ export default function PokemonCreate () {
                       value={pokemon.defense}
                       onChange={handleChange}
                   />
-                  {isSubmited && errors.defense && <p>{errors.defense}</p>} 
+                  {errors.defense && <p>{errors.defense}</p>} 
               </div>
               <div>
                   <label name="speed">Speed</label>
@@ -138,7 +136,7 @@ export default function PokemonCreate () {
                       value={pokemon.speed}
                       onChange={handleChange}
                   />
-                  {isSubmited && errors.speed && <p>{errors.speed}</p>} 
+                  {errors.speed && <p>{errors.speed}</p>} 
               </div>  
               <div>
                   <label name="height">Height</label>  
@@ -148,7 +146,7 @@ export default function PokemonCreate () {
                       value={pokemon.height}
                       onChange={handleChange}
                   />
-                  {isSubmited && errors.height && <p>{errors.height}</p>}   
+                  {errors.height && <p>{errors.height}</p>}   
               </div>
               <div>
                   <label name="weight">Weight</label>  
@@ -158,7 +156,7 @@ export default function PokemonCreate () {
                       value={pokemon.weight}
                       onChange={handleChange}
                   />
-                  {isSubmited && errors.weight && <p>{errors.weight}</p>}   
+                  {errors.weight && <p>{errors.weight}</p>}   
               </div>
               <div>
                   <label name="Type">Type</label>
@@ -172,6 +170,7 @@ export default function PokemonCreate () {
                           <option key={type.id} value={type.name}>{type.name}</option>
                       ))}
                   </select>
+                    {errors.type && <p>{errors.type}</p>}
               </div>
               <div>
                   <label name="image">Image</label>
