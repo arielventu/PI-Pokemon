@@ -39,7 +39,10 @@ export default function PokemonCreate () {
             ...pokemon,
             [e.target.name]: e.target.value
         });
-        const errors = validate(pokemon);
+        setErrors(validate({
+            ...pokemon,
+            [e.target.name]: e.target.value
+        }));
         setErrors(errors);
     };
 
