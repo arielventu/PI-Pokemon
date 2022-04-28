@@ -22,6 +22,15 @@ export default function PokemonDetail (props) {
       {pokemonDetail && 
         <div>
           <h1>{pokemonDetail.name}</h1>
+          <img src={pokemonDetail.image} alt={pokemonDetail.name} />
+          <p>{pokemonDetail.description}</p>
+          <p>{pokemonDetail.type}</p>
+          <p>{pokemonDetail.hp}</p>
+          <p>{pokemonDetail.attack}</p>
+          <p>{pokemonDetail.defense}</p>
+          <p>{pokemonDetail.speed}</p>
+          <p>{pokemonDetail.height}</p>
+          <p>{pokemonDetail.weight}</p>
         </div>
         }
     
