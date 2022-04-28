@@ -174,8 +174,8 @@ export default function PokemonCreate() {
                     <label name="Type">Type</label>
                     <select
                         name="type"
-                        //   multiple
-                        //   value={pokemon.type}
+                          multiple
+                          value={pokemon.type}
                         onChange={handleSelect}
                     >
                         {types.map((type) => (
@@ -190,12 +190,6 @@ export default function PokemonCreate() {
                 }
                 {/* <button type="submit">Create Pokemon</button> */}
             </form>
-            {types.map((type) => (
-                <div>
-                    <p key={type.id}>{type.name}</p>
-                    <button>{type.id}</button>
-                </div>
-            ))}
             
           
           <Link to="/home">Back to Home</Link>
