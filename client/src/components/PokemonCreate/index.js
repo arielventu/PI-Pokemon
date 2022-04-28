@@ -31,6 +31,7 @@ export default function PokemonCreate () {
         image: '',
         type: []
     });
+    
     const [errors, setErrors] = useState({});
     const allPokemons = useSelector((state) => state.pokemons);
 
