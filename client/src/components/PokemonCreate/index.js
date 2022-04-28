@@ -174,7 +174,7 @@ export default function PokemonCreate () {
                   <label name="Type">Type</label>
                   <select
                       name="type"
-                      multiple
+                    //   multiple
                       value={pokemon.type}
                       onChange={handleSelect}
                   >
