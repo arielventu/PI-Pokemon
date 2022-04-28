@@ -63,14 +63,10 @@ function rootReducer (state = initialState, {payload, type}) {
 				pokemons: orderBy,
 			};
 		case CREATE_POKEMON:
-			console.log(response.data);
-			if (payload.data === 'Name already exists in the database') alert(payload.data);
-			else {
 			return {
 				...state,
 				pokemons: [...state.pokemons, payload],
-				};
-			}
+			};
 			
 	
 			// case SET_POKEMONS_TO_SHOW:
