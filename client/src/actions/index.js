@@ -116,13 +116,12 @@ export const searchPokemons = (payload) => {
     return function (dispatch) {
         axios.get(`${ALL_POKES}?name=${payload}`)
             .then(response => {
-                // console.log(response.data);
+                console.log(response.data);
                 if (response.data !== 'Pokemon not found') {
                     dispatch({
                         type: 'SEARCH_POKEMONS',
                         payload: response.data,
                     });
-                    alert(response.data);
                 } else {
                     // console.log(response.data);
                     alert(response.data);    
