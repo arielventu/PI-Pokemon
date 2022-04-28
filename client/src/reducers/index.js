@@ -6,15 +6,12 @@ import {
 	SORT_BY,
 	CREATE_POKEMON,
 	// SEARCH_POKEMONS,
-	// SET_POKEMONS_TO_SHOW,
 } from '../actions';
 
 const initialState = {
 	pokemons: [],
 	types: [],
 	allPokemons: [],
-	// pokemonsOrigin: 'All',
-	// typeFiltered: 'All',
 };
 
 function rootReducer (state = initialState, {payload, type}) {
@@ -66,10 +63,13 @@ function rootReducer (state = initialState, {payload, type}) {
 				pokemons: orderBy,
 			};
 		case CREATE_POKEMON:
+			if (payload.data === 'Name already exists in the database') alert(payload.data);
+			else {
 			return {
 				...state,
 				pokemons: [...state.pokemons, payload],
-			};
+				};
+			}
 			
 	
 			// case SET_POKEMONS_TO_SHOW:
