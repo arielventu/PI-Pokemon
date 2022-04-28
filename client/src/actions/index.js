@@ -83,6 +83,7 @@ export const createPokemon = (payload) => {
             })
             .catch(error => {
                 console.log(error);
+                alert(error);
             });
     };
 };

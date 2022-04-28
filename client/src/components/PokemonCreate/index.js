@@ -56,7 +56,12 @@ export default function PokemonCreate () {
             alert('Pokemon not created. Please fix the errors in the form.');
         }
         else {
-
+            if (pokemon.type.length === 0) {
+                pokemon.type = ['normal'];
+            }
+            if (pokemon.image === '') {
+                pokemon.image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png';
+            }
             dispatch(createPokemon(pokemon));
             setPokemon({
                 name: '',
