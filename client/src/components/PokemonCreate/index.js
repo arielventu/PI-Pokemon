@@ -184,7 +184,11 @@ export default function PokemonCreate () {
                       onChange={handleChange}
                   />
               </div>
-                  <button type="submit">Create</button>
+              {Object.keys(errors).length > 0 ?
+                  <button type="submit" disabled>Create Pokemon</button>
+                  : <button type="submit">Create Pokemon</button>
+              }
+                  {/* <button type="submit">Create</button> */}
           </form>
           <Link to="/home">Back to Home</Link>
       </div>
