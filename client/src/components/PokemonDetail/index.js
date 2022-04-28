@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function PokemonDetail (props) {
-  console.log(props);
+  // console.log(props);
   
   const dispatch = useDispatch()
   // const pokemons = useSelector(state => state.pokemons)
@@ -21,7 +21,7 @@ export default function PokemonDetail (props) {
     <div>
       {pokemonDetail.length > 0 && 
         <div>
-          <h1>{pokemonDetail[0].name}</h1>
+          <h1>{pokemonDetail.name}</h1>
         </div>
         }
     

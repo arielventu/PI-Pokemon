@@ -13,7 +13,7 @@ const initialState = {
 	pokemons: [],
 	types: [],
 	allPokemons: [],
-	detailPokemon:[],
+	detailPokemon:{},
 };
 
 function rootReducer (state = initialState, {payload, type}) {
