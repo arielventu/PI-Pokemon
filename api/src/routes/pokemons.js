@@ -221,7 +221,7 @@ router.post('/', async (req, res, next) => {
                             })
                         )
                     }
-                    return res.send("Pokmon reated");
+                    return res.send("Pokmon created");
                 }
             } else {
                 return res.json("Name already exists in the database");
