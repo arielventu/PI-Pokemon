@@ -76,7 +76,7 @@ export const createPokemon = (payload) => {
                         payload: response.data,
                     });
                 } else {
-                    console.log(response.data);
+                    // console.log(response.data);
                     alert(response.data);    
                 }
             })
