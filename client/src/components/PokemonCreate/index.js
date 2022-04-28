@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
-import { getTypes, createPokemon } from '../../actions'
+import { getTypes, createPokemon, getPokemons } from '../../actions'
+import { get } from '../../../../api/src/routes/pokemons';
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
     const errors = {};
@@ -72,6 +73,7 @@ export default function PokemonCreate () {
 
     useEffect(() => {
         dispatch(getTypes());
+        dispatch(getPokemons());
     }, [dispatch]);
 
 
