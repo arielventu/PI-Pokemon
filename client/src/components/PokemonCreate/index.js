@@ -109,7 +109,7 @@ export default function PokemonCreate() {
                         name="hp"
                         value={pokemon.hp}
                         onChange={handleChange}
-                        placeholder={errors.hp}
+                        // placeholder={errors.hp}
                     />
                     {/* {errors.hp && <p>{errors.hp}</p>} */}
                 </div>
