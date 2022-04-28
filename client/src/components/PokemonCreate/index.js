@@ -98,9 +98,9 @@ export default function PokemonCreate() {
                         name="name"
                         value={pokemon.name}
                         onChange={handleChange}
-                        
+                        placeholder={errors.name}
                     />
-                    {errors.name && <p>{errors.name}</p>}
+                    {/* {errors.name && <p>{errors.name}</p>} */}
                 </div>
                 <div>
                     <label name="hp">HP</label>
@@ -110,7 +110,7 @@ export default function PokemonCreate() {
                         value={pokemon.hp}
                         onChange={handleChange}
                     />
-                    {errors.hp && <p>{errors.hp}</p>}
+                    {/* {errors.hp && <p>{errors.hp}</p>} */}
                 </div>
                 <div>
                     <label name="attack">Attack</label>
