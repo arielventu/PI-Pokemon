@@ -112,6 +112,22 @@ export const clearPokemonDetails = () => {
     };
 }
 
+export const searchPokemons = (payload) => {
+    return function (dispatch) {
+        axios.get(`${ALL_POKES}?name=${payload}`)
+            .then(response => {
+                // console.log(response.data);
+                dispatch({
+                    type: 'SEARCH_POKEMONS',
+                    payload: response.data,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+                alert(error);
+            });
+    };
+};
 
 // export const searchPokemons = (search) => {
 //     return function (dispatch) {
