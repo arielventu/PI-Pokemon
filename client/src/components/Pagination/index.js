@@ -12,8 +12,8 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination}) 
     <nav>
         <ul className={`${style.ulPagination}`}>
             {pageNumbers && pageNumbers.map(number => (
-                <li className={`${style.pageItem}`} key={number}>
-                    <a onClick={() => pagination(number)} className={`${style.num}`}>{number}</a>
+                <li onClick={() => pagination(number)} className={`${style.pageItem}`} key={number}>
+                    <a  className={`${style.num}`}>{number}</a>
                 </li>
             ))}
         </ul>
