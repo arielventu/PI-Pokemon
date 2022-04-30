@@ -6,7 +6,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	box-shadow: 0 0 20px rgb(207, 110, 30);
+	box-shadow: 0 0 20px rgb(235, 211, 77);
+	position: relative;
 }
 
 .logo {
