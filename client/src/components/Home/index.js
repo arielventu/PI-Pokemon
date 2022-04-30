@@ -110,13 +110,13 @@ export default function Home () {
                         </Link>
                     ))}
                 </div>
-                <div className='home-footer'>
+                {/* <div className='home-footer'> */}
                     <Pagination
                         pokemonsPerPage={pokemonsPerPage}
                         allPokemons={allPokemons.length}
                         pagination={pagination}
                     />
-                </div>
+                {/* </div> */}
 
             </div>
         )
