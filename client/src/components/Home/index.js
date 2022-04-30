@@ -79,16 +79,16 @@ export default function Home () {
         return (
             <div className={`${style.homeContainer}`}>
                 <div className={`${style.filters}`}>
-                    <div className={`${style.filterSource}`}>
-                        <select defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
+                    <div className={`${style.divFilterSource}`}>
+                        <select className={`${style.selectFilterSource}`} defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
                             <option value={"default"} hidden>Origin</option>
                             <option value='All'>All</option>
                             <option value='PokeAPI'>PokeAPI</option>
                             <option value='Created'>Created</option>
                         </select>
                     </div>
-                    <div className={`${style.filterType}`}>
-                        <select defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
+                    <div className={`${style.divFilterType}`}>
+                        <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                             <option value={"default"} hidden>Type</option>
                             <option value='All'>All</option>
                             {allTypes.map((type) => (
@@ -98,8 +98,8 @@ export default function Home () {
                             ))}
                         </select>
                     </div>
-                    <div className={`${style.filterOrder}`}>
-                        <select defaultValue={"default"} onChange={(e) => handleSort(e)}>
+                    <div className={`${style.divFilterOrder}`}>
+                        <select className={`${style.selectFilterOrder}`} defaultValue={"default"} onChange={(e) => handleSort(e)}>
                             <option value={"default"} hidden>Order</option>
                             <option value='A-Z'>A-Z</option>
                             <option value='Z-A'>Z-A</option>
