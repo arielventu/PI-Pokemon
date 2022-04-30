@@ -78,29 +78,35 @@ export default function Home () {
     } else {
         return (
             <div className={`${style.homeContainer}`}>
-                <div className={`${style.homeHeader}`}>
-                    <select defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
-                        <option value={"default"} hidden>Origin</option>
-                        <option value='All'>All</option>
-                        <option value='PokeAPI'>PokeAPI</option>
-                        <option value='Created'>Created</option>
-                    </select>
-                    <select defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
-                        <option value={"default"} hidden>Type</option>
-                        <option value='All'>All</option>
-                        {allTypes.map((type) => (
-                            <option key={type.id} value={type.name}>
-                                {type.name}
-                            </option>
-                        ))}
-                    </select>
-                    <select defaultValue={"default"} onChange={(e) => handleSort(e)}>
-                        <option value={"default"} hidden>Order</option>
-                        <option value='A-Z'>A-Z</option>
-                        <option value='Z-A'>Z-A</option>
-                        <option value='Ʌ Attack'>Ʌ Attack</option>
-                        <option value='V Attack'>V Attack</option>
-                    </select>
+                <div className={`${style.filters}`}>
+                    <div className={`${style.filterSource}`}>
+                        <select defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
+                            <option value={"default"} hidden>Origin</option>
+                            <option value='All'>All</option>
+                            <option value='PokeAPI'>PokeAPI</option>
+                            <option value='Created'>Created</option>
+                        </select>
+                    </div>
+                    <div className={`${style.filterType}`}>
+                        <select defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
+                            <option value={"default"} hidden>Type</option>
+                            <option value='All'>All</option>
+                            {allTypes.map((type) => (
+                                <option key={type.id} value={type.name}>
+                                    {type.name}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                    <div className={`${style.filterOrder}`}>
+                        <select defaultValue={"default"} onChange={(e) => handleSort(e)}>
+                            <option value={"default"} hidden>Order</option>
+                            <option value='A-Z'>A-Z</option>
+                            <option value='Z-A'>Z-A</option>
+                            <option value='Ʌ Attack'>Ʌ Attack</option>
+                            <option value='V Attack'>V Attack</option>
+                        </select>
+                    </div>
                 </div>
                 <div className={`${style.body}`}>
                     {currentPokemons?.map((p) => (
