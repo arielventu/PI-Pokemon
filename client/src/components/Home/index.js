@@ -77,8 +77,8 @@ export default function Home () {
         )
     } else {
         return (
-            <div className={`${style.homeContainer}`}>
-                <div className={`${style.filters}`}>
+            <div className={`${style.divContainer}`}>
+                <div className={`${style.homeLeft}`}>
                     <div className={`${style.divFilterSource}`}>
                         <select className={`${style.selectFilterSource}`} defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
                             <option value={"default"} hidden>Origin</option>
@@ -108,22 +108,23 @@ export default function Home () {
                         </select>
                     </div>
                 </div>
-                <div className={`${style.body}`}>
-                    {currentPokemons?.map((p) => (
-                        // console.log(p.type)
-                        <Link to={`/pokemon/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
-                            <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
-                        </Link>
-                    ))}
+                <div className={`${style.divHomeContainer}`}>
+                    <div className={`${style.body}`}>
+                        {currentPokemons?.map((p) => (
+                            // console.log(p.type)
+                            <Link to={`/pokemon/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
+                                <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
+                            </Link>
+                        ))}
+                    </div>
+                    <div className={`${style.divFooter}`}>
+                        <Pagination
+                            pokemonsPerPage={pokemonsPerPage}
+                            allPokemons={allPokemons.length}
+                            pagination={pagination}
+                        />
+                    </div>
                 </div>
-                <div className='home-footer'>
-                    <Pagination
-                        pokemonsPerPage={pokemonsPerPage}
-                        allPokemons={allPokemons.length}
-                        pagination={pagination}
-                    />
-                </div>
-
             </div>
         )
     }
