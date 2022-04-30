@@ -226,6 +226,55 @@
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
+.Electric {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(247, 208, 44, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Psychic {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(249, 85, 135, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Ice {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(150, 217, 214, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+
 .divType {
     display: flex;
     flex-direction: column;
