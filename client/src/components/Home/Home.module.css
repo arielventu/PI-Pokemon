@@ -5,8 +5,10 @@
 }
 
 .cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    display: flex;
+    justify-content: center;
     text-align: center;
     justify-items: center;
     background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
