@@ -15,6 +15,7 @@
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     border: 1px solid rgba(255, 255, 255, 0.35);
+    text-decoration: none;
 }
 
 .name {
