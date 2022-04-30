@@ -112,7 +112,7 @@ export default function Home () {
                 <div className={`${style.body}`}>
                     {currentPokemons?.map((p) => (
                         // console.log(p.type)
-                        <Link to={`/pokemon/${p.id}`} key={p.id}>
+                        <Link to={`/pokemon/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
                             <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
                         </Link>
                     ))}

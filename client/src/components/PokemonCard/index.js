@@ -3,13 +3,22 @@ import style from './PokemonCard.module.css';
 
 export default function PokemonCard ({name, id, image, type, attack}) {
 	
+	const typeColor = black => {
+		
+		if (black) {
+			return '#000';
+		} else {
+			return '#fff';
+		}
+	}
+
 return (
 	<div className={`${style.divCard}`}>
 		<h1 className={`${style.name}`}>{name}</h1>
 		<img src={image} alt={name} width="105" height="105" />
 		<div className='div-type'>
 			{type && type.map((el, i) => (
-				<div key={i} className='{cssButtonType(el)}'>
+				<div key={i} className={`${style.typeColor}`}>
 					<p key={i} className='p'>
 						{el}
 					</p>
