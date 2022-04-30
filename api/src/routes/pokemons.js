@@ -144,7 +144,7 @@ router.get('/:id', async (req, res, next) => {
                 }
                 return res.status(200).send(pokemonFound);
             }
-            else send('Pokemon not found')
+            else res.json('Pokemon not found')
         } catch (error) {
             next(error)
         }
