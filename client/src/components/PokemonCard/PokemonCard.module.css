@@ -32,44 +32,9 @@
     align-items: center;
 }
 
-.Normal {
-    background: rgb(255, 255, 255);
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
-}
-
-.Fire {
-    background: rgb(255, 0, 0);
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
-}
-
-.Water {
-    background: rgb(0, 0, 255);
-    border-radius: 10%;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    box-shadoilter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
-}
-
 .Grass {
-    background: rgb(0, 255, 0);
-    border-radius: 10%;
+    background: rgb(0, 168, 0);
+    border-radius: 10px;
     width: 2.5rem;
     height: 1rem;
     margin: 0.5rem;
