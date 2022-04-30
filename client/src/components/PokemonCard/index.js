@@ -13,7 +13,8 @@ return (
 		<div className={`${style[type[0]]}`}>
 			{type && type.map((type, index) => (
 				<div key={index} className={`${style.divType}`}>
-					<p key={index} className={`${style[type]}`} >
+					{/* <p key={index} className={`${style[type]}`} > */}
+					<p key={index}  >
 						{type}
 					</p>
 				</div>
