@@ -21,7 +21,23 @@
     background-color: #000;
     background-position: right bottom;
     background-repeat: no-repeat;
-    background-size: contain  ;
+    background-size: contain;
 }
 
+.selectFilterSource{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
 
+.selectFilterType{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.selectFilterOrder{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
