@@ -77,8 +77,8 @@ export default function Home () {
         )
     } else {
         return (
-            <div className='home'>
-                <div className='home-header'>
+            <div className={`${style.homeContainer}`}>
+                <div className={`${style.homeHeader}`}>
                     <h1>Origin</h1>
                     <select onChange={(e) => handleFilterByOrigin(e)}>
                         <option value='All'>All</option>
