@@ -26,14 +26,14 @@
 	margin-left: 2rem;
 }
 .pHP:hover {
-	color: #ff8800;
+	color: rgb(247, 208, 44);
 }
 
 .pCP {
 	font-size: 1.5rem;
 	font-weight: 500;
 	font-family: 'Kanit', sans-serif;
-	color: #ff8800;
+	color: rgb(247, 208, 44);
 	margin-right: 2rem;
 }
 
