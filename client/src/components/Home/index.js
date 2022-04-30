@@ -79,7 +79,6 @@ export default function Home () {
         return (
             <div className={`${style.homeContainer}`}>
                 <div className={`${style.homeHeader}`}>
-                    {/* <h1>Origin</h1> */}
                     <select defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
                         <option value={"default"} hidden>Origin</option>
                         <option value='All'>All</option>
