@@ -101,12 +101,6 @@ export default function Home () {
                         <option value='Ʌ Attack'>Ʌ Attack</option>
                         <option value='V Attack'>V Attack</option>
                     </select>
-                    <Pagination
-                        pokemonsPerPage={pokemonsPerPage}
-                        allPokemons={allPokemons.length}
-                        pagination={pagination}
-                    />
-                   
                 </div>
                 <div className={`${style.body}`}>
                     {currentPokemons?.map((p) => (
@@ -117,6 +111,11 @@ export default function Home () {
                     ))}
                 </div>
                 <div className='home-footer'>
+                    <Pagination
+                        pokemonsPerPage={pokemonsPerPage}
+                        allPokemons={allPokemons.length}
+                        pagination={pagination}
+                    />
                 </div>
 
             </div>
