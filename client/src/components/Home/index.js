@@ -98,7 +98,7 @@ export default function Home () {
                     </select>
                     <h1>Sort</h1>
                     <select onChange={(e) => handleSort(e)}>
-                        <option disabled selected>Type</option>
+                        <option disabled selected>Order</option>
                         <option value='A-Z'>A-Z</option>
                         <option value='Z-A'>Z-A</option>
                         <option value='Ʌ Attack'>Ʌ Attack</option>
