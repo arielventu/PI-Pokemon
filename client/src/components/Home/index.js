@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import PokemonCard from '../PokemonCard';
 import Pagination from '../Pagination';
 import { LOADING_IMG } from '../../utils';
-import './Home.css';
+import style from './Home.module.css'
 
 
 export default function Home () {
