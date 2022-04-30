@@ -4,4 +4,7 @@
     text-align: center;
     background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
     background-color: #000;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain  ;
 }
