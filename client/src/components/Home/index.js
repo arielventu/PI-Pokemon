@@ -81,14 +81,14 @@ export default function Home () {
                 <div className={`${style.homeHeader}`}>
                     {/* <h1>Origin</h1> */}
                     <select onChange={(e) => handleFilterByOrigin(e)}>
-                        <option disabled selected>Origin</option>
+                        <option hidden selected>Origin</option>
                         <option value='All'>All</option>
                         <option value='PokeAPI'>PokeAPI</option>
                         <option value='Created'>Created</option>
                     </select>
                     <h1>Type</h1>
-                    <select defaultValue="Type" onChange={(e) => handleFilterByType(e)}>
-                        {/* <option disabled selected>Type</option> */}
+                    <select onChange={(e) => handleFilterByType(e)}>
+                        <option hidden selected>Type</option>
                         <option value='All'>All</option>
                         {allTypes.map((type) => (
                             <option key={type.id} value={type.name}>
@@ -98,7 +98,7 @@ export default function Home () {
                     </select>
                     <h1>Sort</h1>
                     <select onChange={(e) => handleSort(e)}>
-                        <option disabled selected>Order</option>
+                        <option hidden selected>Order</option>
                         <option value='A-Z'>A-Z</option>
                         <option value='Z-A'>Z-A</option>
                         <option value='Ʌ Attack'>Ʌ Attack</option>
