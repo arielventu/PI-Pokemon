@@ -40,7 +40,7 @@
     margin-left: 2rem;
     border-radius: 0.5rem;
     border: none;
-    background-color: #ff8800;
+    background-color: rgb(247, 208, 44);;
     color: rgb(0, 0, 0);
     font-size: 1.5rem;
     font-weight: 500;
@@ -51,7 +51,7 @@
     
 }
 .button:hover {
-    background-color: #ffad4f;
+    background-color: rgb(214, 179, 39);;
     color: rgb(0, 0, 0);
     transform: translateY(-1px);
 }
