@@ -82,22 +82,6 @@
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.Fire {
-    border-radius: 10px;
-    width: 6rem;
-    height: 1.5rem;
-    margin-bottom: .5rem;
-    font-family: 'Kanit', sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: 200;
-    background: rgba(238, 129, 48, 0.356);
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
 .Poison {
     border-radius: 10px;
     width: 6rem;
@@ -178,6 +162,54 @@
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
+.Steel {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(183, 183, 206, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Fire {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(238, 129, 48, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Water {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(99, 144, 240, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
 .Grass {
     border-radius: 10px;
     width: 6rem;
@@ -186,7 +218,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(30, 245, 2, 0.356);
+    background: rgba(122, 199, 76, 0.356);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
