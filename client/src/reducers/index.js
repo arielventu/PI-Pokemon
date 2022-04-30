@@ -7,7 +7,7 @@ import {
 	CREATE_POKEMON,
 	GET_POKEMON_DETAILS,
 	CLEAR_POKEMON_DETAILS,
-	SEARCH_POKEMONS,
+	GET_POKEMON_BY_NAME,
 } from '../actions';
 
 const initialState = {
@@ -83,15 +83,10 @@ function rootReducer (state = initialState, {payload, type}) {
 				...state,
 				detailPokemon: {},
 			};
-		case SEARCH_POKEMONS:
-			const allPokes = state.allPokemons;
-			let searchFiltered;
-
-			if (payload === '') searchFiltered = allPokes;
-			if (payload !== '') searchFiltered = allPokes.filter((el) => el.name.includes(payload));
+		case GET_POKEMON_BY_NAME:
 			return {
 				...state,
-				detailPokemon: searchFiltered,
+				detailPokemon: payload,
 			};
 			default:
 				return state;

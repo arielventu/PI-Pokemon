@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import {searchPokemons} from '../../actions';
+import { NavLink } from 'react-router-dom';
+import { getPokemonByName } from '../../actions';
+import style from './SearchBar.module.css';
 
 const SearchBar = () => {
-  const [search, setSearch] = useState('')
+  const [name, setName] = useState('')
   const dispatch = useDispatch();
 
-  const onSubmit = (e) => {
+  
+  const handleInputChange = (e) => {
     e.preventDefault()
-    dispatch(searchPokemons(search));
+    setName(e.target.value)
+    console.log(name)
   }
-
-  const onChange = (e) => {
-    setSearch(e.target.value)
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(getPokemonByName(name));
   }
 
   return (
     <div>
-      <form onSubmit={onSubmit} >
-        <input type="text" onChange={onChange} value={ search }/>
-        <input type="submit" value="Search" />
+      <form className={`${style.form}`} onSubmit={handleSubmit} >
+        <input className={`${style.input}`} type="text" onChange={(e) => handleInputChange(e)} value={name}/>
+        <NavLink to={`/pokemon/search/${name}`}><input className={`${style.button}`} type="submit" value="Search" /></NavLink>
+        {/* <NavLink to={`/pokemon/search/${search}`}><button>Search</button></NavLink> */}
+        {/* <input type="submit" value="Search" /> */}
       </form>
     </div>
   )

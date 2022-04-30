@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemons, getPokemonDetails, clearPokemonDetails } from '../../actions';
+import { getPokemons, getPokemonByName, clearPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
 import NavBar from '../NavBar';
 
 
-export default function PokemonDetail (props) {
+export default function PokemonDetailByName (props) {
   console.log(props);
   
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ export default function PokemonDetail (props) {
 
   useEffect(() => {
     dispatch(clearPokemonDetails())
-    dispatch(getPokemonDetails(props.match.params.id))
+    dispatch(getPokemonByName(props.match.params.name))
   }, [dispatch])
 
   // console.log(pokemonDetail.name);

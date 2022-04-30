@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ALL_POKES, ALL_TYPES } from '../utils.js';
+import { ALL_POKES, ALL_TYPES, POKES_NAME } from '../utils.js';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
@@ -9,7 +9,7 @@ export const SORT_BY = 'SORT_BY';
 export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
 export const CLEAR_POKEMON_DETAILS = 'CLEAR_POKEMON_DETAILS';
-export const SEARCH_POKEMONS = 'SEARCH_POKEMONS';
+export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -85,16 +85,15 @@ export const createPokemon = (payload) => {
             })
             .catch(error => {
                 console.log(error);
-                alert(error);
             });
     };
 };
 
 export const getPokemonDetails = (payload) => {
     return function (dispatch) {
-        axios.get(`${ALL_POKES}/${payload}`)
+        axios.get(`${ALL_POKES}${payload}`)
             .then(response => {
-                // console.log(response.data);
+                console.log(response.data);
                 dispatch({
                     type: 'GET_POKEMON_DETAILS',
                     payload: response.data,
@@ -112,43 +111,23 @@ export const clearPokemonDetails = () => {
     };
 }
 
-export const searchPokemons = (payload) => {
+export const getPokemonByName = (payload) => {
     return function (dispatch) {
-        axios.get(`${ALL_POKES}?name=${payload}`)
+        axios.get(`${POKES_NAME}${payload}`)
             .then(response => {
                 console.log(response.data);
-                if (response.data !== 'Pokemon not found') {
-                    dispatch({
-                        type: 'SEARCH_POKEMONS',
-                        payload: response.data,
-                    });
-                } else {
-                    // console.log(response.data);
-                    alert(response.data);    
-                }
+                dispatch({
+                    type: 'GET_POKEMON_BY_NAME',
+                    payload: response.data,
+                });
             })
             .catch(error => {
                 console.log(error);
-                alert(error);
             });
     };
 };
 
-// export const searchPokemons = (search) => {
-//     return function (dispatch) {
-//         axios.get(`${ALL_POKES}?name=${search}`)
-//         .then(response => {
-//                 // console.log(response);
-//                 dispatch({
-//                     type: SEARCH_POKEMONS,
-//                     payload: response.data
-//                 });
-//             })
-//             .catch(error => {
-//                 console.log(error);
-//             });
-//     };
-// }
+
 
 
 

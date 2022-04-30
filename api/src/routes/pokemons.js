@@ -67,7 +67,7 @@ router.get('/', async (req, res, next) => {
                         speed: pokeAPI.data.stats[4].base_stat,
                         weight: pokeAPI.data.weight,
                         height: pokeAPI.data.height,
-                        image: pokeAPI.data.sprites.front_default,
+                        image: pokeAPI.data.sprites.other.dream_world.front_default,
                         type: pokeAPI.data.types.map(type => capitalize(type.type.name))
                     }
                     console.log('Desde API')
@@ -101,7 +101,7 @@ router.get('/', async (req, res, next) => {
             });
         }
         
-        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=8`); 
+        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
         const pokeAPIList = []; 
             
         //Convertir a un array de objetos desde API
@@ -162,7 +162,7 @@ router.get('/:id', async (req, res, next) => {
                     speed: pokeAPI.data.stats[4].base_stat,
                     weight: pokeAPI.data.weight,
                     height: pokeAPI.data.height,
-                    image: pokeAPI.data.sprites.front_default,
+                    image: pokeAPI.data.sprites.other.dream_world.front_default,
                     type: pokeAPI.data.types.map(type => capitalize(type.type.name))
                 }
                 res.status(200).send(pokemonFound);

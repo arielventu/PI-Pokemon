@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { getPokemons } from '../../actions';
 import { useDispatch, useSelector } from 'react-redux';
+import style from './LandingPage.module.css';
 
 const LandingPage = () => {
 
@@ -14,11 +15,13 @@ const LandingPage = () => {
     }, [dispatch]);
 
     return (
-        <div>
-            <h1>Landing Page</h1>
-            <Link to="/home">
-                <button>Entrar</button>
-            </Link>
+        <div className={`${style.divLandingPage}`} >
+            <div className={`${style.divLandingPage_container}`}>
+                <h1 className={`${style.h1Welcome}`} >Welcome to my PI · Henry Pokemon</h1>
+                <Link to="/home">
+                    <button className={`${style.button}`} >Entrar</button>
+                </Link>
+            </div>
         </div>
   )
 }
