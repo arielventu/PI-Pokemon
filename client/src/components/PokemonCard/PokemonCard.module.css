@@ -8,7 +8,7 @@
     width: 10rem;
     height: 15rem;
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     background: rgba(255, 255, 255, 0.09);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -33,20 +33,26 @@
 }
 
 .Grass {
-    background: rgb(0, 168, 0);
     border-radius: 10px;
     width: 2.5rem;
-    height: 1rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    height: .6rem;
+    /* margin: 0.5rem;
+    padding: 0.5rem; */
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(30, 245, 2, 0.356);
+    border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
-    font-family: 'Kanit', sans-serif;
-    color: rgb(255, 255, 255);
+    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.divType .Grass {
-    font-family: 'Kanit', sans-serif;
+
+.divType {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
