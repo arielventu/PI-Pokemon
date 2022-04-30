@@ -12,8 +12,8 @@ return (
 		<img src={image} alt={name} width="105" height="105" />
 		<div className={`${style[type[0]]}`}>
 			{type && type.map((type, index) => (
-				<div key={index}  className={`${style[type]} ${style.divType}`}>
-					<p key={index}>
+				<div key={index} className={`${style.divType}`}>
+					<p key={index} className={`${style[type]}`} >
 						{type}
 					</p>
 				</div>
