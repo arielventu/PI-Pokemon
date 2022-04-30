@@ -78,7 +78,7 @@ export default function Home () {
     } else {
         return (
             <div className={`${style.divContainer}`}>
-                <div className={`${style.homeLeft}`}>
+                <div className={`${style.filters}`}>
                     <div className={`${style.divFilterSource}`}>
                         <select className={`${style.selectFilterSource}`} defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
                             <option value={"default"} hidden>Origin</option>
