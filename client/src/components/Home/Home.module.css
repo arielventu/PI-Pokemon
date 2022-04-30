@@ -35,6 +35,18 @@
     background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
 }
 
+.divFilterSource{
+    margin: 0.5rem;
+}
+
+.divFilterType{
+    margin: 0.5rem;
+}
+
+.divFilterOrder{
+    margin: 0.5rem;
+}
+
 .selectFilterSource{
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
