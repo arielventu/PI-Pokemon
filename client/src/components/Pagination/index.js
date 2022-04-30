@@ -9,13 +9,12 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination}) 
 
     return (
     <nav>
-        <h1>PAGINACIONNN</h1>
-            <ul className="pagination">
-                {pageNumbers && pageNumbers.map(number => (
-                    <li key={number} className="page-item">
-                        <a onClick={() => pagination(number)} className="page-link">{number}</a>
-                    </li>
-                ))}
+        <ul className="pagination">
+            {pageNumbers && pageNumbers.map(number => (
+                <li key={number} className="page-item">
+                    <a onClick={() => pagination(number)} className="page-link">{number}</a>
+                </li>
+            ))}
         </ul>
     </nav>
     )

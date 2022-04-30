@@ -85,7 +85,6 @@ export default function Home () {
                         <option value='PokeAPI'>PokeAPI</option>
                         <option value='Created'>Created</option>
                     </select>
-                    <h1>Type</h1>
                     <select defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                         <option value={"default"} hidden>Type</option>
                         <option value='All'>All</option>
@@ -95,7 +94,6 @@ export default function Home () {
                             </option>
                         ))}
                     </select>
-                    <h1>Sort</h1>
                     <select defaultValue={"default"} onChange={(e) => handleSort(e)}>
                         <option value={"default"} hidden>Order</option>
                         <option value='A-Z'>A-Z</option>
@@ -103,7 +101,6 @@ export default function Home () {
                         <option value='Ʌ Attack'>Ʌ Attack</option>
                         <option value='V Attack'>V Attack</option>
                     </select>
-                    <h1>Pokemons</h1>
                     <Pagination
                         pokemonsPerPage={pokemonsPerPage}
                         allPokemons={allPokemons.length}
