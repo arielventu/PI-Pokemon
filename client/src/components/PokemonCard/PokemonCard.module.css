@@ -49,7 +49,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(168, 167, 122, 1);
+    background: rgba(168, 167, 122, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -65,7 +65,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(194, 46, 40, 1);
+    background: rgba(194, 46, 40, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -81,7 +81,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(169, 143, 243, 1);
+    background: rgba(169, 143, 243, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -97,7 +97,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(163, 62, 161, 1);
+    background: rgba(163, 62, 161, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -113,7 +113,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(226, 191, 101, 1);
+    background: rgba(226, 191, 101, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -129,7 +129,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(182, 161, 54, 1);
+    background: rgba(182, 161, 54, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -145,7 +145,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(166, 185, 26, 1);
+    background: rgba(166, 185, 26, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -161,7 +161,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(115, 87, 151, 1);
+    background: rgba(115, 87, 151, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -177,7 +177,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(183, 183, 206, 1);
+    background: rgba(183, 183, 206, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -193,7 +193,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(238, 129, 48, 1);
+    background: rgba(238, 129, 48, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -209,7 +209,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(99, 144, 240, 1);
+    background: rgba(99, 144, 240, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -225,7 +225,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(122, 199, 76, 1);
+    background: rgba(122, 199, 76, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -241,7 +241,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(247, 208, 44, 1);
+    background: rgba(247, 208, 44, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -257,7 +257,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(249, 85, 135, 1);
+    background: rgba(249, 85, 135, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -273,7 +273,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(150, 217, 214, 1);
+    background: rgba(150, 217, 214, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -289,7 +289,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(111, 53, 252, 1);
+    background: rgba(111, 53, 252, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -305,7 +305,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(112, 87, 70, 1);
+    background: rgba(112, 87, 70, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -321,7 +321,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(255, 204, 204, 1);
+    background: rgba(255, 204, 204, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -337,7 +337,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0.900);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
