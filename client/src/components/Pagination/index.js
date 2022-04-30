@@ -9,7 +9,7 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination}) 
 
     return (
     <nav>
-        <ul className="pagination">
+        <ul className={`${style.ulPagination}`}>
             {pageNumbers && pageNumbers.map(number => (
                 <li key={number} className="page-item">
                     <a onClick={() => pagination(number)} className="page-link">{number}</a>
