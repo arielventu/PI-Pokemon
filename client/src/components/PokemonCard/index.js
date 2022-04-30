@@ -10,9 +10,10 @@ return (
 	<div className={`${style.divCard}`}>
 		<h1 className={`${style.name}`}>{name}</h1>
 		<img src={image} alt={name} width="105" height="105" />
-		<div className={`${style[type[0]]}`}>
+		<div >
 			{type && type.map((type, index) => (
-				<div key={index} className={`${style.divType}`}>
+				// <div key={index} className={`${style.divType}`}>
+				<div key={index} className={`${style[type[0]]}`}>
 					{/* <p key={index} className={`${style[type]}`} > */}
 					<p key={index}  >
 						{type}
