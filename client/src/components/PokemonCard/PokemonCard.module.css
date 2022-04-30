@@ -43,6 +43,7 @@
     backdrop-filter: blur(8.8px);
     -webkit-backdrop-filter: blur(8.8px);
     font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
 }
 
 .divType .Grass {
