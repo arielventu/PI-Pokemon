@@ -5,7 +5,7 @@
 }
 
 .divCardsContainer {
-    
+    display:flex;
 }
 .cards{
     /* display: grid;
