@@ -10,7 +10,7 @@ return (
 	<div className={`${style.divCard}`}>
 		<h1 className={`${style.name}`}>{name}</h1>
 		<img src={image} alt={name} width="105" height="105" />
-		<div className={`${style.types}`}>
+		<div className={`${style.typesContainer}`}>
 			{type && type.map((el, i) => (
 				<div key={i} className={`${style[el]}`}>
 					<p key={i} className='p'>
