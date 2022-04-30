@@ -40,9 +40,9 @@
     height: 1.5rem;
     margin-bottom: .5rem;
     font-family: 'Kanit', sans-serif;
-    color: #A8A77A;
+    color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(255, 255, 255, 0.356);
+    background: rgba(168, 167, 122, 0.356);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -56,9 +56,9 @@
     height: 1.5rem;
     margin-bottom: .5rem;
     font-family: 'Kanit', sans-serif;
-    color: #C22E28;
+    color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(255, 255, 255, 0.356);
+    background: rgba(194, 46, 40, 0.356);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -72,9 +72,9 @@
     height: 1.5rem;
     margin-bottom: .5rem;
     font-family: 'Kanit', sans-serif;
-    color: #A98FF3;
+    color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(255, 255, 255, 0.356);
+    background: rgba(169, 143, 243, 0.356);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -90,7 +90,7 @@
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
-    background: rgba(255, 255, 255, 0.356);
+    background: rgba(238, 129, 48, 0.356);
     border-radius: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.8px);
@@ -98,6 +98,37 @@
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
+.Poison {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(163, 62, 161, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Ground {
+    border-radius: 10px;
+    width: 6rem;
+    height: 1.5rem;
+    margin-bottom: .5rem;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: 200;
+    background: rgba(163, 62, 161, 0.356);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.8px);
+    -webkit-backdrop-filter: blur(8.8px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
 
 .Grass {
     border-radius: 10px;
@@ -114,23 +145,6 @@
     -webkit-backdrop-filter: blur(8.8px);
     border: 1px solid rgba(255, 255, 255, 0.35);
 }
-
-.Poison {
-    border-radius: 10px;
-    width: 6rem;
-    height: 1.5rem;
-    margin-bottom: .5rem;
-    font-family: 'Kanit', sans-serif;
-    color: rgb(255, 255, 255);
-    font-weight: 200;
-    background: rgba(212, 4, 231, 0.356);
-    border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8.8px);
-    -webkit-backdrop-filter: blur(8.8px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-}
-
 
 .divType {
     display: flex;
