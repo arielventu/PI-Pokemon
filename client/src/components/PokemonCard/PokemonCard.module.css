@@ -35,7 +35,7 @@
 
 .Grass {
     border-radius: 10px;
-    width: 65%;
+    width: 6rem;
     height: 1.5rem;
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
@@ -50,7 +50,7 @@
 
 .Poison {
     border-radius: 10px;
-    width: 65%;
+    width: 6rem;
     height: 1.5rem;
     /* margin: 0.5rem;
     padding: 0.5rem; */
