@@ -20,15 +20,13 @@ export default function Home () {
   
     // Paginación 
     const [currentPage, setCurrentPage] = useState(1);
-    const [pokemonsPerPage, setPokemonsPerPage] = useState(4);
+    const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
     // Ordenamiento
     const [order, setOrder] = useState(''); // Descendente x defecto
-    // const [orderBy, setOrderBy] = useState('id'); // Ordenado x ID x defecto
-
 
     // **************************************************************************************
     // **************************************FUNCTIONS****************************************
