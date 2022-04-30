@@ -30,13 +30,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .Grass {
     border-radius: 10px;
     width: 65%;
     height: 1.5rem;
-    margin-top: 1.5rem;
     font-family: 'Kanit', sans-serif;
     color: rgb(255, 255, 255);
     font-weight: 200;
