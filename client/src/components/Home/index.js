@@ -108,7 +108,7 @@ export default function Home () {
                         </select>
                     </div>
                 </div>
-                <div className={`${style.divHomeContainer}`}>
+                <div className={`${style.divCardsContainer}`}>
                     <div className={`${style.cards}`}>
                         {currentPokemons?.map((p) => (
                             // console.log(p.type)
@@ -117,6 +117,7 @@ export default function Home () {
                             </Link>
                         ))}
                     </div>
+                </div>
                     <div className={`${style.divFooter}`}>
                         <Pagination
                             pokemonsPerPage={pokemonsPerPage}
@@ -124,7 +125,6 @@ export default function Home () {
                             pagination={pagination}
                         />
                     </div>
-                </div>
             </div>
         )
     }
