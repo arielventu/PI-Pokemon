@@ -87,8 +87,8 @@ export default function Home () {
                         <option value='Created'>Created</option>
                     </select>
                     <h1>Type</h1>
-                    <select onChange={(e) => handleFilterByType(e)}>
-                        <option disabled selected>Type</option>
+                    <select defaultValue="Type" onChange={(e) => handleFilterByType(e)}>
+                        {/* <option disabled selected>Type</option> */}
                         <option value='All'>All</option>
                         {allTypes.map((type) => (
                             <option key={type.id} value={type.name}>
