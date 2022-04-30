@@ -2,4 +2,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     text-align: center;
+    background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    background-color: #000;
 }
