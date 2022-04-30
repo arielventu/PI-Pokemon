@@ -109,7 +109,7 @@ export default function Home () {
                     />
                    
                 </div>
-                <div className='home-body'>
+                <div className={`${style.body}`}>
                     {currentPokemons?.map((p) => (
                         // console.log(p.type)
                         <Link to={`/pokemon/${p.id}`} key={p.id}>
