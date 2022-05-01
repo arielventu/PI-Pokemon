@@ -105,6 +105,7 @@ export default function Home () {
                             <option value='Z-A'>Z-A</option>
                             <option value='Ʌ Attack'>Ʌ Attack</option>
                             <option value='V Attack'>V Attack</option>
+                            <option value='id'>ID</option>
                         </select>
                     </div>
                 </div>
