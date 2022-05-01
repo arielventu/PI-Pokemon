@@ -94,14 +94,10 @@ export const getPokemonDetails = (payload) => {
         axios.get(`${ALL_POKES}${payload}`)
             .then(response => {
                 // console.log(response.data, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS');
-                if (response.data !== 'Pokemon not found') {
                 dispatch({
                     type: 'GET_POKEMON_DETAILS',
                     payload: response.data,
                 });
-                } else {
-                    alert(response.data);
-                }
             })
             .catch(error => {
                 console.log(error);
@@ -119,15 +115,11 @@ export const getPokemonByName = (payload) => {
     return function (dispatch) {
         axios.get(`${POKES_NAME}${payload}`)
             .then(response => {
-                console.log(response.data);
-                // if(response.data !== 'Pokemon not found') {
+                // console.log(response.data);
                 dispatch({
                     type: 'GET_POKEMON_BY_NAME',
                     payload: response.data,
                 });
-                // } else {
-                //     alert(response.data);
-                // }
             })
             .catch(error => {
                 console.log(error);
