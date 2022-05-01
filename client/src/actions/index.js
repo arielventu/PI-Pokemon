@@ -120,14 +120,14 @@ export const getPokemonByName = (payload) => {
         axios.get(`${POKES_NAME}${payload}`)
             .then(response => {
                 console.log(response.data);
-                if(response.data !== 'Pokemon not found') {
+                // if(response.data !== 'Pokemon not found') {
                 dispatch({
                     type: 'GET_POKEMON_BY_NAME',
                     payload: response.data,
                 });
-                } else {
-                    alert(response.data);
-                }
+                // } else {
+                //     alert(response.data);
+                // }
             })
             .catch(error => {
                 console.log(error);
