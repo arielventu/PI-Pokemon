@@ -22,7 +22,7 @@
 .loadingText::before {
     content: attr(data-text);
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     color: rgb(247, 208, 44);
