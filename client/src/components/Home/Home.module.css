@@ -15,24 +15,25 @@
   font-size: 2rem;
   font-weight: 400;
   color: #fff;
-  animation: 2s anim-loadingText ease-out infinite;
 }
 
-@keyframes anim-loadingText {
+.loadingText::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: rgb(247, 208, 44);
+    border-bottom: 16px solid rgb(247, 208, 44);
+    animation: lod 2s linear infinite;
+    overflow: hidden;
+  }
+  @keyframes lod {
     0% {
-      opacity: 0;
-      transform: translateY(80%);
-    }
-    20% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-      transform: translateY(0%);
+      width: 0;
     }
     100% {
-      opacity: 1;
-      transform: translateY(0%);
+      width: 100%;
     }
   }
 
