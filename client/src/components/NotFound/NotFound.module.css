@@ -10,14 +10,7 @@
   background-color: #000000;
 }
 
-.imgLoading {
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  background-position: right bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+
 
 .h1 {
   font-family: 'Kanit', sans-serif;
