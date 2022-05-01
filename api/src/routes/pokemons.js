@@ -129,22 +129,22 @@ router.get('/:id', async (req, res, next) => {
         try {
             const pokeDB = await Pokemon.findOne({ where: { id }, include: Type }); // Búsqueda en DB
             if (pokeDB) {
-                    const pokemon = pokeDB.dataValues;
-                    const pokemonFound = {
-                        id: pokemon.id,
-                        name: capitalize(pokemon.name),
-                        hp: pokemon.hp,
-                        attack: pokemon.attack,
-                        defense: pokemon.defense,
-                        speed: pokemon.speed,
-                        weight: pokemon.weight,
-                        height: pokemon.height,
-                        image: pokemon.image,
-                        type: pokemon.types.map(type => capitalize(type.dataValues.name))
+                const pokemon = pokeDB.dataValues;
+                const pokemonFound = {
+                    id: pokemon.id,
+                    name: capitalize(pokemon.name),
+                    hp: pokemon.hp,
+                    attack: pokemon.attack,
+                    defense: pokemon.defense,
+                    speed: pokemon.speed,
+                    weight: pokemon.weight,
+                    height: pokemon.height,
+                    image: pokemon.image,
+                    type: pokemon.types.map(type => capitalize(type.dataValues.name))
                 }
                 return res.status(200).send(pokemonFound);
             }
-            else return res.json('Pokemon not found')
+            else return res.json('Pokemon not found');
         } catch (error) {
             next(error)
         }
