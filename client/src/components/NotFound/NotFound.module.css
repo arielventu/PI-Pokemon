@@ -5,21 +5,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
+  width: 100vw;
+  height: 100vh;
   background-color: #000000;
 }
 
 .h1 {
   font-family: 'Kanit', sans-serif;
-  font-size: 2rem;
+  font-size: 5rem;
   font-weight: 400;
   color: #fff;
 }
 
 .h2 {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: 400;
   color: #fff;
 }
