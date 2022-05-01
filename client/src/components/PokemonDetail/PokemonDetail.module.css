@@ -39,13 +39,15 @@
 
 .name {
   font-family: 'Kanit', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-weight: 600;
   color: #fff;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .img {
-  width: 400px;
+  width: 380px;
   margin-top: -8rem;
   margin-left: -5rem;
   filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
