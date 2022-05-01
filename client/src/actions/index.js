@@ -91,7 +91,7 @@ export const createPokemon = (payload) => {
 
 export const getPokemonDetails = (payload) => {
     return function (dispatch) {
-        axios.get(`${ALL_POKES}${payload}`)
+        axios.get(`${ALL_POKES}/${payload}`)
             .then(response => {
                 console.log(response.data, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS');
                 // if (response.data !== 'Pokemon not found') {
