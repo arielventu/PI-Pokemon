@@ -3,6 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getPokemons, getPokemonDetails, clearPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
+import style from './PokemonDetail.module.css';
+import {LOADING_IMG} from '../../utils';
 
 
 export default function PokemonDetail (props) {
