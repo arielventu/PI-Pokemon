@@ -10,6 +10,13 @@
   background-color: #000000;
 }
 
+.loadingText {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
 .divContainer{
     display: flex;
     flex-direction: column;

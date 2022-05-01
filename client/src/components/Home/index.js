@@ -72,7 +72,7 @@ export default function Home () {
         return (
             <div className={`${style.divLoading}`}>
                 <img src={LOADING_IMG} alt="loading" />
-                <h3 className >Loading...</h3>
+                <h3 className={`${style.loadingText}`} >Loading...</h3>
             </div>
         )
     } else {
