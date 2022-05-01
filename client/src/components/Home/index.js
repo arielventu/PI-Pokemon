@@ -71,7 +71,8 @@ export default function Home () {
     if (allPokemons.length === 0 || allPokemons === "Pokemon created") {
         return (
             <div className={`${style.divLoading}`}>
-                <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} />
+                <img src={LOADING_IMG} alt="loading" width="150" height="150" />
+                {/* <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} /> */}
                 <h3 className={`${style.loadingText}`} >Loading...</h3>
             </div>
         )
