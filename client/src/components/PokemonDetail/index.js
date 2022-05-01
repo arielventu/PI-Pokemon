@@ -17,8 +17,18 @@ export default function PokemonDetail (props) {
   }, [dispatch])
 
   // console.log(pokemonDetail.name);
-      
-  if (pokemonDetail === 'Pokemon not found') return <PokeNotFound />
+
+  if (pokemonDetail.length === 0) {
+    return (
+      <div className={`${style.divLoading}`}>
+        <img src={LOADING_IMG} alt="loading" width="150" height="150" />
+        {/* <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} /> */}
+        <h3 className={`${style.loadingText}`} data-text="Loading...">Loading...</h3>
+      </div>
+    )
+  } else if (pokemonDetail === 'Pokemon not found') {
+    return <PokeNotFound />
+  } else {
   return (
     <div>
       {pokemonDetail && 
@@ -45,4 +55,5 @@ export default function PokemonDetail (props) {
       
     </div>
   )
+  }
 }
