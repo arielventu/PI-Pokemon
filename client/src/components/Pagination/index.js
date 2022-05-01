@@ -3,7 +3,7 @@ import style from './Pagination.module.css'
 
 export default function Pagination ({allPokemons, pokemonsPerPage, pagination, currentPage}) {
     const pageNumbers = [];
-    console.log(currentPage);
+    // console.log(currentPage);
 
     for (let i = 1; i <= Math.ceil(allPokemons/pokemonsPerPage); i++) {
         pageNumbers.push(i);
