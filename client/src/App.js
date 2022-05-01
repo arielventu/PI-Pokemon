@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
@@ -11,22 +11,18 @@ import NotFound from './components/NotFound'
 
 
 
-// function App() {
-//   return (
-const App = () => {
-    <Router>
-      <Switch>
+function App() {
+  return (
+    <React.Fragment>
       <Route exact path="/" component={LandingPage} />
       <Route path="/home" component={NavBar} />
       <Route path="/home" component={Home} />
       <Route exact path="/pokemon/:id" component={PokemonDetail} />
       <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
       <Route exact path="/create" component={PokemonCreate} />
-        <Route component={NotFound} />
-      </Switch>
-    </Router>
-  // );
+      <Route component={NotFound} />
+    </React.Fragment>
+  );
 }
 
-// export default App;
-render(<App />, document.getElementById('root'));
+export default App;
