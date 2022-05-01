@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPokemons, getPokemonDetails, clearPokemonDetails } from '../../actions';
 import { Link } from 'react-router-dom';
-import NavBar from '../NavBar';
+// import NavBar from '../NavBar';
 
 
 export default function PokemonDetail (props) {
@@ -19,7 +19,7 @@ export default function PokemonDetail (props) {
   // console.log(pokemonDetail.name);
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       {pokemonDetail && 
         <div>
           <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
