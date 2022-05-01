@@ -3,10 +3,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getPokemonByName } from '../../actions';
 import style from './SearchBar.module.css';
+import PokeNotFound from '../NotFound/PokeNotFound';
 
 const SearchBar = () => {
   const [name, setName] = useState('')
   const dispatch = useDispatch();
+  const result =useSelector((state) => state.detailPokemon);
 
   
   const handleInputChange = (e) => {
@@ -20,6 +22,9 @@ const SearchBar = () => {
     dispatch(getPokemonByName(name));
   }
 
+  console.log(result);
+
+  if (result === 'Pokemon not found') return <PokeNotFound />
   return (
     <div>
       <form className={`${style.form}`} onSubmit={handleSubmit} >
