@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
@@ -14,14 +14,15 @@ import NotFound from './components/NotFound'
 function App() {
   return (
     <React.Fragment>
+      <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/home" component={NavBar} />
       <Route path="/home" component={Home} />
       <Route exact path="/pokemon/:id" component={PokemonDetail} />
       <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
       <Route exact path="/create" component={PokemonCreate} />
-      <Route exact path="/404" component={NotFound} />
-      <Redirect to="/404" />
+        <Route path="/404" component={NotFound} />
+        </Switch>
       </React.Fragment>
   );
 }
