@@ -17,7 +17,8 @@
   color: #fff;
   animation: 2s anim-loadingText ease-out infinite;
 }
-  @keyframes anim-loadingText {
+
+@keyframes anim-loadingText {
     0% {
       opacity: 0;
       transform: translateY(80%);
@@ -34,7 +35,7 @@
       transform: translateY(0%);
     }
   }
-  
+
 .divContainer{
     display: flex;
     flex-direction: column;
