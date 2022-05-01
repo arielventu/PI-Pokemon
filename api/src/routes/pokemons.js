@@ -169,7 +169,7 @@ router.get('/:id', async (req, res, next) => {
             } 
             
         } catch (error) {
-            error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+            error.response.data === 'Not Found' ? res.json('Pokemon not found') : res.status(500).send('Internal Server Error')
             // next(error)
             // console.log(error.response.data);
         }
