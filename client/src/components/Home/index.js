@@ -70,9 +70,9 @@ export default function Home () {
 
     if (allPokemons.length === 0 || allPokemons === "Pokemon created") {
         return (
-            <div>
+            <div className={`${style.divLoading}`}>
                 <img src={LOADING_IMG} alt="loading" />
-                <h3>Loading...</h3>
+                <h3 className >Loading...</h3>
             </div>
         )
     } else {
