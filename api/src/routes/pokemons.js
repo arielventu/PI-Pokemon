@@ -74,7 +74,7 @@ router.get('/', async (req, res, next) => {
                     return res.status(200).send(pokemonFound);
                 }
             } catch (error) {
-                return error.response.data === 'Not Found' ? res.status(404).send('Pokemon not found') : res.status(500).send('Internal Server Error')
+                return error.response.data === 'Not Found' ? res.json('Pokemon not found') : res.status(500).send('Internal Server Error')
                 // next(error)
                 // console.log(error.response.data);
             }
