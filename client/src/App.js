@@ -27,4 +27,5 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+render(<App />, document.getElementById('root'));
