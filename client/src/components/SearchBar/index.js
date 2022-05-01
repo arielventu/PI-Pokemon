@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { getPokemonByName } from '../../actions';
 import style from './SearchBar.module.css';
-import PokeNotFound from '../NotFound/PokeNotFound';
+import PokeNotFound from '../NotFound/PokeNotFound.js';
 
 const SearchBar = () => {
   const [name, setName] = useState('')
