@@ -4,7 +4,6 @@ import { getPokemons, getPokemonDetails, clearPokemonDetails } from '../../actio
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
-import {LOADING_IMG} from '../../utils';
 
 
 export default function PokemonDetail (props) {
@@ -20,24 +19,16 @@ export default function PokemonDetail (props) {
 
   // console.log(pokemonDetail.name);
 
-  if (pokemonDetail.hasOwnProperty()) {
-    return (
-      <div className={`${style.divLoading}`}>
-        <img src={LOADING_IMG} alt="loading" width="150" height="150" />
-        {/* <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} /> */}
-        <h3 className={`${style.loadingText}`} data-text="Loading...">Loading...</h3>
-      </div>
-    )
-  } else if (pokemonDetail === 'Pokemon not found') {
+  if (pokemonDetail === 'Pokemon not found') {
     return <PokeNotFound />
   } else {
   return (
-    <div>
+    <div className={`${style.divContainer}`} >
       {pokemonDetail && 
-        <div>
-          <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
-          <h1>{pokemonDetail.name}</h1>
-          <div>
+        <div className={`${style.divCardDetail}`} >
+          <img className={`${style.img}`} src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
+          <h1 className={`${style.name}`} >{pokemonDetail.name}</h1>
+          <div className={`${style.divTypes}`}>
             {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
               <div key={i} className='{cssButtonType(el)}'>
                 <p key={i} className='p'>{el}</p>

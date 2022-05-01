@@ -4,7 +4,6 @@ import { getPokemons, getPokemonByName, clearPokemonDetails } from '../../action
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
-import {LOADING_IMG} from '../../utils';
 
 
 export default function PokemonDetailByName (props) {
@@ -18,17 +17,9 @@ export default function PokemonDetailByName (props) {
     dispatch(getPokemonByName(props.match.params.name))
   }, [dispatch])
 
-  if (pokemonDetail.length === 0) {
-    return (
-      <div className={`${style.divLoading}`}>
-        <img src={LOADING_IMG} alt="loading" width="150" height="150" />
-        {/* <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} /> */}
-        <h3 className={`${style.loadingText}`} data-text="Loading...">Loading...</h3>
-      </div>
-    )
-  } else if (pokemonDetail === 'Pokemon not found') {
+if (pokemonDetail === 'Pokemon not found') {
     return <PokeNotFound />
-  } else {
+} else {
   return (
     <div>
       {/* <NavBar /> */}
