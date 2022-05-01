@@ -48,7 +48,7 @@
   width: 400px;
   margin-top: -8rem;
   margin-left: -5rem;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
 }
 .divTypeContainer {
   display: flex;
