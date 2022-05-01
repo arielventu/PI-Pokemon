@@ -11,8 +11,9 @@ import NotFound from './components/NotFound'
 
 
 
-function App() {
-  return (
+// function App() {
+//   return (
+const App = () => {
     <Router>
       <Switch>
       <Route exact path="/" component={LandingPage} />
@@ -24,7 +25,7 @@ function App() {
         <Route component={NotFound} />
       </Switch>
     </Router>
-  );
+  // );
 }
 
 // export default App;
