@@ -20,8 +20,7 @@ function App() {
       <Route exact path="/pokemon/:id" component={PokemonDetail} />
       <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
       <Route exact path="/create" component={PokemonCreate} />
-      <Redirect component={NotFound} />
-    </React.Fragment>
+      </React.Fragment>
   );
 }
 
