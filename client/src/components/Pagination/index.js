@@ -8,7 +8,9 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination, c
         pageNumbers.push(i);
     }
 
-    
+    console.log(currentPage);
+    console.log(pokemonsPerPage);
+
     return (
     <nav className={`${style.nav}`}>
         <ul className={`${style.ulPagination}`}>
