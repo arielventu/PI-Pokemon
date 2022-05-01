@@ -37,12 +37,14 @@ export default function PokemonDetail (props) {
               </div>
             ))}
           </div>
-          <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
-          <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
-          <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
-          <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
-          <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
-          <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+          <div className={`${style.divStatsContainer1}`}>
+            <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
+            <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
+            <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
+            <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
+            <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
+            <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+          </div>
         </div>
       }
       <Link to='/home'>
