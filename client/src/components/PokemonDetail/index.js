@@ -20,7 +20,7 @@ export default function PokemonDetail (props) {
 
   // console.log(pokemonDetail.name);
 
-  if (!pokemonDetail) {
+  if (pokemonDetail.hasOwnProperty()) {
     return (
       <div className={`${style.divLoading}`}>
         <img src={LOADING_IMG} alt="loading" width="150" height="150" />
