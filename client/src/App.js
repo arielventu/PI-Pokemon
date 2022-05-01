@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/';
 import PokemonDetail from './components/PokemonDetail/';
 import PokemonDetailByName from './components/PokemonDetail/byName';
 import PokemonCreate from './components/PokemonCreate/';
+import NotFound from './components/NotFound'
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route exact path="/pokemon/:id" component={PokemonDetail} />
       <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
       <Route exact path="/create" component={PokemonCreate} />
+      <Route path="*" component={NotFound} />
     </React.Fragment>
   );
 }
