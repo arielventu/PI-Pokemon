@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import style from './NotFound.module.css'
 
-const NotFound = () => {
+const PokeNotFound = () => {
     return (
         <div className={`${style.div}`}>
             <h1 className={`${style.h1}`}>POKEMON</h1>
@@ -14,4 +14,4 @@ const NotFound = () => {
     )
 }
 
-export default NotFound
+export default PokeNotFound
