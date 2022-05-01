@@ -13,14 +13,18 @@ import NotFound from './components/NotFound'
 
 function App() {
   return (
-    <React.Fragment>
-      <Route exact path="/" component={LandingPage} />
-      <Route path="/home" component={NavBar} />
-      <Route path="/home" component={Home} />
-      <Route exact path="/pokemon/:id" component={PokemonDetail} />
-      <Route path="/pokemon/search/:name" component={PokemonDetailByName} />
-      <Route path="/create" component={PokemonCreate} />
-    </React.Fragment>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/home" component={NavBar} />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/pokemon/:id" component={PokemonDetail} />
+        <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
+        <Route exact path="/create" component={PokemonCreate} />
+        <Route path="/" component={NotFound} />
+
+      </Switch>
+    </Router>
   );
 }
 
