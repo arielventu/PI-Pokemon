@@ -43,10 +43,10 @@ export default function PokemonDetail (props) {
           <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
         </div>
       }
-      <Link to='/home'>Back</Link>
-    
-      
+      <Link to='/home'>
+        <button className={`${style.button}`}>Go to Home</button>
+      </Link>
     </div>
-  )
+    )
   }
 }
