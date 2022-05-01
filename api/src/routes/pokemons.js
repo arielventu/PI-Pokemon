@@ -144,10 +144,9 @@ router.get('/:id', async (req, res, next) => {
                 }
                 return res.status(200).send(pokemonFound);
             }
-            else res.json('Pokemon not found')
+            else return res.json('Pokemon not found')
         } catch (error) {
-            // next(error)
-            return error.response.data === 'Not Found' ? res.json('Pokemon not found') : res.status(500).send('Internal Server Error')
+            next(error)
         }
     } else { // ID de API
         try {
