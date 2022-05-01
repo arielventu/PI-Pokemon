@@ -31,7 +31,7 @@
   font-size: 4rem;
   font-weight: 400;
   color: #fff;
-  /* animation-name: parpadeo;
+  animation-name: parpadeo;
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -39,7 +39,7 @@
   -webkit-animation-name:parpadeo;
   -webkit-animation-duration: 1s;
   -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite; */
+  -webkit-animation-iteration-count: infinite;
 }
 
 
