@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
@@ -13,8 +13,8 @@ import NotFound from './components/NotFound'
 
 function App() {
   return (
-    <React.Fragment>
-      <switch>
+    <Router>
+      <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/home" component={NavBar} />
       <Route path="/home" component={Home} />
@@ -22,8 +22,8 @@ function App() {
       <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
       <Route exact path="/create" component={PokemonCreate} />
         <Route component={NotFound} />
-      </switch>
-    </React.Fragment>
+      </Switch>
+    </Router>
   );
 }
 
