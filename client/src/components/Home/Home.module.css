@@ -11,6 +11,7 @@
 }
 
 .loadingText {
+  position: relative;
   font-family: 'Kanit', sans-serif;
   font-size: 2rem;
   font-weight: 400;
@@ -20,7 +21,7 @@
 .loadingText::before {
     content: attr(data-text);
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     color: rgb(247, 208, 44);
