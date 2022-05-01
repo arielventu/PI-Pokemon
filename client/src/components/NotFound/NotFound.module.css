@@ -17,6 +17,7 @@
   font-size: 5rem;
   font-weight: 400;
   color: #fff;
+  margin: 0px;
   animation-name: parpadeo;
   animation-duration: 1s;
   animation-timing-function: linear;
@@ -33,6 +34,8 @@
   font-size: 4rem;
   font-weight: 400;
   color: #fff;
+  margin-top: 0px;
+  margin-bottom: 25px;
   animation-name: parpadeo;
   animation-duration: 1s;
   animation-timing-function: linear;
