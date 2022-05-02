@@ -12,92 +12,92 @@
 }
 
 .divForm {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-width: 40%;
-height: 80%;
-margin-top: -2rem;
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(10.2px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 80%;
+    margin-top: -2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .divName {
-display: flex;
-flex-direction: row;
-justify-content: center;
-text-align: center;
-align-items: baseline;
-width: 100%;
-height: 100%;
-margin-top: -3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    margin-top: -3rem;
 }
 
 .labelName {
-font-family: 'Kanit', sans-serif;
-font-size: 1.5rem;
-font-weight: 300;
-color: rgb(255, 255, 255);
-text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-margin-right: 1rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
 }
 
 .inputName {
-font-family: 'Kanit', sans-serif;
-font-size: 1.5rem;
-font-weight: 300;
-width: 100%;
-height: 2rem;
-margin-top: .5rem;
-border-radius: 16px;
-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
-border: 1px solid rgba(255, 255, 255, 0.3);     
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    height: 2rem;
+    margin-top: .5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.3);     
 }
 
 .divHp {
-display: flex;
-flex-direction: row;
-justify-content: center;
-text-align: center;
-align-items: baseline;
-width: 100%;
-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
 }
 
 .labelHp {
-font-family: 'Kanit', sans-serif;
-font-size: 1.5rem;
-font-weight: 300;
-color: rgb(255, 255, 255);
-text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
-margin-right: 1rem;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
 }
 
 .inputHp {
-font-family: 'Kanit', sans-serif;
-font-size: 1.5rem;
-font-weight: 300;
-width: 100%;
-height: 2rem;
-margin-top: .5rem;
-border-radius: 16px;
-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
-border: 1px solid rgba(255, 255, 255, 0.3);     
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    height: 2rem;
+    margin-top: .5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.3);     
 }
 
 .divAttack {
-display: flex;
-flex-direction: row;
-justify-content: center;
-text-align: center;
-align-items: baseline;
-width: 100%;
-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
 }
 
 .labelAttack {
@@ -306,6 +306,21 @@ height: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);     
 }
 
+.buttonSubmitt {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    height: 2.3rem;
+    width: 8rem;
+    background-color: rgb(247, 208, 44);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-decoration: none;
+}
+
 .button {
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
@@ -319,4 +334,4 @@ height: 100%;
     padding: 0.5rem;
     margin: 0.5rem;
     text-decoration: none;
-    }
+}
