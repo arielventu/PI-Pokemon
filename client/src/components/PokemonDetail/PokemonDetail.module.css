@@ -99,21 +99,42 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .stat1{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   font-family: 'Kanit', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: #fff;
   margin-top: 0px;
-  weight: 140%;
+  width: 100%;
 }
 
-.hp {
+.stat2{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.stat3{
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 0px;
+  width: 100%;
+}
+  .hp {
   font-family: 'Kanit', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
