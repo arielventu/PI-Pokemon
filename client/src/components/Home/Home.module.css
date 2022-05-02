@@ -77,10 +77,10 @@
 }
 
 @keyframes slide {
-    0% {
+    0% {opacity: 0;
         background-image: url('../../img/2/bg/1\ \(1\).jpg');
     }
-    10% {
+    10% { opacity: 1;
       background-image: url('../../img/2/bg/1\ \(1\).jpg');
     }
     10.01% {
