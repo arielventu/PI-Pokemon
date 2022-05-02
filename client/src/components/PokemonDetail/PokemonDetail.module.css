@@ -193,6 +193,55 @@
   text-decoration: none;
 }
 
+/* Estilos para cada tipo */
+.Normal {
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1.5rem;
+  background: rgba(168, 167, 122, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Fighting {
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1.5rem;
+  background: rgba(194, 46, 40, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.Flying {
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: 1.5rem;
+  background: rgba(169, 143, 243, 0.900);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.8px);
+  -webkit-backdrop-filter: blur(8.8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
 .Poison {
   width: 10rem;
   height: 2.3rem;
