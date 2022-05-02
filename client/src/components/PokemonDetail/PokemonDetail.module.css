@@ -17,7 +17,7 @@
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 70%;
+  height: 65%;
   margin-top: 5rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -194,7 +194,7 @@
 }
 
 .Poison {
-  width: 6rem;
+  width: 10rem;
   height: 2.3rem;
   text-align: center;
   margin-bottom: .5rem;
