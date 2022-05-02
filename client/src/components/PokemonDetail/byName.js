@@ -17,35 +17,78 @@ export default function PokemonDetailByName (props) {
     dispatch(getPokemonByName(props.match.params.name))
   }, [dispatch])
 
+// if (pokemonDetail === 'Pokemon not found') {
+//     return <PokeNotFound />
+// } else {
+//   return (
+//     <div>
+//       {/* <NavBar /> */}
+//       {pokemonDetail &&
+//         <div>
+//           <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
+//           <h1>{pokemonDetail.name}</h1>
+//           <div>
+//             {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
+//               <div key={i} className='{cssButtonType(el)}'>
+//                 <p key={i} className='p'>{el}</p>
+//               </div>
+//             ))}
+//           </div>
+//           <p>HP: {pokemonDetail.hp}</p>
+//           <p>Attack: {pokemonDetail.attack}</p>
+//           <p>Defense: {pokemonDetail.defense}</p>
+//           <p>Speed: {pokemonDetail.speed}</p>
+//           <p>Height: {pokemonDetail.height}</p>
+//           <p>Weight: {pokemonDetail.weight}</p>
+//         </div>
+//       }
+//       <Link to='/home'>Back</Link>
+    
+      
+//     </div>
+//     )
+  
 if (pokemonDetail === 'Pokemon not found') {
-    return <PokeNotFound />
+  return <PokeNotFound />
 } else {
-  return (
-    <div>
-      {/* <NavBar /> */}
-      {pokemonDetail && 
-        <div>
-          <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
-          <h1>{pokemonDetail.name}</h1>
-          <div>
-            {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
-              <div key={i} className='{cssButtonType(el)}'>
-                <p key={i} className='p'>{el}</p>
+return (
+  <div className={`${style.divContainer}`} >
+    {pokemonDetail && 
+      <div className={`${style.divCardDetail}`} >
+        <div className={`${style.divCardImageName}`}>
+        <img className={`${style.img}`} src={pokemonDetail.image} alt={pokemonDetail.name}/>
+        <h1 className={`${style.name}`} >{pokemonDetail.name}</h1>
+        </div>
+        <div className={`${style.rightContainer}`} >
+          <div className={`${style.divTypeContainer}`}>
+            {pokemonDetail.type && pokemonDetail.type.map((type, index) => (
+              <div key={index} className={`${style[type]}`}>
+                {type}
               </div>
             ))}
           </div>
-          <p>HP: {pokemonDetail.hp}</p>
-          <p>Attack: {pokemonDetail.attack}</p>
-          <p>Defense: {pokemonDetail.defense}</p>
-          <p>Speed: {pokemonDetail.speed}</p>
-          <p>Height: {pokemonDetail.height}</p>
-          <p>Weight: {pokemonDetail.weight}</p>
+          <div className={`${style.divStatsContainer}`}>
+            <div className={`${style.stat1}`} >
+              <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
+              <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
+            </div>  
+            <div className={`${style.stat2}`} >
+              <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
+              <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
+            </div>  
+            <div className={`${style.stat3}`} >
+              <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
+              <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+            </div>  
+          </div>
+
         </div>
-      }
-      <Link to='/home'>Back</Link>
-    
-      
-    </div>
-    )
+      </div>
+    }
+    <Link to='/home'>
+      <button className={`${style.button}`}>Go to Home</button>
+    </Link>
+  </div>
+  )
   }
 }
