@@ -34,14 +34,14 @@ export default function PokemonDetail (props) {
             <div className={`${style.divTypeContainer}`}>
               {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
                 <div key={i} className={`${style.divType}`}>
-                  <p key={i} className={`${style.typeName}`}>{el}</p>
+                  <p key={i} className={`${style[type]}`}>{el}</p>
                 </div>
               ))}
             </div>
             <div className={`${style.divStatsContainer}`}>
               <div className={`${style.stat1}`} >
-                <h1 className={`${style.hp}`} >HP: {pokemonDetail.hp}</h1>
-                <h1 className={`${style.attack}`} >Attack: {pokemonDetail.attack}</h1>
+                <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
+                <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
               </div>  
               <div className={`${style.stat2}`} >
                 <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
