@@ -114,7 +114,7 @@ export default function PokemonCreate() {
                             value={pokemon.hp}
                             onChange={handleChange}
                         />
-                        {errors.hp && <p>{errors.hp}</p>}
+                        {errors.hp && <p className={`${style.pError}`}>{errors.hp}</p>}
                     </div>
                     <div className={`${style.divAttack}`}>
                         <label className={`${style.labelAttack}`} name="attack">Attack</label>

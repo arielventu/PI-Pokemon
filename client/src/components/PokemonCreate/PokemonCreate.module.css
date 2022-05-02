@@ -17,7 +17,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 60%;
     height: 80%;
     margin-top: -2rem;
     background: rgba(255, 255, 255, 0.2);
@@ -305,6 +305,15 @@
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
     border: 1px solid rgba(255, 255, 255, 0.3);     
+}
+
+.pError {
+    font-family: 'Kanit', sans-serif;
+    font-size: .8rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
 }
 
 .buttonDisabled {
