@@ -72,6 +72,70 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    animation: slide 20s infinite;
+}
+
+@keyframes slide {
+    0% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    10% {
+      background-image: url('');
+    }
+    10.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    20% {
+      background-image: url('');
+    }
+    20.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    30% {
+      background-image: url('');
+    }
+    30.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    40% {
+      background-image: url('');
+    }
+    40.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    50% {
+      background-image: url('');
+    }
+    50.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    60% {
+      background-image: url('');
+    }
+    60.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    70% {
+      background-image: url('');
+    }
+    70.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    80% {
+      background-image: url('');
+    }
+    80.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    90% {
+      background-image: url('');
+    }
+    90.01% {
+        background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg');
+    }
+    100% {
+      background-image: url('');
+    }
 }
 
 .divFilterSource{
