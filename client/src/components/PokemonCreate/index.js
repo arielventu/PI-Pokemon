@@ -95,7 +95,7 @@ export default function PokemonCreate() {
                     <label name="name">Name</label>
                     <input
                         type="text"
-                        name="name"
+                        // name="name"
                         value={pokemon.name}
                         onChange={handleChange}
                         placeholder={errors.name}
@@ -106,7 +106,7 @@ export default function PokemonCreate() {
                     <label name="hp">HP</label>
                     <input
                         type="text"
-                        name="hp"
+                        // name="hp"
                         value={pokemon.hp}
                         onChange={handleChange}
                     />
@@ -116,7 +116,7 @@ export default function PokemonCreate() {
                     <label name="attack">Attack</label>
                     <input
                         type="text"
-                        name="attack"
+                        // name="attack"
                         value={pokemon.attack}
                         onChange={handleChange}
                     />
@@ -126,7 +126,7 @@ export default function PokemonCreate() {
                     <label name="defense">Defense</label>
                     <input
                         type="text"
-                        name="defense"
+                        // name="defense"
                         value={pokemon.defense}
                         onChange={handleChange}
                     />
@@ -136,7 +136,7 @@ export default function PokemonCreate() {
                     <label name="speed">Speed</label>
                     <input
                         type="text"
-                        name="speed"
+                        // name="speed"
                         value={pokemon.speed}
                         onChange={handleChange}
                     />
@@ -146,7 +146,7 @@ export default function PokemonCreate() {
                     <label name="height">Height</label>
                     <input
                         type="text"
-                        name="height"
+                        // name="height"
                         value={pokemon.height}
                         onChange={handleChange}
                     />
@@ -156,7 +156,7 @@ export default function PokemonCreate() {
                     <label name="weight">Weight</label>
                     <input
                         type="text"
-                        name="weight"
+                        // name="weight"
                         value={pokemon.weight}
                         onChange={handleChange}
                     />
@@ -166,7 +166,7 @@ export default function PokemonCreate() {
                     <label name="image">Image</label>
                     <input
                         type="text"
-                        name="image"
+                        // name="image"
                         value={pokemon.image}
                         onChange={handleChange}
                     />
