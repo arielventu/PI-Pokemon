@@ -28,11 +28,6 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.form {
-    width: 30rem;
-    height: 70rem;
-}
-
 .divName {
     display: flex;
     flex-direction: row;
@@ -310,6 +305,22 @@
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
     border: 1px solid rgba(255, 255, 255, 0.3);     
+}
+
+.buttonDisabled {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    height: 2.3rem;
+    width: 25rem;
+    background-color: rgba(255, 255, 255, 0.123);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: -5rem;
+    text-decoration: none;
 }
 
 .buttonSubmit {
