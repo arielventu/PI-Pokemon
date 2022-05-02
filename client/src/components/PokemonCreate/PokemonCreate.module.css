@@ -56,7 +56,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -87,7 +87,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -118,7 +118,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -149,7 +149,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -180,7 +180,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -211,7 +211,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -242,7 +242,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -273,7 +273,7 @@
     font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
-    height: 2rem;
+    height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -314,7 +314,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: .7rem;
     font-weight: 200;
-    color: rgb(255, 238, 0);
+    color: rgb(247, 208, 44);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
     margin-left: 1rem;
 }
