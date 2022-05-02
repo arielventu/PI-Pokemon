@@ -96,87 +96,95 @@ export default function PokemonCreate() {
                     <div className={`${style.divname}`}>
                         <label className={`${style.labelName}`} name="name">Name</label>
                         <input
-                            
+                            className={`${style.inputName}`}
                             type="text"
-                            // name="name"
+                            name="name"
                             value={pokemon.name}
                             onChange={handleChange}
                             placeholder={errors.name}
                         />
                         {/* {errors.name && <p>{errors.name}</p>} */}
                     </div>
-                    <div>
-                        <label name="hp">HP</label>
+                    <div className={`${style.divHp}`}>
+                        <label className={`${style.labelHp}`} name="hp">HP</label>
                         <input
+                            className={`${style.inputHp}`}
                             type="text"
-                            // name="hp"
+                            name="hp"
                             value={pokemon.hp}
                             onChange={handleChange}
                         />
                         {errors.hp && <p>{errors.hp}</p>}
                     </div>
-                    <div>
-                        <label name="attack">Attack</label>
+                    <div className={`${style.divAttack}`}>
+                        <label className={`${style.labelAttack}`} name="attack">Attack</label>
                         <input
+                            className={`${style.inputAttack}`}
                             type="text"
-                            // name="attack"
+                            name="attack"
                             value={pokemon.attack}
                             onChange={handleChange}
                         />
                         {errors.attack && <p>{errors.attack}</p>}
                     </div>
-                    <div>
-                        <label name="defense">Defense</label>
+                    <div className={`${style.divDefense}`}>
+                        <label className={`${style.labelDefense}`} name="defense">Defense</label>
                         <input
+                            className={`${style.inputDefense}`}
                             type="text"
-                            // name="defense"
+                            name="defense"
                             value={pokemon.defense}
                             onChange={handleChange}
                         />
                         {errors.defense && <p>{errors.defense}</p>}
                     </div>
-                    <div>
-                        <label name="speed">Speed</label>
+                    <div className={`${style.divSpeed}`}>
+                        <label className={`${style.labelSpeed}`} name="speed">Speed</label>
                         <input
+                            className={`${style.inputSpeed}`}
                             type="text"
-                            // name="speed"
+                            name="speed"
                             value={pokemon.speed}
                             onChange={handleChange}
                         />
                         {errors.speed && <p>{errors.speed}</p>}
                     </div>
-                    <div>
-                        <label name="height">Height</label>
+                    <div className={`${style.divHeight}`}>
+                        <label className={`${style.labelHeight}`} name="height">Height</label>
                         <input
+                            className={`${style.inputHeight}`}
                             type="text"
-                            // name="height"
+                            name="height"
                             value={pokemon.height}
                             onChange={handleChange}
                         />
                         {errors.height && <p>{errors.height}</p>}
                     </div>
-                    <div>
-                        <label name="weight">Weight</label>
+                    <div className={`${style.divWeight}`}>
+                        <label className={`${style.labelWeight}`} name="weight">Weight</label>
                         <input
+                            className={`${style.inputWeight}`}
                             type="text"
-                            // name="weight"
+                            name="weight"
                             value={pokemon.weight}
                             onChange={handleChange}
                         />
                         {errors.weight && <p>{errors.weight}</p>}
                     </div>
-                    <div>
-                        <label name="image">Image</label>
+                    <div className={`${style.divImage}`}>
+                        <label className={`${style.labelImage}`} name="image">Image</label>
                         <input
+                            className={`${style.inputImage}`}
                             type="text"
-                            // name="image"
+                            name="image"
                             value={pokemon.image}
                             onChange={handleChange}
                         />
                     </div>
-                    <div>
-                        <label name="Type">Type</label>
+                    <div className={`${style.divType}`}>
+                        <label className={`${style.labelType}`} name="Type">Type</label>
                         <select
+                            className={`${style.selectType}`}
                             name="type"
                             multiple
                             value={pokemon.type}
