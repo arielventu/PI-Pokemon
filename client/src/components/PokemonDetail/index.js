@@ -29,21 +29,24 @@ export default function PokemonDetail (props) {
           <div className={`${style.divCardImageName}`}>
           <img className={`${style.img}`} src={pokemonDetail.image} alt={pokemonDetail.name}/>
           <h1 className={`${style.name}`} >{pokemonDetail.name}</h1>
-        </div>
-          <div className={`${style.divTypeContainer}`}>
-            {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
-              <div key={i} className={`${style.divType}`}>
-                <p key={i} className={`${style.typeName}`}>{el}</p>
-              </div>
-            ))}
           </div>
-          <div className={`${style.divStatsContainer1}`}>
-            <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
-            <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
-            <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
-            <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
-            <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
-            <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+          <div className={`${style.rightContainer}`} >
+            <div className={`${style.divTypeContainer}`}>
+              {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
+                <div key={i} className={`${style.divType}`}>
+                  <p key={i} className={`${style.typeName}`}>{el}</p>
+                </div>
+              ))}
+            </div>
+            <div className={`${style.divStatsContainer1}`}>
+              <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
+              <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
+              <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
+              <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
+              <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
+              <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+            </div>
+
           </div>
         </div>
       }
