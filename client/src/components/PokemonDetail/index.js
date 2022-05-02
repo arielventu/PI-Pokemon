@@ -17,7 +17,7 @@ export default function PokemonDetail (props) {
     dispatch(getPokemonDetails(props.match.params.id))
   }, [dispatch])
 
-  // console.log(pokemonDetail.name);
+  console.log(props);
 
   if (pokemonDetail === 'Pokemon not found') {
     return <PokeNotFound />
