@@ -196,10 +196,12 @@ export default function PokemonCreate() {
                         </select>
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
+                    <div className={`${style.divButton}`}>
                     {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
                         <button className={`${style.buttonDisabled}`} type="submit" disabled>Create Pokemon</button>
                         : <button className={`${style.buttonSubmit}`} type="submit">Create Pokemon</button>
-                    }
+                        }
+                    </div>
                 </form>
             </div>
             <Link to="/home">
