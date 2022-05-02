@@ -72,7 +72,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     /* background-image: url('../../img/2/1440x900-376074-pokemon-free-desktop-pictures.jpg'); */
-    animation: slide 20s ease-in-out infinite;
+    animation: slide 50s ease 0s infinite;
 }
 
 @keyframes slide {
