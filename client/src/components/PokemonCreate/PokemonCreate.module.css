@@ -11,6 +11,11 @@
     margin-top: -3rem;
 }
 
+.form {
+    width: 100%;
+    height: 100%;
+}
+
 .divForm {
     display: flex;
     flex-direction: row;
