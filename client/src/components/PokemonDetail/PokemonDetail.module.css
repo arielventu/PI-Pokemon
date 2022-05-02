@@ -55,23 +55,13 @@
 
 .divTypeContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 20rem;
   height: 100%;
     /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
-.divStatsContainer1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
 .divType {
   display: flex;
@@ -100,6 +90,26 @@
   width: 80%;
   height: 90%;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.divStatsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.stat1{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 0px;
 }
 
 .hp {

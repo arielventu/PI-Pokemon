@@ -38,13 +38,19 @@ export default function PokemonDetail (props) {
                 </div>
               ))}
             </div>
-            <div className={`${style.divStatsContainer1}`}>
-              <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
-              <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
-              <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
-              <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
-              <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
-              <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+            <div className={`${style.divStatsContainer}`}>
+              <div className={`${style.stat1}`} >
+                <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
+                <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
+              </div>  
+              <div className={`${style.stat2}`} >
+                <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
+                <p className={`${style.speed}`} >Speed: {pokemonDetail.speed}</p>
+              </div>  
+              <div className={`${style.stat3}`} >
+                <p className={`${style.height}`} >Height: {pokemonDetail.height}</p>
+                <p className={`${style.weight}`} >Weight: {pokemonDetail.weight}</p>
+              </div>  
             </div>
 
           </div>
