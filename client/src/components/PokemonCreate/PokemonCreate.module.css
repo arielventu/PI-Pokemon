@@ -17,7 +17,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 60%;
+    width: 70%;
     height: 80%;
     margin-top: -2rem;
     background: rgba(255, 255, 255, 0.2);
@@ -72,7 +72,7 @@
 
 .labelHp {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@
 
 .inputHp {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -103,7 +103,7 @@
 
 .labelAttack {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -112,7 +112,7 @@
 
 .inputAttack {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -134,7 +134,7 @@
 
 .labelDefense {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -143,7 +143,7 @@
 
 .inputDefense {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -165,7 +165,7 @@
 
 .labelSpeed {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -174,7 +174,7 @@
 
 .inputSpeed {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -196,7 +196,7 @@
 
 .labelHeight {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -205,7 +205,7 @@
 
 .inputHeight {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -227,7 +227,7 @@
 
 .labelWeight {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -236,7 +236,7 @@
 
 .inputWeight {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -258,7 +258,7 @@
 
 .labelImage {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
@@ -267,7 +267,7 @@
 
 .inputImage {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     width: 100%;
     height: 2rem;
@@ -289,7 +289,7 @@
 
 .labelType {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
