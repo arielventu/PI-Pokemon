@@ -210,13 +210,13 @@
 }
 
 .Ground {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(226, 191, 101, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -226,13 +226,13 @@
 }
 
 .Rock {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(182, 161, 54, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -242,13 +242,13 @@
 }
 
 .Bug {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(166, 185, 26, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -258,13 +258,13 @@
 }
 
 .Ghost {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(115, 87, 151, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -274,13 +274,13 @@
 }
 
 .Steel {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(183, 183, 206, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -290,13 +290,13 @@
 }
 
 .Fire {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(238, 129, 48, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -306,13 +306,13 @@
 }
 
 .Water {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(99, 144, 240, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -322,13 +322,13 @@
 }
 
 .Grass {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(122, 199, 76, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -338,13 +338,13 @@
 }
 
 .Electric {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+ width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(247, 208, 44, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -354,13 +354,13 @@
 }
 
 .Psychic {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(249, 85, 135, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -370,13 +370,13 @@
 }
 
 .Ice {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(150, 217, 214, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -386,13 +386,13 @@
 }
 
 .Dragon {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(111, 53, 252, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -402,13 +402,13 @@
 }
 
 .Dark {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(112, 87, 70, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -418,13 +418,13 @@
 }
 
 .Fairy {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(255, 204, 204, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -434,13 +434,13 @@
 }
 
 .Shadow {
-  border-radius: 10px;
-  width: 6rem;
-  height: 1.5rem;
-  margin-bottom: .5rem;
+  width: 10rem;
+  height: 2.3rem;
+  text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
