@@ -7,7 +7,7 @@ import style from './PokemonDetail.module.css';
 
 
 export default function PokemonDetail (props) {
-  console.log(props);
+  // console.log(props);
   
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state => state.detailPokemon)
