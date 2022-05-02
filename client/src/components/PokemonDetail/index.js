@@ -33,8 +33,8 @@ export default function PokemonDetail (props) {
           <div className={`${style.rightContainer}`} >
             <div className={`${style.divTypeContainer}`}>
               {pokemonDetail.type && pokemonDetail.type.map((type, index) => (
-                <div key={index} className={`${style.divType}`}>
-                  <p key={index} className={`${style[type]}`}>type</p>
+                <div key={index} className={`${style[type]}`}>
+                  {type}
                 </div>
               ))}
             </div>
