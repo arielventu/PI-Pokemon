@@ -40,8 +40,8 @@ export default function PokemonDetail (props) {
             </div>
             <div className={`${style.divStatsContainer}`}>
               <div className={`${style.stat1}`} >
-                <p className={`${style.hp}`} >HP: {pokemonDetail.hp}</p>
-                <p className={`${style.attack}`} >Attack: {pokemonDetail.attack}</p>
+                <h1 className={`${style.hp}`} >HP: {pokemonDetail.hp}</h1>
+                <h1 className={`${style.attack}`} >Attack: {pokemonDetail.attack}</h1>
               </div>  
               <div className={`${style.stat2}`} >
                 <p className={`${style.defense}`} >Defense: {pokemonDetail.defense}</p>
