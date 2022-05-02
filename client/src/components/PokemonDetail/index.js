@@ -17,7 +17,7 @@ export default function PokemonDetail (props) {
     dispatch(getPokemonDetails(props.match.params.id))
   }, [dispatch])
 
-  console.log(props);
+  // console.log(pokemonDetail.name);
 
   if (pokemonDetail === 'Pokemon not found') {
     return <PokeNotFound />
@@ -34,7 +34,7 @@ export default function PokemonDetail (props) {
             <div className={`${style.divTypeContainer}`}>
               {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
                 <div key={i} className={`${style.divType}`}>
-                  <p key={i} className={`${style[type]}`}>{el}</p>
+                  <p key={i} className={`${style.typeName}`}>{el}</p>
                 </div>
               ))}
             </div>
