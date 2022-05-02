@@ -13,7 +13,7 @@
 
   .divForm {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 40%;
@@ -29,7 +29,7 @@
 
   .divName {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -50,7 +50,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     width: 100%;
-    height: 3rem;
+    height: 2rem;
     margin-top: 1rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
