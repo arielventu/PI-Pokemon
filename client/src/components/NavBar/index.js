@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <nav className={`${style.nav}`}>
       <div className={`${style.leftLink}`}>
-        <Link to="/home" className={`${style.link}`}>
+        <Link to="/" className={`${style.link}`}>
           <h1 className={`${style.pHP}`}>Henry Pokemon</h1>
         </Link>
       </div>
