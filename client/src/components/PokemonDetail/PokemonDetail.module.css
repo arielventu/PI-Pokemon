@@ -47,7 +47,7 @@
 }
 
 .img {
-  width: 380px;
+  height: 400px;
   margin-top: -6rem;
   margin-left: -5rem;
   filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
