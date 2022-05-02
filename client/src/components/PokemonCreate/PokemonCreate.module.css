@@ -32,7 +32,7 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
     height: 100%;
     margin-top: 1rem;
@@ -44,9 +44,73 @@
     font-weight: 300;
     color: rgb(255, 255, 255);
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
   }
 
   .inputName {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.3);     
+  }
+
+  .divHp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .labelHp {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
+  }
+
+  .inputHp {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    width: 100%;
+    height: 2rem;
+    margin-top: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
+    border: 1px solid rgba(255, 255, 255, 0.3);     
+  }
+  .divHp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    margin-top: 1rem;
+  }
+
+  .labelHp {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-right: 1rem;
+  }
+
+  .inputHp {
     font-family: 'Kanit', sans-serif;
     font-size: 1.5rem;
     font-weight: 300;
