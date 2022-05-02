@@ -93,9 +93,10 @@ export default function PokemonCreate() {
             <h1 className={`${style.title}`}>Create Pokemon</h1>
             <div className={`${style.divForm}`}>
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label name="name">Name</label>
+                    <div className={`${style.divname}`}>
+                        <label className={`${style.labelName}`} name="name">Name</label>
                         <input
+                            
                             type="text"
                             // name="name"
                             value={pokemon.name}
