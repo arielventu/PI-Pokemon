@@ -125,7 +125,7 @@ export default function PokemonCreate() {
                             value={pokemon.attack}
                             onChange={handleChange}
                         />
-                        {errors.attack && <p>{errors.attack}</p>}
+                        {errors.attack && <p className={`${style.pError}`}>{errors.attack}</p>}
                     </div>
                     <div className={`${style.divDefense}`}>
                         <label className={`${style.labelDefense}`} name="defense">Defense</label>
@@ -136,7 +136,7 @@ export default function PokemonCreate() {
                             value={pokemon.defense}
                             onChange={handleChange}
                         />
-                        {errors.defense && <p>{errors.defense}</p>}
+                        {errors.defense && <p className={`${style.pError}`}>{errors.defense}</p>}
                     </div>
                     <div className={`${style.divSpeed}`}>
                         <label className={`${style.labelSpeed}`} name="speed">Speed</label>
@@ -147,7 +147,7 @@ export default function PokemonCreate() {
                             value={pokemon.speed}
                             onChange={handleChange}
                         />
-                        {errors.speed && <p>{errors.speed}</p>}
+                        {errors.speed && <p className={`${style.pError}`}>{errors.speed}</p>}
                     </div>
                     <div className={`${style.divHeight}`}>
                         <label className={`${style.labelHeight}`} name="height">Height</label>
@@ -158,7 +158,7 @@ export default function PokemonCreate() {
                             value={pokemon.height}
                             onChange={handleChange}
                         />
-                        {errors.height && <p>{errors.height}</p>}
+                        {errors.height && <p className={`${style.pError}`}>{errors.height}</p>}
                     </div>
                     <div className={`${style.divWeight}`}>
                         <label className={`${style.labelWeight}`} name="weight">Weight</label>
@@ -169,7 +169,7 @@ export default function PokemonCreate() {
                             value={pokemon.weight}
                             onChange={handleChange}
                         />
-                        {errors.weight && <p>{errors.weight}</p>}
+                        {errors.weight && <p className={`${style.pError}`}>{errors.weight}</p>}
                     </div>
                     <div className={`${style.divImage}`}>
                         <label className={`${style.labelImage}`} name="image">Image</label>
@@ -194,7 +194,7 @@ export default function PokemonCreate() {
                                 <option key={type.id} value={type.name}>{type.name}</option>
                             ))}
                         </select>
-                        {errors.type && <p>{errors.type}</p>}
+                        {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
                     {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
                         <button className={`${style.buttonDisabled}`} type="submit" disabled>Create Pokemon</button>
