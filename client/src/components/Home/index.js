@@ -37,16 +37,17 @@ export default function Home () {
     };
 
 
-    // Obtengo los datos del store 
+    // Obtengo los datos del store al montar el componente
 
     useEffect(() => {
         dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
-    }, [dispatch]);
+    }, []);
 
+    
     // useEffect(() => {
-    //     dispatch(getTypes())
+    //     dispatch(clearPokemonDetails())
     // }, [dispatch])
 
 

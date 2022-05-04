@@ -9,10 +9,8 @@ const LandingPage = () => {
     const dispatch = useDispatch(); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
     const pokemons = useSelector(state => state.pokemons);
     useEffect(() => {
-        if (pokemons.length === 0) { // si no están cargados en el store, se cargan
             dispatch(getPokemons());
-        }
-    }, [dispatch]);
+    }, []);
 
     return (
         <div className={`${style.divLandingPage}`} >
