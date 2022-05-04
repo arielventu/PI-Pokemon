@@ -57,9 +57,12 @@ export default function PokemonCreate() {
                 ...pokemon,
                 type: [...selectedTypes]
             })
-        if (selectedTypes.length === maxTypes) {
-            e.target.disabled = true;
-        }
+            console.log('selectedTypes', selectedTypes);
+            console.log(selectedTypes.length)
+        console.log(e.target.value);
+        // if (selectedTypes.length === maxTypes) {
+        //     e.target.disabled = true;
+        // }
     };
         
     
@@ -68,7 +71,6 @@ export default function PokemonCreate() {
         //     type: e.target.options.length > maxTypes ? `You can only select ${maxTypes} types` : ''
         // })
     // };
-    console.log(selectedTypes);
     
     const handleSubmit = (e) => {
         e.preventDefault();
