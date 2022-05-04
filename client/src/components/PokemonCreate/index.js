@@ -47,6 +47,28 @@ export default function PokemonCreate() {
         }));
     };
 
+    const validateTypes = () => {
+        if (pokemon.type.length === 0) {
+            setErrors({
+                ...errors,
+                type: 'Type is required'
+            });
+        }
+     
+        const maxTypes = 2;
+        if (pokemon.type.length > maxTypes) {
+            setErrors({
+                ...errors,
+                type: `You can only select ${maxTypes} types`
+            });
+        }
+    }
+
+    useEffect(() => {
+        handleSelect(pokemon.type);
+    }, [pokemon.type]);
+
+
 
     const handleSelect = (e) => {
         const maxTypes = 2;
