@@ -52,7 +52,7 @@ export default function PokemonCreate() {
         
         const maxTypes = 2
         console.log(selectedTypes);
-        if (selectedTypes.length < maxTypes) {
+        while (selectedTypes.length <= maxTypes) {
             setSelectedTypes([...selectedTypes, e.target.value]);
             setPokemon({
                 ...pokemon,
