@@ -43,14 +43,9 @@ export default function Home () {
         dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
-    }, []);
+    }, [dispatch]);
 
     
-    // useEffect(() => {
-    //     dispatch(clearPokemonDetails())
-    // }, [dispatch])
-
-
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
     };
