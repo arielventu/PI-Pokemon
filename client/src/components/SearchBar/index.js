@@ -24,8 +24,6 @@ const SearchBar = () => {
       <form className={`${style.form}`} onSubmit={handleSubmit} >
         <input className={`${style.input}`} type="text" onChange={(e) => handleInputChange(e)} value={name}/>
         <NavLink to={`/pokemon/search/${name}`}><input className={`${style.button}`} type="submit" value="Search" /></NavLink>
-        {/* <NavLink to={`/pokemon/search/${search}`}><button>Search</button></NavLink> */}
-        {/* <input type="submit" value="Search" /> */}
       </form>
     </div>
   )
