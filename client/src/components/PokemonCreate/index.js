@@ -57,7 +57,7 @@ export default function PokemonCreate() {
                 ...pokemon,
                 type: [...selectedTypes]
             })
-        if (selectedTypes.length === maxTypes) {
+        if (selectedTypes.length - 1 === maxTypes) {
             e.target.disabled = true;
         }
     };
