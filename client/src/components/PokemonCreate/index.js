@@ -53,7 +53,10 @@ export default function PokemonCreate() {
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         }) 
         const maxTypes = 2
-        
+        setErrors({
+            ...errors,
+            type: e.target.options.length > maxTypes ? `You can only select ${maxTypes} types` : ''
+        })
     };
     
     const handleSubmit = (e) => {
