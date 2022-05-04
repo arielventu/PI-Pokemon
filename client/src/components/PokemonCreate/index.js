@@ -48,24 +48,27 @@ export default function PokemonCreate() {
     };
 
     const [selectedTypes, setSelectedTypes] = useState([]);
+    const maxTypes = 2
+
     const handleSelect = (e) => {
         
-        const maxTypes = 2
-        if (selectedTypes.length < maxTypes) {
-            setSelectedTypes([...selectedTypes, e.target.value]);
+           setSelectedTypes([...selectedTypes, e.target.value]);
             setPokemon({
                 ...pokemon,
                 type: [...selectedTypes]
             })
+        if (selectedTypes.length === maxTypes) {
+            e.target.disabled = true;
         }
+    };
         
-        console.log(selectedTypes);
-
-        // setErrors({
+    
+    // setErrors({
         //     ...errors,
         //     type: e.target.options.length > maxTypes ? `You can only select ${maxTypes} types` : ''
         // })
-    };
+    // };
+    console.log(selectedTypes);
     
     const handleSubmit = (e) => {
         e.preventDefault();
