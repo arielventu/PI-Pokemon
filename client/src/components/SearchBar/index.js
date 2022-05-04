@@ -19,6 +19,8 @@ const SearchBar = () => {
     dispatch(getPokemonByName(name));
   }
   
+
+  
   return (
     <div>
       <form className={`${style.form}`} onSubmit={handleSubmit} >
