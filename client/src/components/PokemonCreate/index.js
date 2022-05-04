@@ -47,44 +47,13 @@ export default function PokemonCreate() {
         }));
     };
 
-    const validateTypes = () => {
-        if (pokemon.type.length === 0) {
-            setErrors({
-                ...errors,
-                type: 'Type is required'
-            });
-        }
-     
-        const maxTypes = 2;
-        if (pokemon.type.length > maxTypes) {
-            setErrors({
-                ...errors,
-                type: `You can only select ${maxTypes} types`
-            });
-        }
-    }
-
-    useEffect(() => {
-        handleSelect(pokemon.type);
-    }, [pokemon.type]);
-
-
-
     const handleSelect = (e) => {
-        const maxTypes = 2;
-        const selectedType = e.target.value;
-
-        console.log(selectedType);
-        console.log(pokemon.type);
-
-        pokemon.type.length <= maxTypes ?
         setPokemon({
             ...pokemon,
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
-        }) : setErrors({
-            ...errors,
-            type: 'You can only select 2 types'
-        });
+        }) 
+        const maxTypes = 2
+        
     };
     
     const handleSubmit = (e) => {
