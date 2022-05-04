@@ -17,36 +17,6 @@ export default function PokemonDetailByName (props) {
     dispatch(getPokemonByName(props.match.params.name))
   }, [dispatch])
 
-// if (pokemonDetail === 'Pokemon not found') {
-//     return <PokeNotFound />
-// } else {
-//   return (
-//     <div>
-//       {/* <NavBar /> */}
-//       {pokemonDetail &&
-//         <div>
-//           <img src={pokemonDetail.image} alt={pokemonDetail.name} width="105" height="105"/>
-//           <h1>{pokemonDetail.name}</h1>
-//           <div>
-//             {pokemonDetail.type && pokemonDetail.type.map((el, i) => (
-//               <div key={i} className='{cssButtonType(el)}'>
-//                 <p key={i} className='p'>{el}</p>
-//               </div>
-//             ))}
-//           </div>
-//           <p>HP: {pokemonDetail.hp}</p>
-//           <p>Attack: {pokemonDetail.attack}</p>
-//           <p>Defense: {pokemonDetail.defense}</p>
-//           <p>Speed: {pokemonDetail.speed}</p>
-//           <p>Height: {pokemonDetail.height}</p>
-//           <p>Weight: {pokemonDetail.weight}</p>
-//         </div>
-//       }
-//       <Link to='/home'>Back</Link>
-    
-      
-//     </div>
-//     )
   
 if (pokemonDetail === 'Pokemon not found') {
   return <PokeNotFound />
