@@ -51,8 +51,7 @@ export default function PokemonCreate() {
     const handleSelect = (e) => {
         
         const maxTypes = 2
-        console.log(selectedTypes);
-        if (selectedTypes.length <= maxTypes) {
+        if (selectedTypes.length < maxTypes) {
             setSelectedTypes([...selectedTypes, e.target.value]);
             setPokemon({
                 ...pokemon,
@@ -60,6 +59,7 @@ export default function PokemonCreate() {
             })
         }
         
+        console.log(selectedTypes);
 
         // setErrors({
         //     ...errors,
