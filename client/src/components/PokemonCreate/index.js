@@ -49,18 +49,15 @@ export default function PokemonCreate() {
 
     const [selectedTypes, setSelectedTypes] = useState([]);
     const handleSelect = (e) => {
-        // setPokemon({
-        //     ...pokemon,
-        //         type: [...e.target.options].filter(o => o.selected).map(o => o.value)
-        // }) 
+        
         const maxTypes = 2
+        console.log(selectedTypes);
         if (selectedTypes.length < maxTypes) {
             setSelectedTypes([...selectedTypes, e.target.value]);
             setPokemon({
                 ...pokemon,
                 type: [...selectedTypes]
             })
-            console.log(selectedTypes);
         }
         
 
