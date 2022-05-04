@@ -47,30 +47,12 @@ export default function PokemonCreate() {
         }));
     };
 
-    const [selectedTypes, setSelectedTypes] = useState([]);
-    const maxTypes = 2
-
     const handleSelect = (e) => {
-        
-           setSelectedTypes([...selectedTypes, e.target.value]);
-            setPokemon({
-                ...pokemon,
-                type: [...selectedTypes]
-            })
-            console.log('selectedTypes', selectedTypes);
-            console.log(selectedTypes.length)
-        console.log(e.target.value);
-        // if (selectedTypes.length === maxTypes) {
-        //     e.target.disabled = true;
-        // }
+        setPokemon({
+            ...pokemon,
+                type: [...e.target.options].filter(o => o.selected).map(o => o.value)
+        }) 
     };
-        
-    
-    // setErrors({
-        //     ...errors,
-        //     type: e.target.options.length > maxTypes ? `You can only select ${maxTypes} types` : ''
-        // })
-    // };
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -203,7 +185,8 @@ export default function PokemonCreate() {
                         <select
                             className={`${style.selectType}`}
                             name="type"
-                            // value={pokemon.type}
+                            multiple
+                            value={pokemon.type}
                             onChange={handleSelect}
                         >
                             {types.map((type) => (
