@@ -14,7 +14,7 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination, c
         <ul className={`${style.ulPagination}`}>
             {pageNumbers && pageNumbers.map(number => (
                 <li onClick={() => pagination(number)} className={ number === currentPage ? `${style.current}` : `${style.pageItem}`} key={number}>
-                    <a href="!#" className={`${style.num}`}>{number}</a>
+                    <a className={`${style.num}`}>{number}</a>
                 </li>
             ))}
         </ul>
