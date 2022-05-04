@@ -54,10 +54,13 @@ export default function PokemonCreate() {
 
         console.log(e.target.value);
         console.log(pokemon.type);
-        
+        pokemon.type.length <= maxTypes ?
         setPokemon({
-            ...pokemon,
-                type: [...e.target.options].filter(o => o.selected).map(o => o.value)
+                ...pokemon,
+                type: [...pokemon.type, selectedType]
+        }) : setErrors({
+            ...errors,
+            type: 'You can only select 2 types'
         });
     };
     
