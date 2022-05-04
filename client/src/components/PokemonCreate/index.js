@@ -49,9 +49,12 @@ export default function PokemonCreate() {
 
 
     const handleSelect = (e) => {
+        const maxTypes = 2;
+        const selectedType = e.target.value;
+        console.log(e.target.value);
         setPokemon({
             ...pokemon,
-            type: [...e.target.options].filter(o => o.selected).map(o => o.value)
+                type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         });
     };
     
