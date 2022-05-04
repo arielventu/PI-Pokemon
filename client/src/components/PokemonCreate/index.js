@@ -52,7 +52,7 @@ export default function PokemonCreate() {
         
         const maxTypes = 2
         console.log(selectedTypes);
-        while (selectedTypes.length <= maxTypes) {
+        if (selectedTypes.length <= maxTypes) {
             setSelectedTypes([...selectedTypes, e.target.value]);
             setPokemon({
                 ...pokemon,
@@ -198,7 +198,7 @@ export default function PokemonCreate() {
                         <select
                             className={`${style.selectType}`}
                             name="type"
-                            value={pokemon.type}
+                            // value={pokemon.type}
                             onChange={handleSelect}
                         >
                             {types.map((type) => (
