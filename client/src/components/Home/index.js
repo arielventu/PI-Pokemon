@@ -43,7 +43,7 @@ export default function Home () {
         dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
-    }, [currentPage]);
+    }, []);
 
     
     const handleFilterByOrigin = (e) => {
