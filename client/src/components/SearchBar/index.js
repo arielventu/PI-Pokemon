@@ -17,7 +17,6 @@ const SearchBar = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     dispatch(getPokemonByName(name));
-    e.target.reset()
   }
   
 
@@ -26,7 +25,9 @@ const SearchBar = () => {
     <div>
       <form className={`${style.form}`} onSubmit={handleSubmit} >
         <input className={`${style.input}`} type="text" onChange={(e) => handleInputChange(e)} value={name}/>
-        <NavLink to={`/pokemon/search/${name}`}><input className={`${style.button}`} type="submit" value="Search" /></NavLink>
+        <NavLink to={`/pokemon/search/${name}`}>
+          <input className={`${style.button}`} type="submit" value="Search" onClick={() => { setName('') }} />
+        </NavLink>
       </form>
     </div>
   )
