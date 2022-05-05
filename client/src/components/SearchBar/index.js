@@ -16,8 +16,8 @@ const SearchBar = () => {
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    setName('')
     dispatch(getPokemonByName(name));
+    e.target.reset()
   }
   
 
