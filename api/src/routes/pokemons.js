@@ -162,7 +162,7 @@ router.get('/:id', async (req, res, next) => {
                     speed: pokeAPI.data.stats[4].base_stat,
                     weight: pokeAPI.data.weight,
                     height: pokeAPI.data.height,
-                    image: pokeAPI.data.sprites.other.dream_world.front_default,
+                    image: pokeAPI.data.sprites.other.dream_world.front_default ? pokeAPI.data.sprites.other.dream_world.front_default : pokeAPI.data.sprites.other.home.front_default,
                     type: pokeAPI.data.types.map(type => capitalize(type.type.name))
                 }
                 res.status(200).send(pokemonFound);
