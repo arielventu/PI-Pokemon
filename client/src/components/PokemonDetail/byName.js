@@ -15,7 +15,7 @@ export default function PokemonDetailByName (props) {
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonByName(props.match.params.name))
-  }, [])
+  }, [props.match.params.name])
 
   
 if (pokemonDetail === 'Pokemon not found') {
