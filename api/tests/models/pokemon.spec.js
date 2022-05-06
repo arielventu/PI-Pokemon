@@ -55,11 +55,12 @@ describe('Pokemon model', () => {
     beforeEach(() => Type.create({ name: 'Electric' }));
     
     describe('should create a pokemon with a type', () => {
-      beforeEach(() => Pokemon.sync({ force: true }));
+      // beforeEach(() => Pokemon.sync({ force: true }));
 
       it('should create a pokemon with a type', () => {
         return Pokemon.create({ name: 'Pikachu', type: 'Electric' })
           .then(pokemon => {
+            console.log(pokemon);
             expect(pokemon.name).to.equal('Pikachu');
             expect(pokemon.type).to.equal('Electric');
           });
