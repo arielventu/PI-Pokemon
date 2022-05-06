@@ -55,6 +55,12 @@ describe('Pokemon model', () => {
         .catch(() => done(new Error("Hp is not a number")));
     });
 
+    it('Should throw an error if name is repeated', (done) => {
+      Pokemon.create({ name: 'pika2' });
+      Pokemon.create({ name: 'pika2' })
+        .then(() => done())
+        .catch(() => done(new Error('It requires a valid name')));
+    });
 
   });
 
