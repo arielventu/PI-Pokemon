@@ -84,6 +84,9 @@ export default function Home () {
                             <option value='Created'>Created</option>
                         </select>
                     </div>
+                    <div>
+                        
+                    </div>
                     <div className={`${style.divFilterType}`}>
                         <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                             <option value={"default"} hidden>Type</option>
