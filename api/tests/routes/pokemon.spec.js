@@ -3,8 +3,6 @@ const { expect } = require('chai');
 const session = require('supertest-session');
 const app = require('../../src/app.js');
 const { Pokemon, conn } = require('../../src/db.js');
-const modelPokemon = require('../../src/models/Pokemon.js');
-const modelType = require('../../src/models/Type.js');
 
 const agent = session(app);
 const pokemon = {
@@ -19,10 +17,27 @@ describe('Pokemon routes', () => {
     }));
   beforeEach(() => Pokemon.sync({ force: true })
     .then(() => Pokemon.create(pokemon)));
+  
   describe('GET /pokemons', () => {
     it('should get 200', () =>
       agent.get('/pokemons/').expect(200)
     );
+  });
+
+  describe('POST /pokemons', () => {
+    it('should get 200', function () {
+      agent.post('/pokemons/')
+        .send(pokemon)
+        .expect(200)
+    });
+    it('should get Name', function () {
+      agent.post('/pokemons/')
+        .send(pokemon)
+        .expect(200)
+        .expect(res => {
+          expect(res.body.name).to.equal(pokemon.name);
+        });
+    });
   });
 
   describe('GET /pokemons/:id', () => {
@@ -54,21 +69,5 @@ describe('Pokemon routes', () => {
     });
   });
   
-  
-  
-  describe('POST /pokemons', () => {
-    it('should get 200', function () {
-      agent.post('/pokemons/')
-        .send(pokemon)
-        .expect(200)
-    });
-    it('should get Name', function () {
-      agent.post('/pokemons/')
-        .send(pokemon)
-        .expect(200)
-        .expect(res => {
-          expect(res.body.name).to.equal(pokemon.name);
-        });
-    });
-  });
+
   });
