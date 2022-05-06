@@ -76,7 +76,6 @@ export default function Home () {
         return (
             <div className={`${style.divContainer}`}>
                 <div className={`${style.filters}`}>
-                    <div className   >
                     <div className={`${style.divFilterSource}`}>
                         <select className={`${style.selectFilterSource}`} defaultValue={"default"} onChange={(e) => handleFilterByOrigin(e)}>
                             <option value={"default"} hidden>Origin</option>
@@ -84,8 +83,6 @@ export default function Home () {
                             <option value='PokeAPI'>PokeAPI</option>
                             <option value='Created'>Created</option>
                         </select>
-                    </div>
-                        
                     </div>
                     <div className={`${style.divFilterType}`}>
                         <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
