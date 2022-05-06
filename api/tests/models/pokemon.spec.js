@@ -48,26 +48,14 @@ describe('Pokemon model', () => {
     });
   });
 
-  describe('Relations', () => {
-    beforeEach(() => Pokemon.sync({ force: true }));
-    beforeEach(() => Type.sync({ force: true }));
-    
-    describe('should create a pokemon with a type', () => {
-      beforeEach(() => Pokemon.sync({ force: true }));
-      beforeEach(() => Type.sync({ force: true }));
-      beforeEach(() => Type.create({ name: 'Electric' }));
-      beforeEach(() => Pokemon.create({ name: 'PikachuPrueba' }));
-
-      it('should create a pokemon with a type', () => {
-        return Pokemon.findOne({ where: { name: 'PikachuPrueba' } })
-          .then(pokemon => {
-            return pokemon.getTypes()
-              .then(types => {
-                expect(types[0].name).to.equal('Electric');
-              });
-          });
-      });
+  describe("Stats", () => {
+    it("Should throw an error if Hp is not a number", (done) => {
+      Pokemon.create({ name: "pikachu1", hp: "aaa" })
+        .then(() => done())
+        .catch(() => done(new Error("Hp is not a number")));
     });
+
+
   });
 
 });
