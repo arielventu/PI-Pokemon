@@ -50,7 +50,7 @@ describe('Pokemon model', () => {
 
   describe('Relations', () => {
     beforeEach(() => Pokemon.sync({ force: true }));
-    beforeEach(() => Pokemon.create({ name: 'Pikachu' }));
+    beforeEach(() => Pokemon.create({ name: 'Pikachu', id: 'a416d989-91d1-48c9-b583-267df138834a' }));
     beforeEach(() => Type.sync({ force: true }));
     beforeEach(() => Type.create({ name: 'Electric' }));
     
