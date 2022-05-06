@@ -55,7 +55,7 @@ describe('Pokemon model', () => {
     beforeEach(() => Type.create({ name: 'Electric' }));
     
     describe('should create a pokemon with a type', () => {
-      // beforeEach(() => Pokemon.sync({ force: true }));
+      beforeEach(() => Pokemon.sync({ force: true }));
 
       it('should create a pokemon with a type', () => {
         return Pokemon.create({ name: 'Pikachu', type: 'Electric' })
