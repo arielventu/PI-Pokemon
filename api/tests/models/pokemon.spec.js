@@ -50,17 +50,15 @@ describe('Pokemon model', () => {
 
   describe('Relations', () => {
     beforeEach(() => Pokemon.sync({ force: true }));
-    beforeEach(() => Pokemon.create({ name: 'Pikachu', id: 'a416d989-91d1-48c9-b583-267df138834a' }));
     beforeEach(() => Type.sync({ force: true }));
+    beforeEach(() => Pokemon.create({ name: 'Pikachu', id: 'a416d989-91d1-48c9-b583-267df1388343' }));
     beforeEach(() => Type.create({ name: 'Electric' }));
+    beforeEach(() => Pokemon.create({ name: 'Pikachu', type: 'Electric' }));
     
-    describe('should create a pokemon with a type', () => {
-      beforeEach(() => Pokemon.sync({ force: true }));
-
-      it('should create a pokemon with a type', () => {
-        return Pokemon.create({ name: 'Pikachu', type: 'Electric' })
+    describe('should get a pokemon with its type', () => {
+      it('should get a pokemon with its type', () => {
+        return Pokemon.findOne({ where: { name: 'Pikachu' } })
           .then(pokemon => {
-            console.log('NOMBRE: ' + pokemon.name + ' ' + pokemon.type);
             expect(pokemon.name).to.equal('Pikachu');
             expect(pokemon.type).to.equal('Electric');
           });
