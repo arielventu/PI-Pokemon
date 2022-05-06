@@ -35,8 +35,7 @@ describe('Pokemon routes', () => {
       agent.get(`/pokemons/${pokemon.id}`)
       .expect(200)
       .expect(res => {
-          console.log(res);
-          expect(res.body.name).to.equal(pokemon.name);
+          expect(res.body.id).to.equal(pokemon.id);
         });
     });
   });
