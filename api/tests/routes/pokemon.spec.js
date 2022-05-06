@@ -10,7 +10,7 @@ const pokemon = {
   id: 'a416d989-91d1-48c9-b583-267df138834c',
 };
 
-describe('Pokemon routes', () => {
+xdescribe('Pokemon routes', () => {
   before(() => conn.authenticate()
     .catch((err) => {
       console.error('Unable to connect to the database:', err);
