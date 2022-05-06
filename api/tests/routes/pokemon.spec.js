@@ -24,22 +24,6 @@ describe('Pokemon routes', () => {
     );
   });
 
-  describe('POST /pokemons', () => {
-    it('should get 200', function () {
-      agent.post('/pokemons/')
-        .send(pokemon)
-        .expect(200)
-    });
-    it('should get Name', function () {
-      agent.post('/pokemons/')
-        .send(pokemon)
-        .expect(200)
-        .expect(res => {
-          expect(res.body.name).to.equal(pokemon.name);
-        });
-    });
-  });
-
   describe('GET /pokemons/:id', () => {
     it('should get 200', function () {
       agent.get(`/pokemons/${pokemon.id}`)
@@ -69,5 +53,20 @@ describe('Pokemon routes', () => {
     });
   });
   
+  describe('POST /pokemons', () => {
+    it('should get 200', function () {
+      agent.post('/pokemons/')
+        .send(pokemon)
+        .expect(200)
+    });
+    it('should get Name', function () {
+      agent.post('/pokemons/')
+        .send(pokemon)
+        .expect(200)
+        .expect(res => {
+          expect(res.body.name).to.equal(pokemon.name);
+        });
+    });
+  });
 
   });
