@@ -60,7 +60,7 @@ describe('Pokemon model', () => {
       it('should create a pokemon with a type', () => {
         return Pokemon.create({ name: 'Pikachu', type: 'Electric' })
           .then(pokemon => {
-            console.log(pokemon);
+            console.log('NOMBRE: ' + pokemon.name);
             expect(pokemon.name).to.equal('Pikachu');
             expect(pokemon.type).to.equal('Electric');
           });
