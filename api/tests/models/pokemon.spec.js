@@ -18,7 +18,7 @@ describe('Pokemon model', () => {
           .catch(() => done());
       });
       it('should work when its a valid name', () => {
-        Pokemon.create({ name: 'Pikachu' });
+        Pokemon.create({ name: 'PikachuPrueba' });
       });
     });
   });
@@ -27,9 +27,9 @@ describe('Pokemon model', () => {
     describe('should create a pokemon', () => {
       beforeEach(() => Pokemon.sync({ force: true }));
       it('should create a pokemon', () => {
-        return Pokemon.create({ name: 'Pikachu' })
+        return Pokemon.create({ name: 'PikachuPrueba' })
           .then(pokemon => {
-            expect(pokemon.name).to.equal('Pikachu');
+            expect(pokemon.name).to.equal('PikachuPrueba');
             // console.log('NOMBREEEEEE:', pokemon.name);
           });
       })
@@ -37,11 +37,11 @@ describe('Pokemon model', () => {
 
     describe('should get a pokemon', () => {
       beforeEach(() => Pokemon.sync({ force: true }));
-      beforeEach(() => Pokemon.create({ name: 'Pikachu' }));
+      beforeEach(() => Pokemon.create({ name: 'PikachuPrueba' }));
       it('should get a pokemon', () => {
-        return Pokemon.findOne({ where: { name: 'Pikachu' } })
+        return Pokemon.findOne({ where: { name: 'PikachuPrueba' } })
           .then(pokemon => {
-            expect(pokemon.name).to.equal('Pikachu');
+            expect(pokemon.name).to.equal('PikachuPrueba');
           }
           );
       })
@@ -58,25 +58,16 @@ describe('Pokemon model', () => {
       beforeEach(() => Type.create({ name: 'Electric' }));
       beforeEach(() => Pokemon.create({ name: 'PikachuPrueba' }));
 
-
-
       it('should create a pokemon with a type', () => {
         return Pokemon.findOne({ where: { name: 'PikachuPrueba' } })
           .then(pokemon => {
-            expect(pokemon.name).to.equal('PikachuPrueba');
-            return pokemon.getTypes();
-          }
-        ).then(types => {
-          expect(types[0].name).to.equal('Electric');
-        }
-        );
-      }
-      );
-    }
-    );
-
-
-
+            return pokemon.getTypes()
+              .then(types => {
+                expect(types[0].name).to.equal('Electric');
+              });
+          });
+      });
+    });
   });
 
 });
