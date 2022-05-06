@@ -1,4 +1,4 @@
-const { Type, Pokemon, conn } = require('../../src/db.js');
+const { PokemonType, Type, Pokemon, conn } = require('../../src/db.js');
 const { expect } = require('chai');
 const modelPokemon = require('../../src/models/Pokemon.js');
 const modelType = require('../../src/models/Type.js');
@@ -53,7 +53,7 @@ describe('Pokemon model', () => {
     beforeEach(() => Type.sync({ force: true }));
     beforeEach(() => Pokemon.create({ name: 'Pikachu', id: 'a416d989-91d1-48c9-b583-267df1388343' }));
     beforeEach(() => Type.create({ name: 'Electric' }));
-    beforeEach(() => Pokemon.create({ name: 'Pikachu', type: 'Electric' }));
+    beforeEach(() => PokemonType.create({ name: 'Pikachu', type: 'Electric' }));
     
     describe('should get a pokemon with its type', () => {
       it('should get a pokemon with its type', () => {
