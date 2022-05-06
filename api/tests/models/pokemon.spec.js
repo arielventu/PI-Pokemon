@@ -23,27 +23,29 @@ describe('Pokemon model', () => {
     });
   });
 
-  describe('should create a pokemon', () => {
-    beforeEach(() => Pokemon.sync({ force: true }));
-    it('should create a pokemon', () => {
-      return Pokemon.create({ name: 'Pikachu' })
-        .then(pokemon => {
-          expect(pokemon.name).to.equal('Pikachu');
-          // console.log('NOMBREEEEEE:', pokemon.name);
-        });
-    })
-  });
+  describe('Creation', () => {
+    describe('should create a pokemon', () => {
+      beforeEach(() => Pokemon.sync({ force: true }));
+      it('should create a pokemon', () => {
+        return Pokemon.create({ name: 'Pikachu' })
+          .then(pokemon => {
+            expect(pokemon.name).to.equal('Pikachu');
+            // console.log('NOMBREEEEEE:', pokemon.name);
+          });
+      })
+    });
 
-  describe('should get a pokemon', () => {
-    beforeEach(() => Pokemon.sync({ force: true }));
-    beforeEach(() => Pokemon.create({ name: 'Pikachu' }));
-    it('should get a pokemon', () => {
-      return Pokemon.findOne({ where: { name: 'Pikachu' } })
-        .then(pokemon => {
-          expect(pokemon.name).to.equal('Pikachu');
-        }
-      );
-    })
+    describe('should get a pokemon', () => {
+      beforeEach(() => Pokemon.sync({ force: true }));
+      beforeEach(() => Pokemon.create({ name: 'Pikachu' }));
+      it('should get a pokemon', () => {
+        return Pokemon.findOne({ where: { name: 'Pikachu' } })
+          .then(pokemon => {
+            expect(pokemon.name).to.equal('Pikachu');
+          }
+          );
+      })
+    });
   });
 
 });
