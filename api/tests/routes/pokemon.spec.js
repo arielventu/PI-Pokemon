@@ -32,11 +32,10 @@ describe('Pokemon routes', () => {
       // console.log(pokemon);
     });
     it('should get Name', function () {
-      agent.get(`/pokemons/${pokemon.name}`)
+      agent.get(`/pokemons/${pokemon.id}`)
         .expect(200)
-        .then((res) => {
+        .expect(res => {
           expect(res.body.name).to.equal(pokemon.name);
-          console.log(res.body);
         });
     });
   });
