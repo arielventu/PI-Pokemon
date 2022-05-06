@@ -29,7 +29,7 @@ describe('Pokemon model', () => {
       return Pokemon.create({ name: 'Pikachu' })
         .then(pokemon => {
           expect(pokemon.name).to.equal('Pikachu');
-          console.log(pokemon);
+          // console.log('NOMBREEEEEE:', pokemon.name);
         });
     })
   });
