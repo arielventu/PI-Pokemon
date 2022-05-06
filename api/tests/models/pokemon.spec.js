@@ -40,10 +40,7 @@ describe('Pokemon model', () => {
       beforeEach(() => Pokemon.create({ name: 'PikachuPrueba' }));
       it('should get a pokemon', () => {
         return Pokemon.findOne({ where: { name: 'PikachuPrueba' } })
-          .then(pokemon => {
-            expect(pokemon.name).to.equal('PikachuPrueba');
-          }
-          );
+        
       })
     });
   });
