@@ -10,7 +10,6 @@ const agent = session(app);
 const pokemon = {
   name: 'PikachuTest',
   id: 'a416d989-91d1-48c9-b583-267df138834c',
-
 };
 
 describe('Pokemon routes', () => {
