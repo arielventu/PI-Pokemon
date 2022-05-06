@@ -36,12 +36,8 @@ describe('Pokemon routes', () => {
         .expect(200)
         .then((res) => {
           expect(res.body.name).to.equal(pokemon.name);
+          console.log(res.body);
         });
-
-        // .expect(200)
-        // .expect(res => {
-        //   expect(res.body.name).to.equal(pokemon.name);
-        // });
     });
   });
 
