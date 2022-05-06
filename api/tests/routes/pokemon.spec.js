@@ -29,6 +29,7 @@ describe('Pokemon routes', () => {
     it('should get 200', function () {
       agent.get(`/pokemons/${pokemon.id}`)
         .expect(200)
+      console.log(pokemon);
     });
     it('should get Name', function () {
       agent.get(`/pokemons/${pokemon.id}`)
