@@ -1,7 +1,6 @@
 const { Type, Pokemon, conn } = require('../../src/db.js');
 const { expect } = require('chai');
-const modelPokemon = require('../../src/models/Pokemon.js');
-const modelType = require('../../src/models/Type.js');
+
 
 describe('Pokemon model', () => {
   before(() => conn.authenticate()
@@ -23,7 +22,7 @@ describe('Pokemon model', () => {
     });
   });
 
-  describe('Creation', () => {
+  describe('Creation Pokemons & Types', () => {
     describe('Should create a pokemon', () => {
       beforeEach(() => Pokemon.sync({ force: true }));
       it('Should create a pokemon', () => {
@@ -34,7 +33,34 @@ describe('Pokemon model', () => {
           });
       })
     });
+    describe('Should create a type', () => {
+      beforeEach(() => Type.sync({ force: true }));
+      it('Should create a type', () => {
+        return Type.create({ name: 'Electric' })
+          .then(type => {
+            expect(type.name).to.equal('Electric');
+            // console.log('NOMBREEEEEE:', type.name);
+          });
+      });
+    });
+    describe('Should create a pokemon with a type', () => {
+      beforeEach(() => Pokemon.sync({ force: true }));
+      it('Should create a pokemon with a type', () => {
+        return Pokemon.create({ name: 'PikachuPrueba' })
+          .then(pokemon => {
+            return Type.create({ name: 'Electric' })
+              .then(type => {
+                return pokemon.setType(type)
+                  .then(() => {
+                    expect(pokemon.types[0].name).to.equal('Electric');
+                    // console.log('NOMBREEEEEE:', pokemon.types[0].name);
+                  });
+              });
+          });
+      })
+    })
   });
+
 
     it("Should throw an error if Hp is not a number", (done) => {
       Pokemon.create({ name: "pikachuTestModel", hp: "aaa" })
