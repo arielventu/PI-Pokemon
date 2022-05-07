@@ -78,6 +78,8 @@
   padding: 0.5rem;
   margin: 0.5rem;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .button:hover {
