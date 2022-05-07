@@ -43,22 +43,6 @@ describe('Pokemon model', () => {
           });
       });
     });
-    describe('Should create a pokemon with a type', () => {
-      beforeEach(() => Pokemon.sync({ force: true }));
-      it('Should create a pokemon with a type', () => {
-        return Pokemon.create({ name: 'PikachuPrueba' })
-          .then(pokemon => {
-            return Type.create({ name: 'Electric' })
-              .then(type => {
-                return pokemon.addType(type)
-                  .then(() => {
-                    expect(pokemon.types[0].name).to.equal('Electric');
-                    console.log('NOMBREEEEEE:', pokemon.types[0].name);
-                  });
-              });
-          });
-      })
-    })
   });
 
 
