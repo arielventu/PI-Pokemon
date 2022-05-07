@@ -56,13 +56,13 @@ export default function PokemonCreate() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (Object.keys(errors).length > 0) {
-            alert('Pokemon not created. Please fix the errors in the form.');
-        }
-        else {
-            if (pokemon.type.length === 0) {
-                pokemon.type = types[1].id; // Asigna tipo por defecto "Normal"
-            }
+        // if (Object.keys(errors).length > 0) {
+        //     alert('Pokemon not created. Please fix the errors in the form.');
+        // }
+        // else {
+            // if (pokemon.type.length === 0) {
+            //     pokemon.type = types[1].id; // Asigna tipo por defecto "Normal"
+            // }
             if (pokemon.image === '') {
                 pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; //Asigna imagen por defecto
             }
@@ -78,7 +78,7 @@ export default function PokemonCreate() {
                 image: '',
                 type: []
             });
-        }
+        // }
     };
 
     useEffect(() => {
