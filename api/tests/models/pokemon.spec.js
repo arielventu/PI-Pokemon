@@ -45,18 +45,48 @@ describe('Pokemon model', () => {
     });
   });
 
-
-    it("Should throw an error if Hp is not a number", (done) => {
+  it('Should throw an error if name is repeated', (done) => {
+    Pokemon.create({ name: 'pikachuTestModel2' });
+    Pokemon.create({ name: 'pikachuTestModel3' })
+    .then(() => done())
+    .catch(() => done(new Error('It requires a valid name')));
+  });
+  
+  describe('Stats', () => {
+    it("Should throw an error if HP is not a number", (done) => {
       Pokemon.create({ name: "pikachuTestModel", hp: "aaa" })
         .then(() => done(new Error("HP is not a number")))
         .catch(() => done());
     });
-     
-    it('Should throw an error if name is repeated', (done) => {
-      Pokemon.create({ name: 'pikachuTestModel2' });
-      Pokemon.create({ name: 'pikachuTestModel3' })
-        .then(() => done())
-        .catch(() => done(new Error('It requires a valid name')));
+  
+    it("Should throw an error if Attack is not a number", (done) => {
+      Pokemon.create({ name: "pikachuTestModel", attack: "aaa" })
+        .then(() => done(new Error("Attack is not a number")))
+        .catch(() => done());
     });
 
+    it("Should throw an error if Defense is not a number", (done) => {
+      Pokemon.create({ name: "pikachuTestModel", defense: "aaa" })
+        .then(() => done(new Error("Defense is not a number")))
+        .catch(() => done());
+    });
+
+    it("Should throw an error if Speed is not a number", (done) => {
+      Pokemon.create({ name: "pikachuTestModel", speed: "aaa" })
+        .then(() => done(new Error("Speed is not a number")))
+        .catch(() => done());
+    });
+
+    it("Should throw an error if height is not a number", (done) => {
+      Pokemon.create({ name: "pikachuTestModel", height: "aaa" })
+        .then(() => done(new Error("Height is not a number")))
+        .catch(() => done());
+    });
+
+    it("Should throw an error if weight is not a number", (done) => {
+      Pokemon.create({ name: "pikachuTestModel", weight: "aaa" })
+        .then(() => done(new Error("Weight is not a number")))
+        .catch(() => done());
+    });
+  });
 });
