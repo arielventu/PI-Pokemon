@@ -51,6 +51,12 @@
   margin-top: -6rem;
   margin-left: -3rem;
   filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
+  transition: 0.3s;
+}
+
+img:hover {
+  transform: translateY(-3px);
+
 }
 
 .divTypeContainer {
