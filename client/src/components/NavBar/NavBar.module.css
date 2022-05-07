@@ -24,9 +24,11 @@
 	font-family: 'Kanit', sans-serif;
 	color: #ffffff;
 	margin-left: 2rem;
+	transition: 0.3s;
 }
 .pHP:hover {
 	color: rgb(247, 208, 44);
+	transform: translateY(-1px);
 }
 
 .pCP {
@@ -35,10 +37,12 @@
 	font-family: 'Kanit', sans-serif;
 	color: rgb(247, 208, 44);
 	margin-right: 2rem;
+	transition: 0.3s;
 }
 
 .pCP:hover {
 	color: #ffffff;
+	transform: translateY(-1px);
 }
 
 .link {
