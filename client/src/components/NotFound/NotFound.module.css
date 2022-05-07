@@ -8,6 +8,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #000000;
+  margin-top: -3rem;
 }
 
 .h1 {
@@ -79,13 +80,8 @@
   text-decoration: none;
 }
 
-/* .button {
-  border: none;
-  font-size: 1.5rem;
-  font-weight: 200;
-  font-family: 'Kanit', sans-serif;
-  cursor: pointer;
-  transition: 0.3s;
-  outline: none;
-  margin-left: .2rem;
-} */
+.button:hover {
+  background-color:rgb(214, 179, 39);
+  color: rgb(0, 0, 0);
+  transform: translateY(-1px);
+}
