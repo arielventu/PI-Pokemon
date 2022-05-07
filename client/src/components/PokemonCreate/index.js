@@ -34,7 +34,6 @@ export default function PokemonCreate() {
     });
     
     const [errors, setErrors] = useState({});
-    // const allPokemons = useSelector((state) => state.pokemons);
 
     const handleChange = (e) => {
         setPokemon({
@@ -56,29 +55,21 @@ export default function PokemonCreate() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        // if (Object.keys(errors).length > 0) {
-        //     alert('Pokemon not created. Please fix the errors in the form.');
-        // }
-        // else {
-            // if (pokemon.type.length === 0) {
-            //     pokemon.type = types[1].id; // Asigna tipo por defecto "Normal"
-            // }
-            if (pokemon.image === '') {
-                pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; //Asigna imagen por defecto
-            }
-            dispatch(createPokemon(pokemon));
-            setPokemon({
-                name: '',
-                hp: '',
-                attack: '',
-                defense: '',
-                speed: '',
-                height: '',
-                weight: '',
-                image: '',
-                type: []
-            });
-        // }
+        if (pokemon.image === '') {
+            pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; 
+        }
+        dispatch(createPokemon(pokemon));
+        setPokemon({
+            name: '',
+            hp: '',
+            attack: '',
+            defense: '',
+            speed: '',
+            height: '',
+            weight: '',
+            image: '',
+            type: []
+        });
     };
 
     useEffect(() => {
