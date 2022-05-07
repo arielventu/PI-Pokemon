@@ -50,10 +50,10 @@ describe('Pokemon model', () => {
           .then(pokemon => {
             return Type.create({ name: 'Electric' })
               .then(type => {
-                return pokemon.setType(type)
+                return pokemon.addType(type)
                   .then(() => {
                     expect(pokemon.types[0].name).to.equal('Electric');
-                    // console.log('NOMBREEEEEE:', pokemon.types[0].name);
+                    console.log('NOMBREEEEEE:', pokemon.types[0].name);
                   });
               });
           });
