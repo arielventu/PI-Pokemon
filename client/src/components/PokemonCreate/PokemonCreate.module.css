@@ -346,6 +346,7 @@
     text-decoration: none;
 }
 
+
 .buttonSubmit {
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
@@ -360,6 +361,12 @@
     margin-top: 1rem;
     margin-bottom: -5rem;
     text-decoration: none;
+}
+
+.buttonSubmit:hover {
+    background-color:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    transform: translateY(-1px);
 }
 
 .button {
