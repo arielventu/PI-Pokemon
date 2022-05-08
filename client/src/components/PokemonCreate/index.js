@@ -36,6 +36,7 @@ export default function PokemonCreate() {
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
+        console.log(e.target.value)
         setPokemon({
             ...pokemon,
             [e.target.name]: e.target.value
