@@ -1,6 +1,5 @@
 import {
 	GET_POKEMONS,
-	GET_DB_ONLY,
 	GET_TYPES,
 	FILTER_BY_ORIGIN,
 	FILTER_BY_TYPE,
@@ -21,12 +20,6 @@ const initialState = {
 function rootReducer (state = initialState, {payload, type}) {
 	switch (type) {
 		case GET_POKEMONS:
-			return {
-				...state,
-				pokemons: payload,
-				allPokemons: payload,
-			};
-		case GET_DB_ONLY:
 			return {
 				...state,
 				pokemons: payload,

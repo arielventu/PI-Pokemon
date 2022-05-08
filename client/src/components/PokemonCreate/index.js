@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
-import { getTypes, createPokemon, getPokemons, getDbOnly } from '../../actions'
+import { getTypes, createPokemon, getPokemons } from '../../actions'
 import style from './PokemonCreate.module.css'
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
@@ -36,8 +36,8 @@ export default function PokemonCreate() {
     const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
-        console.log(e.target.value)
-        console.log(e.target.name);
+        // console.log(e.target.value)
+        // console.log(e.target.name);
         setPokemon({
             ...pokemon,
             [e.target.name]: e.target.value
@@ -72,7 +72,6 @@ export default function PokemonCreate() {
             image: '',
             type: []
         });
-        dispatch(getDbOnly())
     };
 
     useEffect(() => {
