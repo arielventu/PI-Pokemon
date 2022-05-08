@@ -36,6 +36,7 @@ export default function Home () {
 
     const handleFilterByType = (e) => {
         dispatch(filterByType(e.target.value));
+        console.log(store.msjTypes);
     };
 
     const handleSort = (e) => {
