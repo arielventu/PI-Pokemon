@@ -48,14 +48,19 @@ function rootReducer (state = initialState, {payload, type}) {
 			if (payload === 'All') typeFiltered = allPokesByType;
 			if (payload !== 'All')
 				typeFiltered = allPokesByType.filter((el) => el.type.includes(payload));
-			typeFiltered.length ? 
-			{
-				...state,
-				pokemons: typeFiltered
-			} : 
-			{
-				...state,
-				pokemons
+			// return {
+			// 	...state,
+			// 	pokemons: typeFiltered
+			// };
+			if (typeFiltered.length) {
+				return {
+					...state,
+					pokemons: typeFiltered,
+				}
+			} else {
+				return {
+					...state,
+				}
 			};
 		case SORT_BY:
 			const pokemonsSorted = state.pokemons;
