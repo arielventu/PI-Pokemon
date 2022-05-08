@@ -10,41 +10,27 @@ import style from './Home.module.css'
 
 export default function Home () {
 
-    // **************************************************************************************
-    // ********************************STATE & CONSTANTS*************************************
-
-    // Información de los pokemons
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const allTypes = useSelector((state) => state.types);
   
-    // Paginación 
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
     const indexOfLastPokemon = currentPage * pokemonsPerPage;
     const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
     const currentPokemons = allPokemons.slice(indexOfFirstPokemon, indexOfLastPokemon);
 
-    // Ordenamiento
-    const [order, setOrder] = useState(''); // Descendente x defecto
+    const [order, setOrder] = useState(''); 
 
-    // **************************************************************************************
-    // **************************************FUNCTIONS****************************************
-    
-    // Función para cambiar la página
     const pagination = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-
-
-    // Obtengo los datos del store al montar el componente
 
     useEffect(() => {
         dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
     }, []);
-
     
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
@@ -60,15 +46,10 @@ export default function Home () {
         setOrder(e.target.value);
     }
 
-        
-
-    // Render ********************************************************************************
-
     if (allPokemons.length === 0 || allPokemons === "Pokemon created") {
         return (
             <div className={`${style.divLoading}`}>
                 <img src={LOADING_IMG} alt="loading" width="150" height="150" />
-                {/* <img src={LOADING_IMG} alt="loading" className={`${style.imgLoading}`} /> */}
                 <h3 className={`${style.loadingText}`} data-text="Loading...">Loading...</h3>
             </div>
         )
@@ -109,7 +90,6 @@ export default function Home () {
                 <div className={`${style.divCardsContainer}`}>
                     <div className={`${style.cards}`}>
                         {currentPokemons?.map((p) => (
-                            // console.log(p.type)
                             <Link to={`/pokemon/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
                                 <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
                             </Link>
