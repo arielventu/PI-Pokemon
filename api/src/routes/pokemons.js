@@ -122,6 +122,51 @@ router.get('/', async (req, res, next) => {
     }
 })
 
+router.get('/db', async (req, res, next) => { 
+    const { name } = req.query;
+    
+    // **************************************************************************************
+    // ************************************SOLO DB*******************************************
+    
+        try {
+        const pokeDB = await Pokemon.findAll({
+            include: Type
+        })
+        const pokeDBList = []; 
+        
+        //Convertir a un array de objetos desde DB        
+        for (let i = 0; i < pokeDB.length; i++) {
+            const pokemon = pokeDB[i].dataValues;
+            pokeDBList.push({
+                id: pokemon.id,
+                name: capitalize(pokemon.name),
+                image: pokemon.image,
+                attack: pokemon.attack,
+                type: pokemon.types.map(type => type.dataValues.name)
+            });
+        }
+        
+        // const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
+        // const pokeAPIList = []; 
+            
+        // //Convertir a un array de objetos desde API
+        // for (let i = 0; i < pokeAPI.data.results.length; i++) {
+        //     const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
+        //     pokeAPIList.push({
+        //         id: pokemonAPI.data.id,
+        //         name: capitalize(pokemonAPI.data.name),
+        //         image: pokemonAPI.data.sprites.other.dream_world.front_default,
+        //         attack: pokemonAPI.data.stats[1].base_stat,
+        //         type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
+        //     });
+        // }
+        // const List = pokeAPIList.concat(); //Concatena los dos arrays
+        return res.send(pokeDBList);
+    } catch (error) {
+        next(error);
+    }
+})
+
 
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
