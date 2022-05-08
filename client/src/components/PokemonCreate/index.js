@@ -77,7 +77,6 @@ export default function PokemonCreate() {
         dispatch(getPokemons());
     }, [dispatch]);
 
-
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>

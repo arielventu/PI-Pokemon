@@ -3,9 +3,6 @@ import style from './PokemonCard.module.css';
 
 export default function PokemonCard ({name, id, image, type, attack}) {
 
-		
-	
-
 return (
 	<div className={`${style.divCard}`}>
 		<h1 className={`${style.name}`}>{name}</h1>
