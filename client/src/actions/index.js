@@ -30,11 +30,11 @@ export const getPokemons = () => {
 
 export const getDbOnly = () => {
     return function (dispatch) {
-        axios.get(ALL_POKES)
+        axios.get(`${ALL_POKES}db`)
         .then(response => {
                 // console.log(response.data);
                 dispatch({
-                    type: GET_POKEMONS,
+                    type: GET_DB_ONLY,
                     payload: response.data,
                 });
             })
