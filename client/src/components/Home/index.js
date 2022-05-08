@@ -68,7 +68,7 @@ export default function Home () {
                         <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                             <option value={"default"} hidden>Type</option>
                             <option value='All'>All</option>
-                            {msg.length ? alert(msjTypes) : allTypes.map((type) => (
+                            {msg.length ? alert(msg) : allTypes.map((type) => (
                                 <option key={type.id} value={type.name}>
                                     {type.name}
                                 </option>
