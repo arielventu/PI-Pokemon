@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
-import { getTypes, createPokemon, getPokemons } from '../../actions'
+import { getTypes, createPokemon, getPokemons, getDbOnly } from '../../actions'
 import style from './PokemonCreate.module.css'
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
