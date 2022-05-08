@@ -33,7 +33,7 @@ export default function Home () {
     
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
-        alert(msg)
+        !msg.length && alert(msg)
     };
 
     const handleFilterByType = (e) => {
