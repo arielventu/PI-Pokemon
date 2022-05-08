@@ -57,6 +57,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				return {
 					...state,
 					pokemons: typeFiltered,
+					msjTypes: ''
 				}
 			} else {
 				return {
