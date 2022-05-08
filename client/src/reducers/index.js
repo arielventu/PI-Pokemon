@@ -14,7 +14,8 @@ const initialState = {
 	pokemons: [],
 	allPokemons: [],
 	types: [],
-	detailPokemon:{},
+	detailPokemon: {},
+	msjTypes:''
 };
 
 function rootReducer (state = initialState, {payload, type}) {
@@ -60,6 +61,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			} else {
 				return {
 					...state,
+					msjTypes: 'No existen'
 				}
 			};
 		case SORT_BY:
