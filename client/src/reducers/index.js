@@ -48,6 +48,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			if (payload === 'All') typeFiltered = allPokesByType;
 			if (payload !== 'All')
 				typeFiltered = allPokesByType.filter((el) => el.type.includes(payload));
+			console.log(typeFiltered);
 			return {
 				...state,
 				pokemons: typeFiltered,
