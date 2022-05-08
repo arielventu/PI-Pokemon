@@ -62,7 +62,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			} else {
 				return {
 					...state,
-					msjTypes: 'No existen'
+					msjTypes: 'There are no loaded pokemon of the selected type'
 				}
 			};
 		case SORT_BY:
