@@ -11,6 +11,7 @@ export default function Home () {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const allTypes = useSelector((state) => state.types);
+    const msjTypes = useSelector((state) => state.msjTypes);
   
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
@@ -36,7 +37,7 @@ export default function Home () {
 
     const handleFilterByType = (e) => {
         dispatch(filterByType(e.target.value));
-        console.log(store.msjTypes);
+        console.log(msjTypes);
     };
 
     const handleSort = (e) => {
