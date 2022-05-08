@@ -25,6 +25,12 @@ function rootReducer (state = initialState, {payload, type}) {
 				pokemons: payload,
 				allPokemons: payload,
 			};
+		case GET_DB_ONLY:
+			return {
+				...state,
+				pokemons: payload,
+				allPokemons: payload,
+			};
 		case GET_TYPES:
 			return {
 				...state,
