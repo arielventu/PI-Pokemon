@@ -7,9 +7,7 @@ import Pagination from '../Pagination';
 import { LOADING_IMG } from '../../utils';
 import style from './Home.module.css'
 
-
 export default function Home () {
-
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const allTypes = useSelector((state) => state.types);
