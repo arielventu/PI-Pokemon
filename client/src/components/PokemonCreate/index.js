@@ -37,6 +37,7 @@ export default function PokemonCreate() {
 
     const handleChange = (e) => {
         console.log(e.target.value)
+        console.log(e.target.name);
         setPokemon({
             ...pokemon,
             [e.target.name]: e.target.value
