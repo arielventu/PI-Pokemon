@@ -11,7 +11,7 @@ export default function Home () {
     const dispatch = useDispatch();
     const allPokemons = useSelector((state) => state.pokemons);
     const allTypes = useSelector((state) => state.types);
-    const msjTypes = useSelector((state) => state.msjTypes);
+    const msg = useSelector((state) => state.msg);
   
     const [currentPage, setCurrentPage] = useState(1);
     const [pokemonsPerPage, setPokemonsPerPage] = useState(12);
@@ -68,7 +68,7 @@ export default function Home () {
                         <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                             <option value={"default"} hidden>Type</option>
                             <option value='All'>All</option>
-                            {msjTypes.length ? alert(msjTypes) : allTypes.map((type) => (
+                            {msg.length ? alert(msjTypes) : allTypes.map((type) => (
                                 <option key={type.id} value={type.name}>
                                     {type.name}
                                 </option>

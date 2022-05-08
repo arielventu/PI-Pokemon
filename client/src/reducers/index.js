@@ -15,7 +15,7 @@ const initialState = {
 	allPokemons: [],
 	types: [],
 	detailPokemon: {},
-	msjTypes:''
+	msg:''
 };
 
 function rootReducer (state = initialState, {payload, type}) {
@@ -38,9 +38,17 @@ function rootReducer (state = initialState, {payload, type}) {
 			if (payload === 'All') originFiltered = allPokesByOrigin;
 			if (payload === 'PokeAPI') originFiltered = allPokesByOrigin.filter((el) => typeof el.id === 'number');
 			if (payload === 'Created') originFiltered = allPokesByOrigin.filter((el) => el.id.toString().length > 30);
-			return {
-				...state,
-				pokemons: originFiltered,
+			if (originFiltered.length) {
+				return {
+					...state,
+					pokemons: originFiltered,
+					msg: ''
+				}
+			} else {
+				return {
+					...state,
+					msg: 'There are no created pokemon yet'
+				}
 			};
 		case FILTER_BY_TYPE:
 			const allPokesByType = state.allPokemons;
@@ -57,12 +65,12 @@ function rootReducer (state = initialState, {payload, type}) {
 				return {
 					...state,
 					pokemons: typeFiltered,
-					msjTypes: ''
+					msg: ''
 				}
 			} else {
 				return {
 					...state,
-					msjTypes: 'There are no loaded pokemon of the selected type'
+					msg: 'There are no loaded pokemon of the selected type'
 				}
 			};
 		case SORT_BY:
