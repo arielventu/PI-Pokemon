@@ -36,7 +36,7 @@ export default function Home () {
     };
 
     const handleFilterByType = (e) => {
-        msjTypes.length ? alert(msjTypes) : dispatch(filterByType(e.target.value));
+        dispatch(filterByType(e.target.value));
     };
 
     const handleSort = (e) => {
@@ -68,7 +68,7 @@ export default function Home () {
                         <select className={`${style.selectFilterType}`} defaultValue={"default"} onChange={(e) => handleFilterByType(e)}>
                             <option value={"default"} hidden>Type</option>
                             <option value='All'>All</option>
-                            {allTypes.map((type) => (
+                            {msjTypes.length ? alert(msjTypes) : allTypes.map((type) => (
                                 <option key={type.id} value={type.name}>
                                     {type.name}
                                 </option>
