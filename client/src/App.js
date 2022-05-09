@@ -16,14 +16,14 @@ function App() {
     <Router>
       <Route exact path="/" component={LandingPage} />
       <NavBar />
-      <Switch>
+      {/* <Switch> */}
         {/* <Route exact path="/home" component={NavBar} /> */}
         <Route exact path="/home" component={Home} />
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
-        <Route component={NotFound} />
-      </Switch>
+        <Route path="/" component={NotFound} />
+      {/* </Switch> */}
     </Router>
   );
 }
