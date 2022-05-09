@@ -19,12 +19,12 @@ export default function Home () {
     const firstPokeOfThePage = lastPokeOfThePage - pokemonsPerPage; 
     const currentPokemons = allPokemons.slice(firstPokeOfThePage, lastPokeOfThePage);
 
-    const [order, setOrder] = useState(''); 
-
     const pagination = (pageNumber) => {
         setCurrentPage(pageNumber);
     };
-
+    
+    const [order, setOrder] = useState(''); 
+    
     useEffect(() => {
         dispatch(getPokemons());
         dispatch(getTypes());
