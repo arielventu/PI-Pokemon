@@ -26,8 +26,10 @@ export default function Home () {
     };
 
     useEffect(() => {
-        dispatch(getPokemons());
-        dispatch(getTypes());
+        allPokemons.length === 0 && dispatch(getPokemons());
+        // dispatch(getPokemons());
+        allTypes.length === 0 && dispatch(getTypes());
+        // dispatch(getTypes());
         dispatch(clearPokemonDetails());
     }, []);
     
