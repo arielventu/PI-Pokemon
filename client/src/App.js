@@ -23,7 +23,6 @@ function App() {
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
         <Route path="/" component={NotFound} />
-
       </Switch>
     </Router>
   );
