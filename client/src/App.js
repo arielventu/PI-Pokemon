@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <Switch>
+      {/* <Switch> */}
         <Route exact path="/" component={LandingPage} />
         {/* <Route exact path="/home" component={NavBar} /> */}
         <Route exact path="/home" component={Home} />
@@ -26,7 +26,7 @@ function App() {
             <NotFound />
           </Route>
         {/* <Route path="/" component={NotFound} /> */}
-      </Switch>
+      {/* </Switch> */}
     </Router>
   );
 }
