@@ -14,15 +14,17 @@ import NotFound from './components/NotFound'
 function App() {
   return (
     <Router>
-      <Route path="/" component={LandingPage} exact />
-      <NavBar />
       <Switch>
+      <Route path="/" component={LandingPage} exact />
+      <div className="App">
+        <NavBar />
         {/* <Route exact path="/home" component={NavBar} /> */}
         <Route exact path="/home" component={Home} />
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
         <Route component={NotFound} />
+        </div>
       </Switch>
     </Router>
   );
