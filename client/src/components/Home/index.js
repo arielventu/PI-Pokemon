@@ -33,12 +33,12 @@ export default function Home () {
     
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
-        setCurrentPage(pageNumber)
+        setCurrentPage(1)
     };
 
     const handleFilterByType = (e) => {
         dispatch(filterByType(e.target.value));
-        setCurrentPage(pageNumber)
+        setCurrentPage(1)
     };
 
     const handleSort = (e) => {
