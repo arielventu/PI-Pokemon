@@ -23,8 +23,6 @@ export default function Home () {
         setCurrentPage(pageNumber);
     };
     
-    const [order, setOrder] = useState(''); 
-    
     useEffect(() => {
         dispatch(getPokemons());
         dispatch(getTypes());
@@ -40,6 +38,8 @@ export default function Home () {
         dispatch(filterByType(e.target.value));
         setCurrentPage(1)
     };
+    
+    const [order, setOrder] = useState(''); 
 
     const handleSort = (e) => {
         dispatch(sortBy(e.target.value));
