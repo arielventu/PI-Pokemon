@@ -14,7 +14,7 @@ const NotFound = () => {
     useEffect(() => {
         allPokemons.length === 0 && dispatch(getPokemons());
         dispatch(getTypes());
-    }, []);
+    }, [allPokemons.length]);
 
     return (
         <div className={`${style.div}`}>
