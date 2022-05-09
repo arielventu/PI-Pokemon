@@ -1,8 +1,18 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, { useEffect }from 'react'
+import { Link } from 'react-router-dom'
+import { getPokemons, getTypes } from '../../actions';
+import { useSelector, useDispatch } from 'react-redux'
 import style from './NotFound.module.css'
 
 const PokeNotFound = () => {
+    const dispatch = useDispatch();
+    const allPokemons = useSelector((state) => state.pokemons);
+
+    useEffect(() => {
+        allPokemons.length === 0 && dispatch(getPokemons());
+        dispatch(getTypes());
+    }, []);
+    
     return (
         <div className={`${style.div}`}>
             <h1 className={`${style.h1}`}>POKEMON</h1>
