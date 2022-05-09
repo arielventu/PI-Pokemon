@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import './App.css';
 import LandingPage from './components/LandingPage/';
 import Home from './components/Home';
@@ -22,7 +22,9 @@ function App() {
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
-        <Route path="/" component={NotFound} />
+        <Route path="/404" component={NotFound} />
+        <Redirect to="/404" />
+        {/* <Route path="/" component={NotFound} /> */}
       </Switch>
     </Router>
   );
