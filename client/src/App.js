@@ -22,9 +22,7 @@ function App() {
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
-        <Route path="/404" component={NotFound} />
-        <Redirect to="/404" />
-        {/* <Route path="/" component={NotFound} /> */}
+        <Route path="/" component={NotFound} />
       </Switch>
     </Router>
   );
