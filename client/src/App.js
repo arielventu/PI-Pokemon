@@ -14,7 +14,7 @@ import NotFound from './components/NotFound'
 function App() {
   return (
     <Router>
-        <Route exact path="/" component={LandingPage} />
+      <Route exact path="/" component={LandingPage} />
       <NavBar />
       <Switch>
         {/* <Route exact path="/home" component={NavBar} /> */}
@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
-        <Route path="*" component={NotFound} />
+        <Route path="/" component={NotFound} />
       </Switch>
     </Router>
   );
