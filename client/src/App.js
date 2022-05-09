@@ -14,17 +14,21 @@ import NotFound from './components/NotFound'
 function App() {
   return (
     <Router>
-      <Route exact path="/" component={LandingPage} />
+      <Route exact path="/">
+        <LandingPage />
+      </Route>
+
+      {/* <Route exact path="/" component={LandingPage} /> */}
       <NavBar />
       <Switch>
         {/* <Route exact path="/home" component={NavBar} /> */}
-        <Route path="/">
-            <NotFound />
-          </Route>
         <Route exact path="/home" component={Home} />
         <Route exact path="/pokemon/:id" component={PokemonDetail} />
         <Route exact path="/pokemon/search/:name" component={PokemonDetailByName} />
         <Route exact path="/create" component={PokemonCreate} />
+        <Route path="/">
+            <NotFound />
+          </Route>
         {/* <Route path="/" component={NotFound} /> */}
       </Switch>
     </Router>
