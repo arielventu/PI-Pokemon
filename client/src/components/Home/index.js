@@ -24,10 +24,10 @@ export default function Home () {
     };
     
     useEffect(() => {
-        allPokemons.length < 39 && dispatch(getPokemons());
+        dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
-    }, [allPokemons, dispatch]);
+    }, [dispatch]);
     
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
