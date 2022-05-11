@@ -328,6 +328,15 @@
     height: 100%;
 }
 
+.h1SelectedTitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
 .pSelected{
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
