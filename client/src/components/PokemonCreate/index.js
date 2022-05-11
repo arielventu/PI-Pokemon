@@ -74,7 +74,7 @@ export default function PokemonCreate() {
             type: []
         });
         dispatch(getPokemons());
-        console.log(pokemon);
+        // console.log(pokemon);
     };
     
     useEffect(() => {
