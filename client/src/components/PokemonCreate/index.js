@@ -191,10 +191,10 @@ export default function PokemonCreate() {
                                 <option key={type.id} value={type.name}>{type.name}</option>
                             ))}
                         </select>
-                        <div className={`${style.divTypeSelected}`}>
-                            <p className={`${style.pSelected}`}>{isSelected}</p>
-                        </div>
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
+                    </div>
+                    <div className={`${style.divTypeSelected}`}>
+                        <p className={`${style.pSelected}`}>{isSelected}</p>
                     </div>
                     <div className={`${style.divButton}`}>
                     {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
