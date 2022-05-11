@@ -106,7 +106,7 @@ router.get('/', async (req, res, next) => {
         //Convertir a un array de objetos desde API
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
-            pokeAPIList.push({
+            pokeAPIList.length === 0 && pokeAPIList.push({
                 id: pokemonAPI.data.id,
                 name: capitalize(pokemonAPI.data.name),
                 image: pokemonAPI.data.sprites.other.dream_world.front_default,
