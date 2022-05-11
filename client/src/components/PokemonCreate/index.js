@@ -5,10 +5,10 @@ import { getTypes, createPokemon, getPokemons } from '../../actions'
 import {DEFAULT_IMG} from '../../utils'
 import style from './PokemonCreate.module.css'
 
-const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
+const validate = ({ name, hp, attack, defense, speed, height, weight, image, type }) => {
     const errors = {};
     const regEx = /^\d+$/;
-    const regExUrl = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
+    const regExUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
     
 
     if (!name) errors.name = 'Name is required';
@@ -18,7 +18,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
     if (!speed || speed.search(regEx) === -1) errors.speed = 'Speed is required and must be a number';
     if (!height || height.search(regEx) === -1) errors.height = 'Height is required and must be a number';
     if (!weight || weight.search(regEx) === -1) errors.weight = 'Weight is required and must be a number';
-    if (!type) errors.type = 'Type is required';
+    if (image.length > 0 && image.search(regExUrl) === -1) errors.image = 'Image must be a valid url or leave it empty';
     return errors;
 };
 
