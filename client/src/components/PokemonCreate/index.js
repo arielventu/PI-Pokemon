@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import { getTypes, createPokemon, getPokemons } from '../../actions'
+import {DEFAULT_IMG} from '../../utils'
 import style from './PokemonCreate.module.css'
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
@@ -58,7 +59,7 @@ export default function PokemonCreate() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (pokemon.image === '') {
-            pokemon.image = 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'; 
+            pokemon.image = DEFAULT_IMG; 
         }
         dispatch(createPokemon(pokemon));
         setPokemon({
