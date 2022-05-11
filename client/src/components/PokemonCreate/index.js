@@ -88,7 +88,6 @@ export default function PokemonCreate() {
         dispatch(getTypes());
     }, [dispatch]);
 
-    // console.log(clicSelect);
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>
