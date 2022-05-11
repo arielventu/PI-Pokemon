@@ -53,7 +53,7 @@ export default function PokemonCreate() {
     };
 
     const handleSelect = (e) => {
-        setPokemon({
+        isSelected <= 2 && setPokemon({
             ...pokemon,
             type: [...isSelected, e.target.value]
         })
@@ -195,7 +195,7 @@ export default function PokemonCreate() {
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
                     <div className={`${style.divTypeSelected}`}>
-                        {isSelected.length <= 2 && isSelected.map((type) => (
+                        {isSelected.map((type) => (
                             <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
                         ))}
                     </div>
