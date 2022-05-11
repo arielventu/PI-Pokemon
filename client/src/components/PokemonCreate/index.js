@@ -20,6 +20,8 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
     return errors;
 };
 
+let clicSelect = 0;
+
 export default function PokemonCreate() {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
@@ -54,7 +56,8 @@ export default function PokemonCreate() {
         setPokemon({
             ...pokemon,
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
-        }) 
+        })
+        clicSelect++
     };
     
     const handleSubmit = (e) => {
@@ -82,6 +85,7 @@ export default function PokemonCreate() {
         dispatch(getTypes());
     }, [dispatch]);
 
+    console.log(clicSelect);
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>
