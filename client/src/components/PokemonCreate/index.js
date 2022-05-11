@@ -53,7 +53,7 @@ export default function PokemonCreate() {
     };
 
     const handleSelect = (e) => {
-        setPokemon({
+        isSelected.length < 3 && setPokemon({
             ...pokemon,
             type: [...isSelected, e.target.value]
         })
