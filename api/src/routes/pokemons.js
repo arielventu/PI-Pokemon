@@ -214,9 +214,9 @@ router.post('/', async (req, res, next) => {
                         })
                     )
                 }
-                console.log(newPokemon[type] = type)
+                // console.log(newPokemon[type] = type)
                 // const newPokeWithType = newPokemon[type]
-                return res.json(newPokemon).status(201);
+                return res.json(newPokemon[type] = type).status(201);
             } else {
                 return res.json("Name already exists in the database");
             }
