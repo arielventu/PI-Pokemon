@@ -65,6 +65,15 @@ export default function PokemonCreate() {
         // console.log('isSelected ', isSelected)
         console.log('isSelected.length ', isSelected.length)
     };
+
+    const removeSelected = (e) => {
+        setPokemon({
+            ...pokemon,
+            type: isSelected.filter(type => type !== e.target.value)
+        })
+        setIsSelected(isSelected.filter(type => type !== e.target.value))
+    }
+
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -205,7 +214,7 @@ export default function PokemonCreate() {
                             <h1 className={`${style.h1SelectedTitle}`} >Selected Types:</h1>
                             {isSelected.map((type) => (
                                 <div key={idSelected++} className={`${style.pSelected}`}>
-                                    <p>{type}</p><button onClick={() => setIsSelected.pop(isSelected)}>X</button>
+                                    <p>{type}</p><button onClick={removeSelected}>X</button>
                                 </div>
                             ))}
                         </div>
