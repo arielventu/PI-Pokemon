@@ -8,6 +8,8 @@ import style from './PokemonCreate.module.css'
 const validate = ({ name, hp, attack, defense, speed, height, weight, type }) => {
     const errors = {};
     const regEx = /^\d+$/;
+    const regExUrl = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
+    
 
     if (!name) errors.name = 'Name is required';
     if (!hp || hp.search(regEx) === -1) errors.hp = 'HP is required and must be a number';
@@ -16,6 +18,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
     if (!speed || speed.search(regEx) === -1) errors.speed = 'Speed is required and must be a number';
     if (!height || height.search(regEx) === -1) errors.height = 'Height is required and must be a number';
     if (!weight || weight.search(regEx) === -1) errors.weight = 'Weight is required and must be a number';
+    if (!type) errors.type = 'Type is required';
     return errors;
 };
 
