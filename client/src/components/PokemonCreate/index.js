@@ -23,6 +23,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
 export default function PokemonCreate() {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
+    const [isSelected, setIsSelected] = useState([])
     const [pokemon, setPokemon] = useState({
         name: '',
         hp: '',
@@ -50,14 +51,16 @@ export default function PokemonCreate() {
         }));
     };
 
-    let isSelected = []
+    
     const handleSelect = (e) => {
         setPokemon({
             ...pokemon,
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         })
-        isSelected.push(e.target.option)
-        console.log(e.target.option);
+        setIsSelected(...isSelected, e.target.value)
+        console.log('e.target.value ', e.target.value);
+        console.log('isSelected ', isSelected)
+        console.log('isSelected.length ', isSelected.length)
     };
     
     const handleSubmit = (e) => {
@@ -184,7 +187,7 @@ export default function PokemonCreate() {
                         <select
                             className={`${style.selectType}`}
                             name="type"
-                            value={pokemon.type}
+                            // value={pokemon.type}
                             onChange={handleSelect}
                         >
                             {types.map((type) => (
