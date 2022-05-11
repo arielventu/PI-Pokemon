@@ -23,6 +23,8 @@ export default function PokemonCreate() {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
     const [isSelected, setIsSelected] = useState([])
+    let idSelected = 1;
+    
     const [pokemon, setPokemon] = useState({
         name: '',
         hp: '',
@@ -34,8 +36,6 @@ export default function PokemonCreate() {
         image: '',
         type: []
     });
-    let showSelected = [];
-    let idSelected = 1;
     
     const [errors, setErrors] = useState({});
 
@@ -86,7 +86,8 @@ export default function PokemonCreate() {
     
     useEffect(() => {
         dispatch(getTypes());
-    }, [dispatch]);
+        setIsSelected([]);
+    }, [dispatch, isSelected]);
 
     return (
         <div className={`${style.divContainer}`}>
