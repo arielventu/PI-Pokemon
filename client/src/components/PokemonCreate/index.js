@@ -183,6 +183,7 @@ export default function PokemonCreate() {
                             name="image"
                             value={pokemon.image}
                             onChange={handleChange}
+                            placeholder=''
                         />
                         {errors.image && <p className={`${style.pError}`}>{errors.image}</p>}
                     </div>
