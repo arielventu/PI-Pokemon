@@ -204,7 +204,9 @@ export default function PokemonCreate() {
                         <div className={`${style.divTypeSelected}`}>
                             <h1 className={`${style.h1SelectedTitle}`} >Selected Types:</h1>
                             {isSelected.map((type) => (
-                                <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
+                                <div key={idSelected++} className={`${style.pSelected}`}>
+                                    <p>{type}</p><p>X</p>
+                                </div>
                             ))}
                         </div>
                     )}
