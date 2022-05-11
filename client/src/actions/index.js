@@ -117,20 +117,21 @@ export const getPokemonByName = (payload) => {
         //     .then(response => {
         //         // console.log(response.data);
         //         dispatch({
-        //             type: 'GET_POKEMON_BY_NAME',
-        //             payload: response.data,
-        //         });
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
-        //     });
-        try {
-            await axios.get(`${POKES_NAME}${payload}`)
-                .then(response => {
-                    dispatch({
-                        type: 'GET_POKEMON_BY_NAME',
-                        payload: response.data,
-                    });
+            //             type: 'GET_POKEMON_BY_NAME',
+            //             payload: response.data,
+            //         });
+            //     })
+            //     .catch(error => {
+                //         console.log(error);
+                //     });
+                try {
+                    await axios.get(`${POKES_NAME}${payload}`)
+                    .then(response => {
+                        // console.log(response.data);
+                        dispatch({
+                            type: 'GET_POKEMON_BY_NAME',
+                            payload: response.data,
+                        });
                 });
         } catch (error) {
             console.log(error);
