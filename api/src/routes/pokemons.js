@@ -104,7 +104,6 @@ router.get('/', async (req, res, next) => {
         const pokeAPIList = []; 
             
         //Convertir a un array de objetos desde API
-            
         for (let i = 0; i < pokeAPI.data.results.length; i++) {
             const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
             pokeAPIList.push({
