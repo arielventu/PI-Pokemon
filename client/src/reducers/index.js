@@ -29,6 +29,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				}
 			} else {
 				return {
+					...state,
 					pokemons,
 					allPokemons
 				}
