@@ -195,7 +195,7 @@ export default function PokemonCreate() {
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
                     <div className={`${style.divTypeSelected}`}>
-                        {isSelected.map((type) => (
+                        {isSelected.length <= 2 && isSelected.map((type) => (
                             <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
                         ))}
                     </div>
