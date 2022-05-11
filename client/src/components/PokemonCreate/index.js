@@ -73,12 +73,12 @@ export default function PokemonCreate() {
             image: '',
             type: []
         });
+        dispatch(getPokemons());
         console.log(pokemon);
     };
     
     useEffect(() => {
         dispatch(getTypes());
-        // dispatch(getPokemons());
     }, [dispatch]);
 
     return (
