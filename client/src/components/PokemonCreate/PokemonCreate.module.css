@@ -319,6 +319,25 @@
     margin-left: 1rem;
 }
 
+.divTypeSelected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.pSelected{
+    font-family: 'Kanit', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+    margin-left: 1rem;
+}
+
 .divButton {
     display: flex;
     flex-direction: row;

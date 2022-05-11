@@ -185,14 +185,15 @@ export default function PokemonCreate() {
                         <select
                             className={`${style.selectType}`}
                             name="type"
-                            // value={pokemon.type}
                             onChange={handleSelect}
                         >
                             {types.map((type) => (
                                 <option key={type.id} value={type.name}>{type.name}</option>
                             ))}
                         </select>
-                        <p className={`${style.pError}`}>{isSelected}</p>
+                        <div className={`${style.divTypeSelected}`}>
+                            <p className={`${style.pSelected}`}>{isSelected}</p>
+                        </div>
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
                     <div className={`${style.divButton}`}>
