@@ -215,7 +215,7 @@ router.post('/', async (req, res, next) => {
                     )
                 }
                 // console.log(newPokemon[type] = type)
-                newPokemon.type = type;
+                newPokemon['type'] = type;
                 // return res.json(newPokeWithType).status(201);
                 return res.json(newPokemon).status(201)
             } else {
