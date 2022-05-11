@@ -27,7 +27,7 @@ export default function Home () {
         allPokemons.length < 39 && dispatch(getPokemons());
         dispatch(getTypes());
         dispatch(clearPokemonDetails());
-    }, [dispatch]);
+    }, [allPokemons, dispatch]);
     
     const handleFilterByOrigin = (e) => {
         dispatch(filterByOrigin(e.target.value));
