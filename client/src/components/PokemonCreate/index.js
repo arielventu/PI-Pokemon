@@ -67,7 +67,7 @@ export default function PokemonCreate() {
     };
 
     const removeSelected = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         // setPokemon({
         //     ...pokemon,
         //     type: isSelected.filter(type => type !== e.target.value)
