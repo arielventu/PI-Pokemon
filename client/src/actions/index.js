@@ -111,8 +111,8 @@ export const clearPokemonDetails = () => {
     };
 }
 
-export const getPokemonByName = async(payload) => {
-    return function (dispatch) {
+export const getPokemonByName = (payload) => {
+    return async function (dispatch) {
         // axios.get(`${POKES_NAME}${payload}`)
         //     .then(response => {
         //         // console.log(response.data);
@@ -126,10 +126,12 @@ export const getPokemonByName = async(payload) => {
         //     });
         try {
             await axios.get(`${POKES_NAME}${payload}`)
-            dispatch({
-                            type: 'GET_POKEMON_BY_NAME',
-                            payload: response.data,
-                        });
+                .then(response => {
+                    dispatch({
+                        type: 'GET_POKEMON_BY_NAME',
+                        payload: response.data,
+                    });
+                });
         } catch (error) {
             console.log(error);
         }
