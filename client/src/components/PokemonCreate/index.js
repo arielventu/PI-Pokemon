@@ -54,7 +54,7 @@ export default function PokemonCreate() {
     const handleSelect = (e) => {
         setPokemon({
             ...pokemon,
-            type: [...e.target.options].filter(o => o.selected).map(o => o.value)
+            type: [...isSelected, e.target.value]
         })
         isSelected.length < 2 ? setIsSelected([...isSelected, e.target.value]) : alert('Only up to two types can be selected')
         // console.log('e.target.value ', e.target.value);
