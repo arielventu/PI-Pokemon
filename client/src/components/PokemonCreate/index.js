@@ -16,7 +16,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
     if (!speed || speed.search(regEx) === -1) errors.speed = 'Speed is required and must be a number';
     if (!height || height.search(regEx) === -1) errors.height = 'Height is required and must be a number';
     if (!weight || weight.search(regEx) === -1) errors.weight = 'Weight is required and must be a number';
-    if (type.length > 2) errors.type = 'Only up to two types can be selected'
+    if (clicSelect === 2) errors.type = 'Only up to two types can be selected'
     return errors;
 };
 
@@ -85,7 +85,7 @@ export default function PokemonCreate() {
         dispatch(getTypes());
     }, [dispatch]);
 
-    console.log(clicSelect);
+    // console.log(clicSelect);
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>
