@@ -195,12 +195,14 @@ export default function PokemonCreate() {
                         </select>
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
-                    <div className={`${style.divTypeSelected}`}>
-                        <h1 className={`${style.h1SelectedTitle}`} >Selected Types:</h1>
-                        {isSelected.map((type) => (
-                            <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
-                        ))}
-                    </div>
+                    {isSelected.length > 0 && (
+                        <div className={`${style.divTypeSelected}`}>
+                            <h1 className={`${style.h1SelectedTitle}`} >Selected Types:</h1>
+                            {isSelected.map((type) => (
+                                <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
+                            ))}
+                        </div>
+                    )}
                     <div className={`${style.divButton}`}>
                     {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
                         <button className={`${style.buttonDisabled}`} type="submit" disabled>Create Pokemon</button>
