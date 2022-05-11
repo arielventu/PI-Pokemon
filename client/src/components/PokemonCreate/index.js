@@ -196,7 +196,7 @@ export default function PokemonCreate() {
                     </div>
                     <div className={`${style.divTypeSelected}`}>
                         {isSelected.map((type) => (
-                            <p key={idSelected++} className={`${style.pSelected}`}>{isSelected}</p>
+                            <p key={idSelected++} className={`${style.pSelected}`}>{type}</p>
                         ))}
                     </div>
                     <div className={`${style.divButton}`}>
