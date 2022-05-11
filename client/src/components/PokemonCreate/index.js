@@ -73,6 +73,7 @@ export default function PokemonCreate() {
             image: '',
             type: []
         });
+        console.log(pokemon);
     };
     
     useEffect(() => {
