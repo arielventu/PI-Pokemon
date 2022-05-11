@@ -104,17 +104,16 @@ router.get('/', async (req, res, next) => {
         const pokeAPIList = []; 
             
         //Convertir a un array de objetos desde API
-        if (!pokeAPIList.length) {
-            for (let i = 0; i < pokeAPI.data.results.length; i++) {
-                const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
-                pokeAPIList.push({
-                    id: pokemonAPI.data.id,
-                    name: capitalize(pokemonAPI.data.name),
-                    image: pokemonAPI.data.sprites.other.dream_world.front_default,
-                    attack: pokemonAPI.data.stats[1].base_stat,
-                    type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
-                });
-            }
+            
+        for (let i = 0; i < pokeAPI.data.results.length; i++) {
+            const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
+            pokeAPIList.push({
+                id: pokemonAPI.data.id,
+                name: capitalize(pokemonAPI.data.name),
+                image: pokemonAPI.data.sprites.other.dream_world.front_default,
+                attack: pokemonAPI.data.stats[1].base_stat,
+                type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
+            });
         }
         const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
         return res.send(List);
