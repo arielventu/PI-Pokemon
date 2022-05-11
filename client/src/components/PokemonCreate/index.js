@@ -184,6 +184,7 @@ export default function PokemonCreate() {
                         <select
                             className={`${style.selectType}`}
                             name="type"
+                            
                             multiple
                             value={pokemon.type}
                             onChange={handleSelect}
