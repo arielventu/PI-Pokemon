@@ -124,8 +124,8 @@ export const getPokemonByName = async (payload) => {
         //     .catch(error => {
         //         console.log(error);
         //     });
-        await axios.get(`${POKES_NAME}${payload}`)
         try {
+            await axios.get(`${POKES_NAME}${payload}`)
             dispatch({
                             type: 'GET_POKEMON_BY_NAME',
                             payload: response.data,
