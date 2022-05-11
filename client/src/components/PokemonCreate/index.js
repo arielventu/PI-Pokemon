@@ -34,6 +34,7 @@ export default function PokemonCreate() {
         image: '',
         type: []
     });
+    let showSelected = [];
     
     const [errors, setErrors] = useState({});
 
@@ -50,7 +51,6 @@ export default function PokemonCreate() {
         }));
     };
 
-    
     const handleSelect = (e) => {
         setPokemon({
             ...pokemon,
@@ -194,7 +194,9 @@ export default function PokemonCreate() {
                         {errors.type && <p className={`${style.pError}`}>{errors.type}</p>}
                     </div>
                     <div className={`${style.divTypeSelected}`}>
-                        <div className={`${style.pSelected}`}>{isSelected}</div>
+                        {showSelected && showSelected.map((type) => (
+                            <p key={type.id}>{showSelected}</p>
+                        ))}
                     </div>
                     <div className={`${style.divButton}`}>
                     {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
