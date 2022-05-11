@@ -69,9 +69,9 @@ export default function PokemonCreate() {
     const removeSelected = (e) => {
         setPokemon({
             ...pokemon,
-            type: isSelected.filter(type => type !== e.target.value)
+            type: isSelected.pop()
         })
-        setIsSelected(isSelected.filter(type => type !== e.target.value))
+        setIsSelected(isSelected.pop())
     }
 
     
