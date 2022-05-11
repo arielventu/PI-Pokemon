@@ -25,7 +25,7 @@ export default function Home () {
     
     useEffect(() => {
         allPokemons.length < 39 && dispatch(getPokemons());
-        allTypes.length < 18 && dispatch(getTypes());
+        dispatch(getTypes());
         dispatch(clearPokemonDetails());
     }, [dispatch]);
     
