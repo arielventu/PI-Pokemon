@@ -16,7 +16,6 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, type }) =>
     if (!speed || speed.search(regEx) === -1) errors.speed = 'Speed is required and must be a number';
     if (!height || height.search(regEx) === -1) errors.height = 'Height is required and must be a number';
     if (!weight || weight.search(regEx) === -1) errors.weight = 'Weight is required and must be a number';
-    // if (clicSelect === 2) errors.type = 'Only up to two types can be selected'
     return errors;
 };
 
@@ -57,10 +56,10 @@ export default function PokemonCreate() {
             ...pokemon,
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         })
-        console.log('e.target.value ', e.target.value);
         setIsSelected([...isSelected, e.target.value])
-        console.log('isSelected ', isSelected)
-        console.log('isSelected.length ', isSelected.length)
+        // console.log('e.target.value ', e.target.value);
+        // console.log('isSelected ', isSelected)
+        // console.log('isSelected.length ', isSelected.length)
     };
     
     const handleSubmit = (e) => {
