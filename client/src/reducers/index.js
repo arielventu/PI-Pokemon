@@ -21,14 +21,17 @@ const initialState = {
 function rootReducer (state = initialState, {payload, type}) {
 	switch (type) {
 		case GET_POKEMONS:
-			pokemons.length ?
-			{
-				pokemons,
-				allPokemons
-			} : {
-				...state,
-				pokemons: payload,
-				allPokemons: payload,
+			if (pokemons.length < 40) {
+				return {
+					...state,
+					pokemons: payload,
+					allPokemons: payload,
+				}
+			} else {
+				return {
+					pokemons,
+					allPokemons
+				}
 			};
 		case GET_TYPES:
 			return {
