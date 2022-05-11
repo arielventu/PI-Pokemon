@@ -8,7 +8,7 @@ import style from './PokemonCreate.module.css'
 const validate = ({ name, hp, attack, defense, speed, height, weight, image, type }) => {
     const errors = {};
     const regEx = /^\d+$/;
-    const regExUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/;
+    const regExUrl = /^((ftp|http|https):\/\/)?www\.([A-z]+)\.([A-z]{2,})/
     
 
     if (!name) errors.name = 'Name is required';
