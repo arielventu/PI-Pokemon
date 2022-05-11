@@ -57,10 +57,10 @@ export default function PokemonCreate() {
             // type: [...e.target.options].filter(o => o.selected).map(o => o.value)
                 type: setIsSelected([...isSelected, e.target.value])
         })
-        isSelected > 2 ? setIsSelected([...isSelected, e.target.value]) : alert('Only up to two types can be selected')
+        isSelected.length <= 2 ? setIsSelected([...isSelected, e.target.value]) : alert('Only up to two types can be selected')
         // console.log('e.target.value ', e.target.value);
         // console.log('isSelected ', isSelected)
-        // console.log('isSelected.length ', isSelected.length)
+        console.log('isSelected.length ', isSelected.length)
     };
     
     const handleSubmit = (e) => {
