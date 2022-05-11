@@ -57,7 +57,7 @@ export default function PokemonCreate() {
             ...pokemon,
                 type: [...e.target.options].filter(o => o.selected).map(o => o.value)
         })
-        setIsSelected(e.target.value)
+        setIsSelected(...isSelected, isSelected.push(e.target.value))
         console.log('e.target.value ', e.target.value);
         console.log('isSelected ', isSelected)
         console.log('isSelected.length ', isSelected.length)
