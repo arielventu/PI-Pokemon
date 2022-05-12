@@ -26,9 +26,11 @@ export default function PokemonDetail (props) {
 
   let clicCount = 0;
   const handleDelete = () => {
-    clicCount 
+    if (clicCount === 0) {
+      alert('Are you sure you want to delete this pokemon?')
+      clicCount++
+    }  dispatch(deletePokemon(idPokemon))
     dispatch(deletePokemon(idPokemon))
-    clicCount++;
     // props.history.push('/')
   }
     
