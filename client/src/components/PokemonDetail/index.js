@@ -24,14 +24,13 @@ export default function PokemonDetail (props) {
     pokemons.length === 0 && dispatch(getPokemons())
   }, [])
 
-  let clicCount = 0;
   const handleDelete = () => {
-    if (clicCount === 0) {
-      alert('Are you sure you want to delete this pokemon?')
-      clicCount++
-    }  dispatch(deletePokemon(idPokemon))
-    dispatch(deletePokemon(idPokemon))
-    // props.history.push('/')
+    let delConfirm = confirm('Are you sure you want to delete this pokemon?')
+    console.log(delConfirm);
+    // if (delConfirm) {
+    //   dispatch(deletePokemon(idPokemon))
+    //   props.history.push('/')
+    // }
   }
     
 
