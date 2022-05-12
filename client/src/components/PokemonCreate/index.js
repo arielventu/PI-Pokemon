@@ -86,6 +86,7 @@ export default function PokemonCreate() {
         });
         setIsSelected([])
         pokemons.push(pokemon);
+        alert('Pokemon created successfully')
         // console.log(pokemon);
     };
     
