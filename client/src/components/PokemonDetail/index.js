@@ -11,12 +11,13 @@ export default function PokemonDetail (props) {
   
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state => state.detailPokemon)
+  const idPokemon = props.match.params.id
 
   useEffect(() => {
     dispatch(clearPokemonDetails())
-    dispatch(getPokemonDetails(props.match.params.id))
-    console.log(props.match.params.id);
-  }, [props.match.params.id, dispatch])
+    dispatch(getPokemonDetails(idPokemon))
+    console.log(idPokemon);
+  }, [idPokemon, dispatch])
 
   // console.log(pokemonDetail.name);
 
