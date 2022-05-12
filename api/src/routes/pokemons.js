@@ -214,10 +214,6 @@ router.post('/', async (req, res, next) => {
                         })
                     )
                 }
-                // console.log(newPokemon[type] = type)
-                // newPokemon['type'] = type;
-                // return res.json(newPokeWithType).status(201);
-                // Object.defineProperty(newPokemon, 'types', { value: type });
                 return res.json(newPokemon).status(201)
             } else {
                 return res.json("Name already exists in the database");
@@ -231,6 +227,7 @@ router.post('/', async (req, res, next) => {
 
 router.delete('/delete/:id', async (req, res, next) => {
     const { id } = req.params;
+    if (id.length < 35) res.send('ID must be a pokemon from the database');
     try {
         const pokemon = await Pokemon.findOne({ where: { id } });
         if (pokemon) {
