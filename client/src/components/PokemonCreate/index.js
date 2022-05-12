@@ -25,6 +25,7 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, image, typ
 export default function PokemonCreate() {
     const dispatch = useDispatch();
     const types = useSelector(state => state.types);
+    const pokemons = useSelector(state => state.pokemons);
     const [isSelected, setIsSelected] = useState([])
     let idSelected = 1;
 
