@@ -197,21 +197,21 @@ router.post('/', async (req, res, next) => {
     
                 // Asignación de tipos al pokemon
                 const typesOk = await Type.findAll()
-                if (typesOk.length > 0) { // Verifica que la tabla de tipos no esté vacía
+                if (typesOk.length === 0) { // Verifica si la tabla de tipos está vacía
+                    await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
+                    await newPokemon.addType( // Asigna tipo al pokemon creado  
+                    type.map(type => {
+                        const typeFound = typesOk.find(typeOk => typeOk.name === type)
+                        return typeFound.id
+                    })
+                    )
+                } else {
                     await newPokemon.addType( // Asigna tipo al pokemon creado
                         type.map(type => {
                             const typeFound = typesOk.find(typeOk => typeOk.name === type)
                             return typeFound.id
                         })
                     ) 
-                } else {
-                    await axios.get(`${URL_SERVER}/types`) // Si está vacía, obtiene los tipos de la API y los pasa a la tabla de tipos
-                    await newPokemon.addType( // Asigna tipo al pokemon creado  
-                        type.map(type => {
-                            const typeFound = typesOk.find(typeOk => typeOk.name === type)
-                            return typeFound.id
-                        })
-                    )
                 }
                 return res.json(newPokemon).status(201)
             } else {
