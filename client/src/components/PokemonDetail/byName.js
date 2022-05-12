@@ -6,7 +6,7 @@ import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
 
 
-export default function PokemonDetailByName (props) {
+export default function PokemonDetailByName ({props}) {
   // console.log(props);
   
   const dispatch = useDispatch()
@@ -19,7 +19,7 @@ export default function PokemonDetailByName (props) {
   }, [props.match.params.name, dispatch])
   
   // const idPokemon = pokemonDetail.id
-  console.log(pokemonDetail);
+  console.log(props.match);
 
   const handleDelete = () => {
     console.log(pokemonDetail);
