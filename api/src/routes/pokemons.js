@@ -32,7 +32,7 @@ router.get('/', async (req, res, next) => {
             },
             include: Type
         });
-        console.log(pokeDB);
+        // console.log(pokeDB);
         if (pokeDB) {
             try {
                 const pokemon = pokeDB.dataValues;
