@@ -20,9 +20,9 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination, c
                     {number}
                 </button>
             ))}
-                {currentPage <= pageNumbers.length - 1 && <button className={`${style.pageItem} ${style.num}`} onClick={() => pagination(currentPage + 1)}>
-                    &gt;
-                </button>}
+                {currentPage === pageNumbers.length ?
+                    <button className={`${style.pageItem} ${style.num}`} disabled>&gt;</button>
+                    : currentPage <= pageNumbers.length - 1 && <button className={`${style.pageItem} ${style.num}`} onClick={() => pagination(currentPage + 1)}>&gt;</button>}
         </div>
     </nav>
     )
