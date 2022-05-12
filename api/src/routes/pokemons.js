@@ -220,7 +220,7 @@ router.delete('/delete/:id', async (req, res, next) => {
     if (id.length < 35) res.json('ID must be a pokemon from the database');
     try {
         const pokemon = await Pokemon.findOne({ where: { id } });
-        console.log(pokemon);
+        // console.log(pokemon);
         if (pokemon) {
             await pokemon.destroy();
             return res.json('Pokemon deleted').status(200);
