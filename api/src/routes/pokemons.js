@@ -227,7 +227,7 @@ router.post('/', async (req, res, next) => {
 
 router.delete('/delete/:id', async (req, res, next) => {
     const { id } = req.params;
-    if (id.length < 35) res.send('ID must be a pokemon from the database');
+    if (id.length < 35) res.json('ID must be a pokemon from the database');
     try {
         const pokemon = await Pokemon.findOne({ where: { id } });
         console.log(pokemon);
