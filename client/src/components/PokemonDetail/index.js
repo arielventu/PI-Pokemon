@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemonDetails, clearPokemonDetails, getPokemons } from '../../actions';
+import { getPokemonDetails, clearPokemonDetails, getPokemons, deletePokemon } from '../../actions';
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
@@ -24,6 +24,12 @@ export default function PokemonDetail (props) {
     pokemons.length === 0 && dispatch(getPokemons())
   }, [])
 
+  const handleDelete = () => {
+    dispatch(deletePokemon(idPokemon))
+    // props.history.push('/')
+  }
+    
+
   // console.log(pokemonDetail.name);
 
   if (pokemonDetail === 'Pokemon not found') {
@@ -31,6 +37,7 @@ export default function PokemonDetail (props) {
   } else {
   return (
     <div className={`${style.divContainer}`} >
+      <button className={`${style.button}`} onClick={() => handleDelete() }> Delete Pokemon </button>
       {pokemonDetail && 
         <div className={`${style.divCardDetail}`} >
           <div className={`${style.divCardImageName}`}>

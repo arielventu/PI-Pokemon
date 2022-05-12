@@ -8,6 +8,7 @@ import {
 	GET_POKEMON_DETAILS,
 	CLEAR_POKEMON_DETAILS,
 	GET_POKEMON_BY_NAME,
+	DELETE_POKEMON,
 } from '../actions';
 
 const initialState = {
@@ -109,6 +110,11 @@ function rootReducer (state = initialState, {payload, type}) {
 			return {
 				...state,
 				detailPokemon: payload,
+			};
+		case DELETE_POKEMON:
+			return {
+				...state,
+				pokemons: state.pokemons.filter((el) => el.id !== payload),
 			};
 			default:
 				return state;

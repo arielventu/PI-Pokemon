@@ -10,6 +10,7 @@ export const CREATE_POKEMON = 'CREATE_POKEMON';
 export const GET_POKEMON_DETAILS = 'GET_POKEMON_DETAILS';
 export const CLEAR_POKEMON_DETAILS = 'CLEAR_POKEMON_DETAILS';
 export const GET_POKEMON_BY_NAME = 'GET_POKEMON_BY_NAME';
+export const DELETE_POKEMON = 'DELETE_POKEMON';
 
 export const getPokemons = () => {
     return function (dispatch) {
@@ -138,6 +139,23 @@ export const getPokemonByName = (payload) => {
         }
     };
 };
+
+export const deletePokemon = (payload) => {
+    return function (dispatch) {
+        axios.delete(`${ALL_POKES}delete/${payload}`)
+            .then(response => {
+                console.log(response.data);
+                dispatch({
+                    type: 'DELETE_POKEMON',
+                    payload,
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            }
+        );
+    }
+}
 
 
 
