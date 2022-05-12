@@ -203,7 +203,7 @@ router.post('/', async (req, res, next) => {
                     const typeFound = typesOk.find(typeOk => typeOk.name === type)
                     return typeFound.id
                 }))
-                return res.json(newPokemon).status(201)
+                return res.json('Pokemon created successfully').status(201)
             } else {
                 return res.json("Name already exists in the database");
             }
