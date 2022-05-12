@@ -26,6 +26,7 @@ export default function PokemonDetail (props) {
 
   const handleDelete = () => {
     let delConfirm = confirm('Are you sure you want to delete this pokemon?')
+    alert(delConfirm)
     console.log(delConfirm);
     // if (delConfirm) {
     //   dispatch(deletePokemon(idPokemon))
