@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPokemonDetails, clearPokemonDetails } from '../../actions';
+import { getPokemonDetails, clearPokemonDetails, getPokemons } from '../../actions';
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
@@ -12,12 +12,17 @@ export default function PokemonDetail (props) {
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state => state.detailPokemon)
   const idPokemon = props.match.params.id
+  const pokemons = useSelector(state => state.pokemons)
 
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonDetails(idPokemon))
     console.log(idPokemon);
   }, [idPokemon, dispatch])
+
+  useEffect(() => {
+    pokemons.length === 0 && dispatch(getPokemons())
+  }, [])
 
   // console.log(pokemonDetail.name);
 
