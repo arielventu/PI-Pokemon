@@ -37,7 +37,7 @@ export default function PokemonDetail (props) {
   } else {
   return (
     <div className={`${style.divContainer}`} >
-      <button className={`${style.button}`} onClick={() => handleDelete() }> Delete Pokemon </button>
+      
       {pokemonDetail && 
         <div className={`${style.divCardDetail}`} >
           <div className={`${style.divCardImageName}`}>
@@ -70,9 +70,12 @@ export default function PokemonDetail (props) {
           </div>
         </div>
       }
-      <Link to='/home'>
-        <button className={`${style.button}`}>Go to Home</button>
-      </Link>
+      <div className={`${style.divButtons}`} >
+        <Link to='/home'>
+          <button className={`${style.button}`}>Go to Home</button>
+        </Link>
+        {idPokemon.length > 30 && <button className={`${style.button}`} onClick={() => handleDelete()}> Delete Pokemon </button>}
+      </div>
     </div>
     )
   }
