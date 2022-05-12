@@ -84,8 +84,8 @@ export default function PokemonCreate() {
             image: '',
             type: []
         });
-        // dispatch(getPokemons());
         setIsSelected([])
+        pokemons.push(pokemon);
         console.log(pokemon);
     };
     
@@ -94,7 +94,6 @@ export default function PokemonCreate() {
         setIsSelected([]);
     }, [dispatch]);
     
-    console.log(pokemons);
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>
