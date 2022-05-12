@@ -19,14 +19,13 @@ export default function PokemonDetailByName (props) {
   }, [props.match.params.name, dispatch])
   
   // const idPokemon = pokemonDetail.id
-  console.log(props.match);
 
-  const handleDelete = () => {
-    console.log(pokemonDetail);
+  // const handleDelete = () => {
+    console.log(pokemonDetail.id);
     // dispatch(deletePokemon(idPokemon))
     // alert("Pokemon deleted")
     // props.history.push('/home')
-  }
+  // }
 
 if (pokemonDetail === 'Pokemon not found') {
   return <PokeNotFound />
