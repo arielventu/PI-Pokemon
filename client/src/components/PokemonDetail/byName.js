@@ -11,15 +11,20 @@ export default function PokemonDetailByName (props) {
   
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state => state.detailPokemon)
-  const idPokemon = props.match.params.name
   const pokemons = useSelector(state => state.pokemons)
-
+  
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonByName(props.match.params.name))
   }, [props.match.params.name, dispatch])
-
   
+  const idPokemon = pokemonDetail.id
+  const handleDelete = () => {
+    dispatch(deletePokemon(idPokemon))
+    alert("Pokemon deleted")
+    props.history.push('/home')
+  }
+
 if (pokemonDetail === 'Pokemon not found') {
   return <PokeNotFound />
 } else {
@@ -57,9 +62,12 @@ return (
         </div>
       </div>
     }
-    <Link to='/home'>
-      <button className={`${style.button}`}>Go to Home</button>
-    </Link>
+    <div className={`${style.divButtons}`} >
+        <Link to='/home'>
+          <button className={`${style.buttonToHome} ${style.button}`}>Go to Home</button>
+        </Link>
+        {idPokemon.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={handleDelete}> Delete Pokemon </button>}
+      </div>
   </div>
   )
   }
