@@ -18,14 +18,14 @@ router.get('/', async (req, res, next) => {
         } else {
             const getAPI = await axios.get(`${URL_TYPE}`);
             const typeAPIList = [];
-            console.log(getAPI.data.results);
+            // console.log(getAPI.data.results);
             for (let i = 0; i < getAPI.data.results.length; i++) {
                 typeAPIList.push({
                     name: capitalize(getAPI.data.results[i].name)
                 });
             }
             const typeDB = await Type.bulkCreate(typeAPIList);
-            console.log('Desde API');
+            // console.log('Desde API');
             res.status(200).send(typeDB);
         }
     } catch (error) {
