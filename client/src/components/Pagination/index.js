@@ -11,13 +11,19 @@ export default function Pagination ({allPokemons, pokemonsPerPage, pagination, c
 
     return (
     <nav className={`${style.nav}`}>
-        <ul className={`${style.ulPagination}`}>
+            <div className={`${style.divPagination}`}>
+                {currentPage > 1 && <button className={`${style.pageItem} ${style.num}`} onClick={() => pagination(currentPage - 1)}>
+                    &lt;
+                </button>}
             {pageNumbers && pageNumbers.map(number => (
-                <li onClick={() => pagination(number)} className={ number === currentPage ? `${style.current}` : `${style.pageItem}`} key={number}>
-                    <a className={`${style.num}`}>{number}</a>
-                </li>
+                <button onClick={() => pagination(number)} className={ number === currentPage ? `${style.current} ${style.num}` : `${style.pageItem} ${style.num}`} key={number}>
+                    {number}
+                </button>
             ))}
-        </ul>
+                {currentPage <= pageNumbers.length - 1 && <button className={`${style.pageItem} ${style.num}`} onClick={() => pagination(currentPage + 1)}>
+                    &gt;
+                </button>}
+        </div>
     </nav>
     )
 }

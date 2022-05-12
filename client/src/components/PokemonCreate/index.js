@@ -63,16 +63,8 @@ export default function PokemonCreate() {
         isSelected.length < 2 ? setIsSelected([...isSelected, e.target.value]) : alert('Only up to two types can be selected')
         // console.log('e.target.value ', e.target.value);
         // console.log('isSelected ', isSelected)
-        console.log('isSelected.length ', isSelected.length)
+        // console.log('isSelected.length ', isSelected.length)
     };
-
-    const removeSelected = (e) => {
-        setPokemon({
-            ...pokemon,
-            type: [...isSelected, isSelected.find(e.target.value)]
-        })
-        setIsSelected(isSelected.filter(type => type !== e.target.value))
-    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -92,6 +84,7 @@ export default function PokemonCreate() {
             type: []
         });
         dispatch(getPokemons());
+        setIsSelected([])
         // console.log(pokemon);
     };
     
@@ -213,7 +206,7 @@ export default function PokemonCreate() {
                             <h1 className={`${style.h1SelectedTitle}`} >Selected Types:</h1>
                             {isSelected.map((type) => (
                                 <div key={idSelected++} className={`${style.pSelected}`}>
-                                    <p onClick={removeSelected}>{type}</p>
+                                    <p>{type}</p>
                                 </div>
                             ))}
                         </div>

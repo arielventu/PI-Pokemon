@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { getPokemons } from '../../actions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import style from './LandingPage.module.css';
 
 const LandingPage = () => {
 
     const dispatch = useDispatch(); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
-    const pokemons = useSelector(state => state.pokemons);
+
     useEffect(() => {
-            dispatch(getPokemons());
-    }, []);
+        dispatch(getPokemons());
+    }, [dispatch]);
 
     return (
         <div className={`${style.divLandingPage}`} >
