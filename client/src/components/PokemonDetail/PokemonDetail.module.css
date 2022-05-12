@@ -201,6 +201,10 @@ img:hover {
   transition: 0.3s;
 }
 
+.button:hover {
+  transform: translateY(-1px);
+}
+
 .buttonDel {
   font-family: 'Kanit', sans-serif;
   font-size: 1rem;
@@ -216,12 +220,6 @@ img:hover {
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.button:hover {
-  background-color: rgb(214, 179, 39);;
-  color: rgb(0, 0, 0);
-  transform: translateY(-1px);
 }
 
 /* Estilos para cada tipo */

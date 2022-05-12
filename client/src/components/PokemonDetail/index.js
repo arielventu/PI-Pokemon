@@ -24,8 +24,11 @@ export default function PokemonDetail (props) {
     pokemons.length === 0 && dispatch(getPokemons())
   }, [])
 
+  let clicCount = 0;
   const handleDelete = () => {
+    clicCount 
     dispatch(deletePokemon(idPokemon))
+    clicCount++;
     // props.history.push('/')
   }
     
@@ -72,9 +75,9 @@ export default function PokemonDetail (props) {
       }
       <div className={`${style.divButtons}`} >
         <Link to='/home'>
-          <button className={`${style.buttonToHome}`}>Go to Home</button>
+          <button className={`${style.buttonToHome} ${style.button}`}>Go to Home</button>
         </Link>
-        {idPokemon.length > 30 && <button className={`${style.buttonDel}`} onClick={() => handleDelete()}> Delete Pokemon </button>}
+        {idPokemon.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={() => handleDelete()}> Delete Pokemon </button>}
       </div>
     </div>
     )
