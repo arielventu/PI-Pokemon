@@ -144,7 +144,7 @@ export const deletePokemon = (payload) => {
     return function (dispatch) {
         axios.delete(`${ALL_POKES}delete/${payload}`)
             .then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 dispatch({
                     type: 'DELETE_POKEMON',
                     payload,
