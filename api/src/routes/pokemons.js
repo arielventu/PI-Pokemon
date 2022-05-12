@@ -69,7 +69,7 @@ router.get('/', async (req, res, next) => {
                         image: pokeAPI.data.sprites.other.dream_world.front_default ? pokeAPI.data.sprites.other.dream_world.front_default : pokeAPI.data.sprites.other.home.front_default,
                         type: pokeAPI.data.types.map(type => capitalize(type.type.name))
                     }
-                    console.log('Desde API')
+                    // console.log('Desde API')
                     return res.status(200).send(pokemonFound);
                 }
             } catch (error) {
