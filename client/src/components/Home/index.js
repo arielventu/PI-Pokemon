@@ -91,7 +91,7 @@ export default function Home () {
                 </div>
                 <div className={`${style.divCardsContainer}`}>
                     <div className={`${style.cards}`}>
-                        {currentPokemons?.map((p) => (
+                        {currentPokemons && currentPokemons?.map((p) => (
                             <Link to={`/pokemon/${p.id}`} key={p.id} style={{ textDecoration: 'none' }}>
                                 <PokemonCard key={p.id} name={p.name} image={p.image} type={p.type} />
                             </Link>
