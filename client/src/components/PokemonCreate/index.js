@@ -86,7 +86,7 @@ export default function PokemonCreate() {
         });
         setIsSelected([])
         pokemons.push(pokemon);
-        console.log(pokemon);
+        // console.log(pokemon);
     };
     
     useEffect(() => {
