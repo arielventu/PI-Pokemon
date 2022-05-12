@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
-import { getTypes, createPokemon, getPokemons } from '../../actions'
+import { getTypes, createPokemon} from '../../actions'
 import {DEFAULT_IMG} from '../../utils'
 import style from './PokemonCreate.module.css'
 
@@ -93,7 +93,8 @@ export default function PokemonCreate() {
         dispatch(getTypes());
         setIsSelected([]);
     }, [dispatch]);
-
+    
+    console.log(pokemons);
     return (
         <div className={`${style.divContainer}`}>
             <h1 className={`${style.title}`}>Create Pokemon</h1>
