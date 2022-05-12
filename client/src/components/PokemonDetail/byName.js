@@ -21,7 +21,7 @@ export default function PokemonDetailByName (props) {
   // const idPokemon = pokemonDetail.id
 
   // const handleDelete = () => {
-    console.log(pokemonDetail.id);
+  //  console.log(pokemonDetail && pokemonDetail.id);
     // dispatch(deletePokemon(idPokemon))
     // alert("Pokemon deleted")
     // props.history.push('/home')
@@ -68,7 +68,7 @@ return (
         <Link to='/home'>
           <button className={`${style.buttonToHome} ${style.button}`}>Go to Home</button>
         </Link>
-        {/* {idPokemon.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={handleDelete}> Delete Pokemon </button>} */}
+        {pokemonDetail && pokemonDetail.id.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={handleDelete}> Delete Pokemon </button>}
       </div>
   </div>
   )
