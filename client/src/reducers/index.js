@@ -13,7 +13,7 @@ import {
 
 const initialState = {
 	pokemons: [],
-	allPokemons: [],
+	auxPokemons: [],
 	types: [],
 	detailPokemon: {},
 	msg:''
@@ -25,7 +25,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			return {
 				...state,
 				pokemons: payload,
-				allPokemons: payload,
+				auxPokemons: payload,
 			};
 		case GET_TYPES:
 			return {
@@ -33,7 +33,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				types: payload,
 			};
 		case FILTER_BY_ORIGIN:
-			const allPokesByOrigin = state.allPokemons;
+			const allPokesByOrigin = state.auxPokemons;
 			let originFiltered;
 
 			if (payload === 'All') originFiltered = allPokesByOrigin;
@@ -52,7 +52,7 @@ function rootReducer (state = initialState, {payload, type}) {
 				}
 			};
 		case FILTER_BY_TYPE:
-			const allPokesByType = state.allPokemons;
+			const allPokesByType = state.auxPokemons;
 			let typeFiltered;
 
 			if (payload === 'All') typeFiltered = allPokesByType;
