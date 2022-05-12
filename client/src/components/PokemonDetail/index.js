@@ -25,10 +25,9 @@ export default function PokemonDetail (props) {
   }, [])
 
   const handleDelete = () => {
-    if (delConfirm) {
-      dispatch(deletePokemon(idPokemon))
-      props.history.push('/')
-    }
+    dispatch(deletePokemon(idPokemon))
+    alert("Pokemon deleted")
+    props.history.push('/home')
   }
     
 
