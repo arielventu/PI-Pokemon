@@ -47,7 +47,7 @@ export default function Home () {
         setOrder(e.target.value);
     }
 
-    if (allPokemons.length === 0 || allPokemons === "Pokemon created") {
+    if (allPokemons.length === 0) {
         return (
             <div className={`${style.divLoading}`}>
                 <img src={LOADING_IMG} alt="loading" width="150" height="150" />
