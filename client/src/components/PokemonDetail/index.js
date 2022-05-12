@@ -24,14 +24,11 @@ export default function PokemonDetail (props) {
     pokemons.length === 0 && dispatch(getPokemons())
   }, [])
 
-  let delConfirm = confirm('Are you sure you want to delete this pokemon?')
   const handleDelete = () => {
-    alert(delConfirm)
-    console.log(delConfirm);
-    // if (delConfirm) {
-    //   dispatch(deletePokemon(idPokemon))
-    //   props.history.push('/')
-    // }
+    if (delConfirm) {
+      dispatch(deletePokemon(idPokemon))
+      props.history.push('/')
+    }
   }
     
 
@@ -79,7 +76,7 @@ export default function PokemonDetail (props) {
         <Link to='/home'>
           <button className={`${style.buttonToHome} ${style.button}`}>Go to Home</button>
         </Link>
-        {idPokemon.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={()=> handleDelete()}> Delete Pokemon </button>}
+        {idPokemon.length > 30 && <button className={`${style.buttonDel} ${style.button}`} onClick={handleDelete}> Delete Pokemon </button>}
       </div>
     </div>
     )
