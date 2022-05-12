@@ -83,7 +83,7 @@ export default function PokemonCreate() {
             image: '',
             type: []
         });
-        dispatch(getPokemons());
+        // dispatch(getPokemons());
         setIsSelected([])
         console.log(pokemon);
     };
