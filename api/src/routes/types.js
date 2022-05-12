@@ -20,7 +20,6 @@ router.get('/', async (req, res, next) => {
             const typeAPIList = [];
             console.log(getAPI.data.results);
             for (let i = 0; i < getAPI.data.results.length; i++) {
-                // const typeAPI = await axios.get(getAPI.data.results[i].url)
                 typeAPIList.push({
                     name: capitalize(getAPI.data.results[i].name)
                 });
