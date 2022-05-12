@@ -19,6 +19,7 @@ export default function PokemonDetailByName (props) {
   }, [props.match.params.name, dispatch])
   
   const idPokemon = pokemonDetail.id
+  console.log(pokemonDetail);
   const handleDelete = () => {
     dispatch(deletePokemon(idPokemon))
     alert("Pokemon deleted")
