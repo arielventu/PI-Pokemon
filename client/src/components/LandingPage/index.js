@@ -6,10 +6,10 @@ import style from './LandingPage.module.css';
 
 const LandingPage = () => {
 
-    const dispatch = useDispatch(); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
+    const dispatch = useDispatch(); 
 
     useEffect(() => {
-        dispatch(getPokemons());
+        dispatch(getPokemons()); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
     }, [dispatch]);
 
     return (
