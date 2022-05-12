@@ -15,6 +15,7 @@ export default function PokemonDetail (props) {
   useEffect(() => {
     dispatch(clearPokemonDetails())
     dispatch(getPokemonDetails(props.match.params.id))
+    console.log(props.match.params.id);
   }, [props.match.params.id, dispatch])
 
   // console.log(pokemonDetail.name);
