@@ -229,4 +229,21 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+router.delete('/delete/:id', async (req, res, next) => {
+    const { id } = req.params;
+    try {
+        const pokemon = await Pokemon.findOne({ where: { id } });
+        if (pokemon) {
+            await pokemon.destroy();
+            return res.json('Pokemon deleted').status(200);
+        } else {
+            return res.json('Pokemon not found').status(404);
+        }
+    } catch (error) {
+        next(error);
+    }
+});
+
+    
+
 module.exports = router;
