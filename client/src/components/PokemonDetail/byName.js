@@ -11,7 +11,6 @@ export default function PokemonDetailByName (props) {
   
   const dispatch = useDispatch()
   const pokemonDetail = useSelector(state => state.detailPokemon)
-  const pokemons = useSelector(state => state.pokemons)
   
   useEffect(() => {
     dispatch(clearPokemonDetails())
