@@ -30,7 +30,6 @@ export default function PokemonDetail (props) {
     props.history.push('/home')
   }
     
-
   // console.log(pokemonDetail.name);
 
   if (pokemonDetail === 'Pokemon not found') {
