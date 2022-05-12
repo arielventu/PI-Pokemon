@@ -6,7 +6,7 @@ import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
 
 
-export default function PokemonDetailByName ({props}) {
+export default function PokemonDetailByName (props) {
   // console.log(props);
   
   const dispatch = useDispatch()
