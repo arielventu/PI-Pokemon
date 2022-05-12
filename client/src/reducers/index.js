@@ -83,7 +83,7 @@ function rootReducer (state = initialState, {payload, type}) {
 			if (payload === 'Ʌ Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack < b.attack ? 1 : -1);
 			if (payload === 'V Attack') orderBy = pokemonsSorted.sort((a, b) => a.attack > b.attack ? 1 : -1);
 			if (payload === 'id') orderBy = pokemonsSorted.sort((a, b) => a.id - b.id);
-			console.log(orderBy);
+			console.lo(orderBy);
 			return {
 				...state,
 				pokemons: orderBy,
