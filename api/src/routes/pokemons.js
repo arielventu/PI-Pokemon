@@ -22,7 +22,7 @@ router.get('/', async (req, res, next) => {
     const { name } = req.query;
     
     // **************************************************************************************
-    // ************************************BÚSQUEDA POR NAME*********************************
+    // ************************************SEARCH BY NAME************************************
     if (name) { //Si se proporciona un nombre por query realize la busqueda en DB y API
         const pokeDB = await Pokemon.findOne({ // Búsqueda en DB
             where: {
@@ -81,7 +81,7 @@ router.get('/', async (req, res, next) => {
     }
 
     // **************************************************************************************
-    // **************************************GET GENERAL*************************************
+    // **************************************GET POKEMONS************************************
         try {
         const pokeDB = await Pokemon.findAll({
             include: Type
