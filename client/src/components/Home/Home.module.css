@@ -86,14 +86,17 @@
 
 .divFilterSource{
     margin: 0.5rem;
+    border-radius: 16px;
 }
 
 .divFilterType{
     margin: 0.5rem;
+    border-radius: 16px;
 }
 
 .divFilterOrder{
     margin: 0.5rem;
+    border-radius: 16px;
 }
 
 .selectFilterSource{
