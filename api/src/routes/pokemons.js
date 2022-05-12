@@ -121,6 +121,7 @@ router.get('/', async (req, res, next) => {
     }
 })
 
+
 router.get('/:id', async (req, res, next) => { 
     const { id } = req.params;
     if (id.length > 35) { // ID de base de datos
