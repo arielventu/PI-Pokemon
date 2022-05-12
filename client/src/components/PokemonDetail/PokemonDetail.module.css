@@ -184,7 +184,7 @@ img:hover {
   color: #fff;
 }
 
-.button {
+.buttonToHome {
   font-family: 'Kanit', sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -192,6 +192,23 @@ img:hover {
   height: 2.3rem;
   width: 8rem;
   background-color: rgb(247, 208, 44);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buttonDel {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  height: 2.3rem;
+  width: 9rem;
+  background-color: rgb(119, 8, 0);
   border: none;
   border-radius: 0.5rem;
   padding: 0.5rem;

@@ -72,9 +72,9 @@ export default function PokemonDetail (props) {
       }
       <div className={`${style.divButtons}`} >
         <Link to='/home'>
-          <button className={`${style.button}`}>Go to Home</button>
+          <button className={`${style.buttonToHome}`}>Go to Home</button>
         </Link>
-        {idPokemon.length > 30 && <button className={`${style.button}`} onClick={() => handleDelete()}> Delete Pokemon </button>}
+        {idPokemon.length > 30 && <button className={`${style.buttonDel}`} onClick={() => handleDelete()}> Delete Pokemon </button>}
       </div>
     </div>
     )
