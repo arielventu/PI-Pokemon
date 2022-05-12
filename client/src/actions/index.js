@@ -72,7 +72,7 @@ export const createPokemon = (payload) => {
     return function (dispatch) {
         axios.post(ALL_POKES, payload)
             .then(response => {
-                // console.log(response.data);  
+                console.log(response.data);  
                 if (response.data !== 'Name already exists in the database') {
                     dispatch({
                         type: CREATE_POKEMON,
