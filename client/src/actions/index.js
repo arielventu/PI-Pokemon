@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { ALL_POKES, ALL_TYPES, POKES_NAME } from '../utils.js';
 
 export const GET_POKEMONS = 'GET_POKEMONS';
 export const GET_TYPES = 'GET_TYPES';
@@ -14,7 +13,7 @@ export const DELETE_POKEMON = 'DELETE_POKEMON';
 
 export const getPokemons = () => {
     return function (dispatch) {
-        axios.get(ALL_POKES)
+        axios.get('/pokemons')
         .then(response => {
                 // console.log(response.data);
                 dispatch({
@@ -30,7 +29,7 @@ export const getPokemons = () => {
 
 export const getTypes = () => {
     return function (dispatch) {
-        axios.get(ALL_TYPES)
+        axios.get('/types')
         .then(response => {
             // console.log(response);
             dispatch({
@@ -70,7 +69,7 @@ export const sortBy = (payload) => {
 
 export const createPokemon = (payload) => {
     return function (dispatch) {
-        axios.post(ALL_POKES, payload)
+        axios.post('/pokemons', payload)
             .then(response => {
                 console.log(response.data);  
                 if (response.data !== 'Name already exists in the database') {
@@ -92,7 +91,7 @@ export const createPokemon = (payload) => {
 
 export const getPokemonDetails = (payload) => {
     return function (dispatch) {
-        axios.get(`${ALL_POKES}${payload}`)
+        axios.get(`/pokemons/${payload}`)
             .then(response => {
                 // console.log(response.data, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS');
                 dispatch({
@@ -114,26 +113,15 @@ export const clearPokemonDetails = () => {
 
 export const getPokemonByName = (payload) => {
     return async function (dispatch) {
-        // axios.get(`${POKES_NAME}${payload}`)
-        //     .then(response => {
-        //         // console.log(response.data);
-        //         dispatch({
-            //             type: 'GET_POKEMON_BY_NAME',
-            //             payload: response.data,
-            //         });
-            //     })
-            //     .catch(error => {
-                //         console.log(error);
-                //     });
-                try {
-                    await axios.get(`${POKES_NAME}${payload}`)
-                    .then(response => {
-                        // console.log(response.data);
-                        dispatch({
-                            type: 'GET_POKEMON_BY_NAME',
-                            payload: response.data,
-                        });
+        try {
+            await axios.get(`/pokemons?name=${payload}`)
+            .then(response => {
+                // console.log(response.data);
+                dispatch({
+                    type: 'GET_POKEMON_BY_NAME',
+                    payload: response.data,
                 });
+             });
         } catch (error) {
             console.log(error);
         }
@@ -142,7 +130,7 @@ export const getPokemonByName = (payload) => {
 
 export const deletePokemon = (payload) => {
     return function (dispatch) {
-        axios.delete(`${ALL_POKES}delete/${payload}`)
+        axios.delete(`/pokemons/delete/${payload}`)
             .then(response => {
                 // console.log(response.data);
                 dispatch({
