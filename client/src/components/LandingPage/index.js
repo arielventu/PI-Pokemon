@@ -12,6 +12,10 @@ const LandingPage = () => {
         dispatch(getPokemons()); // Despacho la action para que se ejecute antes de renderizar el componente CardContainer
     }, [dispatch]);
 
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+    }, []);
+
     return (
         <div className={`${style.divLandingPage}`} >
             <div className={`${style.divLandingPage_container}`}>

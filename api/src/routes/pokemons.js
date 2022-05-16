@@ -16,7 +16,8 @@ const {
 // GET https://pokeapi.co/api/v2/type
 
 const router = Router()
-
+const pokeAPIList = []; // Lista de pokemons desde API
+let getAPIDone = false; // Flag para saber si ya se obtuvieron los pokemons desde API
 
 router.get('/', async (req, res, next) => { 
     const { name } = req.query;
@@ -100,22 +101,24 @@ router.get('/', async (req, res, next) => {
             });
         }
         
-        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=4`); 
-        const pokeAPIList = []; 
-            
-        //Convertir a un array de objetos desde API
-        for (let i = 0; i < pokeAPI.data.results.length; i++) {
-            const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
-            pokeAPIList.push({
-                id: pokemonAPI.data.id,
-                name: capitalize(pokemonAPI.data.name),
-                image: pokemonAPI.data.sprites.other.dream_world.front_default,
-                attack: pokemonAPI.data.stats[1].base_stat,
-                type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
-            });
+        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
+
+        if (getAPIDone && pokeAPIList.length > 39) return res.send(pokeAPIList.concat(pokeDBList));
+        else {
+            for (let i = 0; i < pokeAPI.data.results.length; i++) {
+                const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
+                pokeAPIList.push({ //Convertir a un array de objetos desde API
+                    id: pokemonAPI.data.id,
+                    name: capitalize(pokemonAPI.data.name),
+                    image: pokemonAPI.data.sprites.other.dream_world.front_default,
+                    attack: pokemonAPI.data.stats[1].base_stat,
+                    type: pokemonAPI.data.types.map(type => capitalize(type.type.name))
+                });
+            }
+            getAPIDone = true;
+            return res.send(pokeAPIList.concat(pokeDBList)); //Concatenar los arrays
         }
-        const List = pokeAPIList.concat(pokeDBList); //Concatena los dos arrays
-        return res.send(List);
+        // return res.send(pokeAPIList.concat(pokeDBList)); //Concatena los dos arrays
     } catch (error) {
         next(error);
     }

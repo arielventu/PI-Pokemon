@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 import { getTypes, createPokemon} from '../../actions'
-import {DEFAULT_IMG} from '../../utils'
+import { DEFAULT_IMG } from '../../utils'
+// import Modal from '../Modal'
 import style from './PokemonCreate.module.css'
 
 const validate = ({ name, hp, attack, defense, speed, height, weight, image, type }) => {
@@ -10,7 +11,6 @@ const validate = ({ name, hp, attack, defense, speed, height, weight, image, typ
     const regEx = /^\d+$/;
     const regExUrl = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png|svg|webp)/g;
     
-
     if (!name) errors.name = 'Name is required';
     if (!hp || hp.search(regEx) === -1) errors.hp = 'HP is required and must be a number';
     if (!attack || attack.search(regEx) === -1) errors.attack = 'Attack is required and must be a number';
@@ -69,9 +69,7 @@ export default function PokemonCreate() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (pokemon.image === '') {
-            pokemon.image = DEFAULT_IMG; 
-        }
+        if (pokemon.image === '') pokemon.image = DEFAULT_IMG; 
         dispatch(createPokemon(pokemon));
         setPokemon({
             name: '',
@@ -214,7 +212,7 @@ export default function PokemonCreate() {
                         </div>
                     )}
                     <div className={`${style.divButton}`}>
-                    {Object.keys(errors).length > 0 ? // Si existen errores el botón se deshabilita
+                    {Object.keys(errors).length > 0 || Object.keys(pokemon.name).length === 0 || pokemon.type?.length === 0 ?// Si existen errores el botón se deshabilita
                         <button className={`${style.buttonDisabled}`} type="submit" disabled>Create Pokemon</button>
                         : <button className={`${style.buttonSubmit}`} type="submit">Create Pokemon</button>
                         }
@@ -224,6 +222,7 @@ export default function PokemonCreate() {
             <Link to="/home">
                 <button className={`${style.button}`}>Back to Home</button>
             </Link>
+            {/* <Modal /> */}
       </div>
   )
 }

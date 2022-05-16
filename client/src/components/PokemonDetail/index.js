@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getPokemonDetails, clearPokemonDetails, getPokemons, deletePokemon } from '../../actions';
+import Loading from '../Loading';
 import { Link } from 'react-router-dom';
 import PokeNotFound from '../NotFound/PokeNotFound.js';
 import style from './PokemonDetail.module.css';
@@ -32,9 +33,9 @@ export default function PokemonDetail (props) {
     
   // console.log(pokemonDetail.name);
 
-  if (pokemonDetail === 'Pokemon not found') {
-    return <PokeNotFound />
-  } else {
+  if (pokemonDetail === 'Pokemon not found') return <PokeNotFound />
+  if (Object.keys(pokemonDetail).length === 0) return <Loading />;
+  else {
   return (
     <div className={`${style.divContainer}`} >
       

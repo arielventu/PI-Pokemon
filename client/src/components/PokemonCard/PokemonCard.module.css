@@ -17,6 +17,11 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.image {
+    height: 105px;
+    max-width: 105px;
+}
+
 .name {
     font-family: 'Kanit', sans-serif;
     font-size: 1.5rem;

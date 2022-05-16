@@ -48,16 +48,43 @@
 
 .img {
   height: 400px;
+  max-width: 600px;
   margin-top: -6rem;
   margin-left: -3rem;
   filter: drop-shadow(-2px 4px 15px rgb(0, 0, 0));
-  transition: 0.3s;
+  transition: 0.3s;-webkit-animation: bounce-down 1.6s linear infinite;
+  animation: bounce-down 1.6s linear infinite;
 }
 
-img:hover {
+
+@-webkit-keyframes bounce-down {
+  25% {
+       -webkit-transform: translateY(-3px);
+  }
+  50%, 100% {
+       -webkit-transform: translateY(0);
+  }
+  75% {
+       -webkit-transform: translateY(3px);
+  }
+}
+
+@keyframes bounce-down {
+   25% {
+        transform: translateY(-3px);
+   }
+   50%, 100% {
+        transform: translateY(0);
+   }
+   75% {
+        transform: translateY(3px);
+   }
+  }
+
+/* img:hover {
   transform: translateY(-3px);
 
-}
+} */
 
 .divTypeContainer {
   display: flex;
