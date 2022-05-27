@@ -8,7 +8,7 @@ const NavBar = () => {
     <nav className={`${style.nav}`}>
       <div className={`${style.leftLink}`}>
         <Link to="/home" className={`${style.link}`}>
-          <h1 className={`${style.pHP}`}>Henry Pokemon</h1>
+          <h1 className={`${style.pHP}`}>Pokemon App</h1>
         </Link>
       </div>
       <div className={`${style.search}`}>
