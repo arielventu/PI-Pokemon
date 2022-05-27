@@ -19,8 +19,8 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
-import dotenv from 'dotenv';
-dotenv.config();
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 // Syncing all the models at once.
 // conn.sync({ force: true }).then(() => {
@@ -28,7 +28,7 @@ dotenv.config();
 //     console.log('%s listening at 3001'); // eslint-disable-line no-console
 //   });
 // });
-axios.defaults.baseURL = process.env.REACT_APP_API || 'http://localhost:3001';
+axios.defaults.baseURL = `https://localhost:${process.env.PORT}` || 'http://localhost:3001';
 
 conn.sync({ force: true }).then(() => {
   server.listen(process.env.PORT, () => {
