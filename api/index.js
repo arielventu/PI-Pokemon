@@ -28,7 +28,7 @@ const { conn } = require('./src/db.js');
 //     console.log('%s listening at 3001'); // eslint-disable-line no-console
 //   });
 // });
-axios.defaults.baseURL = `https://localhost:${process.env.PORT}` || 'http://localhost:3001';
+// axios.defaults.baseURL = `https://localhost:${process.env.PORT}` || 'http://localhost:3001';
 
 conn.sync({ force: true }).then(() => {
   server.listen(process.env.PORT, () => {
