@@ -31,8 +31,8 @@
 }
 
 .input {
-    height:5.5vh;
-    max-height: 2.2rem;
+    height:5vh;
+    /* max-height: 2rem; */
     width: 40vw;
     border-radius: 0.5rem;
     border: none;
