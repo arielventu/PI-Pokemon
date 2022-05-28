@@ -22,7 +22,7 @@ const SearchBar = () => {
   return (
     <div>
       <form className={`${style.form}`} onSubmit={handleSubmit} >
-        <input className={`${style.input}`} type="text" onChange={(e) => handleInputChange(e)} value={name}/>
+        <input className={`${style.input}`} type="text" onChange={(e) => handleInputChange(e)} value={name} placeholder='Insert Pokemon name here' />
         <NavLink to={`/pokemon/search/${name}`}>
           <input className={`${style.button}`} type="submit" value="Search" onClick={() => { setName('') }} />
         </NavLink>

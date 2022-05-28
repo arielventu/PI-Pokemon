@@ -33,10 +33,11 @@
 .input {
     height:5.5vh;
     max-height: 2.2rem;
+    width: 40vw;
     border-radius: 0.5rem;
     border: none;
     margin-right: .2rem;
     font-family: 'Kanit', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     font-weight: 200;   
 }
