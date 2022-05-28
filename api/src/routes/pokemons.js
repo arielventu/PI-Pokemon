@@ -101,12 +101,11 @@ router.get('/', async (req, res, next) => {
             });
         }
         
-        const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
-
-            if (getAPIDone && pokeAPIList.length > 39) {
-                getAPIDone = false;
-                return res.send(pokeAPIList.concat(pokeDBList));
-            } else {
+        
+        if (getAPIDone && pokeAPIList.length > 39) {
+            return res.send(pokeAPIList.concat(pokeDBList));
+        } else {
+            const pokeAPI = await axios.get(`${URL_POKE}/?offset=0&limit=40`); 
             for (let i = 0; i < pokeAPI.data.results.length; i++) {
                 const pokemonAPI = await axios.get(pokeAPI.data.results[i].url)
                 pokeAPIList.push({ //Convertir a un array de objetos desde API
