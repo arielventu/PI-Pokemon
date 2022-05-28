@@ -24,7 +24,7 @@
     width: 100%;
     height: 4rem;
     background-color: #000000;
-    margin-top: 1rem;
+    margin-top: 0rem;
 }
 
 .divCardsContainer{
@@ -47,15 +47,15 @@
 }
 
 .divFilterSource{
-    margin: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .divFilterType{
-    margin: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .divFilterOrder{
-    margin: 0.5rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 
 .selectFilterSource{
