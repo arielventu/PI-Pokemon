@@ -9,7 +9,6 @@
     height: 100vh;
     background-color: #000000;
     overflow: hidden;
-    margin-top: -3rem;
   }
   
   .loadingText {
