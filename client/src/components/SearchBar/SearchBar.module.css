@@ -9,12 +9,14 @@
 .button {
     width: 120%;
     height: 2.3rem;
+    height:6vh;
+	max-height: 2.3rem;
     border-radius: 0.5rem;
     border: none;
     background-color: rgb(247, 208, 44);
     color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.5vw;
+    font-weight: 300;
     font-family: 'Kanit', sans-serif;
     cursor: pointer;
     transition: 0.3s;
@@ -29,11 +31,12 @@
 }
 
 .input {
-    height: 2.3rem;
+    height:5.5vh;
+    max-height: 2.2rem;
     border-radius: 0.5rem;
     border: none;
     margin-right: .2rem;
     font-family: 'Kanit', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.4vw;
     font-weight: 200;   
 }

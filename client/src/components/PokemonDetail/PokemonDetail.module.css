@@ -34,7 +34,6 @@
   align-items: center;
   width: 30rem;
   height: 100%;
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .name {
@@ -47,7 +46,7 @@
 }
 
 .img {
-  height: 400px;
+  height: 50vh;
   max-width: 600px;
   margin-top: -6rem;
   margin-left: -3rem;
@@ -81,10 +80,6 @@
    }
   }
 
-/* img:hover {
-  transform: translateY(-3px);
-
-} */
 
 .divTypeContainer {
   display: flex;
@@ -92,7 +87,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-    /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .divType {
@@ -110,7 +104,7 @@
 .typeName {
   font-family: 'Kanit', sans-serif;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
 }
 
@@ -123,7 +117,6 @@
   width: 80%;
   height: 90%;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* background: rgba(255, 255, 255, 0.2); */
   border-radius: 16px;
 }
 
@@ -134,15 +127,14 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 .stat1{
   display: flex;
   justify-content: space-around;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
   margin-top: 0px;
   width: 100%;
@@ -152,8 +144,8 @@
   display: flex;
   justify-content: space-around;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
   margin-top: 0px;
   width: 100%;
@@ -163,51 +155,51 @@
   display: flex;
   justify-content: space-around;
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
   margin-top: 0px;
   width: 100%;
 }
   .hp {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .attack {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .defense {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .speed {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .height {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
 .weight {
   font-family: 'Kanit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.3rem;
+  font-weight: 300;
   color: #fff;
 }
 
@@ -256,8 +248,8 @@
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(168, 167, 122, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -272,8 +264,8 @@
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(194, 46, 40, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -283,13 +275,13 @@
 }
 
 .Flying {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(169, 143, 243, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -299,13 +291,13 @@
 }
 
 .Poison {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(163, 62, 161, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -315,13 +307,13 @@
 }
 
 .Ground {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(226, 191, 101, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -331,13 +323,13 @@
 }
 
 .Rock {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(182, 161, 54, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -347,13 +339,13 @@
 }
 
 .Bug {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(166, 185, 26, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -363,13 +355,13 @@
 }
 
 .Ghost {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(115, 87, 151, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -379,13 +371,13 @@
 }
 
 .Steel {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(183, 183, 206, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -395,13 +387,13 @@
 }
 
 .Fire {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(238, 129, 48, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -411,13 +403,13 @@
 }
 
 .Water {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(99, 144, 240, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -427,13 +419,13 @@
 }
 
 .Grass {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(122, 199, 76, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -443,13 +435,13 @@
 }
 
 .Electric {
- width: 10rem;
+ width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(247, 208, 44, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -459,13 +451,13 @@
 }
 
 .Psychic {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(249, 85, 135, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -475,13 +467,13 @@
 }
 
 .Ice {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(150, 217, 214, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -491,13 +483,13 @@
 }
 
 .Dragon {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(111, 53, 252, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -507,13 +499,13 @@
 }
 
 .Dark {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(112, 87, 70, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -523,13 +515,13 @@
 }
 
 .Fairy {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(255, 204, 204, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -539,13 +531,13 @@
 }
 
 .Shadow {
-  width: 10rem;
+  width: 7rem;
   height: 2.3rem;
   text-align: center;
   font-family: 'Kanit', sans-serif;
   color: rgb(255, 255, 255);
-  font-weight: 400;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.3rem;
   background: rgba(0, 0, 0, 0.900);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

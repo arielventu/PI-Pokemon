@@ -19,7 +19,7 @@ const LandingPage = () => {
     return (
         <div className={`${style.divLandingPage}`} >
             <div className={`${style.divLandingPage_container}`}>
-                <h1 className={`${style.h1Welcome}`} >Welcome to my Page · Pokemon App</h1>
+                <h1 className={`${style.h1Welcome}`} >Welcome to Pokemon App</h1>
                 <Link to="/home">
                     <button className={`${style.button}`} >Enter</button>
                 </Link>

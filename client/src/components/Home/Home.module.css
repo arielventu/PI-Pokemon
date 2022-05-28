@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-
 .divContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     background-color: #000000;
     margin-top: -3rem;
     background-image: url('../../img/2/pikachu.jpg');
@@ -26,16 +24,17 @@
     width: 100%;
     height: 4rem;
     background-color: #000000;
-    margin-top: 4rem;
+    /* margin-top: 2rem; */
 }
 
 .divCardsContainer{
     display: flex;  
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    width: 80rem;
+    width: 70rem;
     height: 100vh;
+    margin-top: -7rem;
 }
 
 .cards{
@@ -61,20 +60,24 @@
 .selectFilterSource{
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     border-radius: 5px;
   }
   
   .selectFilterType{
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     border-radius: 5px;
   }
   
   .selectFilterOrder{
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     border-radius: 5px;
+}
+
+.divFooter {
+    margin-top: -5rem;
 }

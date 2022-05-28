@@ -20,7 +20,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 50%;
     height: 80%;
     margin-top: -2rem;
     background: rgba(255, 255, 255, 0.2);
@@ -55,7 +55,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -86,7 +86,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -117,7 +117,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -148,7 +148,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -179,7 +179,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -210,7 +210,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -241,7 +241,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -272,7 +272,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1.2rem;
     font-weight: 300;
-    width: 100%;
+    width: 60%;
     height:1.5rem;
     margin-top: .5rem;
     border-radius: 16px;
@@ -303,7 +303,7 @@
     font-family: 'Kanit', sans-serif;
     font-size: 1rem;
     font-weight: 200;
-    width: 100%;
+    width: 60%;
     margin-top: 1rem;
     border-radius: 16px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.253);
@@ -311,6 +311,7 @@
 }
 
 .pError {
+    width: 50%;
     font-family: 'Kanit', sans-serif;
     font-size: .7rem;
     font-weight: 200;

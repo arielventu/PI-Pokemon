@@ -5,8 +5,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 10rem;
-    height: 15rem;
+    min-width: 120px;
+    height:28vh;
+    min-height: 190px;
     margin: 15px;
     padding: 10px;
     background: rgba(255, 255, 255, 0.2);
@@ -18,14 +19,14 @@
 }
 
 .image {
-    height: 105px;
+    height: 10vh;
     max-width: 105px;
 }
 
 .name {
     font-family: 'Kanit', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 200;
     color: rgb(255, 255, 255);
     text-shadow: 0 2px 0 rgba(0, 0, 0, 0.384);
 } 
