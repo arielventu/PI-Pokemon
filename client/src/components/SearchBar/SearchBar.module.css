@@ -9,7 +9,7 @@
 .button {
     width: 120%;
     height: 2.3rem;
-    height:6vh;
+    height:4vh;
 	max-height: 2.3rem;
     border-radius: 0.5rem;
     border: none;
@@ -22,6 +22,7 @@
     transition: 0.3s;
     outline: none;
     margin-left: .2rem;
+    text-align: center;
 }
 
 .button:hover {
@@ -31,7 +32,7 @@
 }
 
 .input {
-    height:5vh;
+    height:4vh;
     /* max-height: 2rem; */
     width: 40vw;
     border-radius: 0.5rem;
