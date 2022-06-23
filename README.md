@@ -9,6 +9,6 @@ Javascript
 Frontend: ReactJS, Redux, CSS (puro), HTML
 Backend: NodeJS, Express, Sequelize, PostgreSQL
 
-Deploy: https://pi-pokemon-av.vercel.app/
-&nbsp;
+Deploy: https://pi-pokemon-av.vercel.app
+
 Demo: https://www.youtube.com/watch?v=4kTrXJp0mi8
